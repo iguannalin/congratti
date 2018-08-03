@@ -73,8 +73,8 @@ function createConfetti( t, n ) {
   for ( var i = 0; i < t; i++ ) {
     
     var con = new Confetti( confettiColors[Math.round(Math.random() * 10) % confettiColors.length] );
-    con.threegroup.position.x = Math.sin(Math.PI / ( Math.random() )) * ( width / n );
-    con.threegroup.position.y = Math.cos(Math.PI / ( Math.random() )) * ( height / n ) - Math.random()*10;
+    con.threegroup.position.x = Math.sin( Math.PI / ( Math.random() ) ) * ( width / n );
+    con.threegroup.position.y = Math.cos( Math.PI / ( Math.random() ) ) * ( height / n ) - Math.random()*10;
     con.threegroup.position.z = 50 * Math.random() * 10 - t;
     confetti.push( con );
     scene.add( con.threegroup );
@@ -129,7 +129,7 @@ function loop() {
 }
 
 function render() {
-  if (controls) controls.update();
+  if ( controls ) controls.update();
   renderer.render( scene, camera );
 }
 
@@ -137,8 +137,14 @@ function render() {
 init();
 
 // Make less but bigger confetti for optimal speed on phones
-if (screen.width <= 480) {
+if ( screen.width <= 480 ) {
   createConfetti( 4, 9 );
+
+  if ( screen.height > ( screen.width * 1.5) ) {
+
+    height = screen.height / 2;
+
+  }
 }
 else createConfetti( 25, 1 );
 loop();
