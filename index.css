@@ -8,8 +8,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   background-color: darkgray;
-  /*TODO: REMOVE!!*/
-  /*background-color: #fff9e6;*/
+  background-color: #fff9e6;
   font-family: "Varela Round", sans-serif;;
   font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: 700;
 }

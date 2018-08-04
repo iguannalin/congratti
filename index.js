@@ -1,5 +1,3 @@
-// TODO: COMBINE TYPEWRITE TO INDEX AND MINIFY
-
 // Using Karim Maaloul's code as a guide
 // https://bit.ly/2JU9XdV
 
@@ -29,7 +27,6 @@ function init() {
   
   scene = new THREE.Scene();
 
-  // TODO: FIGURE THIS OUT!!
   height = window.innerHeight;
   width = window.innerWidth;
 
@@ -80,8 +77,8 @@ function createConfetti( t ) {
   for ( var i = 0; i < t; i++ ) {
     
     var con = new Confetti( confettiColors[Math.round(Math.random() * 10) % confettiColors.length] );
-    con.threegroup.position.x = Math.sin( Math.PI * ( Math.random() ) ) * ( width / 4 ) - Math.random() * 300;
-    con.threegroup.position.y = Math.cos( Math.PI * ( Math.random() ) ) * ( height ) - Math.random()* 300;
+    con.threegroup.position.x = Math.sin( Math.PI * ( Math.random() ) ) * ( width / 6 ) - ( Math.random() * 300 );
+    con.threegroup.position.y = Math.cos( Math.PI * ( Math.random() ) ) * ( height ) - ( Math.random() * 350 );
     con.threegroup.position.z = 50 * Math.random() * 10 - t;
     confetti.push( con );
     scene.add( con.threegroup );
