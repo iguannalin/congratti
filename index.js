@@ -48,7 +48,6 @@ function init() {
   camera.position.y = 0;
   camera.position.z = 800;
   camera.lookAt( new THREE.Vector3( 0, 0, 0 ) );
-  camera.updateProjectionMatrix();
   renderer = new THREE.WebGLRenderer( { alpha: true, antialias: true } );
   renderer.setPixelRatio( window.devicePixelRatio );
   renderer.setSize( width, height );
@@ -56,22 +55,22 @@ function init() {
   container.appendChild( renderer.domElement );
   windowHalfX = width / 2;
   windowHalfY = height / 2;
-  // window.addEventListener('resize', onWindowResize, false);
+  window.addEventListener('resize', onWindowResize, false);
   controls = new THREE.OrbitControls( camera, renderer.domElement );
   
 }
 
-// function onWindowResize() {
+function onWindowResize() {
   
-//   height = window.innerHeight;
-//   width = window.innerWidth;
-//   windowHalfX = width / 2;
-//   windowHalfY = height / 2;
-//   renderer.setSize( width, height );
-//   camera.aspect = width / height;
-//   camera.updateProjectionMatrix();
+  height = window.innerHeight;
+  width = window.innerWidth;
+  windowHalfX = width / 2;
+  windowHalfY = height / 2;
+  renderer.setSize( width, height );
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
   
-// }
+}
 
 function createConfetti( t ) {
 
