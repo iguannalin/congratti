@@ -29,11 +29,11 @@ function init() {
   
   scene = new THREE.Scene();
 
-  height = window.innerHeight;
-  width = window.innerWidth;
+  height = 256;
+  width = 256;
 
   // TODO: FIGURE THIS OUT!!
-  if ( window.innerHeight > ( window.innerWidth * 1.5) ) height = window.innerHeight - ( window.innerHeight / 5 );
+  // if ( window.innerHeight > ( window.innerWidth * 1.5) ) height = window.innerHeight - ( window.innerHeight / 5 );
 
   aspectRatio = width / height;
   fieldOfView = 60;
@@ -56,22 +56,22 @@ function init() {
   container.appendChild( renderer.domElement );
   windowHalfX = width / 2;
   windowHalfY = height / 2;
-  window.addEventListener('resize', onWindowResize, false);
+  // window.addEventListener('resize', onWindowResize, false);
   controls = new THREE.OrbitControls( camera, renderer.domElement );
   
 }
 
-function onWindowResize() {
+// function onWindowResize() {
   
-  height = window.innerHeight;
-  width = window.innerWidth;
-  windowHalfX = width / 2;
-  windowHalfY = height / 2;
-  renderer.setSize( width, height );
-  camera.aspect = width / height;
-  camera.updateProjectionMatrix();
+//   height = window.innerHeight;
+//   width = window.innerWidth;
+//   windowHalfX = width / 2;
+//   windowHalfY = height / 2;
+//   renderer.setSize( width, height );
+//   camera.aspect = width / height;
+//   camera.updateProjectionMatrix();
   
-}
+// }
 
 function createConfetti( t ) {
 
