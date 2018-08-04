@@ -14,28 +14,27 @@ var scene,
     renderer,
     container;
 
-// SCENE
-var confetti = [],
-    confettiColors = [0xC9D757, 0xDE4B72, 0xF1BA48, 0xDE7567, 0x4C94BE, 0xF4F0C9, 0xD93732, 0xC0C1BD, 0xE07F8D, 0xED3D9, 0xF9EF82, 0xFBFCF7];
-
 // SCREEN VARIABLES
 var height,
     width,
     windowHalfX,
     windowHalfY;
 
-// SCENE
+// CONFETTI
+var confetti = [],
+    confettiColors = [0xC9D757, 0xDE4B72, 0xF1BA48, 0xDE7567, 0x4C94BE, 0xF4F0C9, 0xD93732, 0xC0C1BD, 0xE07F8D, 0xED3D9, 0xF9EF82, 0xFBFCF7];
+
+// INIT SCENE
 function init() {
   
   scene = new THREE.Scene();
-  if ( window.innerHeight > ( window.innerWidth * 1.5) ) {
-    width = window.innerHeight;
-    height = window.innerWidth;
-  }
-  else {
-    height = window.innerHeight;
-    width = window.innerWidth;
-  }
+
+  height = window.innerHeight;
+  width = window.innerWidth;
+
+  // TODO: FIGURE THIS OUT!!
+  if ( window.innerHeight > ( window.innerWidth * 1.5) ) height = window.innerHeight - ( window.innerHeight / 5 );
+
   aspectRatio = width / height;
   fieldOfView = 60;
   nearPlane = 1;
@@ -57,7 +56,6 @@ function init() {
   windowHalfX = width / 2;
   windowHalfY = height / 2;
   window.addEventListener('resize', onWindowResize, false);
-
   controls = new THREE.OrbitControls( camera, renderer.domElement );
   
 }
@@ -74,13 +72,13 @@ function onWindowResize() {
   
 }
 
-function createConfetti( t, n ) {
-  
+function createConfetti( t ) {
+
   for ( var i = 0; i < t; i++ ) {
     
     var con = new Confetti( confettiColors[Math.round(Math.random() * 10) % confettiColors.length] );
-    con.threegroup.position.x = Math.sin( Math.PI / ( Math.random() ) ) * ( width / n );
-    con.threegroup.position.y = Math.cos( Math.PI / ( Math.random() ) ) * ( height / n ) - Math.random()*10;
+    con.threegroup.position.x = Math.sin( Math.PI * ( Math.random() ) ) * ( width / 4 ) - Math.random() * 300;
+    con.threegroup.position.y = Math.cos( Math.PI * ( Math.random() ) ) * ( height ) - Math.random()* 300;
     con.threegroup.position.z = 50 * Math.random() * 10 - t;
     confetti.push( con );
     scene.add( con.threegroup );
@@ -92,7 +90,7 @@ function createConfetti( t, n ) {
 // CONFETTI
 Confetti = function( c ) {
   
-  var plane = new THREE.PlaneBufferGeometry( width / 40, width / 20, 32 );
+  var plane = new THREE.PlaneBufferGeometry( width / 40, width / 20 );
   this.material = new THREE.MeshBasicMaterial( {
     
     color: c,
@@ -109,6 +107,7 @@ Confetti = function( c ) {
 
 }
 
+// RESET CONFETTI
 Confetti.prototype.update = function() {
   
   if ( this.threegroup.position.y < height && this.threegroup.position.y > -height ) {
@@ -141,11 +140,5 @@ function render() {
 
 // CALLS
 init();
-
-// Make less but bigger confetti for optimal speed on phones
-// if ( window.innerWidth <= 480 ) {
-//   createConfetti( 4, 9 );
-// }
-// else 
-createConfetti( 25, 1 );
+createConfetti( 25 );
 loop();
