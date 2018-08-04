@@ -6,6 +6,7 @@ body {
   overflow: hidden;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   background-color: darkgray;
   /*TODO: REMOVE!!*/
   /*background-color: #fff9e6;*/
