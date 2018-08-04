@@ -48,6 +48,7 @@ function init() {
   camera.position.y = 0;
   camera.position.z = 800;
   camera.lookAt( new THREE.Vector3( 0, 0, 0 ) );
+  camera.updateProjectionMatrix();
   renderer = new THREE.WebGLRenderer( { alpha: true, antialias: true } );
   renderer.setPixelRatio( window.devicePixelRatio );
   renderer.setSize( width, height );
