@@ -28,8 +28,14 @@ var height,
 function init() {
   
   scene = new THREE.Scene();
-  height = window.innerHeight;
-  width = window.innerWidth;
+  if ( window.innerHeight > ( window.innerWidth * 1.5) ) {
+    width = window.innerHeight;
+    height = window.innerWidth;
+  }
+  else {
+    height = window.innerHeight;
+    width = window.innerWidth;
+  }
   aspectRatio = width / height;
   fieldOfView = 60;
   nearPlane = 1;
@@ -137,14 +143,9 @@ function render() {
 init();
 
 // Make less but bigger confetti for optimal speed on phones
-if ( screen.width <= 480 ) {
-  createConfetti( 4, 9 );
-
-  if ( screen.height > ( screen.width * 1.5) ) {
-
-    height = screen.height / 2;
-
-  }
-}
-else createConfetti( 25, 1 );
+// if ( window.innerWidth <= 480 ) {
+//   createConfetti( 4, 9 );
+// }
+// else 
+createConfetti( 25, 1 );
 loop();
