@@ -33,9 +33,9 @@ function init() {
   height = window.innerHeight;
   width = window.innerWidth;
 
-  if ( screen.width <= 480 ) {
-    height = 700;
-    width = 700;
+  if ( window.innerHeight > window.innerWidth ) {
+    height = 600;
+    width = 600;
   }
 
   aspectRatio = width / height;
