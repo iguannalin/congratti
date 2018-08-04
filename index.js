@@ -33,7 +33,7 @@ function init() {
   height = window.innerHeight;
   width = window.innerWidth;
 
-  if ( window.innerHeight > ( window.innerWidth * 1.5) ) {
+  if ( window.innerWidth <= 480 ) {
     height = 700;
     width = 700;
   }
