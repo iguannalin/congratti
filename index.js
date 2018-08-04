@@ -29,11 +29,14 @@ function init() {
   
   scene = new THREE.Scene();
 
-  height = 700;
-  width = 700;
-
   // TODO: FIGURE THIS OUT!!
-  // if ( window.innerHeight > ( window.innerWidth * 1.5) ) height = window.innerHeight - ( window.innerHeight / 5 );
+  height = window.innerHeight;
+  width = window.innerWidth;
+
+  if ( window.innerHeight > ( window.innerWidth * 1.5) ) {
+    height = 700;
+    width = 700;
+  }
 
   aspectRatio = width / height;
   fieldOfView = 60;
