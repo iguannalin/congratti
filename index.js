@@ -10,7 +10,8 @@ var scene,
     nearPlane,
     farPlane,
     renderer,
-    container;
+    container,
+    isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 // SCREEN VARIABLES
 var height,
@@ -30,8 +31,8 @@ function init() {
   height = window.innerHeight;
   width = window.innerWidth;
 
-  if ( window.innerHeight > window.innerWidth ) {
-    height = 600;
+  if ( isMobile ) {
+    height = 700;
     width = 800;
   }
 
@@ -61,6 +62,8 @@ function init() {
 }
 
 function onWindowResize() {
+
+  if ( isMobile ) return;
   
   height = window.innerHeight;
   width = window.innerWidth;
