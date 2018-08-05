@@ -32,7 +32,7 @@ function init() {
 
   if ( window.innerHeight > window.innerWidth ) {
     height = 600;
-    width = 600;
+    width = 800;
   }
 
   aspectRatio = width / height;
