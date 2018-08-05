@@ -1,12 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
-/*
-@media screen and (max-width: 768px) {
-    body {
-      background-color: #2a3340;
-      color: white;
-    }
-
-}*/
 
 body {
   margin: 0 auto;
@@ -16,10 +8,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #2a3340;
-  color: white;
+  background-color: #fff9e6;
+  color: #2a3340;
   font-family: "Varela Round", sans-serif;
-  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: 700;
+  font-weight: 900;
 }
 
 div {
@@ -40,7 +32,6 @@ div {
 }
 
 #blurb {
-  color: gray;
   font-size: 36px;
 }
 
@@ -69,7 +60,7 @@ div {
 }
 
 a, a:visited {
-  color: gray;
+  color: initial;
   text-decoration: none;
 }
 
@@ -80,23 +71,18 @@ a:hover {
 }
 
 @media only screen and (min-width: 992px) {
-    body {
-      background-color: #fff9e6;
-      color: #2a3340;
-    }
+  body {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: 700;
+  }
 
-    .header p {
-      font-size: 48px;
-      line-height: 1.6;
-      white-space: pre-line;
-    }
+  .header p {
+    font-size: 48px;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
 
-    #blurb {
-      color: gray;
-      font-size: 24px;
-    }
+  #blurb {
+    font-size: 24px;
+  }
 
-    a {
-      color: black;
-    }
 }
