@@ -31,10 +31,10 @@ function init() {
   height = window.innerHeight;
   width = window.innerWidth;
 
-  if ( isMobile ) {
-    height = 1000;
-    width = 800;
-  }
+  // if ( isMobile ) {
+  //   height = 1000;
+  //   width = 800;
+  // }
 
   aspectRatio = width / height;
   fieldOfView = 60;
@@ -92,6 +92,8 @@ function createConfetti( t ) {
 
 // CONFETTI
 Confetti = function( c ) {
+
+  var cWidth = width ? !isMobile : height;
   
   var plane = new THREE.PlaneBufferGeometry( width / 40, width / 20 );
   this.material = new THREE.MeshBasicMaterial( {
