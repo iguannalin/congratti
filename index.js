@@ -32,7 +32,7 @@ function init() {
   width = window.innerWidth;
 
   if ( isMobile ) {
-    height = 700;
+    height = 1000;
     width = 800;
   }
 
