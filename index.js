@@ -28,13 +28,15 @@ function init() {
   
   scene = new THREE.Scene();
 
-  height = window.innerHeight;
-  width = window.innerWidth;
+  if ( isMobile ) {
+    height = 1000;
+    width = window.innerWidth;
+  }
 
-  // if ( isMobile ) {
-  //   height = 1000;
-  //   width = 800;
-  // }
+  else {
+    height = window.innerHeight;
+    width = window.innerWidth;
+  }
 
   aspectRatio = width / height;
   fieldOfView = 60;
