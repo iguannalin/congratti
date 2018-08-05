@@ -29,7 +29,7 @@ function init() {
   scene = new THREE.Scene();
 
   if ( isMobile ) {
-    height = window.innerHeight - ( window.innerHeight / 4 );
+    height = window.innerHeight - ( window.innerHeight / 3 );
     width = window.innerWidth;
   }
 
