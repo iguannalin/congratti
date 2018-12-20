@@ -56,6 +56,7 @@ function init() {
   renderer.setSize( width, height );
   container = document.body;
   container.appendChild( renderer.domElement );
+  container.setAttribute( 'aria-label', 'Interactive graphic of falling confetti' );
   windowHalfX = width / 2;
   windowHalfY = height / 2;
   window.addEventListener('resize', onWindowResize, false);
