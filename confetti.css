@@ -99,5 +99,12 @@ footer {
   .icons {
     font-size: 25px;
   }
+}
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }

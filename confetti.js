@@ -25,128 +25,124 @@ var confetti = [],
 
 // INIT SCENE
 function init() {
-  
-  scene = new THREE.Scene();
 
-  if ( isMobile ) {
-    height = window.innerHeight - ( window.innerHeight / 3 );
-    width = window.innerWidth;
-  }
+    scene = new THREE.Scene();
 
-  else {
-    height = window.innerHeight;
-    width = window.innerWidth;
-  }
+    if (isMobile) {
+        height = window.innerHeight - (window.innerHeight / 3);
+        width = window.innerWidth;
+    } else {
+        height = window.innerHeight;
+        width = window.innerWidth;
+    }
 
-  aspectRatio = width / height;
-  fieldOfView = 60;
-  nearPlane = 1;
-  farPlane = 2000;
-  camera = new THREE.PerspectiveCamera(
-    fieldOfView,
-    aspectRatio,
-    nearPlane,
-    farPlane
-  );
-  camera.position.y = 0;
-  camera.position.z = 800;
-  camera.lookAt( new THREE.Vector3( 0, 0, 0 ) );
-  renderer = new THREE.WebGLRenderer( { alpha: true, antialias: true } );
-  renderer.setPixelRatio( window.devicePixelRatio );
-  renderer.setSize( width, height );
-  container = document.body;
-  container.appendChild( renderer.domElement );
-  container.setAttribute( 'aria-label', 'Interactive graphic of falling confetti' );
-  windowHalfX = width / 2;
-  windowHalfY = height / 2;
-  window.addEventListener('resize', onWindowResize, false);
-  controls = new THREE.OrbitControls( camera, renderer.domElement );
-  
+    aspectRatio = width / height;
+    fieldOfView = 60;
+    nearPlane = 1;
+    farPlane = 2000;
+    camera = new THREE.PerspectiveCamera(
+        fieldOfView,
+        aspectRatio,
+        nearPlane,
+        farPlane
+    );
+    camera.position.y = 0;
+    camera.position.z = 800;
+    camera.lookAt(new THREE.Vector3(0, 0, 0));
+    renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(width, height);
+    container = document.body;
+    container.appendChild(renderer.domElement);
+    container.setAttribute('aria-label', 'Interactive graphic of falling confetti');
+    windowHalfX = width / 2;
+    windowHalfY = height / 2;
+    window.addEventListener('resize', onWindowResize, false);
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
+
 }
 
 function onWindowResize() {
 
-  if ( isMobile ) return;
-  
-  height = window.innerHeight;
-  width = window.innerWidth;
-  windowHalfX = width / 2;
-  windowHalfY = height / 2;
-  renderer.setSize( width, height );
-  camera.aspect = width / height;
-  camera.updateProjectionMatrix();
-  
+    if (isMobile) return;
+
+    height = window.innerHeight;
+    width = window.innerWidth;
+    windowHalfX = width / 2;
+    windowHalfY = height / 2;
+    renderer.setSize(width, height);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+
 }
 
-function createConfetti( t ) {
+function createConfetti(t) {
 
-  for ( var i = 0; i < t; i++ ) {
-    
-    var con = new Confetti( confettiColors[Math.round(Math.random() * 10) % confettiColors.length] );
-    con.threegroup.position.x = Math.sin( Math.PI * ( Math.random() ) ) * ( width / 6 ) - ( Math.random() * 300 );
-    con.threegroup.position.y = Math.cos( Math.PI * ( Math.random() ) ) * ( height ) - ( Math.random() * 350 );
-    con.threegroup.position.z = 50 * Math.random() * 10 - t;
-    confetti.push( con );
-    scene.add( con.threegroup );
-  
-  }
-  
+    for (var i = 0; i < t; i++) {
+
+        var con = new Confetti(confettiColors[Math.round(Math.random() * 10) % confettiColors.length]);
+        con.threegroup.position.x = Math.sin(Math.PI * (Math.random())) * (width / 6) - (Math.random() * 300);
+        con.threegroup.position.y = Math.cos(Math.PI * (Math.random())) * (height) - (Math.random() * 350);
+        con.threegroup.position.z = 50 * Math.random() * 10 - t;
+        confetti.push(con);
+        scene.add(con.threegroup);
+
+    }
+
 }
 
 // CONFETTI
-Confetti = function( c ) {
+Confetti = function(c) {
 
-  var cWidth = width ? !isMobile : height;
-  
-  var plane = new THREE.PlaneBufferGeometry( width / 40, width / 20 );
-  this.material = new THREE.MeshBasicMaterial( {
-    
-    color: c,
-    transparent: true,
-    opacity: Math.random() * 1.2,
-    side: THREE.DoubleSide
-    
-  } );
-  this.confetto = new THREE.Mesh( plane, this.material );
-  
-  this.threegroup = new THREE.Group();
-  this.threegroup.add( this.confetto );
-  this.threegroup.lookAt( new THREE.Vector3(Math.random() * 10, Math.random() * 80, 60 ) );
+    var cWidth = width ? !isMobile : height;
+
+    var plane = new THREE.PlaneBufferGeometry(width / 40, width / 20);
+    this.material = new THREE.MeshBasicMaterial({
+
+        color: c,
+        transparent: true,
+        opacity: Math.random() * 1.2,
+        side: THREE.DoubleSide
+
+    });
+    this.confetto = new THREE.Mesh(plane, this.material);
+
+    this.threegroup = new THREE.Group();
+    this.threegroup.add(this.confetto);
+    this.threegroup.lookAt(new THREE.Vector3(Math.random() * 10, Math.random() * 80, 60));
 
 }
 
 // RESET CONFETTI
 Confetti.prototype.update = function() {
-  
-  if ( this.threegroup.position.y < height && this.threegroup.position.y > -height ) {
-    this.threegroup.position.y -= 1;
-    this.threegroup.rotateY( Math.random() * 0.05 );
-    this.threegroup.rotateZ( Math.random() * 0.01 );
-  }
-  
-  else {
-    this.threegroup.position.y = height - 1;
-  }
-  
+
+    if (this.threegroup.position.y < height && this.threegroup.position.y > -height) {
+        this.threegroup.position.y -= 1;
+        this.threegroup.rotateY(Math.random() * 0.05);
+        this.threegroup.rotateZ(Math.random() * 0.01);
+    } else {
+        this.threegroup.position.y = height - 1;
+    }
+
 }
 
 // METHODS
 function loop() {
-  render();
-  
-  for ( var i = 0; i < confetti.length; i++ ) {
-   confetti[i].update();
-  }
-  
-  requestAnimationFrame( loop );
+    render();
+
+    for (var i = 0; i < confetti.length; i++) {
+        confetti[i].update();
+    }
+
+    requestAnimationFrame(loop);
 }
 
 function render() {
-  if ( controls ) controls.update();
-  renderer.render( scene, camera );
+    if (controls) controls.update();
+    renderer.render(scene, camera);
 }
 
 // CALLS
 init();
-createConfetti( 25 );
+createConfetti(25);
 loop();
