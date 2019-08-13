@@ -1,6 +1,3 @@
-// Inspired by Josh Collinsworth
-// bit.ly/2MaA5CQ
-
 let n = 0,
     textIndex = 0,
     interval = Math.floor((Math.random() * 200) + 5),

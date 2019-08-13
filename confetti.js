@@ -49,7 +49,7 @@ function init() {
     camera.position.y = 0;
     camera.position.z = 800;
     camera.lookAt(new THREE.Vector3(0, 0, 0));
-    renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(width, height);
     container = document.body;
@@ -92,7 +92,7 @@ function createConfetti(t) {
 }
 
 // CONFETTI
-Confetti = function(c) {
+Confetti = function (c) {
 
     var cWidth = width ? !isMobile : height;
 
@@ -114,7 +114,7 @@ Confetti = function(c) {
 }
 
 // RESET CONFETTI
-Confetti.prototype.update = function() {
+Confetti.prototype.update = function () {
 
     if (this.threegroup.position.y < height && this.threegroup.position.y > -height) {
         this.threegroup.position.y -= 1;
