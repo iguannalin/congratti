@@ -82,8 +82,10 @@ footer {
 
 @media only screen and (min-width: 992px) {
   body {
-    font-family: "Varela Round", sans-serif;
-    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: 700;
+    font-family: "Arial Rounded MT Bold", "Varela Round", "Helvetica Rounded", Arial, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
   }
 
   .header p {
