@@ -10,6 +10,7 @@ body {
   align-items: center;
   background-color: #fff9e6;
   color: #2a3340;
+  font-display: 'swap';
   font-family: 'Arial Rounded MT Bold', 'Nunito', Arial, sans-serif;
   font-style: normal;
   font-variant: normal;
@@ -84,6 +85,7 @@ footer {
 
 @media only screen and (min-width: 992px) {
   body {
+    font-display: 'swap';
     font-family: 'Arial Rounded MT Bold', 'Nunito', Arial, sans-serif;
     font-style: normal;
     font-variant: normal;
