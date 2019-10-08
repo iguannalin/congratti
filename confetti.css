@@ -10,8 +10,10 @@ body {
   align-items: center;
   background-color: #fff9e6;
   color: #2a3340;
-  font-family: "Varela Round", sans-serif;
-  font-weight: 900;
+  font-family: "Arial Rounded MT Bold", 'Nunito', Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
 }
 
 div {
