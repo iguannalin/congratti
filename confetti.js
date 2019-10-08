@@ -11,7 +11,8 @@ var scene,
     farPlane,
     renderer,
     container,
-    isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    isAndroid = navigator.userAgent.match(/Android/i);
 
 // SCREEN VARIABLES
 var height,
@@ -27,17 +28,8 @@ var confetti = [],
 function init() {
 
     scene = new THREE.Scene();
-
-    if (isMobile && navigator.userAgent.match(/Android/i)) {
-        height = ( 2 * window.innerHeight ) / 3;
-        width = window.innerWidth;
-    } else if (isMobile) {
-        height = ( window.innerHeight * 0.9 );
-        width = window.innerWidth;
-    } else {
-        height = window.innerHeight;
-        width = window.innerWidth;
-    }
+    height = window.innerHeight;
+    width = window.innerWidth;
 
     aspectRatio = width / height;
     fieldOfView = 60;
