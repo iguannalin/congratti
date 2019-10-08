@@ -3,7 +3,7 @@ let n = 0,
     interval = Math.floor((Math.random() * 200) + 5),
     textToType = {
         description: 'I am a',
-        titles: [' hobbyist illustrator :)',
+        titles: [' doodler :)',
             ' front-end & UX developer.'
         ]
     },
