@@ -28,8 +28,11 @@ function init() {
 
     scene = new THREE.Scene();
 
-    if (isMobile) {
-        height = window.innerHeight - (window.innerHeight / 3);
+    if (isMobile && navigator.userAgent.match(/Android/i)) {
+        height = ( 2 * window.innerHeight ) / 3;
+        width = window.innerWidth;
+    } else if (isMobile) {
+        height = ( window.innerHeight * 0.9 );
         width = window.innerWidth;
     } else {
         height = window.innerHeight;
