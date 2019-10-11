@@ -2,7 +2,7 @@
 // https://bit.ly/2JU9XdV
 
 // THREE VARIABLES
-var scene,
+let scene,
     camera,
     controls,
     fieldOfView,
@@ -12,16 +12,16 @@ var scene,
     renderer,
     container,
     isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-    isAndroid = navigator.userAgent.match(/Android/i);
+isAndroid = navigator.userAgent.match(/Android/i);
 
 // SCREEN VARIABLES
-var height,
+let height,
     width,
     windowHalfX,
     windowHalfY;
 
 // CONFETTI
-var confetti = [],
+let confetti = [],
     confettiColors = [0xC9D757, 0xDE4B72, 0xF1BA48, 0xDE7567, 0x4C94BE, 0xF4F0C9, 0xD93732, 0xC0C1BD, 0xE07F8D, 0xED3D9, 0xF9EF82, 0xFBFCF7];
 
 // INIT SCENE
@@ -54,7 +54,6 @@ function init() {
     windowHalfY = height / 2;
     window.addEventListener('resize', onWindowResize, false);
     controls = new THREE.OrbitControls(camera, renderer.domElement);
-
 }
 
 function onWindowResize() {
@@ -73,9 +72,9 @@ function onWindowResize() {
 
 function createConfetti(t) {
 
-    for (var i = 0; i < t; i++) {
+    for (let i = 0; i < t; i++) {
 
-        var con = new Confetti(confettiColors[Math.round(Math.random() * 10) % confettiColors.length]);
+        let con = new Confetti(confettiColors[Math.round(Math.random() * 10) % confettiColors.length]);
         con.threegroup.position.x = Math.sin(Math.PI * (Math.random())) * (width / 6) - (Math.random() * 300);
         con.threegroup.position.y = Math.cos(Math.PI * (Math.random())) * (height) - (Math.random() * 350);
         con.threegroup.position.z = 50 * Math.random() * 10 - t;
@@ -89,9 +88,7 @@ function createConfetti(t) {
 // CONFETTI
 Confetti = function (c) {
 
-    var cWidth = width ? !isMobile : height;
-
-    var plane = new THREE.PlaneBufferGeometry(width / 40, width / 20);
+    let plane = new THREE.PlaneBufferGeometry(width / 40, width / 20);
     this.material = new THREE.MeshBasicMaterial({
 
         color: c,
@@ -106,7 +103,7 @@ Confetti = function (c) {
     this.threegroup.add(this.confetto);
     this.threegroup.lookAt(new THREE.Vector3(Math.random() * 10, Math.random() * 80, 60));
 
-}
+};
 
 // RESET CONFETTI
 Confetti.prototype.update = function () {
@@ -119,13 +116,13 @@ Confetti.prototype.update = function () {
         this.threegroup.position.y = height - 1;
     }
 
-}
+};
 
 // METHODS
 function loop() {
     render();
 
-    for (var i = 0; i < confetti.length; i++) {
+    for (let i = 0; i < confetti.length; i++) {
         confetti[i].update();
     }
 
