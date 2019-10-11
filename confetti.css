@@ -34,6 +34,10 @@ div {
   white-space: pre-line;
 }
 
+.sr-only {
+  display: hidden;
+}
+
 #blurb {
   color: gray;
   font-size: 36px;
