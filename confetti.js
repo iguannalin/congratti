@@ -29,10 +29,9 @@ let random = [], randomX = 0;
 
 function generateRandom() {
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 100; i++) {
         random[i] = Math.random();
     }
-
 }
 
 function getRandom(n) {
@@ -93,12 +92,13 @@ function createConfetti(t) {
 
     for (let i = 0; i < t; i++) {
 
-        let con = new Confetti(confettiColors[Math.round(Math.random() * 10) % confettiColors.length]);
-        con.threegroup.position.x = Math.sin(Math.PI * (Math.random())) * (width / 6) - (Math.random() * 300);
-        con.threegroup.position.y = Math.cos(Math.PI * (Math.random())) * (height) - (Math.random() * 350);
-        con.threegroup.position.z = 50 * Math.random() * 10 - t;
+        let con = new Confetti(confettiColors[Math.round(getRandom(randomX+1) * 10) % confettiColors.length]);
+        con.threegroup.position.x = Math.sin(Math.PI * (getRandom(randomX + 2))) * (width / 6) - (getRandom(randomX + 3) * 300);
+        con.threegroup.position.y = Math.cos(Math.PI * (getRandom(randomX + 4))) * (height) - (getRandom(randomX + 5) * 350);
+        con.threegroup.position.z = getRandom(randomX + 6) * 500 - t;
         confetti.push(con);
         scene.add(con.threegroup);
+        randomX += i;
 
     }
 
@@ -112,7 +112,7 @@ Confetti = function (c) {
 
         color: c,
         transparent: true,
-        opacity: Math.random() * 1.2,
+        opacity: getRandom(randomX) * 1.2,
         side: THREE.DoubleSide
 
     });
@@ -120,8 +120,9 @@ Confetti = function (c) {
 
     this.threegroup = new THREE.Group();
     this.threegroup.add(this.confetto);
-    this.threegroup.lookAt(new THREE.Vector3(Math.random() * 10, Math.random() * 80, 60));
+    this.threegroup.lookAt(new THREE.Vector3(getRandom(randomX+1) * 10, getRandom(randomX+1) * 80, 60));
 
+    randomX += 1
 };
 
 // RESET CONFETTI
@@ -129,11 +130,13 @@ Confetti.prototype.update = function () {
 
     if (this.threegroup.position.y < height && this.threegroup.position.y > -height) {
         this.threegroup.position.y -= 1;
-        this.threegroup.rotateY(Math.random() * 0.05);
-        this.threegroup.rotateZ(Math.random() * 0.01);
+        this.threegroup.rotateY(getRandom(randomX) * 0.05);
+        this.threegroup.rotateZ(getRandom(randomX + 1) * 0.01);
     } else {
         this.threegroup.position.y = height - 1;
     }
+
+    randomX += 1
 
 };
 
@@ -146,6 +149,8 @@ function loop() {
     }
 
     requestAnimationFrame(loop);
+    randomX = 0;
+
 }
 
 function render() {
