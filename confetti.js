@@ -93,14 +93,15 @@ function createConfetti(t) {
 
     for (let i = 0; i < t; i++) {
 
-        let con = new Confetti(confettiColors[Math.round(getRandom(randomX+1) * 10) % confettiColors.length]);
-        con.threegroup.position.x = Math.sin(Math.PI * (getRandom(randomX + 2))) * (width / 6) - (getRandom(randomX + 3) * 300);
-        con.threegroup.position.y = Math.cos(Math.PI * (getRandom(randomX + 4))) * (height) - (getRandom(randomX + 5) * 350);
-        con.threegroup.position.z = getRandom(randomX + 6) * 500 - t;
+        let con = new Confetti(confettiColors[Math.round(Math.random() * 10) % confettiColors.length]);
+        con.threegroup.position.x = Math.sin(Math.PI * (Math.random())) * (width / 6) - (Math.random() * 300);
+        con.threegroup.position.y = Math.cos(Math.PI * (Math.random())) * (height) - (Math.random() * 350);
+        con.threegroup.position.z = Math.random() * 500 - t;
         confetti.push(con);
         scene.add(con.threegroup);
-        randomX += i;
-        generateRandom();
+        // randomX += i;
+        // generateRandom();
+
     }
 
 }
