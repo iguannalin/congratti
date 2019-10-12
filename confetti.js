@@ -29,7 +29,8 @@ let random = [], randomX = 0;
 
 function generateRandom() {
 
-    for (let i = 0; i < 100; i++) {
+    let l = random.length;
+    for (let i = l; i < l+17; i++) {
         random[i] = Math.random();
     }
 }
@@ -99,7 +100,7 @@ function createConfetti(t) {
         confetti.push(con);
         scene.add(con.threegroup);
         randomX += i;
-
+        generateRandom();
     }
 
 }
