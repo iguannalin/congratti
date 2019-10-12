@@ -29,8 +29,7 @@ let random = [], randomX = 0;
 
 function generateRandom() {
 
-    let l = random.length;
-    for (let i = l; i < l+17; i++) {
+    for (let i = 0; i < 17; i++) {
         random[i] = Math.random();
     }
 }
@@ -99,8 +98,6 @@ function createConfetti(t) {
         con.threegroup.position.z = Math.random() * 500 - t;
         confetti.push(con);
         scene.add(con.threegroup);
-        // randomX += i;
-        // generateRandom();
 
     }
 
