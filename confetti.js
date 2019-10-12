@@ -34,7 +34,7 @@ function generateRandom() {
     }
 }
 
-function getRandom(n) {
+function Math.random() {
 
     return random[n % random.length];
 
@@ -43,7 +43,7 @@ function getRandom(n) {
 // INIT SCENE
 function init() {
 
-    generateRandom();
+    // generateRandom();
     scene = new THREE.Scene();
     height = window.innerHeight;
     width = window.innerWidth;
@@ -111,7 +111,7 @@ Confetti = function (c) {
 
         color: c,
         transparent: true,
-        opacity: getRandom(randomX) * 1.2,
+        opacity: Math.random() * 1.2,
         side: THREE.DoubleSide
 
     });
@@ -119,7 +119,7 @@ Confetti = function (c) {
 
     this.threegroup = new THREE.Group();
     this.threegroup.add(this.confetto);
-    this.threegroup.lookAt(new THREE.Vector3(getRandom(randomX+1) * 10, getRandom(randomX+1) * 80, 60));
+    this.threegroup.lookAt(new THREE.Vector3(Math.random() * 10, Math.random() * 80, 60));
 
     randomX += 1
 };
@@ -129,8 +129,8 @@ Confetti.prototype.update = function () {
 
     if (this.threegroup.position.y < height && this.threegroup.position.y > -height) {
         this.threegroup.position.y -= 1;
-        this.threegroup.rotateY(getRandom(randomX) * 0.05);
-        this.threegroup.rotateZ(getRandom(randomX + 1) * 0.01);
+        this.threegroup.rotateY(Math.random() * 0.05);
+        this.threegroup.rotateZ(Math.random() * 0.01);
     } else {
         this.threegroup.position.y = height - 1;
     }
