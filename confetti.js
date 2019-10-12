@@ -24,9 +24,27 @@ let height,
 let confetti = [],
     confettiColors = [0xC9D757, 0xDE4B72, 0xF1BA48, 0xDE7567, 0x4C94BE, 0xF4F0C9, 0xD93732, 0xC0C1BD, 0xE07F8D, 0xED3D9, 0xF9EF82, 0xFBFCF7];
 
+// RANDOM
+let random = [], randomX = 0;
+
+function generateRandom() {
+
+    for (let i = 0; i < 10; i++) {
+        random[i] = Math.random();
+    }
+
+}
+
+function getRandom(n) {
+
+    return random[n % random.length];
+
+}
+
 // INIT SCENE
 function init() {
 
+    generateRandom();
     scene = new THREE.Scene();
     height = window.innerHeight;
     width = window.innerWidth;
@@ -54,6 +72,7 @@ function init() {
     windowHalfY = height / 2;
     window.addEventListener('resize', onWindowResize, false);
     controls = new THREE.OrbitControls(camera, renderer.domElement);
+
 }
 
 function onWindowResize() {
