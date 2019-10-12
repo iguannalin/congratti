@@ -104,7 +104,6 @@ Confetti = function (c) {
     this.threegroup.add(this.confetto);
     this.threegroup.lookAt(new THREE.Vector3(Math.random() * 10, Math.random() * 80, 60));
 
-    randomX += 1
 };
 
 // RESET CONFETTI
@@ -118,8 +117,6 @@ Confetti.prototype.update = function () {
         this.threegroup.position.y = height - 1;
     }
 
-    randomX += 1
-
 };
 
 // METHODS
@@ -131,7 +128,6 @@ function loop() {
     }
 
     requestAnimationFrame(loop);
-    randomX = 0;
 
 }
 
