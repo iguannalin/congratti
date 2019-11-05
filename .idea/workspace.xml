@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71c69673-3e7b-4d6e-9708-b794211137b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/blog/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/static/css/main.f6aa9f0e.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/static/css/main.f6aa9f0e.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/static/js/main.9e9c6375.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/static/js/main.9e9c6375.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,7 +23,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -73,6 +65,7 @@
       <updated>1572505104539</updated>
       <workItem from="1572505106108" duration="81000" />
       <workItem from="1572505202420" duration="140000" />
+      <workItem from="1572855315575" duration="505000" />
     </task>
     <task id="LOCAL-00001" summary="(Added a blog)">
       <created>1572505183163</created>
@@ -85,10 +78,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221000" />
+    <option name="totallyTimeSpent" value="726000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="1" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
