@@ -1,68 +1,47 @@
-// TYPEWRITER VARIABLES, Inspired by Josh Collinsworth https://bit.ly/2MaA5CQ
-var n = 0;
-var textToType = {
-  me: "I am a",
-  myThings: [" designer.", " programmer."]
-};
-var target = document.getElementById('blurb');
-var interval = 0;
-var textIndex = 0;
+let n = 0,
+    textIndex = 0,
+    interval = Math.floor((Math.random() * 200) + 5),
+    textToType = {
+        description: 'I am',
+        titles: [' a bad watercolorist.', ' some sort of software engineer.']
+    },
+    target = document.getElementById('blurb');
 
-function typewrite( blurb, target ) {
+function typewrite(blurb, target) {
+    if (typeof (blurb[n] !== 'undefined')) {
+        target.textContent += blurb[n];
+    }
 
+    if (blurb[n] === '.' || blurb[n] === ')') {
+        setTimeout(backspace, 550);
+    }
 
-  if ( typeof( blurb[n] !== 'undefined' ) ) {
+    interval = Math.floor((Math.random() * 300) + 5);
+    n++;
 
-    target.textContent += blurb[n];
-
-  }
-
-  if ( blurb[n] == '.' ) {
-
-    setTimeout( function() { backspace(); }, 550 );
-  
-  }
-
-  interval = Math.floor((Math.random() * 300) + 5);
-
-  n++;
-
-  if ( n < blurb.length ) {
-
-    setTimeout( function() { 
-
-      typewrite( blurb, target );
-
-    }, interval );
-
-  }
+    if (n < blurb.length) {
+        setTimeout(function () {
+            typewrite(blurb, target);
+        }, interval);
+    }
 
 }
 
 function backspace() {
 
-  interval = Math.floor((Math.random() * 200) + 5);
-  var t = document.getElementById('blurb');
+    interval = Math.floor((Math.random() * 200) + 5);
+    let t = document.getElementById('blurb');
 
-  if ( t.textContent !== textToType.me ) {
+    if (t.textContent !== textToType.description) {
+        t.textContent = t.textContent.toString().slice(0, -1);
+        setTimeout(backspace, interval);
 
-    setTimeout( function() {
-
-        t.textContent = t.textContent.toString().slice( 0, -1 );
-        backspace();
-
-      }, interval );
-
-  }
-
-  else {
-
-    n = 0;
-    textIndex = ( textIndex + 1 ) % textToType.myThings.length;
-    typewrite( textToType.myThings[textIndex], target );
-
-  }
+    } else {
+        n = 0;
+        textIndex = (textIndex + 1) % textToType.titles.length;
+        typewrite(textToType.titles[textIndex], target);
+    }
 
 }
 
-if ( target ) backspace();
+if (target) backspace();
