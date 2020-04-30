@@ -11,8 +11,7 @@ let scene,
     farPlane,
     renderer,
     container,
-    isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-isAndroid = navigator.userAgent.match(/Android/i);
+    isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 // SCREEN VARIABLES
 let height,
@@ -89,7 +88,7 @@ function createConfetti(t) {
 // CONFETTI
 Confetti = function (c) {
 
-    let plane = new THREE.PlaneBufferGeometry(width / 40, width / 20);
+    let plane = new THREE.PlaneBufferGeometry(width / 30, width / 10);
     this.material = new THREE.MeshBasicMaterial({
 
         color: c,
