@@ -10,7 +10,7 @@ body {
     align-items: center;
     background-color: #fff9e6;
     color: #2a3340;
-    font-display: 'swap';
+    font-display: swap;
     font-family: 'Arial Rounded MT Bold', 'Nunito', Arial, sans-serif;
     font-style: normal;
     font-variant: normal;
@@ -35,7 +35,7 @@ div {
 }
 
 .sr-only {
-    display: hidden;
+    visibility: hidden;
 }
 
 #blurb {
@@ -95,7 +95,7 @@ footer {
 
 @media only screen and (min-width: 992px) {
     body {
-        font-display: 'swap';
+        font-display: swap;
         font-family: 'Arial Rounded MT Bold', 'Nunito', Arial, sans-serif;
         font-style: normal;
         font-variant: normal;

@@ -2,15 +2,12 @@ let n = 0,
     textIndex = 0,
     interval = Math.floor((Math.random() * 200) + 5),
     textToType = {
-        description: 'I am a',
-        titles: [' doodler :)',
-            ' front-end & UX developer.'
-        ]
+        description: 'I am',
+        titles: [' a bad watercolorist.', ' some sort of software engineer.']
     },
     target = document.getElementById('blurb');
 
 function typewrite(blurb, target) {
-
     if (typeof (blurb[n] !== 'undefined')) {
         target.textContent += blurb[n];
     }
