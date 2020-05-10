@@ -1,0 +1,38 @@
+.Scroll-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.section {
+  //width: 50%;
+}
+
+.section img {
+  width: 50%;
+}
+
+.first {
+  background-color: #EDEDE9;
+}
+
+.second {
+  background-color: #CCDEE7;
+}
+
+.third {
+  background-color: #EBD7C9;
+}
+
+.fourth {
+  background-color: #C4B99B;
+}
+
+.fifth {
+  background-color: #90664F;
+}
+
+.sixth {
+  background-color: #38516A;
+}
