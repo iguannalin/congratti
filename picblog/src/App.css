@@ -1,3 +1,5 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,600;1,700&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,600;1,700&family=Roboto+Mono:ital,wght@0,100;0,300;0,400;1,500&display=swap');
 .App {
     min-height: 100vh;
     display: flex;
@@ -5,7 +7,8 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: #38516A;
     text-align: center;
     background-color: #EDEDE9;
+    font-family: 'Playfair Display', serif;
 }

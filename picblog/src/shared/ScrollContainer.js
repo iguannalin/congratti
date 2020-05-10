@@ -23,8 +23,10 @@ function ScrollContainer() {
                 <img src={Daytime} alt="Daytime at the beach, somewhere on the north-western coast of California."/>
             </div>
             <div className="section fourth">
-                <img src={EveningRock} alt="Evening shot of a rock in the ocean."/>
-                <img src={EveningBeach} alt="Evening shot of the waves receding on the beach."/>
+                {/*<div className="two-columns">*/}
+                    <img src={EveningRock} alt="Evening shot of a rock in the ocean."/>
+                    <img src={EveningBeach} alt="Evening shot of the waves receding on the beach."/>
+                {/*</div>*/}
             </div>
             <div className="section fifth">
                 <img src={SunsetWaves} alt="The waves crashing onto a beach at sunset."/>

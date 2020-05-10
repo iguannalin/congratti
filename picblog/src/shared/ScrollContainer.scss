@@ -1,3 +1,10 @@
+$bg-first-color: #EDEDE9;
+$bg-second-color: #CCDEE7;
+$bg-third-color: #EBD7C9;
+$bg-fourth-color: #C4B99B;
+$bg-fifth-color: #90664F;
+$bg-sixth-color: #38516A;
+
 .Scroll-Container {
   display: flex;
   justify-content: center;
@@ -6,33 +13,44 @@
 }
 
 .section {
-  //width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 .section img {
   width: 50%;
+  padding: 5%;
+}
+
+.two-columns {
+}
+
+
+.two-columns img {
+  //width: 30%;
+
 }
 
 .first {
-  background-color: #EDEDE9;
+  background-image: linear-gradient($bg-first-color, $bg-second-color);
 }
 
 .second {
-  background-color: #CCDEE7;
+  background-image: linear-gradient($bg-second-color, $bg-third-color);
 }
 
 .third {
-  background-color: #EBD7C9;
+  background-image: linear-gradient($bg-third-color, $bg-fourth-color);
 }
 
 .fourth {
-  background-color: #C4B99B;
+  background-image: linear-gradient($bg-fourth-color, $bg-fifth-color);
 }
 
 .fifth {
-  background-color: #90664F;
+  background-image: linear-gradient($bg-fifth-color, $bg-sixth-color);
 }
 
 .sixth {
-  background-color: #38516A;
+  background-image: linear-gradient($bg-sixth-color, black);
 }
