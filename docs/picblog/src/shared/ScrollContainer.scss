@@ -18,7 +18,7 @@ $bg-sixth-color: #38516A;
 
 .section img {
   width: 50%;
-  padding: 5%;
+  padding: 5% 5% 1%;
 }
 
 .two-columns img {
@@ -27,24 +27,30 @@ $bg-sixth-color: #38516A;
 
 .first {
   background-image: linear-gradient($bg-first-color, $bg-second-color);
+  color: $bg-sixth-color;
 }
 
 .second {
   background-image: linear-gradient($bg-second-color, $bg-third-color);
+  color: $bg-fifth-color;
 }
 
 .third {
   background-image: linear-gradient($bg-third-color, $bg-fourth-color);
+  color: $bg-fourth-color;
 }
 
 .fourth {
   background-image: linear-gradient($bg-fourth-color, $bg-fifth-color);
+  color: $bg-third-color;
 }
 
 .fifth {
   background-image: linear-gradient($bg-fifth-color, $bg-sixth-color);
+  color: $bg-second-color;
 }
 
 .sixth {
   background-image: linear-gradient($bg-sixth-color, black);
+  color: $bg-first-color;
 }
