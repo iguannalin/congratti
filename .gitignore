@@ -1,2 +1,4 @@
 ./blog/*
 ./.idea
+./.idea/*
+./docs/picblog/node_modules
