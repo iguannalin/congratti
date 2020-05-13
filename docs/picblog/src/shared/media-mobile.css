@@ -1,8 +1,11 @@
+.section figure {
+  margin: 0 auto !important;
+}
+
 .section img {
   width: 100%;
   margin: 5% 0 1%;
 }
 
 .two-columns img {
-  //width: 100%;
 }
