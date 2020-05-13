@@ -15,7 +15,6 @@
   "scripts": {
     "add-cname": "mv public/CNAME build/",
     "predeploy": "npm run build && add-cname",
-    "deploy": "gh-pages -b master/docs/picblog -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
