@@ -13,7 +13,8 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "add-cname": "mv public/CNAME build/",
+    "predeploy": "npm run build && add-cname",
     "deploy": "gh-pages -b master/docs/picblog -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
