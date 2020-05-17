@@ -4,6 +4,7 @@ $bg-third-color: #EBD7C9;
 $bg-fourth-color: #C4B99B;
 $bg-fifth-color: #90664F;
 $bg-sixth-color: #38516A;
+$bg-seventh-color: #000;
 
 @import url('media-mobile.css') (min-width: 0px);
 @import url('./media.css') (min-width: 768px);
@@ -20,32 +21,32 @@ $bg-sixth-color: #38516A;
 }
 
 .first {
-  background-image: linear-gradient($bg-first-color, $bg-second-color);
+  background-image: linear-gradient($bg-first-color, $bg-second-color 75%);
   color: $bg-sixth-color;
 }
 
 .second {
-  background-image: linear-gradient($bg-second-color, $bg-third-color);
+  background-image: linear-gradient($bg-second-color, $bg-third-color 75%);
   color: $bg-fifth-color;
 }
 
 .third {
-  background-image: linear-gradient($bg-third-color, $bg-fourth-color);
+  background-image: linear-gradient($bg-third-color, $bg-fourth-color 75%);
   color: $bg-fifth-color;
 }
 
 .fourth {
-  background-image: linear-gradient($bg-fourth-color, $bg-fifth-color);
+  background-image: linear-gradient($bg-fourth-color, $bg-fifth-color 75%);
   color: $bg-third-color;
 }
 
 .fifth {
-  background-image: linear-gradient($bg-fifth-color, $bg-sixth-color);
+  background-image: linear-gradient($bg-fifth-color, $bg-sixth-color 75%);
   color: $bg-second-color;
 }
 
 .sixth {
-  background-image: linear-gradient($bg-sixth-color, black);
+  background-image: linear-gradient($bg-sixth-color, $bg-seventh-color 75%);
   color: $bg-first-color;
-  padding-bottom: 5%;
+  padding-bottom: 30%;
 }
