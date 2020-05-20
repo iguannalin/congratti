@@ -10,8 +10,7 @@ let scene,
     nearPlane,
     farPlane,
     renderer,
-    container,
-    isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    container;
 
 // SCREEN VARIABLES
 let height,
@@ -48,7 +47,7 @@ function init() {
     renderer.setSize(width, height);
     container = document.body;
     container.appendChild(renderer.domElement);
-    container.setAttribute('aria-label', 'Interactive graphic of falling confetti');
+    container.setAttribute('aria-label', 'interactive graphic of falling confetti');
     windowHalfX = width / 2;
     windowHalfY = height / 2;
     window.addEventListener('resize', onWindowResize, false);
@@ -57,9 +56,6 @@ function init() {
 }
 
 function onWindowResize() {
-
-    if (isMobile) return;
-
     height = window.innerHeight;
     width = window.innerWidth;
     windowHalfX = width / 2;
@@ -67,7 +63,6 @@ function onWindowResize() {
     renderer.setSize(width, height);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
-
 }
 
 function createConfetti(t) {
