@@ -3,7 +3,7 @@ let n = 0,
     interval = Math.floor((Math.random() * 200) + 5),
     textToType = {
         description: 'I am',
-        titles: [' a bad watercolorist.', ' some sort of software engineer.']
+        titles: [' a bad watercolorist.', ' some sort of software engineer.', ' an art-enthusiast, allergic dog-lover.']
     },
     target = document.getElementById('blurb');
 
