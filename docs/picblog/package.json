@@ -16,7 +16,7 @@
     "add-cname": "mv public/CNAME build/",
     "predeploy": "npm run build && add-cname",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && rm -r ../filmotography/** && cp -r build/** ../filmotography",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
