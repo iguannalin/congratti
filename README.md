@@ -2,5 +2,5 @@
 For new changes:
 Run ' . dev-portfolio/runbuild.sh'
 Push, then checkout to master branch
-Run ' . docs/fetchdeploy.sh $BRANCHNAME'
+Run ' . docs/public/fetchdeploy.sh $BRANCHNAME'
 Done!
