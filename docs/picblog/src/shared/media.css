@@ -1,0 +1,12 @@
+.section img {
+  width: 50%;
+  padding: 5% 5% 0;
+}
+
+.section figcaption {
+  padding-bottom: 5%;
+}
+
+.two-columns img {
+  width: 40%;
+}
