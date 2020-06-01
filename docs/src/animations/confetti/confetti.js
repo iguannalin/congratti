@@ -1,5 +1,4 @@
-// Using Karim Maaloul's code as a guide
-// https://bit.ly/2JU9XdV
+// Using Karim Maaloul's code as a guide (https://bit.ly/2JU9XdV)
 
 // THREE VARIABLES
 let scene,
@@ -23,8 +22,8 @@ let confetti = [],
     confettiColors = [0xC9D757, 0xDE4B72, 0xF1BA48, 0xDE7567, 0x4C94BE, 0xF4F0C9, 0xD93732, 0xC0C1BD, 0xE07F8D, 0xED3D9, 0xF9EF82, 0xFBFCF7],
     fallingSpeed = 0;
 
-// INIT SCENE
-function init() {
+// init SCENE
+function initScene() {
     scene = new THREE.Scene();
     height = window.innerHeight;
     width = window.innerWidth;
@@ -118,13 +117,17 @@ function render() {
 
 function handleClick() {
     const r = Math.random() < .5;
-    document.body.style.backgroundColor = r && 'black' || '#fff9e6';
-    document.body.style.color = r && 'white' || '#2a3340';
+    document.body.style.backgroundColor = r && '#333333' || '#fff9e6';
+    document.body.style.color = r && '#fff9e6' || '#2a3340';
     fallingSpeed = r && 25 || 0;
 }
 
-// CALLS
-init();
-createConfetti(25);
-loop();
-document.addEventListener('click', handleClick);
+function init() {
+    document.addEventListener('click' || 'touchend', handleClick);
+    // console.log('isMobile', isMobileDevice);
+    initScene();
+    createConfetti(25);
+    loop();
+}
+
+document.addEventListener("DOMContentLoaded", init);

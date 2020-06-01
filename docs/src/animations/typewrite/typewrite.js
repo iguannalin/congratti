@@ -1,3 +1,5 @@
+import isMobile from "../../utils/is-mobile.js";
+
 let n = 0,
     textIndex = 0,
     interval = Math.floor((Math.random() * 200) + 5),
@@ -5,7 +7,8 @@ let n = 0,
         description: 'I am',
         titles: [' an amateur watercolorist.', ' some sort of software engineer.', ' an art-enthusiast, allergic dog-lover.']
     },
-    target = document.getElementById('blurb');
+    target = document.getElementById('blurb'),
+    isMobileDevice = isMobile.any();
 
 function typewrite(blurb, target) {
     if (typeof (blurb[n] !== 'undefined')) {
@@ -39,9 +42,15 @@ function backspace() {
 }
 
 function handleClick() {
-    target.textContent = textToType.description + textToType.titles[textIndex] + '         ';
+    target.textContent = textToType.description + textToType.titles[textIndex] + ' .';
     textIndex = (textIndex + 1) % textToType.titles.length;
 }
 
-document.addEventListener('click', handleClick);
-if (target) backspace();
+function init() {
+    document.addEventListener('click' || 'touchend', handleClick);
+    if (target) backspace();
+    console.log('isMobile', isMobileDevice);
+}
+
+document.addEventListener("DOMContentLoaded", init);
+
