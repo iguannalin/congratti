@@ -47,7 +47,7 @@ function handleClick() {
 }
 
 function init() {
-    document.addEventListener('click' || 'touchend', handleClick);
+    document.addEventListener('click' || 'touchstart', handleClick);
     if (target) backspace();
     console.log('isMobile', isMobileDevice);
 }
