@@ -14,8 +14,8 @@ function typewrite(blurb, target) {
     if (typeof (blurb[n] !== 'undefined')) {
         target.textContent += blurb[n];
     }
-    if (blurb[n] === '.' || blurb[n] === ')') {
-        setTimeout(backspace, 550);
+    if (blurb[n] === '.') {
+        setTimeout(backspace, 1000);
     }
     interval = Math.floor((Math.random() * 300) + 5);
     n++;
@@ -42,8 +42,8 @@ function backspace() {
 }
 
 function handleClick() {
-    target.textContent = textToType.description + textToType.titles[textIndex] + ' .';
-    textIndex = (textIndex + 1) % textToType.titles.length;
+    target.textContent = textToType.description + textToType.titles[textIndex];
+    n = textToType.titles[textIndex].length-1;
 }
 
 function init() {
