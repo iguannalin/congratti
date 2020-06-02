@@ -1,4 +1,7 @@
 // Using Karim Maaloul's code as a guide (https://bit.ly/2JU9XdV)
+// Color palettes from https://github.com/mattdesl/color-wander
+const palette = import('./palette.json');
+console.log('Hi ', palette);
 
 // THREE VARIABLES
 let scene,
