@@ -115,7 +115,7 @@ function render() {
     renderer.render(scene, camera);
 }
 
-function handleClick() {
+function handleClick(e) {
     const r = Math.random() < .5;
     document.body.style.backgroundColor = r && '#333333' || '#fff9e6';
     document.body.style.color = r && '#fff9e6' || '#2a3340';
@@ -123,7 +123,7 @@ function handleClick() {
 }
 
 function init() {
-    document.addEventListener('click' || 'touchstart', handleClick);
+    ['click', 'touchend'].forEach(evt => document.addEventListener(evt, handleClick));
     // console.log('isMobile', isMobileDevice);
     initScene();
     createConfetti(25);
