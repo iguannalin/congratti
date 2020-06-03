@@ -1,5 +1,5 @@
 import * as THREEOrbit from "../../utils/three-OrbitControls.js";
-import "../../utils/three.min.js";
+import * as THREE from "../../utils/three.module.js";
 
 // Using Karim Maaloul's code as a guide (https://bit.ly/2JU9XdV)
 
