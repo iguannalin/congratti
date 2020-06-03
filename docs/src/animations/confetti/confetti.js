@@ -80,7 +80,8 @@ function createConfetti(t) {
 
 // CONFETTI
 function Confetti(c) {
-    let plane = new THREE.PlaneBufferGeometry(width / 30, width / 10);
+    let side = (width > height) ? width : height;
+    let plane = new THREE.PlaneBufferGeometry(side / 30, side / 10);
     this.material = new THREE.MeshBasicMaterial({
         color: c,
         transparent: true,
@@ -91,7 +92,7 @@ function Confetti(c) {
     this.threegroup = new THREE.Group();
     this.threegroup.add(this.confetto);
     this.threegroup.lookAt(new THREE.Vector3(Math.random() * 10, Math.random() * 80, 60));
-};
+}
 
 // RESET CONFETTI
 Confetti.prototype.update = function () {
