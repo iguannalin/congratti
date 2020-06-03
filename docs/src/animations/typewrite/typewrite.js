@@ -41,15 +41,14 @@ function backspace() {
     }
 }
 
-function handleClick(e) {
+function handleClick() {
     target.textContent = textToType.description + textToType.titles[textIndex];
     n = textToType.titles[textIndex].length - 1;
 }
 
 function init() {
-    if (!isMobileDevice) document.addEventListener('click', handleClick);
+    // if (!isMobileDevice) document.addEventListener('click', handleClick);
     if (target) backspace();
-    console.log('isMobile', isMobileDevice);
 }
 
 document.addEventListener("DOMContentLoaded", init);
