@@ -47,7 +47,7 @@ function handleClick(e) {
 }
 
 function init() {
-    ['click', 'touchend'].forEach(evt => document.addEventListener(evt, handleClick));
+    if (!isMobileDevice) document.addEventListener('click', handleClick);
     if (target) backspace();
     console.log('isMobile', isMobileDevice);
 }

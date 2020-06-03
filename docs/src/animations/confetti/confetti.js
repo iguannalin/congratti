@@ -4,6 +4,13 @@ const palette = import('./palette.json');
 console.log('Hi ', palette);
 
 // THREE VARIABLES
+import isMobile from "../../utils/is-mobile.js";
+import * as THREEOrbit from "../../utils/three-OrbitControls.js";
+import * as THREE from "../../utils/three.module.js";
+let isMobileDevice = isMobile.any();
+
+console.log('**Hi ', isMobileDevice);
+
 let scene,
     camera,
     controls,
@@ -52,7 +59,7 @@ function initScene() {
     windowHalfX = width / 2;
     windowHalfY = height / 2;
     window.addEventListener('resize', onWindowResize, false);
-    controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls = new THREEOrbit.OrbitControls(camera, renderer.domElement);
 }
 
 function onWindowResize() {
@@ -77,7 +84,7 @@ function createConfetti(t) {
 }
 
 // CONFETTI
-Confetti = function (c) {
+function Confetti(c) {
     let plane = new THREE.PlaneBufferGeometry(width / 30, width / 10);
     this.material = new THREE.MeshBasicMaterial({
         color: c,
@@ -120,14 +127,13 @@ function render() {
 
 function handleClick(e) {
     const r = Math.random() < .5;
-    document.body.style.backgroundColor = r && '#333333' || '#fff9e6';
+    document.body.style.backgroundColor = r && 'black' || '#fff9e6';
     document.body.style.color = r && '#fff9e6' || '#2a3340';
     fallingSpeed = r && 25 || 0;
 }
 
 function init() {
-    ['click', 'touchend'].forEach(evt => document.addEventListener(evt, handleClick));
-    // console.log('isMobile', isMobileDevice);
+    document.addEventListener('click', handleClick)
     initScene();
     createConfetti(25);
     loop();
