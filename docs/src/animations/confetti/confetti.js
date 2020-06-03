@@ -1,16 +1,9 @@
 // Using Karim Maaloul's code as a guide (https://bit.ly/2JU9XdV)
-// Color palettes from https://github.com/mattdesl/color-wander
-const palette = import('./palette.json');
-console.log('Hi ', palette);
 
-// THREE VARIABLES
-import isMobile from "../../utils/is-mobile.js";
 import * as THREEOrbit from "../../utils/three-OrbitControls.js";
 import * as THREE from "../../utils/three.module.js";
-let isMobileDevice = isMobile.any();
 
-console.log('**Hi ', isMobileDevice);
-
+// THREE VARIABLES
 let scene,
     camera,
     controls,
