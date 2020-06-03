@@ -15,14 +15,14 @@ function ScrollContainer() {
         <div className="Scroll-Container">
             <div className="section first">
                 <figure>
-                    <img src={Dawn} alt="Dawn at Yosemite, the sunlight streaming through the valley."/>
+                    <img loading="lazy" src={Dawn} alt="Dawn at Yosemite, the sunlight streaming through the valley."/>
                     <figcaption>Dawn at Yosemite</figcaption>
                 </figure>
             </div>
             <div className="section second">
 
                 <figure>
-                    <img src={Daybreak} alt="Daybreak at Half-Dome, the warm sun rising behind the peak."/>
+                    <img loading="lazy" src={Daybreak} alt="Daybreak at Half-Dome, the warm sun rising behind the peak."/>
                     <figcaption>
                         Daybreak at Half-Dome
                     </figcaption>
@@ -30,7 +30,7 @@ function ScrollContainer() {
             </div>
             <div className="section third">
                 <figure>
-                    <img src={Daytime}
+                    <img loading="lazy" src={Daytime}
                          alt="Daytime at the beach, somewhere on the north-western coast of California."/>
                     <figcaption>
                         Daytime at a beach, on the north-western coast of California
@@ -40,9 +40,9 @@ function ScrollContainer() {
             <div className="section fourth">
                 <div className="two-columns">
                     <figure>
-                        <img src={EveningRock} alt="Evening shot of a rock in the ocean."/>
+                        <img loading="lazy" src={EveningRock} alt="Evening shot of a rock in the ocean."/>
 
-                        <img src={EveningBeach} alt="Evening shot of the waves receding on the beach."/>
+                        <img loading="lazy" src={EveningBeach} alt="Evening shot of the waves receding on the beach."/>
                         <figcaption>
                             Evening at the beach
                         </figcaption>
@@ -51,7 +51,7 @@ function ScrollContainer() {
             </div>
             <div className="section fifth">
                 <figure>
-                    <img src={SunsetWaves} alt="The waves crashing onto a beach at sunset."/>
+                    <img loading="lazy" src={SunsetWaves} alt="The waves crashing onto a beach at sunset."/>
                     <figcaption>
                         Sunset
                     </figcaption>
@@ -59,7 +59,7 @@ function ScrollContainer() {
             </div>
             <div className="section sixth">
                 <figure>
-                    <img src={Dusk} alt="El Capitan in all its glory at dusk."/>
+                    <img loading="lazy" src={Dusk} alt="El Capitan in all its glory at dusk."/>
                     <figcaption>
                         Dusk at El Capitan
                     </figcaption>
