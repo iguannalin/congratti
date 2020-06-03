@@ -93,6 +93,20 @@ footer {
     font-family: monospace;
 }
 
+
+.bottom-note {
+    display: none;
+}
+
+@media only screen and (min-height: 550px) {
+    .bottom-note {
+        display: block;
+        position: absolute;
+        bottom: 16px;
+        font-style: italic;
+    }
+}
+
 @media only screen and (min-width: 992px) {
     body {
         font-display: swap;
