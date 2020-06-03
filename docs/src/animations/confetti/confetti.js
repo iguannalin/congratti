@@ -1,7 +1,7 @@
-// Using Karim Maaloul's code as a guide (https://bit.ly/2JU9XdV)
-
 import * as THREEOrbit from "../../utils/three-OrbitControls.js";
 import * as THREE from "../../utils/three.module.js";
+
+// Using Karim Maaloul's code as a guide (https://bit.ly/2JU9XdV)
 
 // THREE VARIABLES
 let scene,
