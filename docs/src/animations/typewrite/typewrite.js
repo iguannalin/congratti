@@ -5,7 +5,7 @@ let n = 0,
     interval = Math.floor((Math.random() * 200) + 5),
     textToType = {
         description: 'I am',
-        titles: [' an amateur watercolorist.', ' some sort of software engineer.', ' an art-enthusiast, allergic dog-lover.']
+        titles: [' an art-enthusiast, allergic dog-lover.', ' an amateur watercolorist.', ' some sort of software engineer.']
     },
     target = document.getElementById('blurb'),
     isMobileDevice = isMobile.any();
