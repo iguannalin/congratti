@@ -1,7 +1,8 @@
+// Using Karim Maaloul's code as a guide (https://bit.ly/2JU9XdV)
+
 import * as THREEOrbit from "../../utils/three-OrbitControls.js";
 import * as THREE from "../../utils/three.module.js";
-
-// Using Karim Maaloul's code as a guide (https://bit.ly/2JU9XdV)
+import {getRandomPalette, getRandomColorFromPalette} from './palette.js';
 
 // THREE VARIABLES
 let scene,
@@ -22,7 +23,8 @@ let height,
 
 // CONFETTI
 let confetti = [],
-    confettiColors = [0xC9D757, 0xDE4B72, 0xF1BA48, 0xDE7567, 0x4C94BE, 0xF4F0C9, 0xD93732, 0xC0C1BD, 0xE07F8D, 0xED3D9, 0xF9EF82, 0xFBFCF7],
+    confettiColors = getRandomPalette(),
+    bgColor = getRandomColorFromPalette(confettiColors),
     fallingSpeed = 0;
 
 // init SCENE
@@ -120,9 +122,9 @@ function render() {
 
 function handleClick() {
     const r = Math.random() < .5;
-    document.body.style.backgroundColor = r && 'black' || '#fff9e6';
-    document.body.style.color = r && '#fff9e6' || '#2a3340';
     fallingSpeed = r && 25 || 0;
+    confettiColors = getRandomPalette();
+    bgColor = getRandomColorFromPalette(confettiColors);
 }
 
 function init() {
@@ -130,6 +132,7 @@ function init() {
     initScene();
     createConfetti(25);
     loop();
+    document.body.style.backgroundColor = "#" + bgColor.toString();
 }
 
 document.addEventListener("DOMContentLoaded", init);
