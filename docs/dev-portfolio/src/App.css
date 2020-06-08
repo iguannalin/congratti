@@ -3,6 +3,25 @@
     font-family: 'Playfair Display', serif;
 }
 
+.App-container {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 40px;
+}
+
+.navigation {
+    flex: 30%;
+}
+
+.content {
+    flex: 70%;
+}
+
+ul {
+    padding-left: 0;
+    padding-right: 16px;
+}
+
 li {
     font-family: 'Open Sans', sans-serif;
     list-style: none;

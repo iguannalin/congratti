@@ -38,21 +38,23 @@ class App extends React.Component {
     render() {
         return (
             <div className="App">
-                <div className="navigation">
-                    <ul>
-                        <h1>Projects:</h1>
-                        {this.state.projectList.map((project) => {
-                            return (
-                                <li key={project}>
-                                    <button className="project-button"
-                                            onClick={this.handleClick}>{project}</button>
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </div>
-                <div className="content">
-                    {this.getProject()}
+                <div className="App-container">
+                    <div className="navigation">
+                        <ul>
+                            <h1>Projects:</h1>
+                            {this.state.projectList.reverse().map((project) => {
+                                return (
+                                    <li key={project}>
+                                        <button className="project-button"
+                                                onClick={this.handleClick}>{project}</button>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div>
+                    <div className="content">
+                        {this.getProject()}
+                    </div>
                 </div>
             </div>
         );
