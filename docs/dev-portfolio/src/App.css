@@ -13,3 +13,8 @@ li {
 a:hover {
     font-weight: bold;
 }
+
+.project-button {
+    border: none;
+    background-color: transparent;
+}
