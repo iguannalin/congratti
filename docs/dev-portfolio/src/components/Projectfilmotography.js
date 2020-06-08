@@ -1,6 +1,6 @@
 import React from "react";
 
-function Projectspotifyrecentlyadded(props) {
+function Projectfilmotography(props) {
     return (
         <div>
             <p>{props}</p>

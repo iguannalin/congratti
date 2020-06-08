@@ -22,7 +22,7 @@ class App extends React.Component {
         if (this.state.selectedProject) return (
             <div className="Project">
                 <h1>{this.state.selectedProject}</h1>
-                {React.createElement('Project' + this.state.selectedProject.replaceAll(' ', ''), {})}
+                {React.createElement('Project' + this.state.selectedProject.replaceAll(' ', ''), this.state.selectedProject)}
             </div>
         );
         else return (
