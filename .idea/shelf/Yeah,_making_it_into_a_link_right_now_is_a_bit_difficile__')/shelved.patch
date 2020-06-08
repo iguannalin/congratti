@@ -1,0 +1,35 @@
+Index: docs/src/animations/typewrite/typewrite.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import isMobile from \"../../utils/is-mobile.js\";\n\nlet n = 0,\n    textIndex = 0,\n    interval = Math.floor((Math.random() * 200) + 5),\n    textToType = {\n        description: 'I am',\n        titles: [' an amateur watercolorist.', ' some sort of software engineer.', ' an art-enthusiast, allergic dog-lover.']\n    },\n    target = document.getElementById('blurb'),\n    isMobileDevice = isMobile.any();\n\nfunction typewrite(blurb, target) {\n    if (typeof (blurb[n] !== 'undefined')) {\n        target.textContent += blurb[n];\n    }\n    if (blurb[n] === '.') {\n        setTimeout(backspace, 1000);\n    }\n    interval = Math.floor((Math.random() * 300) + 5);\n    n++;\n    if (n < blurb.length) {\n        setTimeout(function () {\n            typewrite(blurb, target);\n        }, interval);\n    }\n}\n\nfunction backspace() {\n    interval = Math.floor((Math.random() * 200) + 5);\n    let t = document.getElementById('blurb');\n\n    if (t.textContent !== textToType.description) {\n        t.textContent = t.textContent.toString().slice(0, -1);\n        setTimeout(backspace, interval);\n\n    } else {\n        n = 0;\n        textIndex = (textIndex + 1) % textToType.titles.length;\n        typewrite(textToType.titles[textIndex], target);\n    }\n}\n\nfunction handleClick() {\n    target.textContent = textToType.description + textToType.titles[textIndex];\n    n = textToType.titles[textIndex].length - 1;\n}\n\nfunction init() {\n    // if (!isMobileDevice) document.addEventListener('click', handleClick);\n    if (target) backspace();\n}\n\ndocument.addEventListener(\"DOMContentLoaded\", init);\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- docs/src/animations/typewrite/typewrite.js	(revision d1fd513228a00132cbacd04ce82d574ed374a7f6)
++++ docs/src/animations/typewrite/typewrite.js	(date 1591216076000)
+@@ -5,14 +5,23 @@
+     interval = Math.floor((Math.random() * 200) + 5),
+     textToType = {
+         description: 'I am',
+-        titles: [' an amateur watercolorist.', ' some sort of software engineer.', ' an art-enthusiast, allergic dog-lover.']
++        titles: [' an art-enthusiast, allergic dog-lover.', ' an amateur watercolorist.', ' some sort of software engineer.'],
++        link: [null, 'https://www.instagram.com/badwatercolor/', null]
+     },
+     target = document.getElementById('blurb'),
+     isMobileDevice = isMobile.any();
+ 
+ function typewrite(blurb, target) {
+     if (typeof (blurb[n] !== 'undefined')) {
+-        target.textContent += blurb[n];
++        if (textToType.link[textIndex]) {
++            const link = document.createElement('a');
++            link.href = textToType.link[textIndex];
++            link.alt = 'Link to my amateur watercolor Instagram blog';
++            console.log('IS LINK', link, 'TARGET TEXT CONTENT', target);
++            link.innerText = target + blurb[n];
++            target.textContent = link;
++        }
++        else target.textContent += blurb[n];
+     }
+     if (blurb[n] === '.') {
+         setTimeout(backspace, 1000);
