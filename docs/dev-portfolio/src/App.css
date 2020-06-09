@@ -41,6 +41,7 @@ li {
     font-style: italic;
     line-height: 2;
     text-decoration: underline;
+    text-align: left;
 }
 
 .Project {
