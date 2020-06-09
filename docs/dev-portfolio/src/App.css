@@ -1,6 +1,7 @@
 .App {
     margin-top: 24px;
     font-family: 'Playfair Display', serif;
+    font-size: 12px;
 }
 
 .App-container {
@@ -26,14 +27,22 @@ li {
     font-family: 'Open Sans', sans-serif;
     list-style: none;
     padding-left: 16px;
-    font-style: italic;
 }
 
-a:hover {
-    font-weight: bold;
+.project-button:hover {
+    font-style: initial;
+    cursor: pointer;
 }
 
 .project-button {
     border: none;
     background-color: transparent;
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 2;
+    text-decoration: underline;
+}
+
+.Project {
+    font-size: 1.3rem;
 }

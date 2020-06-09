@@ -1,9 +1,12 @@
 import React from "react";
 
-function Projectspotifyrecentlyadded(props) {
+const Projectspotifyrecentlyadded = () => {
     return (
         <div>
-            <p>{props}</p>
+            {/*<p>{props.projectTitle}</p>*/}
+            <a href="https://iguannalin.github.io/spotify-recently-added/">View Project</a>
         </div>
     );
-}
+};
+
+export default Projectspotifyrecentlyadded;

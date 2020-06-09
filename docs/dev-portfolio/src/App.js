@@ -1,14 +1,21 @@
 import React from 'react';
 import './App.css';
+import Projecteaturveg from './components/Projecteaturveg';
+import Projectfilmotography from './components/Projectfilmotography';
+import Projectspotifyrecentlyadded from './components/Projectspotifyrecentlyadded';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            components: {
+                eaturveg: Projecteaturveg,
+                spotifyrecentlyadded: Projectspotifyrecentlyadded,
+                filmotography: Projectfilmotography
+            },
             projectList: ['eaturveg', 'Spotify Recently Added', 'Filmotography'],
             selectedProject: null
         };
-
         this.handleClick = this.handleClick.bind(this);
         this.getProject = this.getProject.bind(this);
     }
@@ -19,13 +26,15 @@ class App extends React.Component {
     }
 
     getProject() {
-        if (this.state.selectedProject) return (
-            <div className="Project">
-                <h1>{this.state.selectedProject}</h1>
-                {React.createElement('Project' + this.state.selectedProject.replaceAll(' ', ''), this.state.selectedProject)}
-            </div>
-        );
-        else return (
+        if (this.state.selectedProject) {
+            const Project = this.state.components[this.state.selectedProject.replaceAll(' ', '')];
+            return (
+                <div className="Project">
+                    <h1>{this.state.selectedProject}</h1>
+                    <Project/>
+                </div>
+            );
+        } else return (
             <div className="Project">
                 <p className="home">
                     Hi, welcome to my projects blog.<br/>

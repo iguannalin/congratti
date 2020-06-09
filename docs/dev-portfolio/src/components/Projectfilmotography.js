@@ -1,9 +1,12 @@
 import React from "react";
 
-function Projectfilmotography(props) {
+const Projectfilmotography = () => {
     return (
         <div>
-            <p>{props}</p>
+            {/*<p>{props.projectTitle}</p>*/}
+            <a href="https://annaylin.com/filmotography/">View Project</a>
         </div>
     );
-}
+};
+
+export default Projectfilmotography;

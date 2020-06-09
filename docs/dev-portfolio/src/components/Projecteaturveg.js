@@ -1,9 +1,12 @@
 import React from "react";
 
-function Projecteaturveg() {
+const Projecteaturveg = () => {
     return (
         <div>
-            <p>meow</p>
+            {/*<p>{props.projectTitle}</p>*/}
+            <a href="https://iguannalin.github.io/eaturveg/Projecteaturveg.js">View Project</a>
         </div>
     );
-}
+};
+
+export default Projecteaturveg;
