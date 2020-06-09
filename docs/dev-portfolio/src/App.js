@@ -13,7 +13,7 @@ class App extends React.Component {
                 spotifyrecentlyadded: Projectspotifyrecentlyadded,
                 filmotography: Projectfilmotography
             },
-            projectList: ['eaturveg', 'Spotify Recently Added', 'Filmotography'],
+            projectList: ['Spotify Recently Added', 'Filmotography', 'eaturveg'],
             selectedProject: null
         };
         this.handleClick = this.handleClick.bind(this);
@@ -51,7 +51,7 @@ class App extends React.Component {
                     <div className="navigation">
                         <ul>
                             <h1>Projects:</h1>
-                            {this.state.projectList.reverse().map((project) => {
+                            {this.state.projectList.map((project) => {
                                 return (
                                     <li key={project}>
                                         <button className="project-button"

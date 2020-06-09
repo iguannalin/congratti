@@ -3,7 +3,6 @@ import React from "react";
 const Projecteaturveg = () => {
     return (
         <div>
-            {/*<p>{props.projectTitle}</p>*/}
             <a href="https://iguannalin.github.io/eaturveg/Projecteaturveg.js">View Project</a>
         </div>
     );
