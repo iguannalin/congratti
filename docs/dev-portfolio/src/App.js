@@ -1,18 +1,11 @@
 import React from 'react';
 import './App.css';
-import Projecteaturveg from './components/Projecteaturveg';
-import Projectfilmotography from './components/Projectfilmotography';
-import Projectspotifyrecentlyadded from './components/Projectspotifyrecentlyadded';
+import ProjectsController from "./components/ProjectsController";
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            components: {
-                eaturveg: Projecteaturveg,
-                spotifyrecentlyadded: Projectspotifyrecentlyadded,
-                filmotography: Projectfilmotography
-            },
             projectList: ['Spotify Recently Added', 'Filmotography', 'eaturveg'],
             selectedProject: null
         };
@@ -26,21 +19,13 @@ class App extends React.Component {
     }
 
     getProject() {
-        if (this.state.selectedProject) {
-            const Project = this.state.components[this.state.selectedProject.replaceAll(' ', '')];
-            return (
-                <div className="Project">
-                    <h1>{this.state.selectedProject}</h1>
-                    <Project/>
-                </div>
-            );
-        } else return (
-            <div className="Project">
-                <p className="home">
-                    Hi, welcome to my projects blog.<br/>
-                    <small>Select one from the left.</small>
-                </p>
-            </div>
+        if (this.state.selectedProject) return (
+            <ProjectsController projectName={this.state.selectedProject}/>
+        ); else return (
+            <p className="home">
+                Hi, welcome to my projects blog.<br/>
+                <small>Select one from the left.</small>
+            </p>
         );
     }
 
@@ -62,7 +47,9 @@ class App extends React.Component {
                         </ul>
                     </div>
                     <div className="content">
-                        {this.getProject()}
+                        <div className="Project">
+                            {this.getProject()}
+                        </div>
                     </div>
                 </div>
             </div>
