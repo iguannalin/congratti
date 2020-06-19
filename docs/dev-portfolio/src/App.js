@@ -24,7 +24,7 @@ class App extends React.Component {
         ); else return (
             <p className="home">
                 Hi, welcome to my projects blog.<br/>
-                <small>Select one from the left.</small>
+                <small>Select one from the menu.</small>
             </p>
         );
     }
