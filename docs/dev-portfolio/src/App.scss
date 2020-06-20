@@ -1,6 +1,9 @@
+$primary-font: 'Playfair Display', serif;
+$secondary-font: 'Open Sans', sans-serif;
+
 .App {
     margin-top: 24px;
-    font-family: 'Playfair Display', serif;
+    font-family: $primary-font;
     font-size: 12px;
 }
 
@@ -21,10 +24,10 @@
 ul {
     padding-left: 0;
     padding-right: 16px;
+    font-family: $secondary-font;
 }
 
 li {
-    font-family: 'Open Sans', sans-serif;
     list-style: none;
     padding-left: 16px;
 }
@@ -46,4 +49,11 @@ li {
 
 .Project {
     font-size: 1.3rem;
+}
+
+.project-link, .project-details {
+    font-family: $secondary-font;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 90%;
 }
