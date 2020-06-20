@@ -5,6 +5,6 @@ else
     git st
     git add ../portfolio
     git add ../dev-portfolio
-    git cm '$1'
+    git cm "$1"
     echo 'Ready to push! New changes ' $1
 fi
