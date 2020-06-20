@@ -133,7 +133,7 @@ function init() {
     initScene();
     createConfetti(25);
     loop();
-    document.body.style.backgroundColor = "#" + bgColor.toString();
+    // document.body.style.backgroundColor = "#" + bgColor.toString();
 }
 
 document.addEventListener("DOMContentLoaded", init);
