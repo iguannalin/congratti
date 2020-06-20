@@ -4,7 +4,8 @@ $bg-third-color: #EBD7C9;
 $bg-fourth-color: #C4B99B;
 $bg-fifth-color: #90664F;
 $bg-sixth-color: #38516A;
-$bg-seventh-color: #000;
+$bg-seventh-color: #222;
+$footer-font-color: #cecece;
 
 @import url('media-mobile.css') (min-width: 0px);
 @import url('./media.css') (min-width: 768px);
@@ -16,37 +17,52 @@ $bg-seventh-color: #000;
   flex-flow: column wrap;
 }
 
+.texture-overlay {
+  //background: url('./grainy_texture.png');
+}
+
 .section {
   text-align: center;
 }
 
 .first {
-  background-image: linear-gradient($bg-first-color, $bg-second-color 75%);
+  background-image: url('./grainy_texture.png'), linear-gradient($bg-first-color, $bg-second-color 75%);
   color: $bg-sixth-color;
 }
 
 .second {
-  background-image: linear-gradient($bg-second-color, $bg-third-color 75%);
+  background-image: url('./grainy_texture.png'), linear-gradient($bg-second-color, $bg-third-color 75%);
   color: $bg-fifth-color;
 }
 
 .third {
-  background-image: linear-gradient($bg-third-color, $bg-fourth-color 75%);
+  background-image: url('./grainy_texture.png'), linear-gradient($bg-third-color, $bg-fourth-color 75%);
   color: $bg-fifth-color;
 }
 
 .fourth {
-  background-image: linear-gradient($bg-fourth-color, $bg-fifth-color 75%);
+  background-image: url('./grainy_texture.png'), linear-gradient($bg-fourth-color, $bg-fifth-color 75%);
   color: $bg-third-color;
 }
 
 .fifth {
-  background-image: linear-gradient($bg-fifth-color, $bg-sixth-color 75%);
+  background-image: url('./grainy_texture.png'), linear-gradient($bg-fifth-color, $bg-sixth-color 75%);
   color: $bg-second-color;
 }
 
 .sixth {
-  background-image: linear-gradient($bg-sixth-color, $bg-seventh-color 75%);
+  background-image: url('./grainy_texture.png'), linear-gradient($bg-sixth-color, $bg-seventh-color 75%);
   color: $bg-first-color;
   padding-bottom: 30%;
+}
+
+.footer {
+  background-image: url('./grainy_texture.png');
+  background-color: $bg-seventh-color;
+  color: $footer-font-color;
+  width: 100%
+}
+
+.footer p {
+  font-size: 0.9rem
 }

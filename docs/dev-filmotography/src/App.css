@@ -9,6 +9,7 @@
     font-size: calc(10px + 2vmin);
     color: #38516A;
     text-align: center;
+    background-image: url('./shared/grainy_texture.png');
     background-color: #EDEDE9;
     font-family: 'Playfair Display', serif;
 }
