@@ -7,20 +7,29 @@ class App extends React.Component {
         super(props);
         this.state = {
             projectList: ['Spotify Recently Added', 'Filmotography', 'eaturveg'],
-            selectedProject: null
+            selectedProject: sessionStorage.getItem('pdiddy') || null
         };
         this.handleClick = this.handleClick.bind(this);
+        this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
         this.getProject = this.getProject.bind(this);
     }
 
     handleClick(e) {
         const projectName = (e) ? e.target.innerText.toLowerCase() : null;
         this.setState({selectedProject: projectName});
+        sessionStorage.setItem('pdiddy', projectName);
+    }
+
+    handleBackButtonClick() {
+        sessionStorage.removeItem('pdiddy');
+        this.setState({selectedProject: null});
     }
 
     getProject() {
         if (this.state.selectedProject) return (
-            <ProjectsController projectName={this.state.selectedProject}/>
+            <div>
+                <button aria-label="Back to instructions" className="project-button" onClick={this.handleBackButtonClick}>&#8592;</button>
+                <ProjectsController projectName={this.state.selectedProject}/></div>
         ); else return (
             <p className="home">
                 Hi, welcome to my projects blog.<br/>
