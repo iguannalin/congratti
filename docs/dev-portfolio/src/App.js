@@ -53,6 +53,10 @@ class App extends React.Component {
                                     </li>
                                 );
                             })}
+                            <br/>
+                            <li>
+                                <a className="project-button" href="https://annaylin.com/blog/">older stuff</a>
+                            </li>
                         </ul>
                     </div>
                     <div className="content">
