@@ -23,8 +23,9 @@ let height,
 
 // CONFETTI
 let confetti = [],
-    confettiColors = getRandomPalette(),
-    bgColor = getRandomColorFromPalette(confettiColors),
+    confettiColors = [0xC9D757, 0xDE4B72, 0xF1BA48, 0xDE7567, 0x4C94BE, 0xF4F0C9, 0xD93732, 0xC0C1BD, 0xE07F8D, 0xED3D9, 0xF9EF82, 0xFBFCF7],
+    // confettiColors = getRandomPalette(),
+    // bgColor = getRandomColorFromPalette(confettiColors),
     fallingSpeed = 0;
 
 // init SCENE
@@ -124,8 +125,8 @@ function render() {
 function handleClick() {
     const r = Math.random() < .5;
     fallingSpeed = r && 25 || 0;
-    confettiColors = getRandomPalette();
-    bgColor = getRandomColorFromPalette(confettiColors);
+    // confettiColors = getRandomPalette();
+    // bgColor = getRandomColorFromPalette(confettiColors);
 }
 
 function init() {

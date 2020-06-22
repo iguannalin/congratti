@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:700&display=swap');
+@import url(typography-mobile.css);
+@import url(typography.css) (min-width: 768px);
 
 body {
     margin: 0 auto;
@@ -30,8 +32,6 @@ div {
 }
 
 .header p {
-    font-size: 72px;
-    line-height: 1.7;
     white-space: pre-line;
 }
 
@@ -41,7 +41,6 @@ div {
 
 #blurb {
     color: gray;
-    font-size: 36px;
 }
 
 #blurb:after {
@@ -61,19 +60,6 @@ div {
     }
 }
 
-.icons {
-    position: absolute;
-    z-index: 999;
-    top: 35vh;
-    right: 3vw;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 44px;
-    line-height: 2;
-}
-
 .icons a, .icons a:visited {
     z-index: 99999;
     color: initial;
@@ -90,16 +76,15 @@ footer {
     position: absolute;
     bottom: 10px;
     right: 3vw;
-    font-size: 0.9rem;
     font-family: monospace;
 }
 
 
-.bottom-note {
+.bottom-note, footer, .icons {
     display: none;
 }
 
-@media only screen and (min-height: 550px) {
+@media only screen and (min-height: 550px) and (min-width: 300px) {
     .bottom-note {
         display: block;
         position: absolute;
@@ -108,26 +93,21 @@ footer {
     }
 }
 
-@media only screen and (min-width: 992px) {
-    body {
-        font-display: swap;
-        font-family: 'Arial Rounded MT Bold', 'Nunito', Arial, sans-serif;
-        font-style: normal;
-        font-variant: normal;
-    }
-
-    .header p {
-        font-size: 48px;
-        line-height: 1.6;
-        white-space: pre-line;
-    }
-
-    #blurb {
-        font-size: 24px;
+@media only screen and (min-height: 400px) and (min-width: 250px) {
+    footer {
+        display: initial;
     }
 
     .icons {
-        font-size: 25px;
+        position: absolute;
+        z-index: 999;
+        top: 35vh;
+        right: 3vw;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        line-height: 2;
     }
 }
 
