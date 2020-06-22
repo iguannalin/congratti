@@ -3,6 +3,7 @@
 @import url(typography.css) (min-width: 768px);
 
 body {
+    font-size: 16px;
     margin: 0 auto;
     width: 100vw;
     height: 100vh;
@@ -88,7 +89,7 @@ footer {
     .bottom-note {
         display: block;
         position: absolute;
-        bottom: 16px;
+        bottom: 24px;
         font-style: italic;
     }
 }
