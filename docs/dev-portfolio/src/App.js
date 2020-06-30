@@ -55,6 +55,11 @@ class App extends React.Component {
                             })}
                             <br/>
                             <li>
+                                <a className="project-button" href="https://annaylin.com/blog/text-me-smth-nice">text-me-smth-nice</a>
+                                <span className="in-progress-label">(work in progress)</span>
+                            </li>
+                            <br/>
+                            <li>
                                 <a className="project-button" href="https://annaylin.com/blog/">older stuff</a>
                             </li>
                         </ul>
