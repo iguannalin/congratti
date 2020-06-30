@@ -19,7 +19,7 @@
             display: block !important;
         }
 
-        .container, footer {
+        body *:not(.IE-message), footer {
             display: none;
         }
     </style>
@@ -33,19 +33,18 @@
 <!--[if lt IE 7]>
 <h1 class="IE-message">This page is not supported in IE, apologies. - Anna</h1>
 <![endif]-->
-<section class="container">
-    <h1 class="sr-only">Welcome to Anna's page</h1>
-    <div class="header" role="main">
-        <p id="title">
-            Hi,
-            I'm Anna
-            Lin
-        </p>
-        <p class="sr-only">I am an art-enthusiast, allergic dog-lover, bad watercolorist, and some sort of software
-            engineer.</p>
-        <p id="blurb">I am an art-enthusiast, allergic dog-lover.</p>
-    </div>
-    <span aria-label="Links to find me on the internet" class="icons">
+<h1 class="sr-only">Welcome to Anna's page</h1>
+<div class="header" role="main">
+    <p id="title">
+        Hi,
+        I'm Anna
+        Lin
+    </p>
+    <p class="sr-only">I am an art-enthusiast, allergic dog-lover, bad watercolorist, and some sort of software
+        engineer.</p>
+    <p id="blurb">I am an art-enthusiast, allergic dog-lover.</p>
+</div>
+<span aria-label="Links to find me on the internet" class="icons">
         <a href="./portfolio" alt="Portfolio" title="View my projects"><i class="fas fa-folder-open"></i></a>
         <a href="https://github.com/iguannalin" alt="GitHub" title="Check out my latest project on Github"
            target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
@@ -56,8 +55,7 @@
         <a href="mailto:anlin@ucsc.edu" title="Let's chat" target="_blank" rel="noopener noreferrer"><i
                 class="fa fa-paper-plane" aria-hidden="true"></i></a>
     </span>
-    <p class="bottom-note">spin me around, click around, take me downtown</p>
-</section>
+<p class="bottom-note">spin me around, click around, take me downtown</p>
 </body>
 <footer><a title="Link to photo of me" href="public/anna.png">you can find a photo of me here</a></footer>
 <script defer src="src/animations/typewrite/typewrite.js" type="module"></script>
