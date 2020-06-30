@@ -21,7 +21,7 @@ body {
     /*transition: background-color 2s linear 0s;*/
 }
 
-div {
+.content-div {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -119,3 +119,31 @@ footer {
         left: 0;
     }
 }
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.column-div {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 16px;
+}
+
+.form-button {
+    /*padding: 12px;*/
+}
+
+.received-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.received-content i {
+    font-size: 4rem;
+}
+
