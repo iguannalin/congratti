@@ -15,24 +15,24 @@
 <div>
     <h1>Hi, friend.</h1>
     <h2>May I ask for your phone number?</h2>
-    <form action="./received.html" method="get">
+    <form action="http://text-me-smth-nice.appspot.com/" method="get">
         <div class="column-div">
             <label for="area-code">Area Code</label>
-            <select name="area-code" id="area-code">
-                <option value="+1">US +1</option>
+            <select name="area" id="area-code">
+                <option value="1">US +1</option>
             </select>
         </div>
         <div class="column-div">
             <label for="phone-number-input">Phone number (with area code):</label>
-            <input id="phone-number-input" placeholder="123-456-7890"/>
+            <input id="phone-number-input" name="phone" placeholder="123-456-7890"/>
         </div>
-        <!--<div class="column-div"><input class="form-button" value="Send!" type="submit"/></div>-->
-        <div class="column-div">
-            <button type="button"
-                    class="form-button"
-                    onclick="get_error(event);">Send!
-            </button>
-        </div>
+        <div class="column-div"><input class="form-button" value="Send!" type="submit"/></div>
+        <!--<div class="column-div">-->
+        <!--<button type="button"-->
+        <!--class="form-button"-->
+        <!--onclick="get_error(event);">Send!-->
+        <!--</button>-->
+        <!--</div>-->
     </form>
 </div>
 </body>
