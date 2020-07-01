@@ -19,12 +19,12 @@
         <div class="column-div">
             <label for="area-code">Area Code</label>
             <select name="area" id="area-code">
-                <option value="1">US +1</option>
+                <option value="1" selected>US +1</option>
             </select>
         </div>
         <div class="column-div">
-            <label for="phone-number-input">Phone number (with area code):</label>
-            <input id="phone-number-input" name="phone" placeholder="123-456-7890"/>
+            <label for="phone-number-input">Phone number (e.g. 1234567890):</label>
+            <input id="phone-number-input" name="phone" placeholder="123-456-7890" type="tel" pattern="[0-9]{10}" required/>
         </div>
         <div class="column-div"><input class="form-button" value="Send!" type="submit"/></div>
         <!--<div class="column-div">-->
