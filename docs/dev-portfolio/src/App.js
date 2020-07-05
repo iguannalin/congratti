@@ -28,7 +28,8 @@ class App extends React.Component {
     getProject() {
         if (this.state.selectedProject) return (
             <div>
-                <button aria-label="Back to instructions" className="project-button" onClick={this.handleBackButtonClick}>&#8592;</button>
+                <button aria-label="Back to instructions" className="project-button"
+                        onClick={this.handleBackButtonClick}>&#8592;</button>
                 <ProjectsController projectName={this.state.selectedProject}/></div>
         ); else return (
             <p className="home">
@@ -54,9 +55,15 @@ class App extends React.Component {
                                 );
                             })}
                             <br/>
+                            <span className="in-progress-label">current</span>
                             <li>
-                                <a className="project-button" href="https://annaylin.com/blog/text-me-smth-nice">text-me-smth-nice</a>
+                                <a className="project-button"
+                                   href="https://annaylin.com/blog/text-me-smth-nice">text-me-smth-nice</a>
                                 <span className="in-progress-label">(work in progress)</span>
+                            </li>
+                            <li>
+                                <a className="project-button" href="https://iguannalin.github.io/alphabet-soup/">alphabet
+                                    soup</a>
                             </li>
                             <br/>
                             <li>
