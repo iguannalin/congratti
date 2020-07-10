@@ -2,12 +2,14 @@ import React, {Component} from "react";
 import Projecteaturveg from './Projecteaturveg';
 import Projectfilmotography from './Projectfilmotography';
 import Projectspotifyrecentlyadded from './Projectspotifyrecentlyadded';
+import Projectsuperdiversity from "./Projectsuperdiversity";
 
 class ProjectsController extends Component {
     components = {
         eaturveg: Projecteaturveg,
         spotifyrecentlyadded: Projectspotifyrecentlyadded,
-        filmotography: Projectfilmotography
+        filmotography: Projectfilmotography,
+        superdiversity: Projectsuperdiversity
     };
 
     render() {
