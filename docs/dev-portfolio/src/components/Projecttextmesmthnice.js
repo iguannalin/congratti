@@ -7,8 +7,7 @@ const Projecttextmesmthnice = () => {
             <h2>About this project</h2>
             <div className="project-details">
                 <p>Currently trying to figure out how to use the Twilio sms api to take a list of phone numbers, and
-                    send out routine nice messages via a strange combination Google App Engine, Heroku, and Python
-                    scripts.</p>
+                    send out routine nice messages via a strange combination of Google App Engine, Heroku, and Python.</p>
             </div>
         </div>
     );
