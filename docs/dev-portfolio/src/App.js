@@ -7,6 +7,7 @@ class App extends React.Component {
         super(props);
         this.state = {
             projectList: ['Spotify Recently Added', 'Filmotography', 'eaturveg', 'Superdiversity'],
+            currentProjectList: ['text-me-smth-nice', 'alphabet soup'],
             selectedProject: sessionStorage.getItem('pdiddy') || null
         };
         this.handleClick = this.handleClick.bind(this);
@@ -55,16 +56,15 @@ class App extends React.Component {
                                 );
                             })}
                             <br/>
-                            <span className="in-progress-label">current</span>
-                            <li>
-                                <a className="project-button"
-                                   href="https://annaylin.com/blog/text-me-smth-nice">text-me-smth-nice</a>
-                                <span className="in-progress-label">(work in progress)</span>
-                            </li>
-                            <li>
-                                <a className="project-button" href="https://iguannalin.github.io/alphabet-soup/">alphabet
-                                    soup</a>
-                            </li>
+                            <span className="in-progress-label">works in progress</span>
+                            {this.state.currentProjectList.map((project) => {
+                                return (
+                                    <li key={project}>
+                                        <button className="project-button"
+                                                onClick={this.handleClick}>{project}</button>
+                                    </li>
+                                );
+                            })}
                             <br/>
                             <li>
                                 <a className="project-button" href="https://annaylin.com/blog/">older stuff</a>
