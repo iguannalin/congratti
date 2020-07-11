@@ -9,6 +9,7 @@ import EveningRock from '../photos/Evening-Rock.jpg';
 import EveningBeach from '../photos/Evening-Beach.jpg';
 import SunsetWaves from '../photos/Sunset-Waves.jpg';
 import Dusk from '../photos/Dusk-ElCapitan.jpg';
+import Home from '../photos/Home.jpg';
 
 function ScrollContainer() {
     return (
@@ -66,6 +67,15 @@ function ScrollContainer() {
                         <img loading="lazy" src={Dusk} alt="El Capitan in all its glory at dusk."/>
                         <figcaption>
                             Dusk at El Capitan
+                        </figcaption>
+                    </figure>
+                </div>
+                <div className="section home">
+                    <figure>
+                        <img loading="lazy" src={Home}
+                             alt="A dusky-pink sky outside the window, framed by a disco ball and windchimes."/>
+                        <figcaption>
+                            Home sweet home
                         </figcaption>
                     </figure>
                 </div>
