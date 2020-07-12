@@ -17,7 +17,7 @@ class ProjectsController extends Component {
     };
 
     render() {
-        const ProjectName = this.components[this.props.projectName.replace(/[ |\-]/gi, '')];
+        const ProjectName = this.components[this.props.projectName.replace(/[ |-]/gi, '')];
         return (
             <div><h1>{this.props.projectName}</h1><ProjectName/></div>
         );
