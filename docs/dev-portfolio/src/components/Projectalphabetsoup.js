@@ -8,6 +8,7 @@ const Projectalphabetsoup = () => {
             <div className="project-details">
                 <p>Taking this <a title="Matt DesLauriers's course on Canvas/WebGL Drawing"
                                   target="_blank"
+                                  rel="noopener noreferrer"
                                   href="https://frontendmasters.com/courses/canvas-webgl/drawing-with-text-characters/">creative
                     coding course</a> at the moment, and hoping to make something out of it.</p>
             </div>

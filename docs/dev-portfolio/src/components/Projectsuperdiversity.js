@@ -3,7 +3,9 @@ import React from "react";
 const Projectsuperdiversity = () => {
     return (
         <div>
-            <div className="project-link"><a target="_blank" href="http://www.superdiv.mmg.mpg.de/">View Project</a></div>
+            <div className="project-link"><a target="_blank"
+                                             rel="noopener noreferrer"
+                                             href="http://www.superdiv.mmg.mpg.de/">View Project</a></div>
             <h2>About this project</h2>
             <div className="project-details">
                 <p>I had the opportunity to build a React project for Stamen Design, in collaboration with Max
