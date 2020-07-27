@@ -6,23 +6,19 @@ const Projecttextmesmthnice = () => {
             <div className="project-link"><a href="https://annaylin.com/blog/text-me-smth-nice">View Project</a></div>
             <h2>About this project</h2>
             <div className="project-details">
-                <p>Currently trying to figure out how to use the Twilio sms api to take a list of phone numbers, and
-                    send out routine nice messages via a strange combination of Google App Engine, Heroku, and
-                    Python.</p>
-                <p>The way it currently works is: someone enters their phone number into HTML form -> submitting form
-                    makes a request to a Python app hosted by Google App Engine ->
-                    <span className="strike-through">Python app writes the new phone
-                    number to a file in an online repository and pushes it -> Python app hosted by Heroku automatically
-                        redeploys on every push and runs script periodically to send texts to the list of phone numbers.</span>
-                </p>
-                <p>The hardest part was figuring out of all the technology out there, which ones to use for my use case
-                    and which were overkill. <span className="strike-through">I think there's probably a way to do this in Django, to host a database
-                    that gets updated, instead of the combination of scripting a push in my app on Google App Engine,
-                        and waiting for that push on my app hosted on Heroku, and I'd love to revisit this some more.</span>
-                </p>
-                <p>Update: Going to try out PostgreSQL, which is a persistent data storage add-on to Heroku, instead.</p>
-                    <p>Also
-                    please feel free to write to me if you are reading this and have some thoughts.</p>
+                <p>For this project, I wanted to challenge myself a little and create a simple messaging service that
+                    will send out a nice text to someone, every once in a while.</p>
+                <p>I started with basically no knowledge, and received a lot of help from asking questions on
+                    StackOverflow. The problem I struggled with most was figuring out the tech stack, and what suited
+                    my use case best.</p>
+                <p>This is how it currently runs: Google App Engine hosts the Python &
+                    Flask API route &rarr; Heroku hosts a Python script that runs on a schedule to periodically call the
+                    Twilio messaging API &rarr; and the user makes a call to the API when they submit a form on my
+                    website
+                    with their phone number.</p>
+                <p>There are some security concerns for sure, and also it's currently running on the trial Twilio
+                    service, so I will work on polishing the app a bit more. Overall, I had a lot of fun building it,
+                    and like a sad Christmas, got to play around with some new toys!</p>
             </div>
         </div>
     );
