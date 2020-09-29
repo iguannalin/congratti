@@ -132,8 +132,19 @@ form {
     margin: 16px;
 }
 
+.form-div {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 48px;
+    font-size: 2rem;
+}
+
+.form-div select, .form-div input {
+    font-size: 1em;
+}
+
 .form-button {
-    /*padding: 12px;*/
+    font-size: 0.9rem;
 }
 
 .received-content {
