@@ -1,7 +1,7 @@
 # congratti portfolio
 For new changes:
 
-Run ' . dev-portfolio/runbuild.sh'
+Run ' . runbuild.sh' from inside dev-portfolio folder
 
 Push, then checkout to master branch
 
