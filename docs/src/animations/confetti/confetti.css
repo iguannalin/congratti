@@ -132,11 +132,22 @@ form {
     margin: 16px;
 }
 
+
+@media (min-width: 0px) {
+    .form-div {
+        font-size: 2rem;
+    }
+}
+@media (min-width: 768px) {
+    .form-div {
+        font-size: 1rem;
+    }
+}
+
 .form-div {
     display: flex;
     flex-flow: column wrap;
     margin: 48px;
-    font-size: 2rem;
 }
 
 .form-div select, .form-div input {
