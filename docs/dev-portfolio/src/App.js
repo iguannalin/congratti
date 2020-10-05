@@ -6,8 +6,8 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            projectList: ['Spotify Recently Added', 'Filmotography', 'eaturveg', 'Superdiversity'],
-            currentProjectList: ['text-me-smth-nice', 'alphabet soup'],
+            projectList: ['text-me-smth-nice', 'Spotify Recently Added', 'Filmotography', 'eaturveg', 'Superdiversity'],
+            currentProjectList: ['bookshelf'],
             selectedProject: sessionStorage.getItem('pdiddy') || null
         };
         this.handleClick = this.handleClick.bind(this);

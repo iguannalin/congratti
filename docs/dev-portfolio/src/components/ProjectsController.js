@@ -5,6 +5,7 @@ import Projectspotifyrecentlyadded from './Projectspotifyrecentlyadded';
 import Projectsuperdiversity from "./Projectsuperdiversity";
 import Projecttextmesmthnice from "./Projecttextmesmthnice";
 import Projectalphabetsoup from "./Projectalphabetsoup";
+import Projectbookshelf from "./Projectbookshelf";
 
 class ProjectsController extends Component {
     components = {
@@ -13,7 +14,8 @@ class ProjectsController extends Component {
         filmotography: Projectfilmotography,
         superdiversity: Projectsuperdiversity,
         textmesmthnice: Projecttextmesmthnice,
-        alphabetsoup: Projectalphabetsoup
+        alphabetsoup: Projectalphabetsoup,
+        bookshelf: Projectbookshelf
     };
 
     render() {
