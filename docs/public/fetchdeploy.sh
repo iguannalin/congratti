@@ -1,5 +1,17 @@
 if [ $# -eq 0 ]; then
-    echo "No branch name provided as argument"
+    echo 'No branch name provided as argument'
+elif [ $1 == 'bookshelf' ]; then
+    echo 'Getting le bookshelf ready'
+    cd docs/blog/dev-bookshelf
+    npm run build
+    rm -rf ../bookshelf/*
+    cp ./dist/* ../bookshelf/
+    git add ../bookshelf/
+    rm -rf ./dist
+    git add ./
+    git cm 'Auto-deploying 'bookshelf
+    cd ../../../
+    echo $1' finished building, and moved folders. Ready to push!'
 else
     echo 'Getting '$1' ready ;)'
     rm -rf docs/$1/
