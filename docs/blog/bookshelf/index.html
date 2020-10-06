@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <title>Books</title>
-<link rel="stylesheet" type="text/css" href="./inspector.css">
 <body>
-<script type="module">
-
-import define from "./index.js";
-import {Runtime, Library, Inspector} from "./runtime.js";
-
-const runtime = new Runtime();
-const main = runtime.module(define, Inspector.into(document.body));
-
-</script>
+<div>
+    <h1>bookshelf</h1>
+    <p>data scraped off my All books list on Goodreads.com</p>
+</div>
+<div id="app">
+</div>
+<script src="bookshelf.js"></script>
+</body>

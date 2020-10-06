@@ -1,6 +1,6 @@
 # Books
 
-https://observablehq.com/d/f0f910f306967144@481
+https://observablehq.com/d/bookshelf
 
 View this notebook in your browser by running a web server in this folder. For
 example:
