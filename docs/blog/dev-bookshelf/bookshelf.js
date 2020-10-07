@@ -62,5 +62,4 @@ svg.selectAll("div")
     .style("height", d => `${x(d.pages / 30)}px`)
     .text(d => d.title);
 
-
 // document.addEventListener('DOMContentLoaded', createGraph);
