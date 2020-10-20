@@ -29016,42 +29016,57 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var width = 700;
-var data = [{
-  "title": "Intimations",
-  "author": "Smith, Zadie",
-  "pages": "97"
-}, {
-  "title": "White Teeth",
-  "author": "Smith, Zadie",
-  "pages": "448"
-}, {
-  "title": "On Beauty",
-  "author": "Smith, Zadie",
-  "pages": "445"
-}, {
-  "title": "The Handmaid's Tale",
-  "author": "Atwood, Margaret",
-  "pages": "314"
-}, {
-  "title": "The Remains of the Day",
-  "author": "Ishiguro, Kazuo",
-  "pages": "258"
-}, {
-  "title": "Turtles, Termites, and Traffic Jams: Explorations in Massively Parallel Microworlds",
-  "author": "Resnick, Mitchel",
-  "pages": "184"
-}];
-var x = d3.scaleLinear().domain([0, d3.max(data.map(function (d) {
-  return d.title.length;
-}))]).range([0, width]);
-var svg = d3.select("#app").append("div").style("font", "inherit").style("font-size", "10px").style("text-align", "right").style("color", "white").style("margin-top", "10%").style("overflow", "scroll");
-svg.selectAll("div").data(data).join("div").style("background", "black").style("padding", "5px").style("border", "1px solid white").style("display", "flex").style("justify-content", "center").style("align-items", "center").style("border-radius", "2px").style("width", function (d) {
-  return "".concat(x(d.title.length), "px");
-}).style("height", function (d) {
-  return "".concat(x(d.pages / 30), "px");
-}).text(function (d) {
-  return d.title;
-}); // document.addEventListener('DOMContentLoaded', createGraph);
+var data = [];
+
+var fetchData = function fetchData() {
+  fetch('https://bookshelf-goodreads-api.herokuapp.com/api/list', {
+    "access-control-request-headers": {
+      "mode": "no-cors",
+      "access-control-allow-origin": "cross-origin"
+    }
+  }).then(function (response) {
+    response.text().then(function (text) {
+      return JSON.parse(text);
+    }).then(function (d) {
+      if (d.results.reviews.review) {
+        var raw = d.results.reviews.review;
+        raw.forEach(function (i) {
+          var item = i.book; // console.log('RAW ITEM', item);
+          // TODO: allow for multiple authors
+
+          var book = {
+            "title": item.title._text || '',
+            "author": item.authors.author.name._text || '',
+            "pages": item.num_pages._text || '',
+            "published": item.published._text || '',
+            "description": item.description._text || '',
+            "link": item.link.text || ''
+          };
+          data.push(book);
+        });
+      } // console.log('RESPONSE FETCH', data);
+
+
+      if (data) createGraph();
+    });
+  });
+};
+
+fetchData();
+
+var createGraph = function createGraph() {
+  var x = d3.scaleLinear().domain([0, d3.max(data.map(function (d) {
+    return d.title.length;
+  }))]).range([0, width]);
+  var svg = d3.select("#app").append("div").style("font", "inherit").style("font-size", "10px").style("text-align", "right").style("color", "white").style("margin-top", "10%").style("overflow", "scroll");
+  svg.selectAll("div").data(data).join("div").style("background", "black").style("padding", "5px").style("border", "1px solid white").style("display", "flex").style("justify-content", "center").style("align-items", "center").style("border-radius", "2px").style("width", function (d) {
+    return "".concat(x(d.title.length), "px");
+  }).style("height", function (d) {
+    return "".concat(x(d.pages / 30), "px");
+  }).text(function (d) {
+    return d.title;
+  });
+};
 },{"d3":"node_modules/d3/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -29080,7 +29095,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61518" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60858" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
