@@ -4,7 +4,12 @@ const width = 700;
 let data = [];
 
 const fetchData = () => {
-    fetch('https://bookshelf-goodreads-api.herokuapp.com/api/list').then(response => {
+    fetch('https://bookshelf-goodreads-api.herokuapp.com/api/list', {
+        "access-control-request-headers": {
+            "mode": "no-cors",
+            "access-control-allow-origin": "cross-origin"
+        }
+    }).then(response => {
         response.text().then(text => {
             return JSON.parse(text)
         }).then(d => {
@@ -25,7 +30,7 @@ const fetchData = () => {
                     data.push(book);
                 })
             }
-            console.log('RESPONSE FETCH', data);
+            // console.log('RESPONSE FETCH', data);
             if (data) createGraph();
         });
     })
