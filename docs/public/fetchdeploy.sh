@@ -11,7 +11,7 @@ elif [ $1 == 'bookshelf' ]; then
     git add ./
     git cm 'Auto-deploying 'bookshelf
     cd ../../../
-    echo $1' finished building, and moved folders. Ready to push!'
+    echo $1' finished building, and moved folders. Check index.html .js file import is correct! Ready to push!'
 else
     echo 'Getting '$1' ready ;)'
     rm -rf docs/$1/
