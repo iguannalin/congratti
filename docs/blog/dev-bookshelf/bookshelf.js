@@ -1,7 +1,8 @@
 import * as d3 from "d3";
 
 const width = 700;
-let data = [
+let data = [];
+const initialData = [
     {
         "title": "Intimations",
         "author": "Smith, Zadie",
@@ -62,12 +63,13 @@ const fetchData = () => {
                 })
             }
             // console.log('RESPONSE FETCH', data);
-            if (data) createGraph();
+            if (data) createGraph(data);
         });
     })
 };
 
-const createGraph = () => {
+const createGraph = (data) => {
+    d3.select("#app").selectAll("div").remove();
     const x = d3.scaleLinear()
         .domain([0, d3.max(data.map(d => d.title.length))])
         .range([0, width]);
@@ -96,5 +98,5 @@ const createGraph = () => {
         .text(d => d.title);
 };
 
-createGraph();
 fetchData();
+createGraph(initialData);
