@@ -67,9 +67,6 @@ const fetchData = () => {
     })
 };
 
-createGraph();
-fetchData();
-
 const createGraph = () => {
     const x = d3.scaleLinear()
         .domain([0, d3.max(data.map(d => d.title.length))])
@@ -98,3 +95,6 @@ const createGraph = () => {
         .style("height", d => `${x(d.pages / 30)}px`)
         .text(d => d.title);
 };
+
+createGraph();
+fetchData();
