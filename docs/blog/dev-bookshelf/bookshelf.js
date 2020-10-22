@@ -1,7 +1,38 @@
 import * as d3 from "d3";
 
 const width = 700;
-let data = [];
+let data = [
+    {
+        "title": "Intimations",
+        "author": "Smith, Zadie",
+        "pages": "97"
+    },
+    {
+        "title": "White Teeth",
+        "author": "Smith, Zadie",
+        "pages": "448"
+    },
+    {
+        "title": "On Beauty",
+        "author": "Smith, Zadie",
+        "pages": "445"
+    },
+    {
+        "title": "The Handmaid's Tale",
+        "author": "Atwood, Margaret",
+        "pages": "314"
+    },
+    {
+        "title": "The Remains of the Day",
+        "author": "Ishiguro, Kazuo",
+        "pages": "258"
+    },
+    {
+        "title": "Turtles, Termites, and Traffic Jams: Explorations in Massively Parallel Microworlds",
+        "author": "Resnick, Mitchel",
+        "pages": "184"
+    }
+];
 
 const fetchData = () => {
     fetch('https://bookshelf-goodreads-api.herokuapp.com/api/list', {
