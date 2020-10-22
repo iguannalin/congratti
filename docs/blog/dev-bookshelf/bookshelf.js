@@ -80,7 +80,7 @@ const createGraph = (data) => {
         .style("font-size", "10px")
         .style("text-align", "right")
         .style("color", "white")
-        .style("margin-top", "10%")
+        .style("margin-top", "3%")
         .style("overflow", "scroll");
 
     svg.selectAll("div")
