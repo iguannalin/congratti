@@ -11,7 +11,7 @@
   "proxy": "http://localhost:1234/",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --public-url ./"
   },
   "dependencies": {
     "d3": "5.5.0",
