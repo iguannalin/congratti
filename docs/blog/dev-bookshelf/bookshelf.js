@@ -67,6 +67,7 @@ const fetchData = () => {
     })
 };
 
+createGraph();
 fetchData();
 
 const createGraph = () => {
