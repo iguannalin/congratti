@@ -1,7 +1,11 @@
 import * as d3 from "d3";
 
 const width = 700;
+const dots = document.getElementById('dots');
+const text = '\u00a0...';
+let index = -1;
 let data = [];
+let intervalVar;
 const initialData = [
     {
         "title": "Intimations",
@@ -35,7 +39,24 @@ const initialData = [
     }
 ];
 
+const loadDots = () => {
+    if (dots) {
+        dots.style.fontSize = '32px';
+        intervalVar = setInterval(() => {
+            index = (index + 1) % 4;
+            dots.innerText = text.substring(0, index + 1);
+        }, 250);
+    }
+};
+const clearDots = () => {
+    if (dots && intervalVar) {
+        dots.innerText = '';
+        clearInterval(intervalVar);
+    }
+};
+
 const fetchData = () => {
+    loadDots();
     fetch('https://bookshelf-goodreads-api.herokuapp.com/api/list', {
         "access-control-request-headers": {
             "mode": "no-cors",
@@ -65,6 +86,7 @@ const fetchData = () => {
             // console.log('RESPONSE FETCH', data);
             if (data) createGraph(data);
         });
+        clearDots();
     })
 };
 
