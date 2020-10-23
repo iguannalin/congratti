@@ -29087,13 +29087,13 @@ var fetchData = function fetchData() {
             "pages": item.num_pages._text || '',
             "published": item.published._text || '',
             "description": item.description._text || '',
-            "link": item.link.text || ''
+            "link": item.link._text || ''
           };
           data.push(book);
         });
-      } // console.log('RESPONSE FETCH', data);
+      }
 
-
+      console.log('RESPONSE FETCH', data);
       if (data) createGraph(data);
     });
     clearDots();
@@ -29145,7 +29145,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61107" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61444" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
