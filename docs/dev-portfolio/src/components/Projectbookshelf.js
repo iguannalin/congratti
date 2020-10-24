@@ -3,7 +3,7 @@ import React from "react";
 const Projectbookshelf = () => {
     return (
         <div>
-            <div className="project-link"><a href="https://annaylin.com/blog/bookshelf/">View Project</a></div>
+            <div className="project-link"><a href="https://annaylin.com/bookshelf/">View Project</a></div>
             <h2>About this project</h2>
             <div className="project-details">
                 <p>Learning how to make <a title="Shirley Wu's course on Building Custom Data Visualizations"

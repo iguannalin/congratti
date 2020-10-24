@@ -3,7 +3,7 @@ import React from "react";
 const Projecttextmesmthnice = () => {
     return (
         <div>
-            <div className="project-link"><a href="https://annaylin.com/blog/text-me-smth-nice">View Project</a></div>
+            <div className="project-link"><a href="https://annaylin.com/text-me-smth-nice">View Project</a></div>
             <h2>About this project</h2>
             <div className="project-details">
                 <p>For this project, I wanted to challenge myself a little and create a simple messaging service that
