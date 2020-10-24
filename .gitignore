@@ -5,3 +5,8 @@ dist
 package-lock.json*
 dist/
 docs/evn-nike-demo/
+docs/dev-portfolio/
+docs/dev-filmotography/
+docs/.DS_Store
+.DS_Store
+docs/public/.DS_Store
