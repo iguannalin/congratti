@@ -1,0 +1,24 @@
+{
+  "name": "bookshelf",
+  "main": "",
+  "version": "481.0.0",
+  "homepage": "https://observablehq.com/d/f0f910f306967144",
+  "author": {
+    "name": "Anna Lin",
+    "url": "https://observablehq.com/@iguannalin"
+  },
+  "type": "module",
+  "proxy": "http://localhost:1234/",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html --public-url ./"
+  },
+  "dependencies": {
+    "d3": "5.5.0",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "parcel-bundler": "^1.6.1"
+  }
+}
