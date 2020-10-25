@@ -18,10 +18,8 @@ elif [ $1 == 'congratti' ]; then
     npm run build
     rm ../../index.html
     rm -rf ../../src/*
-    mv ./dist/index.html ../../
-    mv ./dist/* ../../src/
-    git add ../../index.html
-    git add ../../src
+    mv ./dist/* ../../
+    git add ../../
     rm -rf ./dist
     git add ./
     git cm 'Auto-deploying '$1
