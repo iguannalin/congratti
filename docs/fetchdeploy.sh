@@ -19,7 +19,7 @@ elif [ $1 == 'congratti' ]; then
     rm ../../index.html
     rm -rf ../../src/*
     mv ./dist/index.html ../../
-    cp ./dist/* ../../src/
+    mv ./dist/* ../../src/
     git add ../../index.html
     git add ../../src
     rm -rf ./dist
