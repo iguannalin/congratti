@@ -16,12 +16,12 @@ elif [ $1 == 'congratti' ]; then
     echo 'Getting congratti ready :))'
     cd ./dev-congratti
     npm run build
-    rm ../../index.html
-    rm -rf ../../src/*
-    mv ./dist/index.html ../../
-    mv ./dist/* ../../src/
-    git add ../../index.html
-    git add ../../src
+    rm ../index.html
+    rm -rf ../src/*
+    mv ./dist/index.html ../
+    mv ./dist/* ../src/
+    git add ../index.html
+    git add ../src
     rm -rf ./dist
     git add ./
     git cm 'Auto-deploying '$1
