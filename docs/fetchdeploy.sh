@@ -2,15 +2,15 @@ if [ $# -eq 0 ]; then
     echo 'No branch name provided as argument'
 elif [ $1 == 'bookshelf' ]; then
     echo 'Getting le bookshelf ready'
-    cd ./dev-bookshelf
+    cd ../dev-bookshelf
     npm run build
-    rm -rf ../bookshelf/*
-    cp ./dist/* ../bookshelf/
-    git add ../bookshelf/
+    rm -rf ../docs/bookshelf/*
+    cp ./dist/* ../docs/bookshelf/
+    git add ../docs/bookshelf/
     rm -rf ./dist
     git add ./
     git cm 'Auto-deploying 'bookshelf
-    cd ../../
+    cd ../
     echo $1' finished building, and moved folders. Check index.html .js file import is correct! Ready to push!'
 elif [ $1 == 'congratti' ]; then
     echo 'Getting congratti ready :))'
@@ -24,6 +24,7 @@ elif [ $1 == 'congratti' ]; then
     git add ../docs/src
     rm -rf ./dist
     git add ./
+    cd ../
     git cm 'Auto-deploying '$1
     echo $1' finished building, and moved folders. Check index.html is correct! Ready to push!'
 else
