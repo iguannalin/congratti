@@ -34,7 +34,9 @@ body {
     align-items: center;
 }
 
-.portfolio-content {}
+.dark-text {
+    color: gray;
+}
 
 .header p {
     white-space: pre-line;
