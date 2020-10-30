@@ -37,10 +37,6 @@ body {
     color: gray;
 }
 
-.header p {
-    white-space: pre-line;
-}
-
 .sr-only {
     visibility: hidden;
 }
