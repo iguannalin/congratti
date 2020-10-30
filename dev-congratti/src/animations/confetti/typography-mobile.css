@@ -1,11 +1,17 @@
 .header p {
     font-size: 2.5em;
     line-height: 1.6;
+    /*width: 40%;*/
+}
+
+.portfolio-content {
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 #blurb {
     font-size: 0.9em;
-    margin: 2em;
+    margin-right: 2em;
 }
 
 .icons {
