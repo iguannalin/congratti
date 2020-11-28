@@ -8,15 +8,12 @@
     "url": "https://annaylin.com/"
   },
   "type": "module",
-  "proxy": "http://localhost:2468/",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html --public-url ./src/"
   },
-  "dependencies": {
-    "parcel": "^1.12.4"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.12.3"
+    "parcel-bundler": "^1.12.4"
   }
 }
