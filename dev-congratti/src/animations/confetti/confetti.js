@@ -4,6 +4,7 @@ import * as THREEOrbit from "../../utils/three-OrbitControls.js";
 import * as THREE from "../../utils/three.module.js";
 import {getRandomPalette, getRandomColorFromPalette} from './palette.js';
 
+// TODO: animations of confetti to follow cursor, and Anna Lin navi home brand link to animate on hover
 // TODO: encapsulate all the different vars into objects i.e. CONFETTI.confettiGroup = [...], CONFETTI.colors = [...]
 
 // THREE VARIABLES
@@ -66,8 +67,8 @@ function initScene() {
         clearTimeout(resizeTimoutEventID);
         resizeTimoutEventID = setTimeout(onWindowResize, 150);
     }, false);
-    window.addEventListener('mousemove', onMouseMove, false);
-    controls = new THREEOrbit.OrbitControls(camera, renderer.domElement);
+    // window.addEventListener('mousemove', onMouseMove, false);
+    // controls = new THREEOrbit.OrbitControls(camera, renderer.domElement);
     controls.enableZoom = false;
 }
 
@@ -125,7 +126,7 @@ Confetti.prototype.update = function () {
     } else {
         this.threegroup.position.y = height - 1;
     }
-    if (isMouseMoving) this.threegroup.position.y += (isMouseMovingLeft) ? -1 : 2;
+    // if (isMouseMoving) this.threegroup.position.y += (isMouseMovingLeft) ? -1 : 2;
 };
 
 // METHODS
