@@ -4,6 +4,8 @@ import * as THREEOrbit from "../../utils/three-OrbitControls.js";
 import * as THREE from "../../utils/three.module.js";
 import {getRandomPalette, getRandomColorFromPalette} from './palette.js';
 
+// TODO: encapsulate all the different vars into objects i.e. CONFETTI.confettiGroup = [...], CONFETTI.colors = [...]
+
 // THREE VARIABLES
 let scene,
     camera,
@@ -20,6 +22,12 @@ let height,
     width,
     windowHalfX,
     windowHalfY;
+
+// EVENT VARIABLES
+let resizeTimoutEventID,
+    mouseX,
+    isMouseMoving,
+    isMouseMovingLeft;
 
 // CONFETTI
 let confetti = [],
@@ -54,9 +62,21 @@ function initScene() {
     container.setAttribute('aria-label', 'interactive graphic of falling confetti');
     windowHalfX = width / 2;
     windowHalfY = height / 2;
-    window.addEventListener('resize', onWindowResize, false);
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimoutEventID);
+        resizeTimoutEventID = setTimeout(onWindowResize, 150);
+    }, false);
+    window.addEventListener('mousemove', onMouseMove, false);
     controls = new THREEOrbit.OrbitControls(camera, renderer.domElement);
     controls.enableZoom = false;
+}
+
+function onMouseMove(e) {
+    isMouseMoving = true;
+    isMouseMovingLeft = (e.pageX < mouseX);
+    mouseX = e.pageX;
+    // console.log('is mouse moving left?', isMouseMovingLeft);
+    setTimeout(() => isMouseMoving = false, 100);
 }
 
 function onWindowResize() {
@@ -105,6 +125,7 @@ Confetti.prototype.update = function () {
     } else {
         this.threegroup.position.y = height - 1;
     }
+    if (isMouseMoving) this.threegroup.position.y += (isMouseMovingLeft) ? -1 : 2;
 };
 
 // METHODS
