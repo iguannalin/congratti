@@ -5,7 +5,7 @@ body {
     font-size: 16px;
     margin: 0 auto;
     width: 100vw;
-    background-color: #fff9e6;
+    background-color: #FFFFFF;
     color: #2a3340;
     font-display: swap;
     font-family: Verdana, Geneva, sans-serif;
@@ -134,6 +134,7 @@ form {
     margin: 16px;
 }
 
+/*FORM STUFF*/
 
 @media only screen and (max-width: 767px) {
     .form-div {
