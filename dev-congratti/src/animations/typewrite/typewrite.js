@@ -4,19 +4,19 @@ let n = 0,
     textIndex = 0,
     interval = Math.floor((Math.random() * 200) + 5),
     textToType = {
-        description: 'I am',
-        titles: [' an art-enthusiast, allergic dog-lover.', ' an amateur watercolorist.', ' some sort of software engineer.']
+        description: 'Hi,',
+        titles: ['I\'m Anna Lin.']
     },
-    target = document.getElementById('blurb'),
+    target = document.getElementById('title'),
     isMobileDevice = isMobile.any();
 
 function typewrite(blurb, target) {
     if (typeof (blurb[n] !== 'undefined')) {
         target.textContent += blurb[n];
     }
-    if (blurb[n] === '.') {
-        setTimeout(backspace, 1000);
-    }
+    // if (blurb[n] === '.') {
+    //     setTimeout(backspace, 1000);
+    // }
     interval = Math.floor((Math.random() * 300) + 5);
     n++;
     if (n < blurb.length) {
@@ -28,17 +28,17 @@ function typewrite(blurb, target) {
 
 function backspace() {
     interval = Math.floor((Math.random() * 200) + 5);
-    let t = document.getElementById('blurb');
+    let t = document.getElementById('title');
 
-    if (t.textContent !== textToType.description) {
-        t.textContent = t.textContent.toString().slice(0, -1);
-        setTimeout(backspace, interval);
-
-    } else {
+    // if (t.textContent !== textToType.description) {
+    //     t.textContent = t.textContent.toString().slice(0, -1);
+    //     setTimeout(backspace, interval);
+    //
+    // } else {
         n = 0;
         textIndex = (textIndex + 1) % textToType.titles.length;
         typewrite(textToType.titles[textIndex], target);
-    }
+    // }
 }
 
 function handleClick() {

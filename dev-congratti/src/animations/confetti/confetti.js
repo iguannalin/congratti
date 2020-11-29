@@ -68,8 +68,10 @@ function initScene() {
         resizeTimoutEventID = setTimeout(onWindowResize, 150);
     }, false);
     // window.addEventListener('mousemove', onMouseMove, false);
-    // controls = new THREEOrbit.OrbitControls(camera, renderer.domElement);
+    controls = new THREEOrbit.OrbitControls(camera, renderer.domElement);
     controls.enableZoom = false;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 2;
 }
 
 function onMouseMove(e) {

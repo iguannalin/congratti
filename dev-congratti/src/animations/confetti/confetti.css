@@ -7,30 +7,70 @@ body {
     width: 100vw;
     background-color: #FFFFFF;
     color: #2a3340;
-    font-display: swap;
-    font-family: Verdana, Geneva, sans-serif;
-    font-family: 'Arial Rounded MT Bold', 'Nunito', Arial, sans-serif;
+    font-family: 'Alice', serif;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
     /*transition: background-color 2s linear 0s;*/
 }
 
+.heading {
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+}
+
+.subheading {
+    font-family: 'Playfair Display', serif;
+}
+
+.section-links-list {
+    list-style: none;
+    padding: 0;
+}
+
+.section-links-list li {
+    font-family: 'Alice', serif;
+    padding-top: 0.5em;
+}
+
+.overlay-container {
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    border: solid 2px red;
+    position: absolute;
+    padding: 2em;
+}
+
 #canvas {
     position: absolute;
 }
 
-.overlay-container {
-    z-index: 0;
-}
-
-.content-div {
+.section-container {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
+}
+
+.section-container #portfolio {
+    background-color: #F1BA48;
+}
+.section-container #portfolio {
+    background-color: #E59182;
+
+}
+.section-container #portfolio {
+
+}
+.section-container {
+
+}
+
+.section-header {
+    position: fixed;
 }
 
 .dark-text {
@@ -46,9 +86,9 @@ body {
     position: absolute;
 }
 
-#blurb:after {
+#title:after {
     content: '|';
-    animation: 0.9s blink infinite linear;
+    animation: 2s blink infinite linear;
 }
 
 @keyframes blink {
@@ -101,17 +141,17 @@ footer {
         display: initial;
     }
 
-    .icons {
-        position: absolute;
-        z-index: 999;
-        top: 35vh;
-        right: 3vw;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: center;
-        line-height: 2;
-    }
+    /*.icons {*/
+        /*position: absolute;*/
+        /*z-index: 999;*/
+        /*top: 35vh;*/
+        /*right: 3vw;*/
+        /*display: flex;*/
+        /*flex-flow: column;*/
+        /*align-items: center;*/
+        /*justify-content: center;*/
+        /*line-height: 2;*/
+    /*}*/
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

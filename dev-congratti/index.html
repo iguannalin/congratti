@@ -24,9 +24,11 @@
         }
     </style>
     <![endif]-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/animations/confetti/confetti.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Playfair+Display&family=Varela+Round&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="icon" href="public/favicon.png" type="image/png">
 </head>
 
@@ -34,63 +36,65 @@
 <div id="canvas"></div>
 <div class="content-container">
     <div>
-        <div class="main-content content-div">
+        <div class="main-content section-container">
             <!--[if lt IE 7]>
-            <h1 class="IE-message">This page is not supported in IE, apologies. - Anna</h1>
+            <p class="IE-message">This page is not supported in IE, apologies. - Anna</p>
             <![endif]-->
-            <h1 class="sr-only">Welcome to Anna's page</h1>
-            <div class="header" role="main">
-                <p id="title">
-                    Hi,<br>
-                    I'm Anna<br>
-                    Lin
-                </p>
-                <p class="sr-only">I am an art-enthusiast, allergic dog-lover, bad watercolorist, and some sort of
-                    software
-                    engineer.</p>
-                <p id="blurb">I am an art-enthusiast, allergic dog-lover.</p>
-                <!--TODO button below-->
-                <!--<button onclick="window.scrollTo(document.getElementById('portfolio'))"><i class="fa-caret-down"></i></button>-->
+            <div class="header overlay-container" role="main">
+                <h1 id="title" class="heading">
+                    Hi,
+                </h1>
+                <p>I like to code web interfaces with the user experience in mind. I'm a full-stack developer, with a
+                    focus on front-end and human-centric design.</p>
+                <ul class="subheading section-links-list">Projects
+                    <li><a href="#text-me-smth-nice">text-me-smth-nice</a></li>
+                    <li><a href="#Spotify">Spotify Recently Added</a></li>
+                    <li><a href="#Filmotography">Filmotography</a></li>
+                    <li><a href="#eaturveg">eaturveg</a></li>
+                    <li><a href="#Superdiversity">Superdiversity</a></li>
+                    <li><a href="#bookshelf">bookshelf</a></li>
+                    <li><a href="#Archive">Archive</a></li>
+                </ul>
+                <ul class="subheading section-links-list">I also like to dabble in<br>
+                    <li>
+                        <a href="./filmotography" alt="Film photography blog" target="_blank" rel="noopener noreferrer">photography</a>
+                        &#x1f4f7;
+                    </li>
+                    <li><a href="https://annaylin.tumblr.com" alt="Tumblr blog" target="_blank"
+                           rel="noopener noreferrer">illustration</a> &#x1f58d;
+                    </li>
+                    <li>
+                        <a href="https://www.notion.so/518dc89aba014808a55910325e6a689c?v=591d3512034b400c8dcc85728f909919"
+                           alt="Notion blog" target="_blank" rel="noopener noreferrer">writing</a> &#x1f573;
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/badwatercolor/" alt="Instagram watercolor blog"
+                           target="_blank"
+                           rel="noopener noreferrer">watercolor</a> &#x1f3a8;
+                    </li>
+                    <li>
+                        <a href="https://github.com/iguannalin/eaturveg" alt="GitHub project repository" target="_blank"
+                           rel="noopener noreferrer">fonts</a> &#x2728;
+                    </li>
+                </ul>
             </div>
-            <!--<span aria-label="Links to find me on the internet" class="icons">-->
-            <!--<a href="https://github.com/iguannalin" alt="GitHub" title="Check out my latest project on Github"-->
-            <!--target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>-->
-            <!--<a href="https://www.linkedin.com/in/anna-y-lin/" alt="LinkedIn" title="Find me on LinkedIn" target="_blank"-->
-            <!--rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>-->
-            <!--<br/>-->
-            <!--</span>-->
-            <a href="#portfolio" class="bottom-note dark-text">spin me around, click around, take me down</a>
         </div>
     </div>
 
-    <div id="portfolio" class="portfolio-content content-div">
-        <div class="overlay-container">
+    <div id="portfolio" class="portfolio-content section-container">
+        <div class="section-header">
+            <div class="brand-logo"><a href="#">Anna<br>Lin</a></div>
+        </div>
+        <div class="section-body">
             <h2>About me</h2>
-            <!--<p>I work in software development in San Francisco.<br>My background is in Psychology from UC Santa Cruz.</p>-->
-            <p>My name is Anna anna, I'm from the Bay Area. I'm in software development. The people I meet, when I walk
-                down the street...</p>
-            <!--<p>My name is Anna anna-->
-            <!--<br>I'm from the Bay Area-->
-            <!--<br>I work in software development-->
-            <!--<br>The people I meet-->
-            <!--<br>When I walk down the street-->
-            <!--<br>They say "Hello!"-->
-            <!--<br>I say "Hi!"-->
-            <!--<br>They go, "What's your name?"-->
-            <!--<br>I say, "My name is Anna anna"</p>-->
-            <p>I like to dabble–in
-                <a href="https://annaylin.tumblr.com" alt="Tumblr blog" target="_blank"
-                            rel="noopener noreferrer">illustration</a> &#x1f58d;,
-                <a href="https://www.notion.so/518dc89aba014808a55910325e6a689c?v=591d3512034b400c8dcc85728f909919"
-                        alt="Notion blog" target="_blank" rel="noopener noreferrer">writing</a> &#x1f573;,
-                <a href="https://www.instagram.com/badwatercolor/" alt="Instagram watercolor blog" target="_blank"
-                        rel="noopener noreferrer">watercolor</a> &#x1f3a8;,
-                <a href="https://github.com/iguannalin/eaturveg" alt="GitHub project repository" target="_blank"
-                   rel="noopener noreferrer">fonts</a> &#x2728;, and
-                <a href="./filmotography" alt="Film photography blog" target="_blank" rel="noopener noreferrer">film photography</a> &#x1f4f7;.</p>
-            <h2><a href="./portfolio/">Portfolio</a></h2>
             <p>Mail: anna [at] annaylin.com</p>
             <a href="public/AnnaLin--Resume.pdf">Resume</a>
+            <!--<span aria-label="Links to find me on the internet" class="icons">-->
+            <a href="https://github.com/iguannalin" alt="GitHub" title="Check out my latest project on Github"
+            target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/anna-y-lin/" alt="LinkedIn" title="Find me on LinkedIn" target="_blank"
+            rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            <br/>
         </div>
     </div>
 
