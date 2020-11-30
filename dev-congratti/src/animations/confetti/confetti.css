@@ -37,7 +37,7 @@ body {
     z-index: 9999;
     top: 0;
     left: 0;
-    border: solid 2px red;
+    /*border: solid 2px red;*/
     position: absolute;
     padding: 2em;
 }
@@ -51,26 +51,61 @@ body {
     height: 100vh;
     display: flex;
     flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    padding: 2em;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-.section-container #portfolio {
-    background-color: #F1BA48;
+:root {
+    --bg-color-1: rgb(222, 75, 114);
+    --bg-color-2: rgb(241, 186, 72);
+    --bg-color-3: rgb(14, 117, 103);
+    --bg-color-4: rgb(76, 148, 190);
+    --bg-color-5: rgb(249, 239, 130);
+    --bg-color-6: rgb(217, 55, 50);
+    --bg-color-7: rgb(192, 193, 189);
+    --bg-color-8: rgb(224, 127, 141);
+    --bg-color-9: rgb(14, 211, 217);
+    --bg-color-10: rgb(244, 240, 201);
+    --bg-color-11: rgb(251, 252, 247);
+
+
+    scroll-behavior: smooth;
 }
-.section-container #portfolio {
-    background-color: #E59182;
+
+#projects.section-container, #projects .section-header {
+    background-color: var(--bg-color-1);
+}
+
+#social.section-container, #social .section-header {
+    background-color: var(--bg-color-2);
+}
+
+.section-container #projects {
 
 }
-.section-container #portfolio {
 
-}
 .section-container {
-
+    width: 100%;
 }
 
 .section-header {
-    position: fixed;
+    position: sticky;
+    top: 0;
+    /*border: 2px solid red;*/
+    width: 100%;
+}
+
+.brand-logo a {
+    font-family: 'Varela Round', sans-serif;
+    text-decoration: none;
+    color: initial;
+}
+
+.brand-logo a:hover {
+    text-decoration: underline;
 }
 
 .dark-text {
@@ -142,15 +177,15 @@ footer {
     }
 
     /*.icons {*/
-        /*position: absolute;*/
-        /*z-index: 999;*/
-        /*top: 35vh;*/
-        /*right: 3vw;*/
-        /*display: flex;*/
-        /*flex-flow: column;*/
-        /*align-items: center;*/
-        /*justify-content: center;*/
-        /*line-height: 2;*/
+    /*position: absolute;*/
+    /*z-index: 999;*/
+    /*top: 35vh;*/
+    /*right: 3vw;*/
+    /*display: flex;*/
+    /*flex-flow: column;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*line-height: 2;*/
     /*}*/
 }
 
