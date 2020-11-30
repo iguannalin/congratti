@@ -1,10 +1,14 @@
 .heading {
-    font-size: 3em;
+    font-size: 3.7em;
     line-height: 1.7;
 }
 
+.subheading {
+    font-size: 1.2em;
+}
+
 .overlay-container {
-    width: 50%;
+    width: 45%;
 }
 
 #blurb {
