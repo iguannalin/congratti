@@ -7,7 +7,7 @@ body {
     width: 100vw;
     background-color: #FFFFFF;
     color: #2a3340;
-    font-family: 'Alice', serif;
+    font-family: var(--body-text);
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
@@ -15,25 +15,48 @@ body {
 }
 
 .heading {
-    font-family: 'Varela Round', sans-serif;
+    font-family: var(--main-heading);
     font-weight: bold;
 }
 
 .subheading {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--sub-heading);
 }
 
 .section-links-list {
-    list-style: none;
     padding: 0;
+    list-style: '-';
+}
+
+.project-links-list {
+    padding: 0;
+    list-style: none;
 }
 
 .section-links-list li {
-    font-family: 'Alice', serif;
+    font-family: var(--body-text);
     padding-top: 0.5em;
     margin-left: 1em;
-    list-style: '-';
     padding-left: 0.2em;
+}
+
+.project-heading {
+    font-family: var(--sub-heading);
+    font-size: 1.5em;
+}
+
+.project-body {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.project-body-details, .project-body-image-container {
+    width: calc(100% / 2);
+}
+
+.project-body-image-container {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .overlay-container {
@@ -50,7 +73,7 @@ body {
 
 .section-container {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-flow: column;
     /*justify-content: center;*/
@@ -73,7 +96,9 @@ body {
     --bg-color-10: rgb(244, 240, 201);
     --bg-color-11: rgb(251, 252, 247);
 
-
+--main-heading: 'Varela Round', sans-serif;
+    --sub-heading: 'Playfair Display', serif;
+    --body-text: 'Alice', serif;
     scroll-behavior: smooth;
 }
 
@@ -115,7 +140,7 @@ body {
 }
 
 .brand-logo a {
-    font-family: 'Varela Round', sans-serif;
+    font-family: var(--main-heading);
     text-decoration: none;
     color: initial;
     font-size: 1.4em;
