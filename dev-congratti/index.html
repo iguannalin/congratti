@@ -24,10 +24,10 @@
         }
     </style>
     <![endif]-->
-    <link rel="stylesheet" href="src/animations/confetti/confetti.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alice&family=Playfair+Display&family=Varela+Round&display=swap"
           rel="stylesheet">
+    <link rel="stylesheet" href="src/animations/confetti/confetti.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="icon" href="public/favicon.png" type="image/png">
 </head>
@@ -44,33 +44,11 @@
                 <h1 id="title" class="heading">
                     Hi,
                 </h1>
-                <p>I like to code web interfaces with the user experience in mind. I'm a full-stack developer, with a
+                <p class="subheading">I like to code web interfaces with the user experience in mind. I'm a full-stack
+                    developer, with a
                     focus on front-end and human-centric design.</p>
-                <a class="subheading" href="#projects">Projects</a>
-                <ul class="subheading section-links-list">I also like to dabble<br>
-                    <li>
-                        <a href="./filmotography" alt="Film photography blog" target="_blank"
-                           rel="noopener noreferrer">photography</a>
-                    </li>
-                    <li>
-                        <a href="https://annaylin.tumblr.com" alt="Tumblr blog" target="_blank"
-                           rel="noopener noreferrer">illustration</a>
-                    </li>
-                    <li>
-                        <a href="https://www.notion.so/518dc89aba014808a55910325e6a689c?v=591d3512034b400c8dcc85728f909919"
-                           alt="Notion blog" target="_blank" rel="noopener noreferrer">writing</a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/badwatercolor/" alt="Instagram watercolor blog"
-                           target="_blank"
-                           rel="noopener noreferrer">watercolor</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/iguannalin/eaturveg" alt="GitHub project repository"
-                           target="_blank"
-                           rel="noopener noreferrer">fonts</a>
-                    </li>
-                </ul>
+                <p><a class="subheading" href="#projects">Projects</a></p>
+                <p><a class="subheading" href="#personal">Personal</a></p>
                 <p><a class="subheading" href="#social">Contact</a></p>
                 <p><a class="subheading" href="#social">Resume</a></p>
             </div>
@@ -102,8 +80,9 @@
                                     trial Twilio service, so I will work on polishing the app a bit more. Overall, I had
                                     a lot of fun building it, and like a sad Christmas, got to play around with some new
                                     toys!</p></div>
-                            <div class="project-body-image-container"><img alt="PROJECT TITLE"
-                                                                           src="./public/portfolio/text-me-smth-nice-screenshot.svg"/>
+                            <div class="project-body-image-container"><img
+                                    alt="Receiving a text message from the text-me-smth-nice app"
+                                    src="./public/portfolio/text-me-smth-nice-screenshot.svg"/>
                             </div>
                         </div>
                     </div>
@@ -138,8 +117,9 @@
                             <div class="project-body-details"><p>I had the opportunity to build a React project for
                                 Stamen Design, in collaboration with Max Planck Institute to visualize data collected on
                                 diversity patterns in different countries.</p></div>
-                            <div class="project-body-image-container"><img alt="PROJECT TITLE"
-                                                                           src="./public/portfolio/superdiversity-screenshot.png"/>
+                            <div class="project-body-image-container"><img
+                                    alt="Data visualizations on the Superdiversity project site"
+                                    src="./public/portfolio/superdiversity-screenshot.png"/>
                             </div>
                         </div>
                     </div>
@@ -152,7 +132,7 @@
                                 on vegetables that are in-season, I decided to scrape this <a
                                         href="https://github.com/iguannalin/eaturveg/blob/master/src/beautifulveggiesdata.json">data</a>
                                 from the local CUESA website.</p></div>
-                            <div class="project-body-image-container"><img alt="PROJECT TITLE"
+                            <div class="project-body-image-container"><img alt="Scrolling through the eaturveg app"
                                                                            src="./public/portfolio/eaturveg-screenrecording.gif"/>
                             </div>
                         </div>
@@ -184,15 +164,80 @@
         </div>
     </div>
 
+    <div id="personal" class="personal-content section-container">
+        <div class="section-header">
+            <div class="brand-logo"><a href="#">Anna<br>Lin</a></div>
+            <div class="section-header-title"><h2>Personal</h2></div>
+        </div>
+        <div class="section-body">
+            <ul class="subheading project-links-list">I also like to dabble in
+                <li>
+                    <div class="project-container"><h3 class="project-heading">Film Photography</h3>
+                        <div class="project-body">
+                            <div class="project-body-details"><a href="./filmotography" target="_blank"
+                                                                 rel="noopener noreferrer">Film photography blog</a>
+                            </div>
+                            <div class="project-body-image-container"><img alt="35mm shot of Half-Dome"
+                                                                           src="./public/personal/filmotography-screenshot.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="project-container"><h3 class="project-heading">Illustrations</h3>
+                        <div class="project-body">
+                            <div class="project-body-details"><p><a href="https://annaylin.tumblr.com" alt="Tumblr blog"
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer">Illustrations on
+                                Tumblr</a></p></div>
+                            <div class="project-body-image-container"><img alt="Leaves illustration"
+                                                                           src="./public/personal/illustration-leaves.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="project-container"><h3 class="project-heading">Writing</h3>
+                        <div class="project-body">
+                            <div class="project-body-details"><p><a
+                                    href="https://www.notion.so/518dc89aba014808a55910325e6a689c?v=591d3512034b400c8dcc85728f909919"
+                                    alt="Notion blog" target="_blank" rel="noopener noreferrer">Writing blog on
+                                Notion</a></p></div>
+                            <div class="project-body-image-container">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="project-container"><h3 class="project-heading">Watercolor</h3>
+                        <div class="project-body">
+                            <div class="project-body-details"><p><a href="https://www.instagram.com/badwatercolor/"
+                                                                    alt="Instagram watercolor blog"
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer">badwatercolor, an Instagram blog</a></p></div>
+                            <div class="project-body-image-container">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--<li>-->
+                    <!--<a href="https://github.com/iguannalin/eaturveg" alt="GitHub project repository"-->
+                       <!--target="_blank"-->
+                       <!--rel="noopener noreferrer">fonts</a>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+
     <div id="social" class="social-content section-container">
         <div class="section-header">
             <div class="brand-logo"><a href="#">Anna<br>Lin</a></div>
             <div class="section-header-title"><h2>Contact</h2></div>
         </div>
         <div class="section-body">
-            <p>anna [at] annaylin.com</p>
-            <p><a href="public/AnnaLin--Resume.pdf">Download my resume</a></p>
-            <div>
+            <p class="subheading">You can email me at: anna [at] annaylin.com</p>
+            <p class="subheading"><a href="public/AnnaLin--Resume.pdf">Download my resume</a></p>
+            <div class="social-links-icons">
                 <a href="https://github.com/iguannalin" alt="GitHub" title="Check out my latest project on Github"
                    target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/anna-y-lin/" alt="LinkedIn" title="Find me on LinkedIn"

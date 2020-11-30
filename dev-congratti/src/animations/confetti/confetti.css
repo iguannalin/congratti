@@ -87,11 +87,11 @@ body {
     --bg-color-4: rgb(76, 148, 190);
     --bg-color-5: rgb(249, 239, 130);
     --bg-color-6: rgb(217, 55, 50);
-    --bg-color-7: rgb(192, 193, 189);
-    --bg-color-8: rgb(224, 127, 141);
-    --bg-color-9: rgb(14, 211, 217);
-    --bg-color-10: rgb(244, 240, 201);
-    --bg-color-11: rgb(251, 252, 247);
+    /*--bg-color-7: rgb(192, 193, 189);*/
+    /*--bg-color-8: rgb(224, 127, 141);*/
+    /*--bg-color-9: rgb(14, 211, 217);*/
+    /*--bg-color-10: rgb(244, 240, 201);*/
+    /*--bg-color-11: rgb(251, 252, 247);*/
 
 --main-heading: 'Varela Round', sans-serif;
     --sub-heading: 'Playfair Display', serif;
@@ -146,6 +146,18 @@ body {
 
 .brand-logo a:hover {
     text-decoration: underline;
+}
+
+.social-links-icons {
+    font-size: 2em;
+    color: initial;
+    text-decoration: none;
+}
+
+.social-links-icons a:hover {
+    transition: all 0.2s ease-in-out;
+    opacity: 0.6;
+    transform: scale(1.1);
 }
 
 .dark-text {
