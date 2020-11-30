@@ -160,20 +160,19 @@ var n = 0,
     textIndex = 0,
     interval = Math.floor(Math.random() * 200 + 5),
     textToType = {
-  description: 'I am',
-  titles: [' an art-enthusiast, allergic dog-lover.', ' an amateur watercolorist.', ' some sort of software engineer.']
+  description: 'Hi,',
+  titles: ['I\'m Anna Lin.']
 },
-    target = document.getElementById('blurb'),
+    target = document.getElementById('title'),
     isMobileDevice = _isMobile.default.any();
 
 function typewrite(blurb, target) {
   if (_typeof(blurb[n] !== 'undefined')) {
     target.textContent += blurb[n];
-  }
+  } // if (blurb[n] === '.') {
+  //     setTimeout(backspace, 1000);
+  // }
 
-  if (blurb[n] === '.') {
-    setTimeout(backspace, 1000);
-  }
 
   interval = Math.floor(Math.random() * 300 + 5);
   n++;
@@ -187,16 +186,15 @@ function typewrite(blurb, target) {
 
 function backspace() {
   interval = Math.floor(Math.random() * 200 + 5);
-  var t = document.getElementById('blurb');
+  var t = document.getElementById('title'); // if (t.textContent !== textToType.description) {
+  //     t.textContent = t.textContent.toString().slice(0, -1);
+  //     setTimeout(backspace, interval);
+  //
+  // } else {
 
-  if (t.textContent !== textToType.description) {
-    t.textContent = t.textContent.toString().slice(0, -1);
-    setTimeout(backspace, interval);
-  } else {
-    n = 0;
-    textIndex = (textIndex + 1) % textToType.titles.length;
-    typewrite(textToType.titles[textIndex], target);
-  }
+  n = 0;
+  textIndex = (textIndex + 1) % textToType.titles.length;
+  typewrite(textToType.titles[textIndex], target); // }
 }
 
 function handleClick() {
@@ -210,7 +208,7 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
-},{"../../utils/is-mobile.js":"src/utils/is-mobile.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../../utils/is-mobile.js":"src/utils/is-mobile.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -238,7 +236,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51629" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55597" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -414,5 +412,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel/src/builtins/hmr-runtime.js","src/animations/typewrite/typewrite.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/animations/typewrite/typewrite.js"], null)
 //# sourceMappingURL=/typewrite.c3d5fa4e.js.map

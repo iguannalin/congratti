@@ -36664,10 +36664,14 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 // Using Karim Maaloul's code as a guide (https://bit.ly/2JU9XdV)
+// TODO: animations of confetti to follow cursor, and Anna Lin navi home brand link to animate on hover
+// TODO: encapsulate all the different vars into objects i.e. CONFETTI.confettiGroup = [...], CONFETTI.colors = [...]
 // THREE VARIABLES
 var scene, camera, controls, fieldOfView, aspectRatio, nearPlane, farPlane, renderer, container; // SCREEN VARIABLES
 
-var height, width, windowHalfX, windowHalfY; // CONFETTI
+var height, width, windowHalfX, windowHalfY; // EVENT VARIABLES
+
+var resizeTimoutEventID, mouseX, isMouseMoving, isMouseMovingLeft; // CONFETTI
 
 var confetti = [],
     confettiColors = [0xC9D757, 0xDE4B72, 0xF1BA48, 0xDE7567, 0x4C94BE, 0xF4F0C9, 0xD93732, 0xC0C1BD, 0xE07F8D, 0xED3D9, 0xF9EF82, 0xFBFCF7],
@@ -36698,9 +36702,25 @@ function initScene() {
   container.setAttribute('aria-label', 'interactive graphic of falling confetti');
   windowHalfX = width / 2;
   windowHalfY = height / 2;
-  window.addEventListener('resize', onWindowResize, false);
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimoutEventID);
+    resizeTimoutEventID = setTimeout(onWindowResize, 150);
+  }, false); // window.addEventListener('mousemove', onMouseMove, false);
+
   controls = new THREEOrbit.OrbitControls(camera, renderer.domElement);
   controls.enableZoom = false;
+  controls.autoRotate = true;
+  controls.autoRotateSpeed = 2;
+}
+
+function onMouseMove(e) {
+  isMouseMoving = true;
+  isMouseMovingLeft = e.pageX < mouseX;
+  mouseX = e.pageX; // console.log('is mouse moving left?', isMouseMovingLeft);
+
+  setTimeout(function () {
+    return isMouseMoving = false;
+  }, 100);
 }
 
 function onWindowResize() {
@@ -36748,7 +36768,8 @@ Confetti.prototype.update = function () {
     this.threegroup.rotateZ(Math.random() * 0.01);
   } else {
     this.threegroup.position.y = height - 1;
-  }
+  } // if (isMouseMoving) this.threegroup.position.y += (isMouseMovingLeft) ? -1 : 2;
+
 }; // METHODS
 
 
@@ -36783,7 +36804,7 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
-},{"../../utils/three-OrbitControls.js":"src/utils/three-OrbitControls.js","../../utils/three.module.js":"src/utils/three.module.js","./palette.js":"src/animations/confetti/palette.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../../utils/three-OrbitControls.js":"src/utils/three-OrbitControls.js","../../utils/three.module.js":"src/utils/three.module.js","./palette.js":"src/animations/confetti/palette.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -36811,7 +36832,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51629" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55597" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -36987,5 +37008,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel/src/builtins/hmr-runtime.js","src/animations/confetti/confetti.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/animations/confetti/confetti.js"], null)
 //# sourceMappingURL=/confetti.b4e988d5.js.map

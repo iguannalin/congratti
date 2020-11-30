@@ -1,12 +1,26 @@
-.header p {
+.heading {
     font-size: 2.5em;
     line-height: 1.6;
     /*width: 40%;*/
+    min-height: 3.4em;
 }
 
-.portfolio-content {
-    padding: 2rem;
-    box-sizing: border-box;
+.overlay-container {
+    width: 50%;
+}
+
+.project-body {
+    display: flex;
+    flex-flow: column;
+}
+
+.project-body-details, .project-body-image-container {
+    width: 100%;
+}
+
+.project-body-image-container {
+    display: flex;
+    justify-content: center;
 }
 
 #blurb {
@@ -27,9 +41,31 @@ footer {
 }
 
 @media (min-width: 768px) {
-.header p {
-    font-size: 3em;
+.heading {
+    font-size: 3.7em;
     line-height: 1.7;
+}
+
+.subheading {
+    font-size: 1.2em;
+}
+
+.overlay-container {
+    width: 30em;
+}
+
+.project-body {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.project-body-details, .project-body-image-container {
+    width: calc(100% / 2);
+}
+
+.project-body-image-container {
+    display: flex;
+    justify-content: flex-end;
 }
 
 #blurb {
@@ -43,7 +79,6 @@ footer {
 
 footer {
     font-size: 0.9em;
-
 }
 
 .bottom-note {
@@ -55,32 +90,159 @@ body {
     font-size: 16px;
     margin: 0 auto;
     width: 100vw;
-    background-color: #fff9e6;
+    background-color: #FFFFFF;
     color: #2a3340;
-    font-display: swap;
-    font-family: Verdana, Geneva, sans-serif;
-    font-family: 'Arial Rounded MT Bold', 'Nunito', Arial, sans-serif;
+    font-family: var(--body-text);
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
     /*transition: background-color 2s linear 0s;*/
 }
 
+.heading {
+    font-family: var(--main-heading);
+    font-weight: bold;
+}
+
+.subheading {
+    font-family: var(--sub-heading);
+}
+
+.section-links-list {
+    padding: 0;
+    list-style: '-';
+}
+
+.project-links-list {
+    padding: 0;
+    list-style: none;
+}
+
+.section-links-list li {
+    font-family: var(--body-text);
+    padding-top: 0.5em;
+    margin-left: 1em;
+    padding-left: 0.2em;
+}
+
+.project-heading {
+    font-family: var(--sub-heading);
+    font-size: 1.5em;
+}
+
+.project-body-image-container {
+    padding: 1.5em;
+    box-sizing: border-box;
+}
+
+.project-body-image-container img {
+    max-width: 80%;
+    object-fit: contain;
+    max-height: 500px;
+}
+
+.overlay-container {
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 2em;
+}
+
 #canvas {
     position: absolute;
 }
 
-.overlay-container {
-    z-index: 0;
-}
-
-.content-div {
+.section-container {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-flow: column;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    padding: 2em;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color-1: rgb(222, 75, 114);
+    --bg-color-2: rgb(241, 186, 72);
+    --bg-color-3: rgb(14, 117, 103);
+    --bg-color-4: rgb(76, 148, 190);
+    --bg-color-5: rgb(249, 239, 130);
+    --bg-color-6: rgb(217, 55, 50);
+    /*--bg-color-7: rgb(192, 193, 189);*/
+    /*--bg-color-8: rgb(224, 127, 141);*/
+    /*--bg-color-9: rgb(14, 211, 217);*/
+    /*--bg-color-10: rgb(244, 240, 201);*/
+    /*--bg-color-11: rgb(251, 252, 247);*/
+
+--main-heading: 'Varela Round', sans-serif;
+    --sub-heading: 'Playfair Display', serif;
+    --body-text: 'Alice', serif;
+    scroll-behavior: smooth;
+}
+
+#projects.section-container, #projects .section-header {
+    background-color: var(--bg-color-1);
+}
+
+#social.section-container, #social .section-header {
+    background-color: var(--bg-color-2);
+}
+
+.section-container #projects {
+
+}
+
+.section-container {
+    width: 100%;
+}
+
+.section-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 1em;
+}
+
+.section-header-title h2 {
+    display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2em;
+    margin: 0;
+}
+
+.section-header div {
+    width: calc(100% / 3);
+}
+
+.brand-logo a {
+    font-family: var(--main-heading);
+    text-decoration: none;
+    color: initial;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.brand-logo a:hover {
+    text-decoration: underline;
+}
+
+.social-links-icons {
+    font-size: 2em;
+    color: initial;
+    text-decoration: none;
+}
+
+.social-links-icons a:hover {
+    transition: all 0.2s ease-in-out;
+    opacity: 0.6;
+    transform: scale(1.1);
 }
 
 .dark-text {
@@ -96,9 +258,9 @@ body {
     position: absolute;
 }
 
-#blurb:after {
+#title:after {
     content: '|';
-    animation: 0.9s blink infinite linear;
+    animation: 2s blink infinite linear;
 }
 
 @keyframes blink {
@@ -151,17 +313,17 @@ footer {
         display: initial;
     }
 
-    .icons {
-        position: absolute;
-        z-index: 999;
-        top: 35vh;
-        right: 3vw;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: center;
-        line-height: 2;
-    }
+    /*.icons {*/
+    /*position: absolute;*/
+    /*z-index: 999;*/
+    /*top: 35vh;*/
+    /*right: 3vw;*/
+    /*display: flex;*/
+    /*flex-flow: column;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*line-height: 2;*/
+    /*}*/
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -184,6 +346,7 @@ form {
     margin: 16px;
 }
 
+/*FORM STUFF*/
 
 @media only screen and (max-width: 767px) {
     .form-div {
