@@ -1,5 +1,5 @@
-@import url('./typography-mobile.css');
-@import url('./typography.css') (min-width: 768px);
+@import url('./screen-mobile.css');
+@import url('./screen.css') (min-width: 768px);
 
 body {
     font-size: 16px;
@@ -45,18 +45,15 @@ body {
     font-size: 1.5em;
 }
 
-.project-body {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.project-body-details, .project-body-image-container {
-    width: calc(100% / 2);
-}
-
 .project-body-image-container {
-    display: flex;
-    justify-content: flex-end;
+    padding: 1.5em;
+    box-sizing: border-box;
+}
+
+.project-body-image-container img {
+    max-width: 80%;
+    object-fit: contain;
+    max-height: 500px;
 }
 
 .overlay-container {
@@ -127,16 +124,16 @@ body {
     padding-top: 1em;
 }
 
-.section-header div {
-    width: calc(100% / 3);
-}
-
 .section-header-title h2 {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2em;
     margin: 0;
+}
+
+.section-header div {
+    width: calc(100% / 3);
 }
 
 .brand-logo a {

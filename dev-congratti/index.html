@@ -51,7 +51,6 @@
                     <li>
                         <a href="./filmotography" alt="Film photography blog" target="_blank"
                            rel="noopener noreferrer">photography</a>
-
                     </li>
                     <li>
                         <a href="https://annaylin.tumblr.com" alt="Tumblr blog" target="_blank"
@@ -88,45 +87,98 @@
             <ul class="subheading project-links-list">
                 <li>
                     <div class="project-container"><h3 class="project-heading">text-me-smth-nice</h3>
-                    <div class="project-body">
-                        <div class="project-body-details"><p>Lorem ipsum</p></div>
-                        <div class="project-body-image-container"><img width="200" alt="PROJECT TITLE" src="./public/anna.png"/></div>
-                    </div></div>
+                        <div class="project-body">
+                            <div class="project-body-details">
+                                <p>For this project, I wanted to challenge myself a little and create a simple messaging
+                                    service that will send out a nice text to someone, every once in a while.</p>
+                                <p>I started with basically no knowledge, and received a lot of help from asking
+                                    questions on StackOverflow. The problem I struggled with most was figuring out the
+                                    tech stack, and what suited my use case best.</p>
+                                <p>This is how it currently runs: Google App Engine hosts the Python &amp; Flask API
+                                    route → Heroku hosts a Python script that runs on a schedule to periodically call
+                                    the Twilio messaging API → and the user makes a call to the API when they submit a
+                                    form on my website with their phone number.</p>
+                                <p>There are some security concerns for sure, and also it's currently running on the
+                                    trial Twilio service, so I will work on polishing the app a bit more. Overall, I had
+                                    a lot of fun building it, and like a sad Christmas, got to play around with some new
+                                    toys!</p></div>
+                            <div class="project-body-image-container"><img alt="PROJECT TITLE"
+                                                                           src="./public/portfolio/text-me-smth-nice-screenshot.svg"/>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <div class="project-container"><h3 class="project-heading">Spotify Recently Added</h3>
-                    <div class="project-body">
-                        <div class="project-body-details"><p>Lorem ipsum</p></div>
-                        <div class="project-body-image-container"><img width="200" alt="PROJECT TITLE" src="./public/anna.png"/></div>
-                    </div></div>
-                </li>
-                <li>
-                    <div class="project-container"><h3 class="project-heading">eaturveg</h3>
-                    <div class="project-body">
-                        <div class="project-body-details"><p>Lorem ipsum</p></div>
-                        <div class="project-body-image-container"><img width="200" alt="PROJECT TITLE" src="./public/anna.png"/></div>
-                    </div></div>
+                        <div class="project-body">
+                            <div class="project-body-details"><p>Before I was introduced to Spotify, I listened to all
+                                my music on the iTunes app. One feature I enjoyed was the 'Recently Added' playlist,
+                                that iTunes auto-generates based on the top 20 tracks you most recently added to your
+                                music library.</p>
+                                <p>Spotify doesn't offer this feature, but I was excited to find that they have a <a
+                                        href="https://developer.spotify.com/documentation/web-api/reference/playlists/create-playlist/"
+                                        rel="noopener noreferrer" target="_blank">really well-documented API for
+                                    developers</a> to use.</p>
+                                <p>I took a stab at it, and ended up with a functional app that currently serves one
+                                    happy user: me :) !</p>
+                                <p>The biggest challenge I had during this app was figuring out how the Spotify
+                                    authentication worked. It took me a while to figure out, but finally I realized that
+                                    the way the auth process worked was this: Log in to Spotify with the developer key →
+                                    Redirect back to the app with a fresh code → Fetch that code from the url use it to
+                                    make requests to the API.</p></div>
+                            <div class="project-body-image-container"><img
+                                    alt="My top 20 recently added songs on Spotify"
+                                    src="./public/portfolio/spotify-recently-added-screenshot.png"/></div>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <div class="project-container"><h3 class="project-heading">Superdiversity</h3>
-                    <div class="project-body">
-                        <div class="project-body-details"><p>Lorem ipsum</p></div>
-                        <div class="project-body-image-container"><img width="200" alt="PROJECT TITLE" src="./public/anna.png"/></div>
-                    </div></div>
+                        <div class="project-body">
+                            <div class="project-body-details"><p>I had the opportunity to build a React project for
+                                Stamen Design, in collaboration with Max Planck Institute to visualize data collected on
+                                diversity patterns in different countries.</p></div>
+                            <div class="project-body-image-container"><img alt="PROJECT TITLE"
+                                                                           src="./public/portfolio/superdiversity-screenshot.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="project-container"><h3 class="project-heading">eaturveg</h3>
+                        <div class="project-body">
+                            <div class="project-body-details"><p>I started this project at a time when I was kindling a
+                                love for both vegetables and JSON data.<br>Unable to find a good source of information
+                                on vegetables that are in-season, I decided to scrape this <a
+                                        href="https://github.com/iguannalin/eaturveg/blob/master/src/beautifulveggiesdata.json">data</a>
+                                from the local CUESA website.</p></div>
+                            <div class="project-body-image-container"><img alt="PROJECT TITLE"
+                                                                           src="./public/portfolio/eaturveg-screenrecording.gif"/>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <div class="project-container"><h3 class="project-heading">bookshelf</h3>
-                    <div class="project-body">
-                        <div class="project-body-details"><p>Lorem ipsum</p></div>
-                        <div class="project-body-image-container"><img width="200" alt="PROJECT TITLE" src="./public/anna.png"/></div>
-                    </div></div>
+                        <div class="project-body">
+                            <div class="project-body-details"><p>Learning how to make <a
+                                    title="Shirley Wu's course on Building Custom Data Visualizations" target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://frontendmasters.com/courses/d3-js-custom-charts/">d3 charts in
+                                Observable</a> at the moment, and using SVGs to build interactive websites with data.
+                            </p></div>
+                            <div class="project-body-image-container"></div>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <div class="project-container"><h3 class="project-heading">Archive</h3>
-                    <div class="project-body">
-                        <div class="project-body-details"><p>Lorem ipsum</p></div>
-                        <div class="project-body-image-container"><img width="200" alt="PROJECT TITLE" src="./public/anna.png"/></div>
-                    </div></div>
+                        <div class="project-body">
+                            <div class="project-body-details"><p>Lorem ipsum</p></div>
+                            <div class="project-body-image-container"><img alt="PROJECT TITLE"
+                                                                           src="./public/anna.png"/></div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -139,13 +191,14 @@
         </div>
         <div class="section-body">
             <p>anna [at] annaylin.com</p>
-            <a href="public/AnnaLin--Resume.pdf">Download my resume</a>
-            <!--<span aria-label="Links to find me on the internet" class="icons">-->
-            <a href="https://github.com/iguannalin" alt="GitHub" title="Check out my latest project on Github"
-               target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/anna-y-lin/" alt="LinkedIn" title="Find me on LinkedIn" target="_blank"
-               rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-            <br/>
+            <p><a href="public/AnnaLin--Resume.pdf">Download my resume</a></p>
+            <div>
+                <a href="https://github.com/iguannalin" alt="GitHub" title="Check out my latest project on Github"
+                   target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anna-y-lin/" alt="LinkedIn" title="Find me on LinkedIn"
+                   target="_blank"
+                   rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
     </div>
 

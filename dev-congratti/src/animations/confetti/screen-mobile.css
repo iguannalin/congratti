@@ -9,6 +9,20 @@
     width: 50%;
 }
 
+.project-body {
+    display: flex;
+    flex-flow: column;
+}
+
+.project-body-details, .project-body-image-container {
+    width: 100%;
+}
+
+.project-body-image-container {
+    display: flex;
+    justify-content: center;
+}
+
 #blurb {
     font-size: 0.9em;
     margin-right: 2em;

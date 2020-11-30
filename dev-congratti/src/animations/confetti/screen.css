@@ -8,7 +8,21 @@
 }
 
 .overlay-container {
-    width: 45%;
+    width: 30em;
+}
+
+.project-body {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.project-body-details, .project-body-image-container {
+    width: calc(100% / 2);
+}
+
+.project-body-image-container {
+    display: flex;
+    justify-content: flex-end;
 }
 
 #blurb {
