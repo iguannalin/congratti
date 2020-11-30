@@ -99,17 +99,19 @@ body {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
+    padding-top: 1em;
 }
 
 .section-header div {
     width: calc(100% / 3);
 }
 
-.section-header-title {
+.section-header-title h2 {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2em;
+    margin: 0;
 }
 
 .brand-logo a {
