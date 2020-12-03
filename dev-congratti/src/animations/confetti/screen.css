@@ -34,7 +34,8 @@
     font-size: 1.7em;
 }
 
-footer {
+.footer-scroll-area {
+    height: auto;
     font-size: 0.9em;
 }
 

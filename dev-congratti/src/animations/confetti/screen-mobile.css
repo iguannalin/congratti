@@ -36,6 +36,10 @@ footer {
     font-size: 0.7em;
 }
 
+.footer-scroll-area {
+    height: 30%;
+}
+
 .bottom-note {
     font-size: 0.7em
 }
