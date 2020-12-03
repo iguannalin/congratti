@@ -69,7 +69,7 @@ function initScene() {
     }, false);
     // window.addEventListener('mousemove', onMouseMove, false);
     controls = new THREEOrbit.OrbitControls(camera, renderer.domElement);
-    controls.enableZoom = false;
+    // controls.enableZoom = false;
     controls.autoRotate = true;
     controls.autoRotateSpeed = 2;
 }
