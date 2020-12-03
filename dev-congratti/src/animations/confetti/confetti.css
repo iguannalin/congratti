@@ -107,6 +107,11 @@ body {
     background-color: var(--bg-color-2);
 }
 
+#personal.section-container, #personal .section-header {
+    background-color: initial;
+    /*background-color: var(--bg-color-3);*/
+}
+
 .section-container #projects {
 
 }
