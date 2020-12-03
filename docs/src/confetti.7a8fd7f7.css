@@ -36,6 +36,10 @@ footer {
     font-size: 0.7em;
 }
 
+.footer-scroll-area {
+    height: 30%;
+}
+
 .bottom-note {
     font-size: 0.7em
 }
@@ -77,7 +81,8 @@ footer {
     font-size: 1.7em;
 }
 
-footer {
+.footer-scroll-area {
+    height: auto;
     font-size: 0.9em;
 }
 
@@ -128,6 +133,7 @@ body {
 .project-heading {
     font-family: var(--sub-heading);
     font-size: 1.5em;
+    margin-bottom: 0;
 }
 
 .project-header-link {
@@ -148,6 +154,11 @@ body {
     max-width: 80%;
     object-fit: contain;
     max-height: 500px;
+    filter: opacity(0.8);
+}
+
+.project-body-image-container img:hover {
+    filter: opacity(1);
 }
 
 .overlay-container {
@@ -187,7 +198,7 @@ body {
     /*--bg-color-10: rgb(244, 240, 201);*/
     /*--bg-color-11: rgb(251, 252, 247);*/
 
---main-heading: 'Varela Round', sans-serif;
+    --main-heading: 'Varela Round', sans-serif;
     --sub-heading: 'Playfair Display', serif;
     --body-text: 'Alice', serif;
     scroll-behavior: smooth;
@@ -301,13 +312,15 @@ body {
     transform: scale(1.1);
 }
 
-footer {
+.footer-scroll-area {
+    z-index: 999;
     position: absolute;
     bottom: 10px;
     right: 3vw;
     font-family: monospace;
+    display: flex;
+    align-items: flex-end;
 }
-
 
 .bottom-note, footer, .icons {
     display: none;
