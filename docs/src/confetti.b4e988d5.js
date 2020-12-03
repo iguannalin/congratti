@@ -36707,8 +36707,8 @@ function initScene() {
     resizeTimoutEventID = setTimeout(onWindowResize, 150);
   }, false); // window.addEventListener('mousemove', onMouseMove, false);
 
-  controls = new THREEOrbit.OrbitControls(camera, renderer.domElement);
-  controls.enableZoom = false;
+  controls = new THREEOrbit.OrbitControls(camera, renderer.domElement); // controls.enableZoom = false;
+
   controls.autoRotate = true;
   controls.autoRotateSpeed = 2;
 }
@@ -36832,7 +36832,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55486" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56560" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
