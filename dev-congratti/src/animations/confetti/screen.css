@@ -22,7 +22,7 @@
 
 .project-body-image-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 #blurb {
