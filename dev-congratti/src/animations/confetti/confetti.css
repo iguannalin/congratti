@@ -5,8 +5,8 @@ body {
     font-size: 16px;
     margin: 0 auto;
     width: 100vw;
-    background-color: #FFFFFF;
-    color: #2a3340;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
     font-family: var(--body-text);
     font-style: normal;
     font-variant: normal;
@@ -50,11 +50,6 @@ body {
     color: inherit;
 }
 
-.project-header-link:hover {
-    /*text-decoration: underline;*/
-    color: black;
-}
-
 .project-body-image-container {
     padding: 1.5em;
     box-sizing: border-box;
@@ -88,20 +83,31 @@ body {
     min-height: 100vh;
     display: flex;
     flex-flow: column;
-    /*justify-content: center;*/
-    /*align-items: center;*/
     padding: 2em;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
+.section-container a:hover {
+    color: black;
+}
+
 :root {
+    --main-bg-color: #fff9e6;
     --bg-color-1: #D85665;
-    --bg-color-2: #EFA55A;
-    --bg-color-3: #3C71A8;
+    --bg-color-2: #3C71A8;
+    --bg-color-3: #EFA55A;
     --bg-color-4: #64A8DA;
     --bg-color-5: #A9CAE0;
     --bg-color-6: #B3466D;
+
+    --main-text-color: #E64E30;
+    --text-color-1: #CBF094;
+    --text-color-2: #00F096;
+    --text-color-3: #00566F;
+    --text-color-4: #12563C;
+    --text-color-5: #465188;
+    --text-color-6: #4AF04D;
 
     --main-heading: 'Varela Round', sans-serif;
     --sub-heading: 'Playfair Display', serif;
@@ -109,17 +115,29 @@ body {
     scroll-behavior: smooth;
 }
 
+a {
+    color: inherit;
+    opacity: 0.9;
+}
+
+a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
 #projects.section-container, #projects .section-header {
     background-color: var(--bg-color-1);
+    color: var(--text-color-1);
 }
 
 #personal.section-container, #personal .section-header {
-    /*background-color: white;*/
-    background-color: var(--bg-color-3);
+    background-color: var(--bg-color-2);
+    color: var(--text-color-2);
 }
 
 #social.section-container, #social .section-header {
-    background-color: var(--bg-color-2);
+    background-color: var(--bg-color-3);
+    color: var(--text-color-3);
 }
 
 .section-container {
@@ -151,7 +169,6 @@ body {
 .brand-logo a {
     font-family: var(--main-heading);
     text-decoration: none;
-    color: initial;
     font-size: 1.4em;
     font-weight: bold;
 }
@@ -170,14 +187,12 @@ body {
 .social-content .section-body a, .social-links-icons {
     padding: 0.2em;
     font-size: 1.2em;
-    color: initial;
     text-decoration: none;
-    opacity: 0.8;
 }
 
 .social-content .section-body a:hover, .social-links-icons a:hover {
-    transition: all 0.2s ease-in-out;
     opacity: 1;
+    text-decoration: underline;
 }
 
 .dark-text {
@@ -234,6 +249,12 @@ body {
 
 .bottom-note, footer, .icons {
     display: none;
+}
+
+.inspiration-tag {
+    align-self: flex-end;
+    margin-top: auto;
+    text-align: right;
 }
 
 @media only screen and (min-height: 550px) and (min-width: 300px) {
