@@ -148,7 +148,7 @@ body {
 .project-body-image-container img {
     max-width: 80%;
     object-fit: contain;
-    max-height: 500px;
+    max-height: 45vh;
     filter: opacity(0.8);
 }
 
