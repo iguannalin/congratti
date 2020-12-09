@@ -18,6 +18,10 @@
     width: 100%;
 }
 
+.project-body-image-container img {
+    max-height: 40vh;
+}
+
 .project-body-image-container {
     display: flex;
     justify-content: center;

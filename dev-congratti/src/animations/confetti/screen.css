@@ -25,6 +25,10 @@
     justify-content: center;
 }
 
+.project-body-image-container img {
+    max-height: 45vh;
+}
+
 #blurb {
     font-size: 1.3em;
     margin: 0;
