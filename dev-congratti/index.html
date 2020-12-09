@@ -48,8 +48,8 @@
                     generalist, working in both frontend and backend.</p>
                 <p class="subheading">Currently learning and enjoying: d3.js, Three.js,
                     Heroku, SQL, Observable Notebooks, random APIs</p>
-                <p><a class="subheading" href="#projects">Projects</a></p>
                 <p><a class="subheading" href="#professional">Professional Work</a></p>
+                <p><a class="subheading" href="#projects">Projects</a></p>
                 <p><a class="subheading" href="#personal">Personal</a></p>
                 <p><a class="subheading" href="#social">Contact</a></p>
                 <p><a class="subheading" href="#social">Resume</a></p>
@@ -57,6 +57,7 @@
         </div>
     </div>
 
+    <!--**PROJECTS**-->
     <div id="projects" class="projects-content section-container">
         <div class="section-header">
             <div class="brand-logo"><a href="#">Anna<br>Lin</a></div>
@@ -65,6 +66,22 @@
         </div>
         <div class="section-body">
             <ul class="subheading project-links-list">
+                <li id="professional">
+                    <div class="project-container"><h3 class="project-heading">Professional Work</h3>
+                        <div class="project-body">
+                            <div class="project-body-details">
+                                <p><a class="project-header-link" target="_blank"
+                                      href="http://blog.annaylin.com/">View my professional portfolio here</a></p>
+                                <p>For more details on projects I did for Schwab, Stamen, and Farber, click the link to
+                                    my blog above.</p>
+                            </div>
+                            <div class="project-body-image-container"><img loading="lazy"
+                                                                           alt="Demo of the LMS project I built for Farber"
+                                                                           src="./public/portfolio/pwu-course-demo.gif"/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
                 <li>
                     <div class="project-container"><h3 class="project-heading">text-me-smth-nice</h3>
                         <div class="project-body">
@@ -80,15 +97,20 @@
                                     route → Heroku hosts a Python script that runs on a schedule to periodically call
                                     the Twilio messaging API → and the user makes a call to the API when they submit a
                                     form on my website with their phone number.</p>
-                                <p>There are some security concerns for sure, and also it's currently running on the
-                                    trial Twilio service, so I will work on polishing the app a bit more. Overall, I had
-                                    a lot of fun building it, and like a sad Christmas, got to play around with some new
-                                    toys!</p></div>
+                                <p>There are more features I'd like to build, so I will work on polishing the app a bit
+                                    more. Overall, I had
+                                    a lot of fun building it, and I've received positive feedback on it so far.</p>
+                            </div>
                             <div class="project-body-image-container">
                                 <img alt="Receiving texts from the text-me-smth-nice app"
                                      loading="lazy"
                                      width="300"
                                      src="./public/portfolio/text-me-smth-nice.gif"/>
+
+                                <img alt="My friend receiving the texts on their iPhone"
+                                     loading="lazy"
+                                     width="300"
+                                     src="./public/portfolio/text-me-smth-nice-iphone.jpg"/>
                             </div>
                         </div>
                     </div>
@@ -109,8 +131,9 @@
                                         href="https://developer.spotify.com/documentation/web-api/reference/playlists/create-playlist/"
                                         rel="noopener noreferrer" target="_blank">really well-documented API for
                                     developers</a> to use.</p>
-                                <p>I took a stab at it, and ended up with a functional app that currently serves one
-                                    happy user: me :) !</p>
+                                <p>You can check out the app at the link above. You can select the number of your most
+                                    recently added songs you want to be made into a playlist, and it will ask to
+                                    authenticate your Spotify account.</p>
                                 <p>The biggest challenge I had during this app was figuring out how the Spotify
                                     authentication worked. It took me a while to figure out, but finally I realized that
                                     the way the auth process worked was this: Log in to Spotify with the developer key →
@@ -129,13 +152,13 @@
                             <div class="project-body-details">
                                 <p><a class="project-header-link" target="_blank"
                                       href="http://www.superdiv.mmg.mpg.de/">View project here</a></p>
-                                <p>I had the opportunity to build a React project for
+                                <p>I created a React single-page application for
                                     Stamen Design, in collaboration with Max Planck Institute to visualize data
                                     collected on
                                     diversity patterns in different countries.</p></div>
                             <div class="project-body-image-container"><img loading="lazy"
-                                    alt="Data visualizations on the Superdiversity project site"
-                                    src="./public/portfolio/superdiversity-screenshot.png"/>
+                                                                           alt="Data visualizations on the Superdiversity project site"
+                                                                           src="./public/portfolio/superdiversity-screenshot.png"/>
                             </div>
                         </div>
                     </div>
@@ -172,19 +195,11 @@
                                     Observable</a> at the moment, and using SVGs to build interactive websites with
                                     data.
                                 </p></div>
-                            <div class="project-body-image-container"></div>
+                            <div class="project-body-image-container"><img loading="lazy"
+                                                                           alt="Creating a bar chart 'bookshelf' in Observable Notebooks"
+                                                                           src="./public/portfolio/bookshelf-observable-screenshot.png"/>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="project-container"><h3 class="project-heading" id="professional">Professional work</h3>
-                        <p><a class="project-header-link" target="_blank"
-                              href="http://blog.annaylin.com/">View projects here</a></p>
-                        <!--<div class="project-body">-->
-                        <!--<div class="project-body-details"><p>Lorem ipsum</p></div>-->
-                        <!--<div class="project-body-image-container"><img alt="PROJECT TITLE" loading=lazy"-->
-                        <!--src="./public/anna.png"/></div>-->
-                        <!--</div>-->
                     </div>
                 </li>
             </ul>
@@ -280,7 +295,7 @@
             <div class="section-header-title"><h2>Contact</h2></div>
         </div>
         <div class="section-body">
-            <p class="subheading">You can email me at: anna [at] annaylin.com</p>
+            <p class="subheading">You can email me at: anlin [at] ucsc.edu</p>
             <p class="subheading"><a href="public/AnnaLin--Resume.pdf">Download my resume</a></p>
             <div class="social-links-icons">
                 <a href="https://github.com/iguannalin" alt="GitHub" title="Check out my latest project on Github"

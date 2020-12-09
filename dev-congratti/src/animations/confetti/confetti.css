@@ -96,17 +96,12 @@ body {
 }
 
 :root {
-    --bg-color-1: rgb(222, 75, 114);
-    --bg-color-2: rgb(241, 186, 72);
-    --bg-color-3: rgb(14, 117, 103);
-    --bg-color-4: rgb(76, 148, 190);
-    --bg-color-5: rgb(249, 239, 130);
-    --bg-color-6: rgb(217, 55, 50);
-    /*--bg-color-7: rgb(192, 193, 189);*/
-    /*--bg-color-8: rgb(224, 127, 141);*/
-    /*--bg-color-9: rgb(14, 211, 217);*/
-    /*--bg-color-10: rgb(244, 240, 201);*/
-    /*--bg-color-11: rgb(251, 252, 247);*/
+    --bg-color-1: #D85665;
+    --bg-color-2: #EFA55A;
+    --bg-color-3: #3C71A8;
+    --bg-color-4: #64A8DA;
+    --bg-color-5: #A9CAE0;
+    --bg-color-6: #B3466D;
 
     --main-heading: 'Varela Round', sans-serif;
     --sub-heading: 'Playfair Display', serif;
@@ -118,17 +113,13 @@ body {
     background-color: var(--bg-color-1);
 }
 
+#personal.section-container, #personal .section-header {
+    /*background-color: white;*/
+    background-color: var(--bg-color-3);
+}
+
 #social.section-container, #social .section-header {
     background-color: var(--bg-color-2);
-}
-
-#personal.section-container, #personal .section-header {
-    background-color: white;
-    /*background-color: var(--bg-color-3);*/
-}
-
-.section-container #projects {
-
 }
 
 .section-container {
@@ -142,6 +133,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     padding-top: 1em;
+    z-index: 999;
 }
 
 .section-header-title h2 {
@@ -168,16 +160,24 @@ body {
     text-decoration: underline;
 }
 
-.social-links-icons {
-    font-size: 2em;
-    color: initial;
-    text-decoration: none;
+.social-content .section-body {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
 }
 
-.social-links-icons a:hover {
+.social-content .section-body a, .social-links-icons {
+    padding: 0.2em;
+    font-size: 1.2em;
+    color: initial;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.social-content .section-body a:hover, .social-links-icons a:hover {
     transition: all 0.2s ease-in-out;
-    opacity: 0.6;
-    transform: scale(1.1);
+    opacity: 1;
 }
 
 .dark-text {
@@ -249,18 +249,6 @@ body {
     footer {
         display: initial;
     }
-
-    /*.icons {*/
-    /*position: absolute;*/
-    /*z-index: 999;*/
-    /*top: 35vh;*/
-    /*right: 3vw;*/
-    /*display: flex;*/
-    /*flex-flow: column;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
-    /*line-height: 2;*/
-    /*}*/
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
