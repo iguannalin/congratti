@@ -18,6 +18,10 @@
     width: 100%;
 }
 
+.project-body-image-container img {
+    max-height: 40vh;
+}
+
 .project-body-image-container {
     display: flex;
     justify-content: center;
@@ -70,6 +74,10 @@ footer {
 .project-body-image-container {
     display: flex;
     justify-content: center;
+}
+
+.project-body-image-container img {
+    max-height: 45vh;
 }
 
 #blurb {
@@ -143,12 +151,12 @@ body {
 .project-body-image-container {
     padding: 1.5em;
     box-sizing: border-box;
+    /*flex-flow: row wrap;*/
 }
 
 .project-body-image-container img {
     max-width: 80%;
     object-fit: contain;
-    max-height: 45vh;
     filter: opacity(0.8);
 }
 
