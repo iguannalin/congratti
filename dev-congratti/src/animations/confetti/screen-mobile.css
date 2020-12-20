@@ -22,6 +22,11 @@
     max-height: 40vh;
 }
 
+.project-body-image-container img.potato {
+    background-image: url("../../../public/placeholder.png");
+    height: 600px;
+}
+
 .project-body-image-container {
     display: flex;
     justify-content: center;

@@ -75,7 +75,7 @@
                                 <p>For more details on projects I did for Schwab, Stamen, and Farber, click the link to
                                     my blog above.</p>
                             </div>
-                            <div class="project-body-image-container"><img loading="lazy"
+                            <div class="project-body-image-container"><img class="potato" loading="lazy"
                                                                            alt="Demo of the LMS project I built for Farber"
                                                                            src="./public/portfolio/pwu-course-demo.gif"/>
                             </div>
@@ -103,14 +103,16 @@
                             </div>
                             <div class="project-body-image-container">
                                 <img alt="Receiving texts from the text-me-smth-nice app"
-                                     loading="lazy"
+                                     class="potato" loading="lazy"
                                      width="300"
-                                     src="./public/portfolio/text-me-smth-nice.gif"/>
+                                     src="./public/portfolio/text-me-smth-nice.gif"
+                                />
 
                                 <img alt="My friend receiving the texts on their iPhone"
-                                     loading="lazy"
+                                     class="potato" loading="lazy"
                                      width="300"
-                                     src="./public/portfolio/text-me-smth-nice-iphone.jpg"/>
+                                     src="./public/portfolio/text-me-smth-nice-iphone.jpg"
+                                />
                             </div>
                         </div>
                     </div>
@@ -140,9 +142,10 @@
                                     Redirect back to the app with a fresh code → Fetch that code from the url use it to
                                     make requests to the API.</p></div>
                             <div class="project-body-image-container"><img
-                                    loading="lazy"
+                                    class="potato" loading="lazy"
                                     alt="My top 20 recently added songs on Spotify"
-                                    src="./public/portfolio/spotify-recently-added-screenshot.png"/></div>
+                                    src="./public/portfolio/spotify-recently-added-screenshot.png"
+                            /></div>
                         </div>
                     </div>
                 </li>
@@ -156,7 +159,7 @@
                                     Stamen Design, in collaboration with Max Planck Institute to visualize data
                                     collected on
                                     diversity patterns in different countries.</p></div>
-                            <div class="project-body-image-container"><img loading="lazy"
+                            <div class="project-body-image-container"><img class="potato" loading="lazy"
                                                                            alt="Data visualizations on the Superdiversity project site"
                                                                            src="./public/portfolio/superdiversity-screenshot.png"/>
                             </div>
@@ -175,7 +178,7 @@
                                             href="https://github.com/iguannalin/eaturveg/blob/master/src/beautifulveggiesdata.json">data</a>
                                     from the local CUESA website.</p></div>
                             <div class="project-body-image-container"><img alt="Scrolling through the eaturveg app"
-                                                                           loading="lazy"
+                                                                           class="potato" loading="lazy"
                                                                            src="./public/portfolio/eaturveg-screenrecording.gif"/>
                             </div>
                         </div>
@@ -195,7 +198,7 @@
                                     Observable</a> at the moment, and using SVGs to build interactive websites with
                                     data.
                                 </p></div>
-                            <div class="project-body-image-container"><img loading="lazy"
+                            <div class="project-body-image-container"><img class="potato" loading="lazy"
                                                                            alt="Creating a bar chart 'bookshelf' in Observable Notebooks"
                                                                            src="./public/portfolio/bookshelf-observable-screenshot.png"/>
                             </div>
@@ -219,7 +222,8 @@
                             <div class="project-body-details"><a href="./filmotography" target="_blank"
                                                                  rel="noopener noreferrer">Film photography blog</a>
                             </div>
-                            <div class="project-body-image-container"><img alt="35mm shot of Half-Dome" loading="lazy"
+                            <div class="project-body-image-container"><img alt="35mm shot of Half-Dome" class="potato"
+                                                                           loading="lazy"
                                                                            src="./public/personal/filmotography-screenshot.png"/>
                             </div>
                         </div>
@@ -232,7 +236,8 @@
                                                                     target="_blank"
                                                                     rel="noopener noreferrer">Illustrations on
                                 Tumblr</a></p></div>
-                            <div class="project-body-image-container"><img alt="Leaves illustration" loading="lazy"
+                            <div class="project-body-image-container"><img alt="Leaves illustration" class="potato"
+                                                                           loading="lazy"
                                                                            src="./public/personal/illustration-leaves.png"/>
                             </div>
                         </div>
@@ -317,7 +322,29 @@
     </div>
 
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const lazyImages = [].slice.call(document.querySelectorAll("img.potato"));
 
+        if ("IntersectionObserver" in window) {
+            let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        let lazyImage = entry.target;
+                        lazyImage.classList.remove("potato");
+                        lazyImageObserver.unobserve(lazyImage);
+                    }
+                });
+            });
+
+            lazyImages.forEach(function (lazyImage) {
+                lazyImageObserver.observe(lazyImage);
+            });
+        } else {
+            // Possibly fall back to event handlers here
+        }
+    });
+</script>
 </body>
 <footer>
     <div class="footer-scroll-area"><a title="Link to photo of me" href="public/anna.png">you can find a photo of me

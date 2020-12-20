@@ -189,12 +189,12 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/animations/confetti/screen.css":[function(require,module,exports) {
+},{"./../../../public/placeholder.png":[["placeholder.bcc05e2d.png","public/placeholder.png"],"public/placeholder.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/animations/confetti/screen.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/animations/confetti/confetti.css":[function(require,module,exports) {
+},{"./../../../public/placeholder.png":[["placeholder.bcc05e2d.png","public/placeholder.png"],"public/placeholder.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/animations/confetti/confetti.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -227,7 +227,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52955" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49540" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

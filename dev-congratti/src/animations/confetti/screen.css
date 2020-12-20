@@ -29,6 +29,10 @@
     max-height: 45vh;
 }
 
+.project-body-image-container img.potato {
+    background-image: url("../../../public/placeholder.png");
+}
+
 #blurb {
     font-size: 1.3em;
     margin: 0;

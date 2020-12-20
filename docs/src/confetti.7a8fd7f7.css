@@ -22,6 +22,11 @@
     max-height: 40vh;
 }
 
+.project-body-image-container img.potato {
+    background-image: url("/placeholder.bcc05e2d.png");
+    height: 600px;
+}
+
 .project-body-image-container {
     display: flex;
     justify-content: center;
@@ -78,6 +83,10 @@ footer {
 
 .project-body-image-container img {
     max-height: 45vh;
+}
+
+.project-body-image-container img.potato {
+    background-image: url("/placeholder.bcc05e2d.png");
 }
 
 #blurb {
