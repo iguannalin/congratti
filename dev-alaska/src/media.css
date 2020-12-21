@@ -1,0 +1,17 @@
+.section img {
+}
+
+.single-column img {
+    padding: 5% 5% 0;
+    width: 50%;
+}
+
+.section figcaption {
+    padding-bottom: 5%;
+}
+
+.two-columns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
