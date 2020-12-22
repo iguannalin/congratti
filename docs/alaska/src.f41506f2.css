@@ -4,10 +4,10 @@
 }
 
 .section img {
+    margin: 5% 0 1%;
 }
 
 .single-column img {
-    margin: 5% 0 1%;
     width: 100%;
 }
 
@@ -23,6 +23,8 @@
 
 .two-columns img {
     padding-top: 5%;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .two-columns.mixed img {
@@ -49,9 +51,6 @@
     justify-content: center;
 }
 }
-
-/*@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,600;1,700&family=Roboto+Mono:ital,wght@0,100;0,300;0,400;1,500&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&display=swap');
 
 :root {
     --bg-first-color: #90664F;
