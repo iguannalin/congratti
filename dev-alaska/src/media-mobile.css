@@ -3,10 +3,10 @@
 }
 
 .section img {
+    margin: 5% 0 1%;
 }
 
 .single-column img {
-    margin: 5% 0 1%;
     width: 100%;
 }
 
@@ -22,6 +22,8 @@
 
 .two-columns img {
     padding-top: 5%;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .two-columns.mixed img {
