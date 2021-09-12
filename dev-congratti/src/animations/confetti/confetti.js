@@ -154,12 +154,34 @@ function handleClick() {
     // bgColor = getRandomColorFromPalette(confettiColors);
 }
 
+function startAnimation() {
+    brandAnimation = setInterval(() => {
+        let split = brand.innerText.split('\n');
+        brand.innerText = split[0] + 'a' + '\n' + split[1];
+        let random = () => Math.round(255 / (Math.random() * 10)) % 255;
+        let x = random(), y = random(), z = random();
+        brand.style.color = `rgb(${x}, ${y}, ${z})`;
+    }, 200);
+}
+
+function animateBrand() {
+    brand = document.body.querySelector('#brand-name');
+    originalBrandText = brand.innerHTML;
+    brand.addEventListener("mouseover", startAnimation);
+    brand.addEventListener('mouseout', () => {
+        brand.innerHTML = originalBrandText;
+        clearInterval(brandAnimation);
+    })
+}
+
 function init() {
     // document.addEventListener('click', handleClick);
     initScene();
     createConfetti(25);
     loop();
+    animateBrand();
     // document.body.style.backgroundColor = "#" + bgColor.toString();
 }
 
+let brand, originalBrandText, brandAnimation;
 document.addEventListener("DOMContentLoaded", init);

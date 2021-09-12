@@ -331,3 +331,6 @@ form {
     font-size: 4rem;
 }
 
+#brand-name {
+    transition: color ease-in-out 150ms;
+}
