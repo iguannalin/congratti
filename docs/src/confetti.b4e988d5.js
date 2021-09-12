@@ -390,11 +390,11 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
@@ -18015,9 +18015,7 @@ function WebGLRenderer(parameters) {
     _isContextLost = true;
   }
 
-  function onContextRestore()
-  /* event */
-  {
+  function onContextRestore() {
     console.log('THREE.WebGLRenderer: Context Restored.');
     _isContextLost = false;
     initGLContext();
@@ -19096,9 +19094,7 @@ Object.assign(FogExp2.prototype, {
   clone: function clone() {
     return new FogExp2(this.color, this.density);
   },
-  toJSON: function toJSON()
-  /* meta */
-  {
+  toJSON: function toJSON() {
     return {
       type: 'FogExp2',
       color: this.color.getHex(),
@@ -19123,9 +19119,7 @@ Object.assign(Fog.prototype, {
   clone: function clone() {
     return new Fog(this.color, this.near, this.far);
   },
-  toJSON: function toJSON()
-  /* meta */
-  {
+  toJSON: function toJSON() {
     return {
       type: 'Fog',
       color: this.color.getHex(),
@@ -21903,9 +21897,7 @@ function pointInTriangle(ax, ay, bx, by, cx, cy, px, py) {
 
 
 function isValidDiagonal(a, b) {
-  return a.next.i !== b.i && a.prev.i !== b.i && !intersectsPolygon(a, b) && ( // dones't intersect other edges
-  locallyInside(a, b) && locallyInside(b, a) && middleInside(a, b) && ( // locally visible
-  area(a.prev, a, b.prev) || area(a, b.prev, b)) || // does not create opposite-facing sectors
+  return a.next.i !== b.i && a.prev.i !== b.i && !intersectsPolygon(a, b) && (locallyInside(a, b) && locallyInside(b, a) && middleInside(a, b) && (area(a.prev, a, b.prev) || area(a, b.prev, b)) || // does not create opposite-facing sectors
   equals(a, b) && area(a.prev, a, a.next) > 0 && area(b.prev, b, b.next) > 0); // special zero-length case
 } // signed area of a triangle
 
@@ -24823,14 +24815,10 @@ Object.assign(Interpolant.prototype, {
     return result;
   },
   // Template methods for derived classes:
-  interpolate_: function interpolate_()
-  /* i1, t0, t, t1 */
-  {
+  interpolate_: function interpolate_() {
     throw new Error('call to abstract method'); // implementations shall return this.resultBuffer
   },
-  intervalChanged_: function intervalChanged_()
-  /* i1, t0, t1 */
-  {// empty
+  intervalChanged_: function intervalChanged_() {// empty
   }
 }); // DECLARE ALIAS AFTER assign prototype
 
@@ -25897,18 +25885,14 @@ function Loader(manager) {
 }
 
 Object.assign(Loader.prototype, {
-  load: function load()
-  /* url, onLoad, onProgress, onError */
-  {},
+  load: function load() {},
   loadAsync: function loadAsync(url, onProgress) {
     var scope = this;
     return new Promise(function (resolve, reject) {
       scope.load(url, resolve, onProgress, reject);
     });
   },
-  parse: function parse()
-  /* data */
-  {},
+  parse: function parse() {},
   setCrossOrigin: function setCrossOrigin(crossOrigin) {
     this.crossOrigin = crossOrigin;
     return this;
@@ -26475,9 +26459,7 @@ function Curve() {
 Object.assign(Curve.prototype, {
   // Virtual base class method to overwrite and implement in subclasses
   //	- t [0 .. 1]
-  getPoint: function getPoint()
-  /* t, optionalTarget */
-  {
+  getPoint: function getPoint() {
     console.warn('THREE.Curve: .getPoint() not implemented.');
     return null;
   },
@@ -32937,9 +32919,7 @@ function ImmediateRenderObject(material) {
   Object3D.call(this);
   this.material = material;
 
-  this.render = function ()
-  /* renderCallback */
-  {};
+  this.render = function () {};
 
   this.hasPositions = false;
   this.hasNormals = false;
@@ -34607,19 +34587,13 @@ function Spline(points) {
 
 Spline.prototype = Object.create(CatmullRomCurve3.prototype);
 Object.assign(Spline.prototype, {
-  initFromArray: function initFromArray()
-  /* a */
-  {
+  initFromArray: function initFromArray() {
     console.error('THREE.Spline: .initFromArray() has been removed.');
   },
-  getControlPointsArray: function getControlPointsArray()
-  /* optionalTarget */
-  {
+  getControlPointsArray: function getControlPointsArray() {
     console.error('THREE.Spline: .getControlPointsArray() has been removed.');
   },
-  reparametrizeByArcLength: function reparametrizeByArcLength()
-  /* samplingCoef */
-  {
+  reparametrizeByArcLength: function reparametrizeByArcLength() {
     console.error('THREE.Spline: .reparametrizeByArcLength() has been removed.');
   }
 }); //
@@ -34664,14 +34638,10 @@ Object.assign(Loader.prototype, {
   }
 });
 Loader.Handlers = {
-  add: function add()
-  /* regex, loader */
-  {
+  add: function add() {
     console.error('THREE.Loader: Handlers.add() has been removed. Use LoadingManager.addHandler() instead.');
   },
-  get: function get()
-  /* file */
-  {
+  get: function get() {
     console.error('THREE.Loader: Handlers.get() has been removed. Use LoadingManager.getHandler() instead.');
   }
 };
@@ -34773,18 +34743,14 @@ Object.assign(Matrix3.prototype, {
     console.warn('THREE.Matrix3: .multiplyVector3() has been removed. Use vector.applyMatrix3( matrix ) instead.');
     return vector.applyMatrix3(this);
   },
-  multiplyVector3Array: function multiplyVector3Array()
-  /* a */
-  {
+  multiplyVector3Array: function multiplyVector3Array() {
     console.error('THREE.Matrix3: .multiplyVector3Array() has been removed.');
   },
   applyToBufferAttribute: function applyToBufferAttribute(attribute) {
     console.warn('THREE.Matrix3: .applyToBufferAttribute() has been removed. Use attribute.applyMatrix3( matrix ) instead.');
     return attribute.applyMatrix3(this);
   },
-  applyToVector3Array: function applyToVector3Array()
-  /* array, offset, length */
-  {
+  applyToVector3Array: function applyToVector3Array() {
     console.error('THREE.Matrix3: .applyToVector3Array() has been removed.');
   }
 });
@@ -34816,9 +34782,7 @@ Object.assign(Matrix4.prototype, {
     console.warn('THREE.Matrix4: .multiplyVector4() has been removed. Use vector.applyMatrix4( matrix ) instead.');
     return vector.applyMatrix4(this);
   },
-  multiplyVector3Array: function multiplyVector3Array()
-  /* a */
-  {
+  multiplyVector3Array: function multiplyVector3Array() {
     console.error('THREE.Matrix4: .multiplyVector3Array() has been removed.');
   },
   rotateAxis: function rotateAxis(v) {
@@ -34848,9 +34812,7 @@ Object.assign(Matrix4.prototype, {
     console.warn('THREE.Matrix4: .applyToBufferAttribute() has been removed. Use attribute.applyMatrix4( matrix ) instead.');
     return attribute.applyMatrix4(this);
   },
-  applyToVector3Array: function applyToVector3Array()
-  /* array, offset, length */
-  {
+  applyToVector3Array: function applyToVector3Array() {
     console.error('THREE.Matrix4: .applyToVector3Array() has been removed.');
   },
   makeFrustum: function makeFrustum(left, right, bottom, top, near, far) {
@@ -35187,9 +35149,7 @@ Object.defineProperties(BufferAttribute.prototype, {
       console.warn('THREE.BufferAttribute: .dynamic has been deprecated. Use .usage instead.');
       return this.usage === DynamicDrawUsage;
     },
-    set: function set()
-    /* value */
-    {
+    set: function set() {
       console.warn('THREE.BufferAttribute: .dynamic has been deprecated. Use .usage instead.');
       this.setUsage(DynamicDrawUsage);
     }
@@ -35201,14 +35161,10 @@ Object.assign(BufferAttribute.prototype, {
     this.setUsage(value === true ? DynamicDrawUsage : StaticDrawUsage);
     return this;
   },
-  copyIndicesArray: function copyIndicesArray()
-  /* indices */
-  {
+  copyIndicesArray: function copyIndicesArray() {
     console.error('THREE.BufferAttribute: .copyIndicesArray() has been removed.');
   },
-  setArray: function setArray()
-  /* array */
-  {
+  setArray: function setArray() {
     console.error('THREE.BufferAttribute: .setArray has been removed. Use BufferGeometry .setAttribute to replace/resize attribute buffers');
   }
 });
@@ -35316,9 +35272,7 @@ Object.assign(InterleavedBuffer.prototype, {
     this.setUsage(value === true ? DynamicDrawUsage : StaticDrawUsage);
     return this;
   },
-  setArray: function setArray()
-  /* array */
-  {
+  setArray: function setArray() {
     console.error('THREE.InterleavedBuffer: .setArray has been removed. Use BufferGeometry .setAttribute to replace/resize attribute buffers');
   }
 }); //
@@ -35534,9 +35488,7 @@ Object.defineProperties(WebGLRenderer.prototype, {
       console.warn('THREE.WebGLRenderer: .shadowMapCullFace has been removed. Set Material.shadowSide instead.');
       return undefined;
     },
-    set: function set()
-    /* value */
-    {
+    set: function set() {
       console.warn('THREE.WebGLRenderer: .shadowMapCullFace has been removed. Set Material.shadowSide instead.');
     }
   },
@@ -35578,9 +35530,7 @@ Object.defineProperties(WebGLShadowMap.prototype, {
       console.warn('THREE.WebGLRenderer: .shadowMap.cullFace has been removed. Set Material.shadowSide instead.');
       return undefined;
     },
-    set: function set()
-    /* cullFace */
-    {
+    set: function set() {
       console.warn('THREE.WebGLRenderer: .shadowMap.cullFace has been removed. Set Material.shadowSide instead.');
     }
   },
@@ -35803,19 +35753,13 @@ function JSONLoader() {
 
 
 var SceneUtils = {
-  createMultiMaterialObject: function createMultiMaterialObject()
-  /* geometry, materials */
-  {
+  createMultiMaterialObject: function createMultiMaterialObject() {
     console.error('THREE.SceneUtils has been moved to /examples/jsm/utils/SceneUtils.js');
   },
-  detach: function detach()
-  /* child, parent, scene */
-  {
+  detach: function detach() {
     console.error('THREE.SceneUtils has been moved to /examples/jsm/utils/SceneUtils.js');
   },
-  attach: function attach()
-  /* child, scene, parent */
-  {
+  attach: function attach() {
     console.error('THREE.SceneUtils has been moved to /examples/jsm/utils/SceneUtils.js');
   }
 }; //
@@ -36231,9 +36175,7 @@ var OrbitControls = function OrbitControls(object, domElement) {
     scope.update();
   }
 
-  function handleMouseUp()
-  /*event*/
-  {// no-op
+  function handleMouseUp() {// no-op
   }
 
   function handleMouseWheel(event) {
@@ -36366,9 +36308,7 @@ var OrbitControls = function OrbitControls(object, domElement) {
     if (scope.enableRotate) handleTouchMoveRotate(event);
   }
 
-  function handleTouchEnd()
-  /*event*/
-  {// no-op
+  function handleTouchEnd() {// no-op
   } //
   // event handlers - FSM: listen for events and reset state
   //
@@ -36659,9 +36599,9 @@ var THREE = _interopRequireWildcard(require("../../utils/three.module.js"));
 
 var _palette = require("./palette.js");
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 // Using Karim Maaloul's code as a guide (https://bit.ly/2JU9XdV)
 // TODO: animations of confetti to follow cursor, and Anna Lin navi home brand link to animate on hover
@@ -36796,13 +36736,41 @@ function handleClick() {
   // bgColor = getRandomColorFromPalette(confettiColors);
 }
 
+function startAnimation() {
+  brandAnimation = setInterval(function () {
+    var split = brand.innerText.split('\n');
+    brand.innerText = split[0] + 'a' + '\n' + split[1];
+
+    var random = function random() {
+      return Math.round(255 / (Math.random() * 10)) % 255;
+    };
+
+    var x = random(),
+        y = random(),
+        z = random();
+    brand.style.color = "rgb(".concat(x, ", ").concat(y, ", ").concat(z, ")");
+  }, 200);
+}
+
+function animateBrand() {
+  brand = document.body.querySelector('#brand-name');
+  originalBrandText = brand.innerHTML;
+  brand.addEventListener("mouseover", startAnimation);
+  brand.addEventListener('mouseout', function () {
+    brand.innerHTML = originalBrandText;
+    clearInterval(brandAnimation);
+  });
+}
+
 function init() {
   // document.addEventListener('click', handleClick);
   initScene();
   createConfetti(25);
-  loop(); // document.body.style.backgroundColor = "#" + bgColor.toString();
+  loop();
+  animateBrand(); // document.body.style.backgroundColor = "#" + bgColor.toString();
 }
 
+var brand, originalBrandText, brandAnimation;
 document.addEventListener("DOMContentLoaded", init);
 },{"../../utils/three-OrbitControls.js":"src/utils/three-OrbitControls.js","../../utils/three.module.js":"src/utils/three.module.js","./palette.js":"src/animations/confetti/palette.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -36832,7 +36800,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62821" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62186" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

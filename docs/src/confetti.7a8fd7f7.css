@@ -438,6 +438,9 @@ form {
     font-size: 4rem;
 }
 
+#brand-name {
+    transition: color ease-in-out 150ms;
+}
 
 
 /*# sourceMappingURL=/confetti.7a8fd7f7.css.map */
