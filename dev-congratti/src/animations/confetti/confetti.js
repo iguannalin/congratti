@@ -154,24 +154,27 @@ function handleClick() {
     // bgColor = getRandomColorFromPalette(confettiColors);
 }
 
-function startAnimation() {
+function startAnimation(e) {
     brandAnimation = setInterval(() => {
-        let split = brand.innerText.split('\n');
-        brand.innerText = split[0] + 'a' + '\n' + split[1];
+        let split = e.target.innerText.split('\n');
+        e.target.innerText = split[0] + 'a' + '\n' + split[1];
         let random = () => Math.round(255 / (Math.random() * 10)) % 255;
         let x = random(), y = random(), z = random();
-        brand.style.color = `rgb(${x}, ${y}, ${z})`;
+        e.target.style.color = `rgb(${x}, ${y}, ${z})`;
     }, 200);
 }
 
 function animateBrand() {
-    brand = document.body.querySelector('#brand-name');
-    originalBrandText = brand.innerHTML;
-    brand.addEventListener("mouseover", startAnimation);
-    brand.addEventListener('mouseout', () => {
-        brand.innerHTML = originalBrandText;
-        clearInterval(brandAnimation);
-    })
+    document.body.querySelectorAll('.brand-logo > a').forEach((el) => {
+        originalBrandText = el.innerHTML;
+        const originalBrandColor = el.style.color;
+        el.addEventListener("mouseover", startAnimation);
+        el.addEventListener('mouseout', () => {
+            el.innerHTML = originalBrandText;
+            clearInterval(brandAnimation);
+            el.style.color = originalBrandColor;
+        })
+    });
 }
 
 function init() {
@@ -183,5 +186,5 @@ function init() {
     // document.body.style.backgroundColor = "#" + bgColor.toString();
 }
 
-let brand, originalBrandText, brandAnimation;
+let originalBrandText, brandAnimation;
 document.addEventListener("DOMContentLoaded", init);
