@@ -36736,10 +36736,10 @@ function handleClick() {
   // bgColor = getRandomColorFromPalette(confettiColors);
 }
 
-function startAnimation() {
+function startAnimation(e) {
   brandAnimation = setInterval(function () {
-    var split = brand.innerText.split('\n');
-    brand.innerText = split[0] + 'a' + '\n' + split[1];
+    var split = e.target.innerText.split('\n');
+    e.target.innerText = split[0] + 'a' + '\n' + split[1];
 
     var random = function random() {
       return Math.round(255 / (Math.random() * 10)) % 255;
@@ -36748,17 +36748,20 @@ function startAnimation() {
     var x = random(),
         y = random(),
         z = random();
-    brand.style.color = "rgb(".concat(x, ", ").concat(y, ", ").concat(z, ")");
+    e.target.style.color = "rgb(".concat(x, ", ").concat(y, ", ").concat(z, ")");
   }, 200);
 }
 
 function animateBrand() {
-  brand = document.body.querySelector('#brand-name');
-  originalBrandText = brand.innerHTML;
-  brand.addEventListener("mouseover", startAnimation);
-  brand.addEventListener('mouseout', function () {
-    brand.innerHTML = originalBrandText;
-    clearInterval(brandAnimation);
+  document.body.querySelectorAll('.brand-logo > a').forEach(function (el) {
+    originalBrandText = el.innerHTML;
+    var originalBrandColor = el.style.color;
+    el.addEventListener("mouseover", startAnimation);
+    el.addEventListener('mouseout', function () {
+      el.innerHTML = originalBrandText;
+      clearInterval(brandAnimation);
+      el.style.color = originalBrandColor;
+    });
   });
 }
 
@@ -36770,7 +36773,7 @@ function init() {
   animateBrand(); // document.body.style.backgroundColor = "#" + bgColor.toString();
 }
 
-var brand, originalBrandText, brandAnimation;
+var originalBrandText, brandAnimation;
 document.addEventListener("DOMContentLoaded", init);
 },{"../../utils/three-OrbitControls.js":"src/utils/three-OrbitControls.js","../../utils/three.module.js":"src/utils/three.module.js","./palette.js":"src/animations/confetti/palette.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -36800,7 +36803,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62186" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49735" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
