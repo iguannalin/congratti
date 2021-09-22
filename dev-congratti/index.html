@@ -375,14 +375,15 @@
         return {
             essays: [],
             // TODO change later
-            url: 'http://localhost:5000',
+            // url: 'http://localhost:5000',
+            url: 'https://calm-atoll-48231.herokuapp.com/query_db',
 
             init() {
                 this.getEssays();
             },
 
             getEssays() {
-                fetch(``${this.url}/query_db`, {
+                fetch(`${this.url}`, {
                     'Access-Control-Allow-Headers': {
                         'mode': 'cors',
                         'access-control-allow-origin': '*'
