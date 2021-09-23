@@ -30,7 +30,9 @@
     <link rel="stylesheet" href="src/animations/confetti/confetti.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="icon" href="public/favicon.png" type="image/png">
+    <script defer src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
     <script src="src/animations/confetti/confetti.js"></script>
+    <script defer src="src/animations/typewrite/typewrite.js"></script>
 </head>
 
 <body>
@@ -340,6 +342,11 @@
     </div>
 
 </div>
+</body>
+<footer>
+    <div class="footer-scroll-area"><a title="Link to photo of me" href="public/anna.png">you can find a photo of me
+        here</a></div>
+</footer>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const lazyImages = [].slice.call(document.querySelectorAll("img.potato"));
@@ -363,13 +370,6 @@
         }
     });
 </script>
-</body>
-<footer>
-    <div class="footer-scroll-area"><a title="Link to photo of me" href="public/anna.png">you can find a photo of me
-        here</a></div>
-</footer>
-<script defer src="src/animations/typewrite/typewrite.js"></script>
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <script>
     function alpineData() {
         return {
