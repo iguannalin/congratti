@@ -96,7 +96,7 @@ body {
     --main-bg-color: #fff9e6;
     --bg-color-1: #D85665;
     --bg-color-2: #3C71A8;
-    --bg-color-3: #EFA55A;
+    --bg-color-3: #f4c164;
     --bg-color-4: #64A8DA;
     --bg-color-5: #A9CAE0;
     --bg-color-6: #B3466D;
@@ -104,7 +104,7 @@ body {
     --main-text-color: #E64E30;
     --text-color-1: #CBF094;
     --text-color-2: #00F096;
-    --text-color-3: #00566F;
+    --text-color-3: #2E3CB4;
     --text-color-4: #12563C;
     --text-color-5: #465188;
     --text-color-6: #4AF04D;
@@ -136,8 +136,12 @@ a:hover {
 }
 
 #social.section-container, #social .section-header {
-    background-color: var(--bg-color-3);
     color: var(--text-color-3);
+}
+
+#social.section-container {
+    background: var(--bg-color-3);
+    background: linear-gradient(180deg, rgba(244,193,100,1) 0%, rgba(243,188,97,1) 64%, rgba(242,173,89,1) 100%, rgba(241,163,83,1) 100%);
 }
 
 .section-container {
