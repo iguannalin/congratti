@@ -30,14 +30,13 @@
     <link rel="stylesheet" href="src/animations/confetti/confetti.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="icon" href="public/favicon.png" type="image/png">
-    <script defer src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
     <script src="src/animations/confetti/confetti.js"></script>
     <script defer src="src/animations/typewrite/typewrite.js"></script>
 </head>
 
 <body>
 <div id="canvas"></div>
-<div class="content-container" x-data="alpineData()" x-init="init()">
+<div class="content-container">
     <div>
         <div class="main-content section-container">
             <!--[if lt IE 7]>
@@ -62,7 +61,7 @@
     <!--**PROJECTS**-->
     <div id="projects" class="projects-content section-container">
         <div id="professional" class="section-header">
-            <div class="brand-logo"><a href="#">Anna<br>Lin</a></div>
+            <div class="brand-logo"><a id="brand-name" href="#">Anna<br>Lin</a></div>
             <div class="section-header-title"><h2>Projects</h2></div>
             <div></div>
         </div>
@@ -256,23 +255,16 @@
                         </div>
                     </div>
                 </li>
-                <li x-data="{showMore:false}">
+                <li>
                     <div class="project-container"><h3 class="project-heading">Writing</h3>
-                        <template x-if="essays">
                         <div class="project-body">
-                            <div class="project-body-details">
-                                <template x-for="(essay, index) in essays" :key="essay.name">
-                                <p x-show="index < 3 || showMore">
-                                    <a x-bind:href="essay.url" title="read on Notion" target="_blank" x-text="essay.name + ' ('+essay.date+')'"></a>
-                                    <!--.date.replace(/(.*?)-(.*?)-(.*?)/, '$2 $1')-->
-                                </p>
-                                </template>
-                                <span x-show="!showMore && essays.length > 4" x-on:click="showMore = true">...</span>
-                                <span x-show="showMore" x-on:click="showMore = false">^</span>
+                            <div class="project-body-details"><p><a
+                                    href="https://nettle-molecule-46e.notion.site/518dc89aba014808a55910325e6a689c?v=591d3512034b400c8dcc85728f909919"
+                                    alt="Notion blog" target="_blank" rel="noopener noreferrer">Writing blog on
+                                Notion</a></p></div>
                             <div class="project-body-image-container">
                             </div>
                         </div>
-                        </template>
                     </div>
                 </li>
                 <li>
@@ -370,29 +362,5 @@
         }
     });
 </script>
-<script>
-    function alpineData() {
-        return {
-            essays: [],
-            // TODO change later
-            url: 'http://localhost:5000',
-
-            init() {
-                this.getEssays();
-            },
-
-            getEssays() {
-                fetch(``${this.url}/query_db`, {
-                    'Access-Control-Allow-Headers': {
-                        'mode': 'cors',
-                        'access-control-allow-origin': '*'
-                    }
-                }).then((r) => r.json()).then(data => {
-                    this.essays = data.results.map((r) => {return {"date": r.properties["Date Written"].date.start, "name": r.properties.Name.title[0].text.content, "url": r.url};});
-                    this.essays.sort((a, b) => new Date(a.date) - new Date(b.date));
-                });
-            },
-        }
-    }
-</script>
 </html>
+
