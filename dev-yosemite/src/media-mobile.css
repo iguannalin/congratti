@@ -1,0 +1,32 @@
+.section figure {
+    margin: 0 auto !important;
+}
+
+.section img {
+    margin: 5% 0 1%;
+}
+
+.single-column img {
+    width: 100%;
+}
+
+.section figcaption {
+    padding: 0 5% 20%;
+}
+
+.two-columns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.two-columns img {
+    padding-top: 5%;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.two-columns.mixed img {
+    max-width: 40%;
+}
+
