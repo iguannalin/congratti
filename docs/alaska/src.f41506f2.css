@@ -1,5 +1,56 @@
-@import url('./media-mobile.css') (min-width: 0px);
-@import url('./media.css') (min-width: 768px);
+@media (min-width: 0px) {
+.section figure {
+    margin: 0 auto !important;
+}
+
+.section img {
+    margin: 5% 0 1%;
+}
+
+.single-column img {
+    width: 100%;
+}
+
+.section figcaption {
+    padding: 0 5% 20%;
+}
+
+.two-columns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.two-columns img {
+    padding-top: 5%;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.two-columns.mixed img {
+    max-width: 40%;
+}
+}
+
+@media (min-width: 768px) {
+.section img {
+}
+
+.single-column img {
+    padding: 5% 5% 0;
+    width: 50%;
+}
+
+.section figcaption {
+    padding-bottom: 5%;
+}
+
+.two-columns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+}
 
 :root {
     --bg-first-color: #90664F;
@@ -178,3 +229,6 @@ footer:hover p, footer:hover a{
     opacity: 1;
     text-decoration: underline;
 }
+
+
+/*# sourceMappingURL=/src.f41506f2.css.map */
