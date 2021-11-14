@@ -27,6 +27,32 @@ elif [ $1 == 'congratti' ]; then
     cd ../
     git cm 'Auto-deploying '$1
     echo $1' finished building, and moved folders. Check index.html is correct! Ready to push!'
+elif [ $1 == 'alaska' ]; then
+    echo 'Getting alaska ready :))'
+    cd ../dev-alaska
+    npm run build
+    rm -rf ../docs/alaska/*
+    mv ./dist/* ../docs/alaska
+    git add ../docs/alaska/
+    git add ../docs/dev-alaska
+    rm -rf ./dist
+    git add ./
+    cd ../
+    git cm 'Auto-deploying '$1
+    echo $1' finished building and moved folders'
+elif [ $1 == 'yosemite' ]; then
+    echo 'Getting yosemite ready :))'
+    cd ../dev-yosemite
+    npm run build
+    rm -rf ../docs/yosemite/*
+    mv ./dist/* ../docs/yosemite
+    git add ../docs/yosemite/
+    git add ../docs/dev-yosemite
+    rm -rf ./dist
+    git add ./
+    cd ../
+    git cm 'Auto-deploying '$1
+    echo $1' finished building and moved folders'
 else
     echo 'Getting '$1' ready ;)'
     rm -rf ./$1/
