@@ -1,17 +1,25 @@
-.section img {
+body {
+    margin: 0;
+    padding: 0 3em;
 }
 
-.single-column img {
-    padding: 5% 5% 0;
-    width: 50%;
+.Gallery-Container {
+    height: 57vh;
 }
 
-.section figcaption {
-    padding-bottom: 5%;
+.brand-logo {
+    padding: 16px 0;
 }
 
-.two-columns {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+.Gallery-Container img {
+    max-height: 57vh;
+}
+
+.Gallery-Container .Gallery-Block {
+    margin-right: 450px;
+    width: 100%;
+}
+
+.Gallery-Container .Gallery-Block.block-0 {
+    height: 100%;
 }

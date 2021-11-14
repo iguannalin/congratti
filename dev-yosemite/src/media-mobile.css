@@ -1,32 +1,29 @@
-.section figure {
-    margin: 0 auto !important;
+body {
+    margin: 0;
+    padding: 0;
 }
 
-.section img {
-    margin: 5% 0 1%;
+.Gallery-Container {
+    height: 33vh;
 }
 
-.single-column img {
-    width: 100%;
+.brand-logo {
+    padding: 16px 32px;
 }
 
-.section figcaption {
-    padding: 0 5% 20%;
+.Gallery-Container img {
+    max-height: 33vh;
 }
 
-.two-columns {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+.Gallery-Container .Gallery-Block {
+    margin-right: 200px;
 }
 
-.two-columns img {
-    padding-top: 5%;
-    box-sizing: border-box;
-    max-width: 100%;
+.Gallery-Container .Gallery-Block.block-0 {
+    height: 33vh;
 }
 
-.two-columns.mixed img {
-    max-width: 40%;
+footer {
+    opacity: 1;
+    margin: 0 32px;
 }
-
