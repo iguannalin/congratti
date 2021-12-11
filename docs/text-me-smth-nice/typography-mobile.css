@@ -3,6 +3,7 @@
     flex-flow: column wrap;
     margin: 48px;
     font-size: 2em;
+    justify-content: center;
 }
 
 .column-div {
@@ -10,7 +11,7 @@
 }
 
 .form-button {
-    margin: 36px 0 0;
+    margin: 36px 16px 0;
 }
 
 .header p {

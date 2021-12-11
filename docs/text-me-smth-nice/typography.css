@@ -5,8 +5,12 @@
     font-size: 1em;
 }
 
-.column-div {
-    margin: 16px;
+.column-div input:not(:first-child) {
+    margin-left: 16px;
+}
+
+.form-button {
+    margin: 24px 16px 0;
 }
 
 .header p {

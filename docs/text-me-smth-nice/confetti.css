@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:700&display=swap');
 @import url('./typography-mobile.css') (min-width: 0px);
-@import url('./typography.css') (min-width: 768px);
+@import url('./typography.css') (min-width: 1024px);
 
 body {
     font-size: 16px;
@@ -148,7 +148,6 @@ form {
 
 .form-button {
     font-size: 0.9rem;
-    margin: 24px 16px auto;
 }
 
 .received-content {
