@@ -60,7 +60,6 @@ body {
     max-width: 80%;
     object-fit: contain;
     filter: opacity(0.8);
-    background-color: black;
 }
 
 .project-body-image-container img:hover {
