@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:700&display=swap');
 @import url('./typography-mobile.css');
 @import url('./typography.css') (min-width: 768px);
-@import url('./form-mobile.css');
-@import url('./form.css') (min-width: 768px);
 
 body {
     font-size: 16px;
@@ -28,10 +26,6 @@ body {
 
 .overlay-container {
     z-index: 0;
-}
-
-.form-div h1{
-    margin-bottom: 0;
 }
 
 .content-div {
@@ -142,10 +136,34 @@ form {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    margin: 16px;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .form-div {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 48px;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .form-div {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 48px;
+        font-size: 1rem;
+    }
 }
 
 .form-div select, .form-div input {
     font-size: 1em;
+}
+
+.form-button {
+    font-size: 0.9rem;
 }
 
 .received-content {
