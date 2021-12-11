@@ -1,3 +1,18 @@
+.form-div {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 48px;
+    font-size: 2em;
+}
+
+.column-div {
+    margin: 16px 0 0 0;
+}
+
+.form-button {
+    margin: 36px 0 0;
+}
+
 .header p {
     font-size: 2.5em;
     line-height: 1.6;

@@ -1,3 +1,14 @@
+.form-div {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 48px;
+    font-size: 1em;
+}
+
+.column-div {
+    margin: 16px;
+}
+
 .header p {
     font-size: 3em;
     line-height: 1.7;
