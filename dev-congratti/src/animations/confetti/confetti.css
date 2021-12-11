@@ -150,7 +150,6 @@ a:hover {
 .section-header {
     position: sticky;
     top: 0;
-    width: 100%;
     display: flex;
     flex-flow: row wrap;
     padding: 1em 1em 0.5em;
