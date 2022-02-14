@@ -53,6 +53,19 @@ elif [ $1 == 'yosemite' ]; then
     cd ../
     git cm 'Auto-deploying '$1
     echo $1' finished building and moved folders'
+elif [ $1 == 'eastcoast' ]; then
+    echo 'Getting eastcoast ready :))'
+    cd ../dev-eastcoast
+    npm run build
+    rm -rf ../docs/eastcoast/*
+    mv ./dist/* ../docs/eastcoast
+    git add ../docs/eastcoast/
+    git add ../docs/dev-eastcoast
+    rm -rf ./dist
+    git add ./
+    cd ../
+    git cm 'Auto-deploying '$1
+    echo $1' finished building and moved folders'
 else
     echo 'Getting '$1' ready ;)'
     rm -rf ./$1/
