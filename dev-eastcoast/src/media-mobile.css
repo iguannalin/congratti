@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.Gallery-Container {
+    height: 33vh;
+}
+
+.brand-logo {
+    padding: 16px 32px;
+}
+
+.Gallery-Container img {
+    max-height: 33vh;
+}
+
+.Gallery-Container .Gallery-Block {
+    margin-right: 200px;
+}
+
+.Gallery-Container .Gallery-Block.block-0 {
+    height: 33vh;
+}
+
+footer {
+    opacity: 1;
+    margin: 0 32px;
+}
