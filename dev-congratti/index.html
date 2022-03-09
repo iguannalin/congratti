@@ -51,7 +51,7 @@
                 <p class="subheading">Currently learning and enjoying: d3.js, Three.js,
                     Heroku, SQL, Observable Notebooks, random APIs</p>
                 <p><a class="subheading" href="#professional">Professional Work</a></p>
-                <p><a class="subheading" href="#text-me-smth-nice">Projects</a></p>
+                <p><a class="subheading" href="#other-projects">Projects</a></p>
                 <p><a class="subheading" href="#personal">Personal</a></p>
                 <p><a class="subheading" href="#social">Contact / Resume</a></p>
             </div>
@@ -85,7 +85,9 @@
                     </div>
                 </li>
                 <li id="text-me-smth-nice">
-                    <div class="project-container"><h3 class="project-heading">text-me-smth-nice</h3>
+                    <div class="project-container">
+                        <h3 class="project-heading" id="other-projects">Projects</h3>
+                        <h3 class="project-heading">text-me-smth-nice</h3>
                         <div class="project-body">
                             <div class="project-body-details">
                                 <p><a class="project-header-link" target="_blank"
@@ -343,25 +345,25 @@
 </footer>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const lazyImages = [].slice.call(document.querySelectorAll("img.potato"));
-
-        if ("IntersectionObserver" in window) {
-            let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        let lazyImage = entry.target;
-                        lazyImage.classList.remove("potato");
-                        lazyImageObserver.unobserve(lazyImage);
-                    }
-                });
-            });
-
-            lazyImages.forEach(function (lazyImage) {
-                lazyImageObserver.observe(lazyImage);
-            });
-        } else {
-            // Possibly fall back to event handlers here
-        }
+        // const lazyImages = [].slice.call(document.querySelectorAll("img.potato"));
+        //
+        // if ("IntersectionObserver" in window) {
+        //     let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+        //         entries.forEach(function (entry) {
+        //             if (entry.isIntersecting) {
+        //                 let lazyImage = entry.target;
+        //                 lazyImage.classList.remove("potato");
+        //                 lazyImageObserver.unobserve(lazyImage);
+        //             }
+        //         });
+        //     });
+        //
+        //     lazyImages.forEach(function (lazyImage) {
+        //         lazyImageObserver.observe(lazyImage);
+        //     });
+        // } else {
+        //     // Possibly fall back to event handlers here
+        // }
     });
 </script>
 </html>
