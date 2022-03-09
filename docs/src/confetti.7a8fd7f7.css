@@ -368,6 +368,7 @@ a:hover {
     align-self: flex-end;
     margin-top: auto;
     text-align: right;
+    margin-right: 12px;
 }
 
 @media only screen and (min-height: 550px) and (min-width: 300px) {
