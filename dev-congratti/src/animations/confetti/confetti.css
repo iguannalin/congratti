@@ -28,6 +28,10 @@ body {
     padding-right: 2px;
 }
 
+.nested-item {
+    padding-left: 2em;
+}
+
 .section-links-list {
     padding: 0;
     list-style: '-';
@@ -77,6 +81,14 @@ body {
     left: 0;
     position: absolute;
     padding: 2em 3em;
+    border: 2px solid blue;
+}
+
+.desktop-container {
+    position: fixed;
+    right: 0;
+    border: 2px solid red;
+    height: 100vh;
 }
 
 #canvas {

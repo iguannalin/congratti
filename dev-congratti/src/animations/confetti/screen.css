@@ -7,8 +7,19 @@
     font-size: 1.2em;
 }
 
+.main-content {
+    display: flex;
+    justify-content: center;
+    flex-flow: row !important;
+}
+
 .overlay-container {
     width: 30vw;
+}
+
+.desktop-container {
+    width: 60vw;
+    overflow: hidden;
 }
 
 .project-body {

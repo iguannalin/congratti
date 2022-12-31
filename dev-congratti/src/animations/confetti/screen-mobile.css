@@ -13,6 +13,10 @@
     width: 60vw;
 }
 
+.desktop-container {
+    width: 100vw;
+}
+
 .project-body {
     display: flex;
     flex-flow: column;
