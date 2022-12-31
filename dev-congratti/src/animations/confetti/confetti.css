@@ -23,6 +23,11 @@ body {
     font-family: var(--sub-heading);
 }
 
+.link {
+    font-style: italic;
+    padding-right: 2px;
+}
+
 .section-links-list {
     padding: 0;
     list-style: '-';
@@ -71,7 +76,7 @@ body {
     top: 0;
     left: 0;
     position: absolute;
-    padding: 2em;
+    padding: 2em 3em;
 }
 
 #canvas {

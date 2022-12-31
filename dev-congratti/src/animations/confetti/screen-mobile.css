@@ -1,12 +1,16 @@
 .heading {
-    font-size: 2.5em;
+    font-size: 3em;
     line-height: 1.6;
     /*width: 40%;*/
     min-height: 3.4em;
 }
 
+.subheading {
+    font-size: 1.5em;
+}
+
 .overlay-container {
-    width: 50%;
+    width: 60vw;
 }
 
 .project-body {
