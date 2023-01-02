@@ -8,17 +8,18 @@
 }
 
 .main-content {
+    width: 100vw;
     display: flex;
     justify-content: center;
     flex-flow: row !important;
 }
 
 .overlay-container {
-    width: 30vw;
+    width: 40%;
 }
 
 .desktop-container {
-    width: 60vw;
+    width: 60%;
     overflow: hidden;
 }
 

@@ -26,10 +26,18 @@ body {
 .link {
     font-style: italic;
     padding-right: 2px;
+    font-size: 1em !important;
+}
+
+.nested-item-header {
+    margin-bottom: 0;
 }
 
 .nested-item {
-    padding-left: 2em;
+    padding-left: 0.75em;
+    line-height: .75em;
+    font-size: 1.1em;
+    margin-top: 0.5em;
 }
 
 .section-links-list {
@@ -82,6 +90,7 @@ body {
     position: absolute;
     padding: 2em 3em;
     border: 2px solid blue;
+    box-sizing: border-box;
 }
 
 .desktop-container {
@@ -89,10 +98,11 @@ body {
     right: 0;
     border: 2px solid red;
     height: 100vh;
+    box-sizing: border-box;
 }
 
 #canvas {
-    position: absolute;
+    position: fixed;
 }
 
 .section-container {
