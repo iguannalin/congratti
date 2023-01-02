@@ -18,6 +18,8 @@
     <meta property="og:type" content="website">
     <title>Anna Lin</title>
     <script src="main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="interactions.js" defer></script>
     <!--[if lt IE 7]>
     <style>
         body {
@@ -58,7 +60,8 @@
                 <h1 id="title" class="heading">
                     Hi,
                 </h1>
-                <p class="subheading">I am a creative technologist currently pursuing a masters at NYU ITP. Welcome to my portfolio site.</p>
+                <div class="main-body-text">
+                <p class="subheading">I am a creative technologist currently pursuing a masters at NYU ITP.</p>
                 <p class="subheading">Previously I’ve worked at <a class="link" href="https://www.mitre.org/">MITRE</a> and <a class="link" href="https://www.schwab.com/">Schwab</a> as a UX engineer in the cybersecurity, policy, and finance realms, along with a brief stint in data-viz with the wonderful people at <a class="link" href="https://stamen.com/">Stamen Design</a>.
                 </p>
                 <p class="subheading nested-item-header">Projects</p>
@@ -81,6 +84,7 @@
                 <br>
                 <br>
                 <p class="subheading link"><a title="Link to photo of me" href="public/anna.png">you can find a photo of me here</a></p>
+                </div>
             </div>
 
             <div class="desktop-container">
@@ -93,6 +97,9 @@
 <footer>
 </footer>
 <script>
+    // document.getElementsByClassName("main-body-text")[0]?.setAttribute("style", `top:${
+    //     document.getElementById("title")?.getBoundingClientRect().height
+    //     }px`); // doesn't work because height is changing
     document.addEventListener("DOMContentLoaded", function () {
         // const lazyImages = [].slice.call(document.querySelectorAll("img.potato"));
         //
