@@ -11,68 +11,77 @@ class PopUpBox extends HTMLElement {
         const wrapper = document.createElement('span');
         wrapper.setAttribute('class', 'wrapper');
 
-        const header = document.createElement('span');
-        header.setAttribute('class', 'header');
-
+        // Drag, drop, and resize interactions
         // https://stackoverflow.com/questions/63610870/drag-an-element-using-javascript-translating-the-position-css3
-        function onDrag(e) {
-            const {width, height} = window.getComputedStyle(header);
-            let ww = window.innerWidth * 0.4;
-            let cc = (e.clientX-ww) - +width.replace("px", "") / 2;
-            let dd = Math.max(0, cc);
-            let yy = Math.max(0, (e.clientY));
-            console.log(yy);
-            wrapper.style.transform = `translate(${dd}px, ${yy}px)`;
-        }
+        let isCorner = false;
 
-        function onLetGo() {
-            document.removeEventListener('mousemove', onDrag);
-            document.removeEventListener('mouseup', onLetGo);
-            wrapper.addEventListener('mousemove', onHover);
-        }
-
-        function onGrab(e) {
-            console.log(e, e.x);
-            wrapper.removeEventListener('mousemove', onHover);
-            document.addEventListener('mousemove', onDrag);
-            document.addEventListener('mouseup', onLetGo);
-        }
-
-        function onResize(e) {
-            document.addEventListener('mouseup', () => {
-                document.removeEventListener('mousemove', onResize);
-            });
-            const ww = wrapper.getBoundingClientRect();
-            console.log(Math.abs(ww.width - e.x));
-            wrapper.width = `${Math.abs(ww.width - e.x)}px`;
-        }
-
-        function onHover(e) {
-            // let ww = window.innerWidth * 0.4;
-            // const {width, height} = window.getComputedStyle(wrapper);
+        function checkCorners(e) {
             const ww = wrapper.getBoundingClientRect();
             console.log(ww, e.x, e.y);
 
             // TOP LEFT
             if ((Math.abs(ww.top - e.y) <= 10) && Math.abs(ww.left - e.x) <= 10) {
                 document.body.style.cursor = 'nwse-resize';
-                wrapper.addEventListener('mousemove', onResize);
+                isCorner = true;
             }
             // TOP RIGHT
-            if ((Math.abs(ww.top - e.y) <= 10) && Math.abs(ww.right - e.x) <= 10) {
+            else if ((Math.abs(ww.top - e.y) <= 10) && Math.abs(ww.right - e.x) <= 10) {
                 document.body.style.cursor = 'nesw-resize';
+                isCorner = true;
             }
             // BOTTOM LEFT
-            // BOTTOM RIGHT
-            else {
-                document.body.style.cursor = 'hand';
+            else if ((Math.abs(ww.bottom - e.y) <= 10) && Math.abs(ww.left - e.x) <= 10) {
+                document.body.style.cursor = 'nesw-resize';
+                isCorner = true;
             }
-            header.removeEventListener('mousedown', onGrab);
+            // BOTTOM RIGHT
+            else if ((Math.abs(ww.bottom - e.y) <= 10) && Math.abs(ww.right - e.x) <= 10) {
+                document.body.style.cursor = 'nwse-resize';
+                isCorner = true;
+            }
         }
 
-        header.addEventListener('mousedown', onGrab);
-        wrapper.addEventListener('mousemove', onHover);
-        wrapper.appendChild(header);
+        function onGrab() {
+            document.body.style.cursor = 'grabbing';
+            document.addEventListener('mousemove', onDrag);
+            document.addEventListener('mouseup', onLetGo);
+        }
+
+        function onDrag(e) {
+            const width = wrapper.getBoundingClientRect().width;
+            console.log(isCorner);
+            if (isCorner) {
+                e.preventDefault();
+                console.log('RESIZING', Math.abs(width - e.x));
+                wrapper.setAttribute('style', `width:${Math.abs(width - e.x)}px`);
+            } else {
+                let ww = window.innerWidth * 0.4;
+                let cc = (e.clientX - ww) - +width / 2;
+                let dd = Math.max(0, cc);
+                let yy = Math.max(0, (e.clientY));
+                console.log(yy);
+                wrapper.style.transform = `translate(${dd}px, ${yy}px)`;
+            }
+        }
+
+        function onLetGo() {
+            document.body.style.cursor = 'default';
+            isCorner = false;
+            document.removeEventListener('mousemove', onDrag);
+            document.removeEventListener('mouseup', onLetGo);
+        }
+
+        document.addEventListener('mousemove', checkCorners);
+        wrapper.addEventListener('mousedown', onGrab);
+
+
+
+
+
+
+
+
+        // TODO
 
         const icon = document.createElement('span');
         icon.setAttribute('class', 'icon');
