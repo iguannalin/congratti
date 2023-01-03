@@ -90,21 +90,23 @@
                     <button class="button-link" onclick="openPopup('creative-coding')">creative coding</button>
                 </p>
 
-                <p><a class="subheading link" href="">What am I doing at ITP?</a></p>
+                <p><a class="subheading link" href="https://annaylin.notion.site/Fall-22-Doc-Blogs-2c65c02263424187bf7e732de4cacd76">What am I doing at ITP?</a></p>
 
                 <p class="subheading">Besides making things on the internet I also like to make things with my hands and read.</p>
                 <p class="subheading">Say hi at <a class="link" href="mailto:al7215@nyu.edu?subject=Pizza%20Party&body=There's%20a%20pizza%20party%20in%20room%20415!" target="_top">al7215(@)nyu.edu</a></p>
 
                 <br>
                 <br>
-                <p class="subheading link"><a title="Link to photo of me" href="public/anna.png">you can find a photo of me here</a></p>
+                <p class="subheading link">
+                    <button class="button-link" onclick="openPopup('me')">you can find a photo of me here</button>
+                </p>
                 </div>
             </div>
             <div class="desktop-container">
                 <popup-box id="popup-ai-loves-horror"
-                           data-text="A messaging app that uses the Twilio SMS API to send out nice texts periodically."
-                           data-image="public/portfolio/text-me-smth-nice.gif"
-                           data-caption="Phone receiving texts from the text-me-smth-nice app"
+                           data-text="<p>A horror text-based adventure game made using OpenAI's GPT-3 (Davinci model) API. </p> <h2>     Why </h2> <p>     It's an homage to old-school text based adventure games, and an exploration of AI's ability to write an emotionally compelling story for the player. </p> <h2>How</h2> <p>     The app sends a prompt to Davinci to write a text-based adventure game that will give players choices numbered 1-3. When a choice is made, it is added back to the entire story and sent as a prompt to Davinci to send more choices, until the story is finished. </p> <p>     The story changes every time it is run, and it is generated live during gameplay. Ony Davinci has control over the choices and when to end the game. </p> <p>     The pace of the text also increases the longer the player plays. </p> <h2>     Conclusion </h2> <p>     It's interesting how Davinci is able to create a cohesive story that follows the theme of a horror adventure game. The stories Davinci generates usually consists of one spooky figure in a strange place, and the player is given choices to confront the figure or run away. </p> <p>     Somehow, the story always ends in about 5 minutes or so, and Davinci almost always gives a somewhat optimistic ending. </p><a href='https://annaylin.notion.site/ai-loves-horror-Winter-Show-7298b61fd37d40a9b93778572fbce217'>Read more about it here.</a>"
+                           data-image="public/projects/ai-loves-horror.jpg"
+                           data-caption="An old tv set with a green screen surround by piles of books sitting atop a lace-covered desk."
                            position="0"
                            popup-type="project"></popup-box>
                 <popup-box id="popup-text-me-smth-nice"
@@ -155,6 +157,11 @@
                            data-caption="Phone receiving texts from the text-me-smth-nice app"
                            data-images-dir=""
                            position="7"
+                           popup-type="project"></popup-box>
+                <popup-box id="popup-me"
+                           data-image="public/anna.png"
+                           data-caption="Picture of a cat in a business suit sitting in front of caviar."
+                           position="8"
                            popup-type="project"></popup-box>
             </div>
         </div>

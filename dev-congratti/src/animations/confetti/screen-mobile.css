@@ -1,7 +1,13 @@
+popup-box {
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    position: absolute;
+}
+
 .heading {
     font-size: 3em;
     line-height: 1.6;
-    /*width: 40%;*/
     min-height: 3.4em;
 }
 
@@ -15,6 +21,8 @@
 
 .desktop-container {
     width: 100vw;
+    height: auto !important;
+    z-index: 9999;
 }
 
 .project-body {

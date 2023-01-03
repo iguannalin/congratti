@@ -7,6 +7,7 @@ const POSITIONS = {
     5: [10, 95],
     6: [130, 120],
     7: [85, 215],
+    8: [10, 220]
 };
 
 // Create a class for the element
@@ -17,6 +18,7 @@ class PopUpBox extends HTMLElement {
 
         // Create a shadow root
         const shadow = this.attachShadow({mode: 'open'});
+        this.style.display = 'none';
 
         // Create spans
         const wrapper = document.createElement('span');
@@ -27,23 +29,26 @@ class PopUpBox extends HTMLElement {
         const header = document.createElement('div');
         header.setAttribute('class', 'header');
 
-        const logo = document.createElement('div');
-        logo.setAttribute('id', 'brand-name');
-        logo.setAttribute('class', 'brand-logo');
-        logo.setAttribute('tabindex', '0');
-        logo.textContent = "anna";
+        const title = this.getAttribute('id');
+
+        const name = document.createElement('div');
+        name.setAttribute('class', 'title');
+        name.setAttribute('tabindex', '0');
+        name.textContent = title.replace("popup-", "");
 
         const close = document.createElement('div');
         close.setAttribute('class', 'close');
+        close.setAttribute('title', 'close');
         close.setAttribute('tabindex', '0');
         close.textContent = "X";
+        close.addEventListener("click", () => this.style.display = 'none');
 
-        header.appendChild(logo);
+        header.appendChild(name);
         header.appendChild(close);
 
         // CONTENT
-        const type = this.getAttribute('popup-type');
-        console.log(type)
+        // const type = this.getAttribute('popup-type');
+        // console.log(type)
 
         const content = document.createElement('div');
         content.setAttribute('class', 'content');
@@ -67,7 +72,7 @@ class PopUpBox extends HTMLElement {
         if (this.hasAttribute('data-text')) {
             const info = document.createElement('div');
             info.setAttribute('class', 'info');
-            info.textContent = this.getAttribute('data-text');
+            info.innerHTML = this.getAttribute('data-text');
             content.appendChild(info);
         }
 

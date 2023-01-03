@@ -168,10 +168,6 @@ a:hover {
     text-decoration: underline;
 }
 
-popup-box {
-    display: none;
-}
-
 #projects.section-container, #projects .section-header {
     background-color: var(--bg-color-1);
     color: var(--text-color-1);
