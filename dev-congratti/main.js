@@ -12,85 +12,64 @@ class PopUpBox extends HTMLElement {
         wrapper.setAttribute('class', 'wrapper resize draggable');
 
 
+        const header = document.createElement('div');
+        header.setAttribute('class', 'header');
+        const logo = document.createElement('div');
+        logo.setAttribute('id', 'brand-name');
+        logo.setAttribute('class', 'brand-logo');
+        logo.setAttribute('tabindex', '0');
+        logo.textContent = "anna";
 
+        const close = document.createElement('div');
+        close.setAttribute('class', 'close');
+        close.setAttribute('tabindex', '0');
+        close.textContent = "X";
 
-        // TODO
+        header.appendChild(logo);
+        header.appendChild(close);
 
-        const icon = document.createElement('span');
-        icon.setAttribute('class', 'icon');
-        icon.setAttribute('tabindex', 0);
+        // CONTENT
+        const type = this.getAttribute('popup-type');
+        console.log(type)
 
-        const info = document.createElement('span');
+        const content = document.createElement('div');
+        content.setAttribute('class', 'content');
+
+        const info = document.createElement('div');
         info.setAttribute('class', 'info');
 
         // Take attribute content and put it inside the info span
         const text = this.getAttribute('data-text');
+        console.log(this.getAttribute('data-text'));
         info.textContent = text;
+        shadow.appendChild(wrapper);
+        wrapper.appendChild(header);
 
         // Insert icon
-        let imgUrl;
-        if(this.hasAttribute('img')) {
-            imgUrl = this.getAttribute('img');
-        } else {
-            imgUrl = 'img/default.png';
+        if (this.hasAttribute('data-image')) {
+            let imgUrl;
+            imgUrl = this.getAttribute('data-image');
+            let caption = this.getAttribute('data-caption');
+
+            const img = document.createElement('img');
+            img.src = imgUrl;
+            img.alt = caption;
+            const gallery = document.createElement('div');
+            gallery.setAttribute("class", "gallery");
+            gallery.appendChild(img);
+            content.appendChild(gallery);
         }
 
-        const img = document.createElement('img');
-        img.src = imgUrl;
-        icon.appendChild(img);
+        wrapper.appendChild(content);
+        content.appendChild(info);
 
-        // Create some CSS to apply to the shadow dom
-        const style = document.createElement('style');
-        console.log(style.isConnected);
+        // Apply external styles to the shadow DOM
+        const linkElem = document.createElement("link");
+        linkElem.setAttribute("rel", "stylesheet");
+        linkElem.setAttribute("href", "style.css");
 
-        style.textContent = `
-          .wrapper {
-            position: absolute;
-            display: block;
-            width: 250px;
-            height: 250px;
-            border: 5px solid purple;
-          }
-          
-          .header {
-            position: relative;
-            display: block;
-            width: 250px;
-            height: 50px;
-            border: 5px solid green;
-          }
-    
-          .info {
-            font-size: 0.8rem;
-            width: 200px;
-            display: inline-block;
-            border: 1px solid black;
-            padding: 10px;
-            background: white;
-            border-radius: 10px;
-            opacity: 0;
-            transition: 0.6s all;
-            position: absolute;
-            bottom: 20px;
-            left: 10px;
-            z-index: 3;
-          }
-    
-          img {
-            width: 1.2rem;
-          }
-    
-          .icon:hover + .info, .icon:focus + .info {
-            opacity: 1;
-          }
-        `;
-
-        // Attach the created elements to the shadow dom
-        shadow.appendChild(style);
-        console.log(style.isConnected);
-        shadow.appendChild(wrapper);
-        wrapper.appendChild(icon);
-        wrapper.appendChild(info);
+        // Attach the created element to the shadow DOM
+        shadow.appendChild(linkElem);
     }
 }
 

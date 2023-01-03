@@ -12,7 +12,9 @@
     "start": "parcel index.html --open",
     "build": "parcel build index.html --public-url ./src/"
   },
-  "dependencies": {},
+  "dependencies": {
+    "src": "^1.1.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "parcel-bundler": "^1.12.4"

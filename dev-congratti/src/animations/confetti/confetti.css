@@ -13,6 +13,9 @@ body {
     font-weight: 400;
     /*transition: background-color 2s linear 0s;*/
 }
+.wrapper {
+    background-color: green;
+}
 
 .heading {
     font-family: var(--main-heading);
@@ -27,6 +30,22 @@ body {
     font-style: italic;
     padding-right: 2px;
     font-size: 1em !important;
+}
+
+.button-link {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0 0 0 2px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-style: italic;
+    font-size: 1em !important;
+}
+
+.button-link:hover {
+    text-decoration: underline;
 }
 
 .nested-item-header {
