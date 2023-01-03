@@ -1,12 +1,20 @@
 .heading {
-    font-size: 2.5em;
+    font-size: 3em;
     line-height: 1.6;
     /*width: 40%;*/
     min-height: 3.4em;
 }
 
+.subheading {
+    font-size: 1.5em;
+}
+
 .overlay-container {
-    width: 50%;
+    width: 60vw;
+}
+
+.desktop-container {
+    width: 100vw;
 }
 
 .project-body {
@@ -63,8 +71,20 @@ footer {
     font-size: 1.2em;
 }
 
+.main-content {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-flow: row !important;
+}
+
 .overlay-container {
-    width: 30em;
+    width: 40%;
+}
+
+.desktop-container {
+    width: 60%;
+    overflow: hidden;
 }
 
 .project-body {
@@ -120,6 +140,9 @@ body {
     font-weight: 400;
     /*transition: background-color 2s linear 0s;*/
 }
+.wrapper {
+    background-color: green;
+}
 
 .heading {
     font-family: var(--main-heading);
@@ -128,6 +151,39 @@ body {
 
 .subheading {
     font-family: var(--sub-heading);
+}
+
+.link {
+    font-style: italic;
+    padding-right: 2px;
+    font-size: 1em !important;
+}
+
+.button-link {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0 0 0 2px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-style: italic;
+    font-size: 1em !important;
+}
+
+.button-link:hover {
+    text-decoration: underline;
+}
+
+.nested-item-header {
+    margin-bottom: 0;
+}
+
+.nested-item {
+    padding-left: 0.75em;
+    line-height: .75em;
+    font-size: 1.1em;
+    margin-top: 0.5em;
 }
 
 .section-links-list {
@@ -178,11 +234,21 @@ body {
     top: 0;
     left: 0;
     position: absolute;
-    padding: 2em;
+    padding: 2em 3em;
+    border: 2px solid blue;
+    box-sizing: border-box;
+}
+
+.desktop-container {
+    position: fixed;
+    right: 0;
+    border: 2px solid red;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 #canvas {
-    position: absolute;
+    position: fixed;
 }
 
 .section-container {

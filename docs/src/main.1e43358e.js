@@ -117,98 +117,92 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/utils/is-mobile.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-// device sniffing for mobile from The Pudding
-var isMobile = {
-  android: function android() {
-    return navigator.userAgent.match(/Android/i);
-  },
-  blackberry: function blackberry() {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  ios: function ios() {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  opera: function opera() {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  windows: function windows() {
-    return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function any() {
-    return isMobile.android() || isMobile.blackberry() || isMobile.ios() || isMobile.opera() || isMobile.windows();
-  }
-};
-var _default = isMobile;
-exports.default = _default;
-},{}],"src/animations/typewrite/typewrite.js":[function(require,module,exports) {
-"use strict";
-
-var _isMobile = _interopRequireDefault(require("../../utils/is-mobile.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+})({"src/main.js":[function(require,module,exports) {
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-var n = 0,
-    textIndex = 0,
-    interval = Math.floor(Math.random() * 200 + 5),
-    textToType = {
-  description: 'Hi,',
-  titles: ['I\'m Anna Lin.']
-},
-    target = document.getElementById('title'),
-    isMobileDevice = _isMobile.default.any();
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function typewrite(blurb, target) {
-  if (_typeof(blurb[n] !== 'undefined')) {
-    target.textContent += blurb[n];
-  } // if (blurb[n] === '.') {
-  //     setTimeout(backspace, 1000);
-  // }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct; } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+// Create a class for the element
+var PopUpBox = /*#__PURE__*/function (_HTMLElement) {
+  _inherits(PopUpBox, _HTMLElement);
+
+  var _super = _createSuper(PopUpBox);
+
+  function PopUpBox() {
+    var _this;
+
+    _classCallCheck(this, PopUpBox);
+
+    // Always call super first in constructor
+    _this = _super.call(this); // Create a shadow root
+
+    var shadow = _this.attachShadow({
+      mode: 'open'
+    }); // Create spans
 
 
-  interval = Math.floor(Math.random() * 300 + 5);
-  n++;
+    var wrapper = document.createElement('span');
+    wrapper.setAttribute('class', 'wrapper');
+    var icon = document.createElement('span');
+    icon.setAttribute('class', 'icon');
+    icon.setAttribute('tabindex', 0);
+    var info = document.createElement('span');
+    info.setAttribute('class', 'info'); // Take attribute content and put it inside the info span
 
-  if (n < blurb.length) {
-    setTimeout(function () {
-      typewrite(blurb, target);
-    }, interval);
+    var text = _this.getAttribute('data-text');
+
+    info.textContent = text; // Insert icon
+
+    var imgUrl;
+
+    if (_this.hasAttribute('img')) {
+      imgUrl = _this.getAttribute('img');
+    } else {
+      imgUrl = 'img/default.png';
+    }
+
+    var img = document.createElement('img');
+    img.src = imgUrl;
+    icon.appendChild(img); // Create some CSS to apply to the shadow dom
+
+    var style = document.createElement('style');
+    console.log(style.isConnected);
+    style.textContent = "\n      .wrapper {\n        position: relative;\n      }\n\n      .info {\n        font-size: 0.8rem;\n        width: 200px;\n        display: inline-block;\n        border: 1px solid black;\n        padding: 10px;\n        background: white;\n        border-radius: 10px;\n        opacity: 0;\n        transition: 0.6s all;\n        position: absolute;\n        bottom: 20px;\n        left: 10px;\n        z-index: 3;\n      }\n\n      img {\n        width: 1.2rem;\n      }\n\n      .icon:hover + .info, .icon:focus + .info {\n        opacity: 1;\n      }\n    "; // Attach the created elements to the shadow dom
+
+    shadow.appendChild(style);
+    console.log(style.isConnected);
+    shadow.appendChild(wrapper);
+    wrapper.appendChild(icon);
+    wrapper.appendChild(info);
+    return _this;
   }
-}
 
-function backspace() {
-  interval = Math.floor(Math.random() * 200 + 5);
-  var t = document.getElementById('title'); // if (t.textContent !== textToType.description) {
-  //     t.textContent = t.textContent.toString().slice(0, -1);
-  //     setTimeout(backspace, interval);
-  //
-  // } else {
+  return PopUpBox;
+}( /*#__PURE__*/_wrapNativeSuper(HTMLElement)); // Define the new element
 
-  n = 0;
-  textIndex = (textIndex + 1) % textToType.titles.length;
-  typewrite(textToType.titles[textIndex], target); // }
-}
 
-function handleClick() {
-  target.textContent = textToType.description + textToType.titles[textIndex];
-  n = textToType.titles[textIndex].length - 1;
-}
-
-function init() {
-  // if (!isMobileDevice) document.addEventListener('click', handleClick);
-  if (target) backspace();
-}
-
-document.addEventListener("DOMContentLoaded", init);
-},{"../../utils/is-mobile.js":"src/utils/is-mobile.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+customElements.define('popup-box', PopUpBox);
+},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -236,7 +230,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59495" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58407" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -412,5 +406,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/animations/typewrite/typewrite.js"], null)
-//# sourceMappingURL=/typewrite.c3d5fa4e.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/main.js"], null)
+//# sourceMappingURL=/main.1e43358e.js.map

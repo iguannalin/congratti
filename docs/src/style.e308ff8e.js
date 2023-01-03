@@ -117,98 +117,79 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/utils/is-mobile.js":[function(require,module,exports) {
-"use strict";
+})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-// device sniffing for mobile from The Pudding
-var isMobile = {
-  android: function android() {
-    return navigator.userAgent.match(/Android/i);
-  },
-  blackberry: function blackberry() {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  ios: function ios() {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  opera: function opera() {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  windows: function windows() {
-    return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function any() {
-    return isMobile.android() || isMobile.blackberry() || isMobile.ios() || isMobile.opera() || isMobile.windows();
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
   }
-};
-var _default = isMobile;
-exports.default = _default;
-},{}],"src/animations/typewrite/typewrite.js":[function(require,module,exports) {
-"use strict";
 
-var _isMobile = _interopRequireDefault(require("../../utils/is-mobile.js"));
+  return bundleURL;
+}
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var n = 0,
-    textIndex = 0,
-    interval = Math.floor(Math.random() * 200 + 5),
-    textToType = {
-  description: 'Hi,',
-  titles: ['I\'m Anna Lin.']
-},
-    target = document.getElementById('title'),
-    isMobileDevice = _isMobile.default.any();
-
-function typewrite(blurb, target) {
-  if (_typeof(blurb[n] !== 'undefined')) {
-    target.textContent += blurb[n];
-  } // if (blurb[n] === '.') {
-  //     setTimeout(backspace, 1000);
-  // }
-
-
-  interval = Math.floor(Math.random() * 300 + 5);
-  n++;
-
-  if (n < blurb.length) {
-    setTimeout(function () {
-      typewrite(blurb, target);
-    }, interval);
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
   }
+
+  return '/';
 }
 
-function backspace() {
-  interval = Math.floor(Math.random() * 200 + 5);
-  var t = document.getElementById('title'); // if (t.textContent !== textToType.description) {
-  //     t.textContent = t.textContent.toString().slice(0, -1);
-  //     setTimeout(backspace, interval);
-  //
-  // } else {
-
-  n = 0;
-  textIndex = (textIndex + 1) % textToType.titles.length;
-  typewrite(textToType.titles[textIndex], target); // }
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
 }
 
-function handleClick() {
-  target.textContent = textToType.description + textToType.titles[textIndex];
-  n = textToType.titles[textIndex].length - 1;
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
 }
 
-function init() {
-  // if (!isMobileDevice) document.addEventListener('click', handleClick);
-  if (target) backspace();
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
 }
 
-document.addEventListener("DOMContentLoaded", init);
-},{"../../utils/is-mobile.js":"src/utils/is-mobile.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+module.exports = reloadCSS;
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -236,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59495" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63177" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -412,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/animations/typewrite/typewrite.js"], null)
-//# sourceMappingURL=/typewrite.c3d5fa4e.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/style.e308ff8e.js.map

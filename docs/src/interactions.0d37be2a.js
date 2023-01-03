@@ -117,98 +117,36 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/utils/is-mobile.js":[function(require,module,exports) {
-"use strict";
+})({"interactions.js":[function(require,module,exports) {
+interact(".resize").resizable({
+  edges: {
+    right: true,
+    bottom: true
+  },
+  listeners: {
+    move: function move(event) {
+      var target = event.target;
+      var rect = event.rect; // update the element's style
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
+      target.style.width = rect.width + "px";
+      target.style.height = rect.height + "px";
+    }
+  }
 });
-exports.default = void 0;
-// device sniffing for mobile from The Pudding
-var isMobile = {
-  android: function android() {
-    return navigator.userAgent.match(/Android/i);
-  },
-  blackberry: function blackberry() {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  ios: function ios() {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  opera: function opera() {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  windows: function windows() {
-    return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function any() {
-    return isMobile.android() || isMobile.blackberry() || isMobile.ios() || isMobile.opera() || isMobile.windows();
-  }
+var position = {
+  x: 0,
+  y: 0
 };
-var _default = isMobile;
-exports.default = _default;
-},{}],"src/animations/typewrite/typewrite.js":[function(require,module,exports) {
-"use strict";
-
-var _isMobile = _interopRequireDefault(require("../../utils/is-mobile.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var n = 0,
-    textIndex = 0,
-    interval = Math.floor(Math.random() * 200 + 5),
-    textToType = {
-  description: 'Hi,',
-  titles: ['I\'m Anna Lin.']
-},
-    target = document.getElementById('title'),
-    isMobileDevice = _isMobile.default.any();
-
-function typewrite(blurb, target) {
-  if (_typeof(blurb[n] !== 'undefined')) {
-    target.textContent += blurb[n];
-  } // if (blurb[n] === '.') {
-  //     setTimeout(backspace, 1000);
-  // }
-
-
-  interval = Math.floor(Math.random() * 300 + 5);
-  n++;
-
-  if (n < blurb.length) {
-    setTimeout(function () {
-      typewrite(blurb, target);
-    }, interval);
+interact('.draggable').draggable({
+  listeners: {
+    move: function move(event) {
+      position.x += event.dx;
+      position.y += event.dy;
+      event.target.style.transform = "translate(".concat(position.x, "px, ").concat(position.y, "px)");
+    }
   }
-}
-
-function backspace() {
-  interval = Math.floor(Math.random() * 200 + 5);
-  var t = document.getElementById('title'); // if (t.textContent !== textToType.description) {
-  //     t.textContent = t.textContent.toString().slice(0, -1);
-  //     setTimeout(backspace, interval);
-  //
-  // } else {
-
-  n = 0;
-  textIndex = (textIndex + 1) % textToType.titles.length;
-  typewrite(textToType.titles[textIndex], target); // }
-}
-
-function handleClick() {
-  target.textContent = textToType.description + textToType.titles[textIndex];
-  n = textToType.titles[textIndex].length - 1;
-}
-
-function init() {
-  // if (!isMobileDevice) document.addEventListener('click', handleClick);
-  if (target) backspace();
-}
-
-document.addEventListener("DOMContentLoaded", init);
-},{"../../utils/is-mobile.js":"src/utils/is-mobile.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+});
+},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -412,5 +350,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/animations/typewrite/typewrite.js"], null)
-//# sourceMappingURL=/typewrite.c3d5fa4e.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","interactions.js"], null)
+//# sourceMappingURL=/interactions.0d37be2a.js.map
