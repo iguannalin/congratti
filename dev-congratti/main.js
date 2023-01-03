@@ -56,8 +56,7 @@ class PopUpBox extends HTMLElement {
 
         // Insert image
         if (this.hasAttribute('data-image')) {
-            let imgUrl;
-            imgUrl = this.getAttribute('data-image');
+            let imgUrl = this.getAttribute('data-image');
             let caption = this.getAttribute('data-caption');
 
             const img = document.createElement('img');
@@ -66,6 +65,26 @@ class PopUpBox extends HTMLElement {
             const gallery = document.createElement('div');
             gallery.setAttribute("class", "gallery");
             gallery.appendChild(img);
+            content.appendChild(gallery);
+        }
+
+        if (this.hasAttribute('data-images-dir')) {
+            let imgPath = this.getAttribute('data-images-dir');
+            let count = +this.getAttribute('data-images-count');
+            let filename = this.getAttribute('data-images-name');
+            let extension = this.getAttribute('data-images-ext');
+
+            const gallery = document.createElement('div');
+            gallery.setAttribute("class", "gallery-container");
+
+            for (let i = 1; i <=count; i++) {
+                const imgContainer = document.createElement('div');
+                imgContainer.setAttribute("class", "gallery-block " + filename);
+                const img = document.createElement('img');
+                img.src = imgPath+filename+i+"."+extension;
+                imgContainer.appendChild(img);
+                gallery.appendChild(imgContainer);
+            }
             content.appendChild(gallery);
         }
 
