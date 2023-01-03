@@ -62,19 +62,33 @@
                 </h1>
                 <div class="main-body-text">
                 <p class="subheading">I am a creative technologist currently pursuing a masters at NYU ITP.</p>
-                <p class="subheading">Previously I’ve worked at <a class="link" href="https://www.mitre.org/">MITRE</a> and <a class="link" href="https://www.schwab.com/">Schwab</a> as a UX engineer in the cybersecurity, policy, and finance realms, along with a brief stint in data-viz with the wonderful people at <a class="link" href="https://stamen.com/">Stamen Design</a>.
+                <p class="subheading">Previously I’ve worked at <a class="link" href="https://www.mitre.org/">MITRE</a> and <a class="link" href="https://www.schwab.com/">Schwab</a> as a UX engineer in cybersecurity, policy, finance, and briefly in data-vis with the wonderful people at <a class="link" href="https://stamen.com/">Stamen Design</a>.
                 </p>
                 <p class="subheading nested-item-header">Projects</p>
-                    <p class="subheading nested-item"><button class="button-link" onclick="openPopup('ai-loves-horror')">ai loves horror</button></p>
-                <p class="subheading nested-item">text-me-smth-nice</p>
-                <p class="subheading nested-item">spotify recently added</p>
-                <p class="subheading nested-item">generative riso</p>
+                <p class="subheading nested-item"><button class="button-link" onclick="openPopup('ai-loves-horror')">ai loves horror</button></p>
+                <p class="subheading nested-item">
+                    <button class="button-link" onclick="openPopup('text-me-smth-nice')">text-me-smth-nice</button>
+                </p>
+                <p class="subheading nested-item">
+                    <button class="button-link" onclick="openPopup('spotify-recently-added')">spotify recently added</button>
+                </p>
+                <p class="subheading nested-item">
+                    <button class="button-link" onclick="openPopup('generative-riso')">generative riso</button>
+                </p>
 
                 <p class="subheading nested-item-header">Things</p>
-                <p class="subheading nested-item">filmotography</p>
-                <p class="subheading nested-item">badwatercolor</p>
-                <p class="subheading nested-item">writing</p>
-                <p class="subheading nested-item">creative coding</p>
+                <p class="subheading nested-item">
+                    <button class="button-link" onclick="openPopup('filmotography')">filmotography</button>
+                </p>
+                <p class="subheading nested-item">
+                    <button class="button-link" onclick="openPopup('badwatercolor')">badwatercolor</button>
+                </p>
+                <p class="subheading nested-item">
+                    <button class="button-link" onclick="openPopup('writing')">writing</button>
+                </p>
+                <p class="subheading nested-item">
+                    <button class="button-link" onclick="openPopup('creative-coding')">creative coding</button>
+                </p>
 
                 <p><a class="subheading link" href="">What am I doing at ITP?</a></p>
 
@@ -86,20 +100,61 @@
                 <p class="subheading link"><a title="Link to photo of me" href="public/anna.png">you can find a photo of me here</a></p>
                 </div>
             </div>
-
             <div class="desktop-container">
                 <popup-box id="popup-ai-loves-horror"
                            data-text="A messaging app that uses the Twilio SMS API to send out nice texts periodically."
                            data-image="public/portfolio/text-me-smth-nice.gif"
                            data-caption="Phone receiving texts from the text-me-smth-nice app"
-                           data-images-dir=""
+                           position="0"
                            popup-type="project"></popup-box>
-
-                <popup-box id="popup-ai-loves-horror"
+                <popup-box id="popup-text-me-smth-nice"
                            data-text="A messaging app that uses the Twilio SMS API to send out nice texts periodically."
                            data-image="public/anna.png"
                            data-caption="Phone receiving texts from the text-me-smth-nice app"
                            data-images-dir=""
+                           position="1"
+                           popup-type="project"></popup-box>
+                <popup-box id="popup-spotify-recently-added"
+                           data-text="A messaging app that uses the Twilio SMS API to send out nice texts periodically."
+                           data-image="public/anna.png"
+                           data-caption="Phone receiving texts from the text-me-smth-nice app"
+                           data-images-dir=""
+                           position="2"
+                           popup-type="project"></popup-box>
+                <popup-box id="popup-generative-riso"
+                           data-text="A messaging app that uses the Twilio SMS API to send out nice texts periodically."
+                           data-image="public/anna.png"
+                           data-caption="Phone receiving texts from the text-me-smth-nice app"
+                           data-images-dir=""
+                           position="3"
+                           popup-type="project"></popup-box>
+                <popup-box id="popup-filmotography"
+                           data-text="A messaging app that uses the Twilio SMS API to send out nice texts periodically."
+                           data-image="public/anna.png"
+                           data-caption="Phone receiving texts from the text-me-smth-nice app"
+                           data-images-dir=""
+                           position="4"
+                           popup-type="project"></popup-box>
+                <popup-box id="popup-badwatercolor"
+                           data-text="A messaging app that uses the Twilio SMS API to send out nice texts periodically."
+                           data-image="public/anna.png"
+                           data-caption="Phone receiving texts from the text-me-smth-nice app"
+                           data-images-dir=""
+                           position="5"
+                           popup-type="project"></popup-box>
+                <popup-box id="popup-writing"
+                           data-text="A messaging app that uses the Twilio SMS API to send out nice texts periodically."
+                           data-image="public/anna.png"
+                           data-caption="Phone receiving texts from the text-me-smth-nice app"
+                           data-images-dir=""
+                           position="6"
+                           popup-type="project"></popup-box>
+                <popup-box id="popup-creative-coding"
+                           data-text="A messaging app that uses the Twilio SMS API to send out nice texts periodically."
+                           data-image="public/anna.png"
+                           data-caption="Phone receiving texts from the text-me-smth-nice app"
+                           data-images-dir=""
+                           position="7"
                            popup-type="project"></popup-box>
             </div>
         </div>
@@ -111,7 +166,7 @@
 <script>
     function openPopup(targetName) {
         document.getElementById(`popup-${targetName}`).style.display =
-            document.getElementById(`popup-${targetName}`).style.display === 'none' ? 'block' : 'none';
+            document.getElementById(`popup-${targetName}`).style.display === 'block' ? 'none' : 'block';
     }
     // document.getElementsByClassName("main-body-text")[0]?.setAttribute("style", `top:${
     //     document.getElementById("title")?.getBoundingClientRect().height

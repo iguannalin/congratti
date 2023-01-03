@@ -108,14 +108,12 @@ body {
     left: 0;
     position: absolute;
     padding: 2em 3em;
-    border: 2px solid blue;
     box-sizing: border-box;
 }
 
 .desktop-container {
     position: fixed;
     right: 0;
-    border: 2px solid red;
     height: 100vh;
     box-sizing: border-box;
 }
@@ -139,7 +137,7 @@ body {
 
 :root {
     --main-bg-color: #fff9e6;
-    --bg-color-1: #D85665;
+    --bg-color-1: #e04356;
     --bg-color-2: #3C71A8;
     --bg-color-3: #f4c164;
     --bg-color-4: #64A8DA;
@@ -168,6 +166,10 @@ a {
 a:hover {
     opacity: 1;
     text-decoration: underline;
+}
+
+popup-box {
+    display: none;
 }
 
 #projects.section-container, #projects .section-header {

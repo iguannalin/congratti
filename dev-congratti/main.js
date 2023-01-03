@@ -1,3 +1,14 @@
+const POSITIONS = {
+    0: [10, 10],
+    1: [130, 10],
+    2: [65, 100],
+    3: [10, 190],
+    4: [130, 190],
+    5: [10, 95],
+    6: [130, 120],
+    7: [85, 215],
+};
+
 // Create a class for the element
 class PopUpBox extends HTMLElement {
     constructor() {
@@ -9,11 +20,13 @@ class PopUpBox extends HTMLElement {
 
         // Create spans
         const wrapper = document.createElement('span');
-        wrapper.setAttribute('class', 'wrapper resize draggable');
-
+        wrapper.setAttribute('class', `wrapper resize draggable project-${this.getAttribute('color')}`);
+        const pos = this.getAttribute('position');
+        wrapper.style.transform = `translate(${POSITIONS[pos][0]}%, ${POSITIONS[pos][1]}%)`;
 
         const header = document.createElement('div');
         header.setAttribute('class', 'header');
+
         const logo = document.createElement('div');
         logo.setAttribute('id', 'brand-name');
         logo.setAttribute('class', 'brand-logo');
@@ -35,17 +48,7 @@ class PopUpBox extends HTMLElement {
         const content = document.createElement('div');
         content.setAttribute('class', 'content');
 
-        const info = document.createElement('div');
-        info.setAttribute('class', 'info');
-
-        // Take attribute content and put it inside the info span
-        const text = this.getAttribute('data-text');
-        console.log(this.getAttribute('data-text'));
-        info.textContent = text;
-        shadow.appendChild(wrapper);
-        wrapper.appendChild(header);
-
-        // Insert icon
+        // Insert image
         if (this.hasAttribute('data-image')) {
             let imgUrl;
             imgUrl = this.getAttribute('data-image');
@@ -60,16 +63,23 @@ class PopUpBox extends HTMLElement {
             content.appendChild(gallery);
         }
 
-        wrapper.appendChild(content);
-        content.appendChild(info);
+        // Insert text
+        if (this.hasAttribute('data-text')) {
+            const info = document.createElement('div');
+            info.setAttribute('class', 'info');
+            info.textContent = this.getAttribute('data-text');
+            content.appendChild(info);
+        }
 
         // Apply external styles to the shadow DOM
         const linkElem = document.createElement("link");
         linkElem.setAttribute("rel", "stylesheet");
         linkElem.setAttribute("href", "style.css");
-
-        // Attach the created element to the shadow DOM
         shadow.appendChild(linkElem);
+
+        wrapper.appendChild(header);
+        wrapper.appendChild(content);
+        shadow.appendChild(wrapper);
     }
 }
 
