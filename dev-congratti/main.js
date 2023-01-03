@@ -1,3 +1,4 @@
+import isMobile from "./src/utils/is-mobile.js";
 const POSITIONS = {
     0: [10, 10],
     1: [130, 10],
@@ -24,7 +25,7 @@ class PopUpBox extends HTMLElement {
         const wrapper = document.createElement('span');
         wrapper.setAttribute('class', `wrapper resize draggable project-${this.getAttribute('color')}`);
         const pos = this.getAttribute('position');
-        wrapper.style.transform = `translate(${POSITIONS[pos][0]}%, ${POSITIONS[pos][1]}%)`;
+        if (!isMobile.any()) wrapper.style.transform = `translate(${POSITIONS[pos][0]}%, ${POSITIONS[pos][1]}%)`;
 
         const header = document.createElement('div');
         header.setAttribute('class', 'header');

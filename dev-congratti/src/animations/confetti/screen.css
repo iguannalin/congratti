@@ -1,3 +1,10 @@
+popup-box {
+    width: auto;
+    height: 100vh;
+    z-index: 99999;
+    position: fixed;
+}
+
 .heading {
     font-size: 3.7em;
     line-height: 1.7;
