@@ -48,9 +48,7 @@ class PopUpBox extends HTMLElement {
         header.appendChild(close);
 
         // CONTENT
-        // const type = this.getAttribute('popup-type');
-        // console.log(type)
-
+        const type = this.getAttribute('popup-type');
         const content = document.createElement('div');
         content.setAttribute('class', 'content');
 
@@ -86,6 +84,56 @@ class PopUpBox extends HTMLElement {
                 gallery.appendChild(imgContainer);
             }
             content.appendChild(gallery);
+        }
+
+        if (type === 'film') {
+            const gallery = document.createElement('div');
+            gallery.setAttribute("class", "gallery-container");
+
+            const option = [Math.floor(Math.random() * 3)];
+            // const place = ['yosemite','alaska','eastcoast'][option];
+            let place = 'yosemite';
+            const count = [8, 8, 17];
+            const path = "public/projects/";
+
+            if (place === 'yosemite') {
+                const headingDiv = document.createElement('div');
+                headingDiv.setAttribute('class', 'gallery-block block-0');
+                const div= document.createElement('div');
+                const heading = document.createElement('h1');
+                heading.setAttribute('class', 'gallery-heading');
+                heading.textContent = 'Yosemite';
+                headingDiv.appendChild(div);
+                div.appendChild(heading);
+                gallery.appendChild(headingDiv);
+
+                ["yosemite/Dawn-Yosemite-2x.jpg",
+                    "yosemite/Daybreak-HalfDome-2x.jpg",
+                    "yosemite/Daytime-Beach-2x.jpg",
+                    "yosemite/Evening-Rock-2x.jpg",
+                    "yosemite/Evening-Beach-2x.jpg",
+                    "yosemite/Sunset-Waves-2x.jpg",
+                    "yosemite/Dusk-ElCapitan-2x.jpg"].forEach((src, i) => {
+                    const imgContainer = document.createElement('div');
+                    imgContainer.setAttribute("class", "gallery-block film block-"+(Math.ceil(i/2)+1));
+                    const divContainer = document.createElement('div');
+                    divContainer.setAttribute('class', 'gallery-div-container');
+                    const figure = document.createElement('figure');
+                    const img = document.createElement('img');
+                    img.src = path+src;
+                    imgContainer.appendChild(divContainer);
+                    divContainer.appendChild(figure);
+                    figure.appendChild(img);
+                    gallery.appendChild(imgContainer);
+                });
+            }
+
+            const footer = document.createElement('footer');
+            footer.innerHTML = `<div><p>November 2019</p></div>
+                    <div><p>Nikon N8008 35mm</p></div>`;
+
+            content.appendChild(gallery);
+            content.appendChild(footer);
         }
 
         // Insert text
