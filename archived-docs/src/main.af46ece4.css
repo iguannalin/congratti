@@ -1,0 +1,36 @@
+popup-box .wrapper {
+    position: absolute;
+    display: block;
+    width: 250px;
+    height: 250px;
+    border: 5px solid purple;
+}
+
+popup-box .header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border: 5px solid green;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+popup-box .info {
+}
+
+popup-box img {
+    width: 1.2rem;
+}
+
+popup-box .icon:hover + .info, .icon:focus + .info {
+    opacity: 1;
+}
+
+popup-box .wrapper {
+    background-color: blue;
+}
+
+
+/*# sourceMappingURL=/main.af46ece4.css.map */
