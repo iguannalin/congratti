@@ -17,9 +17,6 @@
     <meta property="og:image" content="public/congratti.png">
     <meta property="og:type" content="website">
     <title>Anna Lin</title>
-    <script src="main.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-    <script src="interactions.js" defer></script>
     <!--[if lt IE 7]>
     <style>
         body {
@@ -44,8 +41,11 @@
     <link rel="stylesheet" href="src/animations/confetti/confetti.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="icon" href="public/favicon.png" type="image/png">
-    <script src="src/animations/confetti/confetti.js"></script>
-    <script defer src="src/animations/typewrite/typewrite.js"></script>
+    <script type="module" src="src/animations/confetti/confetti.js"></script>
+    <script type="module" defer src="src/animations/typewrite/typewrite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script defer src="main.js"></script>
+    <script src="interactions.js" defer></script>
 </head>
 
 <body>
@@ -65,7 +65,7 @@
                 <p class="subheading">Previously I’ve worked at <a class="link" href="https://www.mitre.org/">MITRE</a> and <a class="link" href="https://www.schwab.com/">Schwab</a> as a UX engineer in the cybersecurity, policy, and finance realms, along with a brief stint in data-viz with the wonderful people at <a class="link" href="https://stamen.com/">Stamen Design</a>.
                 </p>
                 <p class="subheading nested-item-header">Projects</p>
-                <p class="subheading nested-item">ai loves horror</p>
+                    <p class="subheading nested-item"><button class="button-link" onclick="openPopup('ai-loves-horror')">ai loves horror</button></p>
                 <p class="subheading nested-item">text-me-smth-nice</p>
                 <p class="subheading nested-item">spotify recently added</p>
                 <p class="subheading nested-item">generative riso</p>
@@ -88,7 +88,19 @@
             </div>
 
             <div class="desktop-container">
-                <popup-box img="public/anna.png" data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card."></popup-box>
+                <popup-box id="popup-ai-loves-horror"
+                           data-text="A messaging app that uses the Twilio SMS API to send out nice texts periodically."
+                           data-image="public/portfolio/text-me-smth-nice.gif"
+                           data-caption="Phone receiving texts from the text-me-smth-nice app"
+                           data-images-dir=""
+                           popup-type="project"></popup-box>
+
+                <popup-box id="popup-ai-loves-horror"
+                           data-text="A messaging app that uses the Twilio SMS API to send out nice texts periodically."
+                           data-image="public/anna.png"
+                           data-caption="Phone receiving texts from the text-me-smth-nice app"
+                           data-images-dir=""
+                           popup-type="project"></popup-box>
             </div>
         </div>
     </div>
@@ -97,6 +109,10 @@
 <footer>
 </footer>
 <script>
+    function openPopup(targetName) {
+        document.getElementById(`popup-${targetName}`).style.display =
+            document.getElementById(`popup-${targetName}`).style.display === 'none' ? 'block' : 'none';
+    }
     // document.getElementsByClassName("main-body-text")[0]?.setAttribute("style", `top:${
     //     document.getElementById("title")?.getBoundingClientRect().height
     //     }px`); // doesn't work because height is changing
