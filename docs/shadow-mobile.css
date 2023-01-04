@@ -29,3 +29,7 @@
     height: auto;
     display: block;
 }
+
+.header {
+    font-size: 1.5em;
+}
