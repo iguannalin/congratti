@@ -62,6 +62,14 @@ const IMAGES = {
         "eastcoast/Northend.jpg",
     ]
 };
+// places for film blog popup
+const PLACES = ['Yosemite', 'Alaska', 'Eastcoast'];
+// details for film blog popup
+const DETAILS = {
+    'Yosemite': ["November 2019", "Nikon N8008 35mm"],
+    'Alaska': ["October 2020", "Nikon N8008 35mm"],
+    'Eastcoast': ["Fall 2021", "Olympus mju, 35mm"]
+};
 
 // Create a class for the element
 class PopUpBox extends HTMLElement {
@@ -141,44 +149,56 @@ class PopUpBox extends HTMLElement {
         }
 
         if (type === 'film') {
-            const gallery = document.createElement('div');
-            gallery.setAttribute("class", "gallery-container");
+            const setImages = () => {
+                function resetFilm() {
+                    gallery.remove();
+                    footer.remove();
+                    setImages();
+                    close.removeEventListener('click', resetFilm);
+                }
 
-            const option = [Math.floor(Math.random() * 3)];
-            const place = ['yosemite','alaska','eastcoast'][option];
-            const count = [8, 8, 17];
-            const path = "public/projects/";
+                const gallery = document.createElement('div');
+                gallery.setAttribute("class", "gallery-container");
 
-            const headingDiv = document.createElement('div');
-            headingDiv.setAttribute('class', 'gallery-block block-0');
-            const div= document.createElement('div');
-            const heading = document.createElement('h1');
-            heading.setAttribute('class', 'gallery-heading');
-            heading.textContent = place[0].toUpperCase() + place.substring(1);
-            headingDiv.appendChild(div);
-            div.appendChild(heading);
-            gallery.appendChild(headingDiv);
+                const option = [Math.floor(Math.random() * 3)];
+                const place = PLACES[option];
+                const path = "public/projects/";
 
-            IMAGES[`${place.toUpperCase()}`].forEach((src, i) => {
-                const imgContainer = document.createElement('div');
-                imgContainer.setAttribute("class", "gallery-block film block-"+(Math.ceil(i/2)+1));
-                const divContainer = document.createElement('div');
-                divContainer.setAttribute('class', 'gallery-div-container');
-                const figure = document.createElement('figure');
-                const img = document.createElement('img');
-                img.src = path+src;
-                imgContainer.appendChild(divContainer);
-                divContainer.appendChild(figure);
-                figure.appendChild(img);
-                gallery.appendChild(imgContainer);
-            });
+                const headingDiv = document.createElement('div');
+                headingDiv.setAttribute('class', 'gallery-block block-0');
+                const div = document.createElement('div');
+                const heading = document.createElement('h1');
+                heading.setAttribute('class', 'gallery-heading');
+                heading.textContent = place;
+                headingDiv.appendChild(div);
+                div.appendChild(heading);
+                gallery.appendChild(headingDiv);
 
-            const footer = document.createElement('footer');
-            footer.innerHTML = `<div><p>November 2019</p></div>
-                    <div><p>Nikon N8008 35mm</p></div>`;
+                IMAGES[`${place.toUpperCase()}`].forEach((src, i) => {
+                    const imgContainer = document.createElement('div');
+                    imgContainer.setAttribute("class", "gallery-block film block-" + (Math.ceil(i / 2) + 1));
+                    const divContainer = document.createElement('div');
+                    divContainer.setAttribute('class', 'gallery-div-container');
+                    const figure = document.createElement('figure');
+                    const img = document.createElement('img');
+                    img.src = path + src;
+                    imgContainer.appendChild(divContainer);
+                    divContainer.appendChild(figure);
+                    figure.appendChild(img);
+                    gallery.appendChild(imgContainer);
+                });
 
-            content.appendChild(gallery);
-            content.appendChild(footer);
+                const footer = document.createElement('footer');
+                footer.innerHTML = `<div><p>${DETAILS[place][0]}</p></div>
+                    <div><p>${DETAILS[place][1]}</p></div>`;
+
+                content.appendChild(gallery);
+                content.appendChild(footer);
+
+                close.addEventListener('click', resetFilm);
+            };
+
+            setImages();
         }
 
         // Insert text
