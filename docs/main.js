@@ -23,7 +23,9 @@ class PopUpBox extends HTMLElement {
 
         // Create spans
         const wrapper = document.createElement('span');
-        wrapper.setAttribute('class', `wrapper resize draggable project-${this.getAttribute('color')}`);
+        let classes = `wrapper project-${this.getAttribute('color')}`;
+        if (!isMobile.any()) classes += " resize draggable";
+        wrapper.setAttribute('class', classes);
         const pos = this.getAttribute('position');
         if (!isMobile.any()) wrapper.style.transform = `translate(${POSITIONS[pos][0]}%, ${POSITIONS[pos][1]}%)`;
 
