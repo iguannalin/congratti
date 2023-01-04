@@ -8,3 +8,24 @@
     height: auto;
     width: 100%;
 }
+
+.gallery-container .gallery-block {
+    height: auto;
+    width: 100%;
+}
+
+.gallery-container .gallery-div-container {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-container figure {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
