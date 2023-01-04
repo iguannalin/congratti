@@ -1,4 +1,6 @@
 import isMobile from "./src/utils/is-mobile.js";
+
+// [x, y] positions of popup windows
 const POSITIONS = {
     0: [10, 10],
     1: [130, 10],
@@ -9,6 +11,56 @@ const POSITIONS = {
     6: [130, 120],
     7: [85, 215],
     8: [10, 220]
+};
+
+// file paths for film blog popup
+const IMAGES = {
+    YOSEMITE: [
+        "yosemite/Dawn-Yosemite-2x.jpg",
+        "yosemite/Daybreak-HalfDome-2x.jpg",
+        "yosemite/Daytime-Beach-2x.jpg",
+        "yosemite/Evening-Rock-2x.jpg",
+        "yosemite/Evening-Beach-2x.jpg",
+        "yosemite/Sunset-Waves-2x.jpg",
+        "yosemite/Dusk-ElCapitan-2x.jpg"
+    ],
+    ALASKA: [
+        "alaska/ice-field-1x.jpg",
+        "alaska/mountain-sunrise-vertical.jpg",
+        "alaska/ice-field.jpg",
+        "alaska/mountain-sunrise.jpg",
+        "alaska/little-friend-1x.jpg",
+        "alaska/shed-blue-1x.jpg",
+        "alaska/little-friend.jpg",
+        "alaska/shed-blue.jpg",
+        "alaska/mountain-evening-1x.jpg",
+        "alaska/shed-white-1x.jpg",
+        "alaska/mountain-evening.jpg",
+        "alaska/shed-white.jpg",
+        "alaska/mountain-sunrise-1x.jpg",
+        "alaska/skater-buds-1x.jpg",
+        "alaska/mountain-sunrise-vertical-1x.jpg",
+        "alaska/skater-buds.jpg",
+    ],
+    EASTCOAST: [
+        "eastcoast/BostonCommons1.jpg",
+        "eastcoast/Cathedral.jpg",
+        "eastcoast/Skyline.jpg",
+        "eastcoast/BostonCommons2.jpg",
+        "eastcoast/Dome.jpg",
+        "eastcoast/Skyscrapers.jpg",
+        "eastcoast/BostonCommons3.jpg",
+        "eastcoast/Downtown.jpg",
+        "eastcoast/SpringSt.jpg",
+        "eastcoast/Brekkie.jpg",
+        "eastcoast/DowntownArt.jpg",
+        "eastcoast/Storiedbuildings.jpg",
+        "eastcoast/Buildings.jpg",
+        "eastcoast/MBTA.jpg",
+        "eastcoast/Treeshadow.jpg",
+        "eastcoast/Cathedral-inside.jpg",
+        "eastcoast/Northend.jpg",
+    ]
 };
 
 // Create a class for the element
@@ -93,42 +145,33 @@ class PopUpBox extends HTMLElement {
             gallery.setAttribute("class", "gallery-container");
 
             const option = [Math.floor(Math.random() * 3)];
-            // const place = ['yosemite','alaska','eastcoast'][option];
-            let place = 'yosemite';
+            const place = ['yosemite','alaska','eastcoast'][option];
             const count = [8, 8, 17];
             const path = "public/projects/";
 
-            if (place === 'yosemite') {
-                const headingDiv = document.createElement('div');
-                headingDiv.setAttribute('class', 'gallery-block block-0');
-                const div= document.createElement('div');
-                const heading = document.createElement('h1');
-                heading.setAttribute('class', 'gallery-heading');
-                heading.textContent = 'Yosemite';
-                headingDiv.appendChild(div);
-                div.appendChild(heading);
-                gallery.appendChild(headingDiv);
+            const headingDiv = document.createElement('div');
+            headingDiv.setAttribute('class', 'gallery-block block-0');
+            const div= document.createElement('div');
+            const heading = document.createElement('h1');
+            heading.setAttribute('class', 'gallery-heading');
+            heading.textContent = place[0].toUpperCase() + place.substring(1);
+            headingDiv.appendChild(div);
+            div.appendChild(heading);
+            gallery.appendChild(headingDiv);
 
-                ["yosemite/Dawn-Yosemite-2x.jpg",
-                    "yosemite/Daybreak-HalfDome-2x.jpg",
-                    "yosemite/Daytime-Beach-2x.jpg",
-                    "yosemite/Evening-Rock-2x.jpg",
-                    "yosemite/Evening-Beach-2x.jpg",
-                    "yosemite/Sunset-Waves-2x.jpg",
-                    "yosemite/Dusk-ElCapitan-2x.jpg"].forEach((src, i) => {
-                    const imgContainer = document.createElement('div');
-                    imgContainer.setAttribute("class", "gallery-block film block-"+(Math.ceil(i/2)+1));
-                    const divContainer = document.createElement('div');
-                    divContainer.setAttribute('class', 'gallery-div-container');
-                    const figure = document.createElement('figure');
-                    const img = document.createElement('img');
-                    img.src = path+src;
-                    imgContainer.appendChild(divContainer);
-                    divContainer.appendChild(figure);
-                    figure.appendChild(img);
-                    gallery.appendChild(imgContainer);
-                });
-            }
+            IMAGES[`${place.toUpperCase()}`].forEach((src, i) => {
+                const imgContainer = document.createElement('div');
+                imgContainer.setAttribute("class", "gallery-block film block-"+(Math.ceil(i/2)+1));
+                const divContainer = document.createElement('div');
+                divContainer.setAttribute('class', 'gallery-div-container');
+                const figure = document.createElement('figure');
+                const img = document.createElement('img');
+                img.src = path+src;
+                imgContainer.appendChild(divContainer);
+                divContainer.appendChild(figure);
+                figure.appendChild(img);
+                gallery.appendChild(imgContainer);
+            });
 
             const footer = document.createElement('footer');
             footer.innerHTML = `<div><p>November 2019</p></div>
