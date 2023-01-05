@@ -172,9 +172,26 @@
 <footer>
 </footer>
 <script>
+    const popups = ['ai-loves-horror', 'text-me-smth-nice', 'spotify-recently-added', 'generative-riso', 'filmotography', 'badwatercolor', 'writing', 'creative-coding', 'me'];
+    let openedPopups = [];
+    let closedPopups = [];
     function openPopup(targetName) {
-        document.getElementById(`popup-${targetName}`).style.display =
-            document.getElementById(`popup-${targetName}`).style.display === 'block' ? 'none' : 'block';
+        if (popups.includes(targetName)) {
+            let dis = document.getElementById(`popup-${targetName}`).style.display;
+            if (dis === 'block') {
+                document.getElementById(`popup-${targetName}`).style.display = 'none';
+                closedPopups.push(targetName);
+                openedPopups.splice(openedPopups.indexOf(targetName), 1);
+            } else {
+                document.getElementById(`popup-${targetName}`).style.display = 'block';
+                openedPopups.push(targetName);
+                closedPopups.splice(closedPopups.indexOf(targetName), 1);
+            }
+            location.hash = '';
+            openedPopups.forEach((item) => {
+                location.hash = location.hash ? (location.hash + ',' + item) : ('#' + item);
+            })
+        }
     }
     // document.getElementsByClassName("main-body-text")[0]?.setAttribute("style", `top:${
     //     document.getElementById("title")?.getBoundingClientRect().height
@@ -183,9 +200,11 @@
         let hash = location.hash;
         if (!hash) return;
         hash = hash.replace('#', '');
-        if (['ai-loves-horror', 'text-me-smth-nice', 'spotify-recently-added', 'generative-riso', 'filmotography', 'badwatercolor', 'writing', 'creative-coding', 'me'].includes(hash)) {
-            openPopup(hash);
-        }
+        hash.split(',').forEach((item) => {
+            if (popups.includes(item)) {
+                openPopup(item);
+            }
+        })
         // const lazyImages = [].slice.call(document.querySelectorAll("img.potato"));
         //
         // if ("IntersectionObserver" in window) {
