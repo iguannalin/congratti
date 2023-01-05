@@ -180,6 +180,12 @@
     //     document.getElementById("title")?.getBoundingClientRect().height
     //     }px`); // doesn't work because height is changing
     document.addEventListener("DOMContentLoaded", function () {
+        let hash = location.hash;
+        if (!hash) return;
+        hash = hash.replace('#', '');
+        if (['ai-loves-horror', 'text-me-smth-nice', 'spotify-recently-added', 'generative-riso', 'filmotography', 'badwatercolor', 'writing', 'creative-coding', 'me'].includes(hash)) {
+            openPopup(hash);
+        }
         // const lazyImages = [].slice.call(document.querySelectorAll("img.potato"));
         //
         // if ("IntersectionObserver" in window) {
