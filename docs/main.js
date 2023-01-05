@@ -25,21 +25,13 @@ const IMAGES = {
         "yosemite/Dusk-ElCapitan-2x.jpg"
     ],
     ALASKA: [
-        "alaska/ice-field-1x.jpg",
         "alaska/mountain-sunrise-vertical.jpg",
         "alaska/ice-field.jpg",
         "alaska/mountain-sunrise.jpg",
-        "alaska/little-friend-1x.jpg",
-        "alaska/shed-blue-1x.jpg",
         "alaska/little-friend.jpg",
         "alaska/shed-blue.jpg",
-        "alaska/mountain-evening-1x.jpg",
-        "alaska/shed-white-1x.jpg",
         "alaska/mountain-evening.jpg",
         "alaska/shed-white.jpg",
-        "alaska/mountain-sunrise-1x.jpg",
-        "alaska/skater-buds-1x.jpg",
-        "alaska/mountain-sunrise-vertical-1x.jpg",
         "alaska/skater-buds.jpg",
     ],
     EASTCOAST: [
