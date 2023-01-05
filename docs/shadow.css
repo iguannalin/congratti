@@ -27,6 +27,7 @@
 
 .gallery-container img {
     height: 100%;
+    width: auto;
     display: block;
 }
 
