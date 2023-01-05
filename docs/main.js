@@ -165,7 +165,7 @@ class PopUpBox extends HTMLElement {
                 const path = "public/projects/";
 
                 const headingDiv = document.createElement('div');
-                headingDiv.setAttribute('class', 'gallery-block block-0');
+                headingDiv.setAttribute('class', 'gallery-block block-0 ' + place);
                 const div = document.createElement('div');
                 const heading = document.createElement('h1');
                 heading.setAttribute('class', 'gallery-heading');
@@ -176,7 +176,7 @@ class PopUpBox extends HTMLElement {
 
                 IMAGES[`${place.toUpperCase()}`].forEach((src, i) => {
                     const imgContainer = document.createElement('div');
-                    imgContainer.setAttribute("class", "gallery-block film block-" + (Math.ceil(i / 2) + 1));
+                    imgContainer.setAttribute("class", place + " gallery-block film block-" + (Math.ceil(i / 2) + 1));
                     const divContainer = document.createElement('div');
                     divContainer.setAttribute('class', 'gallery-div-container');
                     const figure = document.createElement('figure');
