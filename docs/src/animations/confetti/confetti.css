@@ -17,6 +17,10 @@ body {
     background-color: green;
 }
 
+#title {
+    cursor: pointer;
+}
+
 .heading {
     font-family: var(--main-heading);
     font-weight: bold;
