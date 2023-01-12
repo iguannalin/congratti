@@ -203,8 +203,8 @@
     document.addEventListener("DOMContentLoaded", function () {
         let hash = location.hash;
         if (!hash) {
-            const r = Math.floor(Math.random() * (popups.length-1));
-            openPopup(popups[r]);
+            // const r = Math.floor(Math.random() * (popups.length-1));
+            // openPopup(popups[r]);
             return;
         }
         hash = hash.replace('#', '');
