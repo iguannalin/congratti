@@ -158,8 +158,12 @@ body {
     --text-color-5: #465188;
     --text-color-6: #4AF04D;
 
+
+    /*--main-heading: 'Fredoka One', cursive;*/
     --main-heading: 'Varela Round', sans-serif;
-    --sub-heading: 'Playfair Display', serif;
+    --sub-heading: 'Spectral', serif;
+    /*--body-text: 'Spectral', serif;*/
+    /*--sub-heading: 'Playfair Display', serif;*/
     --body-text: 'Alice', serif;
     scroll-behavior: smooth;
 }
