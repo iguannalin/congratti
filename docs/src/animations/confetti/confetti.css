@@ -28,6 +28,8 @@ body {
 
 .subheading {
     font-family: var(--sub-heading);
+    line-height: 1.5em;
+    font-weight: 600;
 }
 
 .link {
