@@ -204,7 +204,8 @@
         let hash = location.hash;
         if (!hash) {
             const r = Math.floor(Math.random() * (popups.length-1));
-            openPopup(popups[r]);
+            import isMobile from "./src/utils/is-mobile.js";
+            if (!isMobile) openPopup(popups[r]);
             return;
         }
         hash = hash.replace('#', '');
