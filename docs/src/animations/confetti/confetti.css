@@ -38,20 +38,29 @@ body {
     font-size: 1em !important;
 }
 
-.button-link {
+.button-no-style {
     background: none;
-    color: inherit;
     border: none;
     padding: 0 0 0 2px;
     font: inherit;
     cursor: pointer;
     outline: inherit;
     font-style: italic;
-    font-size: 1em !important;
     text-align: left;
 }
 
+.button-link {
+    color: hsl(214deg 78% 55%);
+    font-size: 1.2em !important;
+}
+
 .button-link:hover {
+    text-decoration: underline;
+}
+
+.fake-link {
+    font-size: initial !important;
+    color: inherit;
     text-decoration: underline;
 }
 
@@ -62,8 +71,8 @@ body {
 .nested-item {
     padding-left: 0.75em;
     line-height: .75em;
-    font-size: 1.1em;
     margin-top: 0.5em;
+    font-size: 1.2em;
 }
 
 .section-links-list {
@@ -139,8 +148,12 @@ body {
     scroll-behavior: smooth;
 }
 
-.section-container a:hover {
-    color: black;
+.section-container a:hover, .fake-link:hover, .button-link:hover {
+    color: hsl(125deg 78% 55%);
+}
+
+.button-link:hover {
+    list-style: url("./public/hand.svg");
 }
 
 :root {
@@ -172,10 +185,10 @@ body {
 
 a {
     color: inherit;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
-a:hover {
+a:hover, .fake-link:hover {
     opacity: 1;
     text-decoration: underline;
 }
