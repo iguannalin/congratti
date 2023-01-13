@@ -152,8 +152,12 @@ body {
     color: hsl(125deg 78% 55%);
 }
 
-.button-link:hover {
-    list-style: url("./public/hand.svg");
+.button-link li {
+    list-style: none;
+}
+
+.button-link:hover li {
+    list-style: url("public/hand.svg");
 }
 
 :root {
