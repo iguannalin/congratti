@@ -71,7 +71,6 @@ class PopUpBox extends HTMLElement {
 
         // Create a shadow root
         const shadow = this.attachShadow({mode: 'open'});
-        this.style.display = 'none';
 
         // Create spans
         const wrapper = document.createElement('span');
@@ -90,6 +89,8 @@ class PopUpBox extends HTMLElement {
         name.setAttribute('class', 'title');
         name.setAttribute('tabindex', '0');
         name.textContent = title.replace("popup-", "");
+
+        if (!this.isMobile && title !== 'popup-filmotography') this.style.display = 'none';
 
         const close = document.createElement('div');
         close.setAttribute('class', 'close');
