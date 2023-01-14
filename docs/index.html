@@ -178,8 +178,7 @@
 </body>
 <footer>
 </footer>
-<script type="module">
-    import isMobile from "./src/utils/is-mobile.js";
+<script>
     const popups = ['baby-killer', 'ai-loves-horror', 'text-me-smth-nice', 'spotify-recently-added', 'generative-riso', 'filmotography', 'badwatercolor', 'creative-coding', 'me'];
     let openedPopups = [];
     let closedPopups = [];
@@ -204,8 +203,8 @@
     document.addEventListener("DOMContentLoaded", function () {
         let hash = location.hash;
         if (!hash) {
-            const r = Math.floor(Math.random() * (popups.length-1));
-            if (!isMobile) openPopup(popups[r]);
+            // const r = Math.floor(Math.random() * (popups.length-1));
+            // if (!isMobile) openPopup(popups[r]);
             return;
         }
         hash = hash.replace('#', '');
