@@ -90,7 +90,7 @@ class PopUpBox extends HTMLElement {
         name.setAttribute('tabindex', '0');
         name.textContent = title.replace("popup-", "");
 
-        if (!this.isMobile && title !== 'popup-filmotography') this.style.display = 'none';
+        if (isMobile.any() || title !== 'popup-filmotography') this.style.display = 'none';
 
         const close = document.createElement('div');
         close.setAttribute('class', 'close');
