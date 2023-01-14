@@ -90,7 +90,11 @@ class PopUpBox extends HTMLElement {
         name.setAttribute('tabindex', '0');
         name.textContent = title.replace("popup-", "");
 
-        if (isMobile.any() || title !== 'popup-filmotography') this.style.display = 'none';
+        if (isMobile.any() || title !== 'popup-filmotography') {
+            this.style.display = 'none';
+        } else {
+            document.getElementById('button-' + name.textContent).setAttribute('class', 'button-no-style button-link active');
+        }
 
         const close = document.createElement('div');
         close.setAttribute('class', 'close');

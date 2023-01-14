@@ -63,32 +63,32 @@
                     <p class="subheading">Previously, I’ve crafted user experiences to help people access data at <a class="link" href="https://www.mitre.org/">MITRE</a> and <a class="link" href="https://www.schwab.com/">Schwab</a> as a UX engineer in the realms of cybersecurity, policy, finance, and briefly in data-vis with the wonderful people at <a class="link" href="https://stamen.com/">Stamen Design</a>.
                     </p>
                     <p class="subheading nested-item-header">projects</p>
-                    <p class="subheading nested-item"><button class="button-no-style button-link" onclick="openPopup('ai-loves-horror')"><li>ai loves horror</button></p></p>
+                    <p class="subheading nested-item"><button class="button-no-style button-link" id="button-ai-loves-horror" onclick="openPopup('ai-loves-horror')"><li>ai loves horror</button></p></p>
                     <p class="subheading nested-item">
-                        <button class="button-no-style button-link" onclick="openPopup('text-me-smth-nice')"><li>text-me-smth-nice</li></button>
+                        <button class="button-no-style button-link" id="button-text-me-smth-nice" onclick="openPopup('text-me-smth-nice')"><li>text-me-smth-nice</li></button>
                     </p>
                     <p class="subheading nested-item">
-                        <button class="button-no-style button-link" onclick="openPopup('baby-killer')"><li>baby killer</li></button>
+                        <button class="button-no-style button-link" id="button-baby-killer" onclick="openPopup('baby-killer')"><li>baby killer</li></button>
                     </p>
                     <p class="subheading nested-item">
-                        <button class="button-no-style button-link" onclick="openPopup('generative-riso')"><li>generative riso</li></button>
+                        <button class="button-no-style button-link" id="button-generative-riso" onclick="openPopup('generative-riso')"><li>generative riso</li></button>
                     </p>
                     <p class="subheading nested-item">
-                        <button class="button-no-style button-link" onclick="openPopup('spotify-recently-added')"><li>spotify recently added</li></button>
+                        <button class="button-no-style button-link" id="button-spotify-recently-added" onclick="openPopup('spotify-recently-added')"><li>spotify recently added</li></button>
                     </p>
 
                     <p class="subheading nested-item-header">bric-a-brac</p>
                     <p class="subheading nested-item">
-                        <button class="button-no-style button-link" onclick="openPopup('filmotography')"><li>filmotography</li></button>
+                        <button class="button-no-style button-link" id="button-filmotography" onclick="openPopup('filmotography')"><li>filmotography</li></button>
                     </p>
                     <p class="subheading nested-item">
-                        <button class="button-no-style button-link" onclick="openPopup('badwatercolor')"><li>badwatercolor</li></button>
+                        <button class="button-no-style button-link" id="button-badwatercolor" onclick="openPopup('badwatercolor')"><li>badwatercolor</li></button>
                     </p>
                     <!--<p class="subheading nested-item">-->
-                        <!--<button class="button-no-style button-link" onclick="openPopup('writing')"><li>writing</li></button>-->
+                        <!--<button class="button-no-style button-link" id=writing onclick="openPopup('writing')"><li>writing</li></button>-->
                     <!--</p>-->
                     <p class="subheading nested-item">
-                        <button class="button-no-style button-link" onclick="openPopup('creative-coding')"><li>creative coding</li></button>
+                        <button class="button-no-style button-link" id="button-creative-coding" onclick="openPopup('creative-coding')"><li>creative coding</li></button>
                     </p>
 
                     <p><a class="subheading link" href="https://annaylin.notion.site/Fall-22-Doc-Blogs-2c65c02263424187bf7e732de4cacd76">What am I doing at ITP?</a></p>
@@ -184,15 +184,18 @@
     let closedPopups = [];
     function openPopup(targetName) {
         if (popups.includes(targetName)) {
+            const button = document.getElementById('button-' + targetName);
             let dis = document.getElementById(`popup-${targetName}`).style.display;
             if (dis === 'block') {
                 document.getElementById(`popup-${targetName}`).style.display = 'none';
                 closedPopups.push(targetName);
                 openedPopups.splice(openedPopups.indexOf(targetName), 1);
+                button.setAttribute('class', 'button-no-style button-link');
             } else {
                 document.getElementById(`popup-${targetName}`).style.display = 'block';
                 openedPopups.push(targetName);
                 closedPopups.splice(closedPopups.indexOf(targetName), 1);
+                button.setAttribute('class', 'button-no-style button-link active');
             }
             location.hash = '';
             openedPopups.forEach((item) => {

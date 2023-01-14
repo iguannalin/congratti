@@ -148,7 +148,8 @@ body {
     scroll-behavior: smooth;
 }
 
-.section-container a:hover, .fake-link:hover, .button-link:hover {
+.section-container a:hover, .fake-link:hover, .button-link:hover, .button-link.active li {
+    text-decoration: underline;
     color: hsl(125deg 78% 55%);
 }
 
@@ -156,7 +157,7 @@ body {
     list-style: none;
 }
 
-.button-link:hover li {
+.button-link:hover li, .button-link.active li {
     list-style: url("https://annaylin.com/public/handsy.png");
 }
 
