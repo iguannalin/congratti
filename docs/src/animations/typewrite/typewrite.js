@@ -4,8 +4,8 @@ let n = 0,
     textIndex = 0,
     interval = Math.floor((Math.random() * 200) + 5),
     textToType = {
-        description: 'Hi,',
-        titles: ['I\'m Anna Lin.']
+        description: 'Hi',
+        titles: ['i\'m anna y lin']
     },
     target = document.getElementById('title'),
     isMobileDevice = isMobile.any();
