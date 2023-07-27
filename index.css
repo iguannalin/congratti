@@ -6,13 +6,13 @@
   --default-text: rgb(35, 35, 35);
 }
 
-.theme {
+#theme {
   background-color: var(--default-bg);
   color: var(--default-text);
 }
 
 @media (prefers-color-scheme: dark) {
-  .theme {
+  #theme {
     --default-bg: rgb(35, 35, 35);
     --default-text: rgb(89 255 66);
   }
@@ -34,13 +34,13 @@ body {
   transition: all ease-in-out 0.2s;
 }
 
-.container {
+#container {
   height: 100vh;
   width: 100vw;
   z-index: 999;
 }
 
-.background {
+#background {
   position: fixed;
   height: 100vh;
   width: 100vw;

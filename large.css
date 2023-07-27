@@ -1,4 +1,4 @@
-.main {
+#main {
   display: flex;
   width: auto;
   height: 100%;
@@ -7,29 +7,29 @@
   align-items: stretch;
 }
 
-.top {
+#top {
   display: none;
 }
 
-.left {
+#left {
   display: flex;
   border: 2px solid red;
   flex: 1;
 }
 
-.center {
+#center {
   display: flex;
   border: 2px solid blue;
   flex: 2;
   padding: 16px 12px;
 }
 
-.right {
+#right {
   display: flex;
   border: 2px solid green;
   flex: 1;
 }
 
-.left, .right {
+#left, #right {
   padding: 16px 12px;
 }

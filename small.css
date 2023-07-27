@@ -1,30 +1,47 @@
-.main {
+#main {
   display: flex;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   flex-flow: column;
   justify-content: stretch;
   align-items: center;
 }
 
-.top {
+#top {
   display: flex;
+  width: 100%;
   border: 2px solid yellow;
   flex: 1;
   padding: 16px 12px;
+  justify-content: center;
+  align-items: center;
 }
 
-.left {
+#top label {
+  visibility: hidden;
+  position: absolute;
+  z-index: 0;
+}
+
+#top select {
+  width: 88%;
+  z-index: 100;
+}
+
+#left {
   display: none;
+  width: 100%;
 }
 
-.center {
+#center {
   display: flex;
   flex: 25;
   border: 2px solid blue;
   padding: 16px 12px;
+  width: 100%;
 }
 
-.right {
+#right {
   display: none;
+  width: 100%;
 }
