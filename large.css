@@ -2,27 +2,32 @@
   display: flex;
   width: auto;
   height: 100%;
+  flex-flow: row;
   justify-content: center;
   align-items: stretch;
+}
+
+.top {
+  display: none;
 }
 
 .left {
   display: flex;
   border: 2px solid red;
-  flex-grow: 1;
+  flex: 1;
 }
 
 .center {
   display: flex;
   border: 2px solid blue;
-  flex-grow: 2;
+  flex: 2;
   padding: 16px 12px;
 }
 
 .right {
   display: flex;
   border: 2px solid green;
-  flex-grow: 1;
+  flex: 1;
 }
 
 .left, .right {
