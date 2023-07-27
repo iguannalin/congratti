@@ -6,13 +6,13 @@
   --default-text: rgb(35, 35, 35);
 }
 
-#theme {
+.theme {
   background-color: var(--default-bg);
   color: var(--default-text);
 }
 
 @media (prefers-color-scheme: dark) {
-  #theme {
+  .theme {
     --default-bg: rgb(35, 35, 35);
     --default-text: rgb(89 255 66);
   }
