@@ -40,6 +40,10 @@ body {
   z-index: 1000;
 }
 
+.center div {
+  display: none;
+}
+
 #background {
   position: fixed;
   height: 100vh;

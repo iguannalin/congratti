@@ -25,6 +25,12 @@ window.addEventListener("load", () => {
       default:
         elem = center;
     }
+    if (elem == center) {
+      if (document.getElementById(selected)) {
+        let subelem = document.getElementById(selected);
+        subelem.style.display = "block";
+      }
+    }
     if (elem) {
       previousSelect.style.display = "none";
       elem.style.display = "block";
