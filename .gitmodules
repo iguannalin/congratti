@@ -4,3 +4,6 @@
 [submodule "seeds"]
 	path = seeds
 	url = https://github.com/iguannalin/seeds.git
+[submodule "canto"]
+	path = canto
+	url = https://github.com/iguannalin/canto.git
