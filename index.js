@@ -61,6 +61,7 @@ window.addEventListener("load", () => {
     }
     if (elem) {
       previousSelect.style.display = "none";
+      center.style.display = "none";
       elem.style.display = "block";
       previousSelect = elem;
     }
