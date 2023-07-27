@@ -1,43 +1,46 @@
-window.addEventListener("load", () => {
+let previousSelect;
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+}
+
+function onSelectProject(e) {
+  const selected = e.target.innerText;
+  console.log('selected', selected);
+  if (document.getElementById(selected)) {
+    let subelem = document.getElementById(selected);
+    subelem.style.display = "block";
+    onSelect(null, "center");
+  }
+}
+
+function onSelect(e, name="") {
+  const select = document.getElementById("select");
   const left = document.getElementById("left");
   const center = document.getElementById("center");
   const right = document.getElementById("right");
-  const select = document.getElementById("select");
-  let previousSelect = center;
-
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+  const selected = e ? e.target.value : name;
+  console.log(e ? e.target.value : name);
+  console.log(select);
+  select.value = selected;
+  let elem;
+  switch (selected) {
+    case "projects":
+      elem = left;
+      break;
+    case "about":
+      elem = right;
+      break;
+    default:
+      elem = center;
   }
-
-  function onSelect(e) {
-    window.navigator.vibrate(200);
-    const selected = e.target.value;
-    let elem;
-    switch (selected) {
-      case "projects":
-        elem = left;
-        break;
-      case "about":
-          elem = right;
-          break;
-      default:
-        elem = center;
-    }
-    if (elem == center) {
-      if (document.getElementById(selected)) {
-        let subelem = document.getElementById(selected);
-        subelem.style.display = "block";
-      }
-    }
-    if (elem) {
-      previousSelect.style.display = "none";
-      elem.style.display = "block";
-      previousSelect = elem;
-    }
-    console.log(e.target.value);
+  if (elem) {
+    if (previousSelect) previousSelect.style.display = "none";
+    elem.style.display = "block";
+    previousSelect = elem;
   }
+}
 
-  select.onchange = (e) => onSelect(e);
-});
+setTimeout(onSelect(null, "projects"),500); // remove later

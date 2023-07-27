@@ -42,30 +42,16 @@
     </head>
     <body>
         <div class="theme" id="container">
-            <div id="background"></div>
+            
             <div id="main">
                 <div id="top">
                     <h1>anna y lin</h1>
                     <label for="select">select the page you would like to visit:</label>
-                    <select id="select">
+                    <select id="select" onchange="onSelect(event)">
                         <optgroup>
                             <option selected>center</option>
                             <option>about</option>
                             <option>projects</option>
-                            <optgroup label="code">
-                                <option value="projects">all</option>
-                                <option>ai</option>
-                                <option>text</option>
-                                <option>baby</option>
-                                <option>spotify</option>
-                            </optgroup>
-                            <optgroup label="print">
-                                <option value="projects">all</option>
-                                <option>generative</option>
-                                <option>filmotography</option>
-                                <option>badwatercolor</option>
-                                <option>creative</option>
-                            </optgroup>
                             <option>draw</option>
                         </optgroup>
                     </select>
@@ -76,14 +62,14 @@
                             <tr><th>projects</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>ai-loves-horror</td></tr>
-                            <tr><td>text-me-smth-nice</td></tr>
-                            <tr><td>baby-killer</td></tr>
-                            <tr><td>generative riso</td></tr>
-                            <tr><td>spotify recently added</td></tr>
-                            <tr><td>filmotography</td></tr>
-                            <tr><td>badwatercolor</td></tr>
-                            <tr><td>creative coding</td></tr>
+                            <tr><td><a href="javascript:void(0);" onclick="onSelectProject(event)">ai</a></td></tr>
+                            <tr><td><a href="javascript:void(0);" onclick="onSelectProject(event)">text</a></td></tr>
+                            <tr><td><a href="javascript:void(0);" onclick="onSelectProject(event)">baby</a></td></tr>
+                            <tr><td><a href="javascript:void(0);" onclick="onSelectProject(event)">spotify</a></td></tr>
+                            <tr><td><a href="javascript:void(0);" onclick="onSelectProject(event)">generative</a></td></tr>
+                            <tr><td><a href="javascript:void(0);" onclick="onSelectProject(event)">filmotography</a></td></tr>
+                            <tr><td><a href="javascript:void(0);" onclick="onSelectProject(event)">badwatercolor</a></td></tr>
+                            <tr><td><a href="javascript:void(0);" onclick="onSelectProject(event)">creative</a></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -126,6 +112,8 @@
                     </table>
                 </div>
             </div>
+
+            <div id="background"></div>
         </div>
     </body>
 </html>
