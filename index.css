@@ -1,5 +1,5 @@
-@import url(small.css) (min-width:0px);
-@import url(large.css) (min-width:900px);
+@import url(small.css) (min-width: 0px);
+@import url(large.css) (min-width: 800px);
 
 :root {
   --default-bg: #fdfaf6;
@@ -31,6 +31,7 @@ body {
   justify-content: center;
   text-shadow: #acb5bd 1px 1px 6px;
   margin: 0 auto;
+  transition: all ease-in-out 0.2s;
 }
 
 .container {
