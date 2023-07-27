@@ -12,6 +12,7 @@ window.addEventListener("load", () => {
   }
 
   function onSelect(e) {
+    window.navigator.vibrate(200);
     const selected = e.target.value;
     let elem;
     switch (selected) {

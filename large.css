@@ -7,6 +7,10 @@
   align-items: stretch;
 }
 
+#main div {
+  box-sizing: border-box;
+}
+
 #top {
   display: none;
 }
@@ -20,7 +24,7 @@
 #center {
   display: flex;
   border: 2px solid blue;
-  flex: 2;
+  flex: 4;
   padding: 16px 12px;
 }
 

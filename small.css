@@ -7,6 +7,10 @@
   align-items: center;
 }
 
+#main div {
+  box-sizing: border-box;
+}
+
 #top {
   display: flex;
   width: 100%;
@@ -15,6 +19,7 @@
   padding: 16px 12px;
   justify-content: center;
   align-items: center;
+  line-height: 18px;
 }
 
 #top label {
@@ -30,6 +35,8 @@
 
 #left {
   display: none;
+  flex: 25;
+  padding: 16px 12px;
   width: 100%;
 }
 
@@ -43,5 +50,7 @@
 
 #right {
   display: none;
+  flex: 25;
+  padding: 16px 12px;
   width: 100%;
 }
