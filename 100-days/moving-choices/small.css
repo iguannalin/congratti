@@ -1,0 +1,7 @@
+#parent {
+  display: none;
+}
+
+#heading::after {
+  content: 'mobile not available; soz -anna';
+}

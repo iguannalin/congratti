@@ -1,0 +1,13 @@
+body {
+  font-size: 10px;
+}
+
+#sheet {
+  background: linear-gradient( to bottom, var(--main-text-color), var(--main-text-color) 50%, var(--alt-bg-color) 50%, var(--alt-bg-color));
+  background-size: 100% 36px;
+}
+
+input[type='radio'] {
+  width: 12px;
+  height: 12px;
+}

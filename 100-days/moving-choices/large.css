@@ -1,0 +1,7 @@
+#parent {
+  display: block;
+}
+
+#heading::after {
+  content: '';
+}

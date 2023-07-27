@@ -1,0 +1,56 @@
+:root {
+  --main-bg-color: rgb(35, 35, 35);
+  --main-text-color: rgb(255 255 255);
+  --alt-bg-color: rgb(223 223 223);
+}
+
+html {
+  display: block;
+  width: 100%;
+  margin: auto 0;
+}
+
+*:not(button) {
+  cursor: pointer;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-bg-color);
+  font-size: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#heading {
+  border: 3px solid white;
+  border-radius: 5px;
+  margin-top: 15%;
+  padding: 0 16px;
+  width: fit-content;
+  background-color: var(--alt-bg-color);
+}
+
+.hover-area {
+  position: absolute;
+  margin: 20px;
+}
+
+input[type='checkbox'] {
+  width: 13px;
+  height: 13px;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #222;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+input[type='checkbox']:checked {
+  background-color: #0000ffd1;
+}

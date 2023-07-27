@@ -1,0 +1,50 @@
+@import url(small.css) (min-width:0px);
+@import url(large.css) (min-width:700px);
+
+:root {
+  --main-bg-color: rgb(35, 35, 35);
+  --main-text-color: rgb(255 255 255);
+  --alt-bg-color: rgb(223 223 223);
+}
+
+html {
+  display: block;
+  width: 100%;
+  margin: 5% 0 auto;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: minion-pro, serif;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--main-text-color);
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  cursor: url('question.png') 0 16, pointer;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: 0 auto;
+  padding: 7px 0 10px;
+  color: var(--main-bg-color);;
+}
+
+.container {
+  width: 85%;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+#heading {
+  background-color: var(--alt-bg-color);
+}
+
+input[type='radio'] {
+  accent-color: #3861f0;
+  cursor: url('pencil.png') 0 16, default;
+}

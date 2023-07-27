@@ -1,0 +1,630 @@
+{
+  "Afrikaans": {
+      "directions": ["noorde", "ooste", "suide", "weste"],
+      "country": "Namibia",
+      "latitude": -22,
+      "longitude": 17
+  },
+  "Albanian": {
+      "directions": ["pranvera", "vera", "vjeshta", "dimra"],
+      "country": "Albania",
+      "latitude": 41,
+      "longitude": 20
+  },
+  "Arabic": {
+      "directions": ["شمال", "شرق", "جنوب", "غرب"],
+      "country": "Saudi Arabia",
+      "latitude": 25,
+      "longitude": 45
+  },
+  "Armenian": {
+      "directions": ["հյուսիս", "արեւելք", "հարավ", "արեւմուտք"],
+      "country": "Armenia",
+      "latitude": 40,
+      "longitude": 45
+  },
+  "Assamese": {
+      "directions": ["উত্তৰ", "পূব", "দক্ষিণ", "পশ্চিম"],
+      "country": "Bhutan",
+      "latitude": 27.5,
+      "longitude": 90.5
+  },
+  "Aymara": {
+      "directions": ["lapaki", "junt'upacha", "caratacu", "juyphipacha","autipacha"
+      ],
+      "country": "Peru",
+      "latitude": -10,
+      "longitude": -76
+  },
+  "Azerbaijani": {
+      "directions": ["şimali", "şərq", "cənubi", "qərb"],
+      "country": "Azerbaijan",
+      "latitude": 40.5,
+      "longitude": 47.5
+  },
+  "Basque": {
+      "directions": ["iparraldean", "ekialdean", "hego", "mendebaldean"],
+      "country": "Spain",
+      "latitude": 40,
+      "longitude": -4
+  },
+  "Bengali": {
+      "directions": ["উত্তর", "পূর্ব", "দক্ষিণ", "পশ্চিম"],
+      "country": "Bangladesh",
+      "latitude": 24,
+      "longitude": 90
+  },
+  "Belarussian": {
+      "directions": ["поўнач", "ўсход", "поўдзень", "захад"],
+      "country": "Belarus",
+      "latitude": 53,
+      "longitude": 28
+  },
+  "Bikol": {
+      "directions": ["amihanan", "habagatan", "sirangan / subangan", "sulnopan"],
+      "country": "Philippines",
+      "latitude": 13,
+      "longitude": 122
+  },
+  "Bosnian": {
+      "directions": ["sjever", "istok", "jug", "zapad"],
+      "country": "Bosnia and Herzegovina",
+      "latitude": 44,
+      "longitude": 18
+  },
+  "Bulgarian": {
+      "directions": ["север", "изток", "юг", "запад"],
+      "country": "Bulgaria",
+      "latitude": 43,
+      "longitude": 25
+  },
+  "Burmese": {
+      "directions": ["မွောကျ", "အရှေ့", "တောင်", "အနောက်"],
+      "country": "Myanmar",
+      "latitude": 22,
+      "longitude": 98
+  },
+  "Chichewa": {
+      "directions": ["kumpoto", "kummawa", "kum'mwera", "kumadzulo"],
+      "country": "Zambia",
+      "latitude": -15,
+      "longitude": 30
+  },
+  "Chinese": {
+      "directions": ["北", "東", "南", "西"],
+      "country": "China",
+      "latitude": 35,
+      "longitude": 105
+  },
+  "Cree": {
+      "directions": ["ᑮᐁᐧᑎᓄᕁ", "ᓵᑳᐢᑌᓄᕁ", "ᑮᓱᐯᐧᓄᕁ", "ᐸᐦᑭᓯᒨᑖᕁ"],
+      "country": "Canada",
+      "latitude": 60,
+      "longitude": -95
+  },
+  "Croatian": {
+      "directions": ["sjever", "istok", "jug", "zapad"],
+      "country": "Croatia",
+      "latitude": 45.1667,
+      "longitude": 15.5
+  },
+  "Czech": {
+      "directions": ["sever", "východ", "jih", "západ"],
+      "country": "Czech Republic",
+      "latitude": 49.75,
+      "longitude": 15.5
+  },
+  "Danish": {
+      "directions": ["norden", "østen", "syden", "vesten"],
+      "country": "Denmark",
+      "latitude": 56,
+      "longitude": 10
+  },
+  "Dutch": {
+      "directions": ["noorden", "oosten", "zuiden", "westen"],
+      "country": "Netherlands",
+      "latitude": 52.5,
+      "longitude": 5.75
+  },
+  "Estonian": {
+      "directions": ["põhi", "ida", "lõunas", "lääs"],
+      "country": "Estonia",
+      "latitude": 59,
+      "longitude": 26
+  },
+  "Faroese": {
+      "directions": ["norður", "eystur", "suður", "vestur"],
+      "country": "Faroe Islands",
+      "latitude": 62,
+      "longitude": -7
+  },
+  "Finnish": {
+      "directions": ["pohjoinen", "itä", "etelä", "länsi"],
+      "country": "Finland",
+      "latitude": 64,
+      "longitude": 26
+  },
+  "French": {
+      "directions": ["nord", "est", "sud", "ouest"],
+      "country": "France",
+      "latitude": 46,
+      "longitude": 2
+  },
+  "Georgian": {
+      "directions": ["ჩრდილოეთი", "აღმოსავლეთი", "სამხრეთი", "დასავლეთი"],
+      "country": "Georgia",
+      "latitude": 42,
+      "longitude": 43.5
+  },
+  "German": {
+      "directions": ["Norden", "Osten", "Süden", "Westen"],
+      "country": "Germany",
+      "latitude": 51,
+      "longitude": 9
+  },
+  "Greek": {
+      "directions": ["βόρειος", "ανατολή", "νότος", "δυτικά"],
+      "country": "Greece",
+      "latitude": 39,
+      "longitude": 22
+  },
+  "Gujarati": {
+      "directions": ["ઉત્તર", "પૂર્વ", "દક્ષિણ", "પશ્ચિમ"],
+      "country": "India",
+      "latitude": 20,
+      "longitude": 77
+  },
+  "Haitian Creole": {
+      "directions": ["nò", "bò solèy leve", "sid", "lwès"],
+      "country": "Haiti",
+      "latitude": 19,
+      "longitude": -72.4167
+  },
+  "Hausa": {
+      "directions": ["arewa", "gabas", "kudu", "yamma"],
+      "country": "Ghana",
+      "latitude": 8,
+      "longitude": -2
+  },
+  "Hawaiian": {
+      "directions": ["ke akau", "ka hikina", "ka hema", "ke komohana"],
+      "country": "United States Minor Outlying Islands",
+      "latitude": 19.2833,
+      "longitude": 166.6
+  },
+  "Hebrew": {
+      "directions": ["צָפוֹן", "מזרח", "דָרוֹם", "מַעֲרָב"],
+      "country": "Israel",
+      "latitude": 31.5,
+      "longitude": 34.75
+  },
+  "Hindi": {
+      "directions": ["उत्तर", "पूर्व", "दक्षिण", "पश्चिम"],
+      "country": "India",
+      "latitude": 20,
+      "longitude": 77
+  },
+  "Hungarian": {
+      "directions": ["észak", "kelet", "dél", "nyugat"],
+      "country": "Hungary",
+      "latitude": 47,
+      "longitude": 20
+  },
+  "Icelandic": {
+      "directions": ["norður", "austur", "suður", "vestur"],
+      "country": "Iceland",
+      "latitude": 65,
+      "longitude": -18
+  },
+  "Indonesian": {
+      "directions": ["utara", "timur", "selatan", "barat"],
+      "country": "Indonesia",
+      "latitude": -5,
+      "longitude": 120
+  },
+  "Irish": {
+      "directions": ["ó thuaidh", "soir", "anoir", "aneas"],
+      "country": "Ireland",
+      "latitude": 53,
+      "longitude": -8
+  },
+  "Italian": {
+      "directions": ["nord", "est", "sud", "ovest"],
+      "country": "Italy",
+      "latitude": 42.8333,
+      "longitude": 12.8333
+  },
+  "Japanese": {
+      "directions": ["北", "東", "南", "西"],
+      "country": "Japan",
+      "latitude": 36,
+      "longitude": 138
+  },
+  "Javanese": {
+      "directions": ["lor", "wetan", "kidul", "kulon"],
+      "country": "Indonesia",
+      "latitude": -5,
+      "longitude": 120
+  },
+  "Kannada": {
+      "directions": ["ಉತ್ತರ", "ಪೂರ್ವ", "ದಕ್ಷಿಣ", "ಪಶ್ಚಿಮಕ್ಕೆ"],
+      "country": "India",
+      "latitude": 20,
+      "longitude": 77
+  },
+  "Keapara": {
+      "directions": ["agi lakati", "wau", "gavu rigo", "avala"],
+      "country": "Papua New Guinea",
+      "latitude": -6,
+      "longitude": 147
+  },
+  "Khmer": {
+      "directions": ["ខាងជើង", "ខាងកើត", "ខាងត្បូង", "ខាងលិច"],
+      "country": "Cambodia",
+      "latitude": 13,
+      "longitude": 105
+  },
+  "Korean": {
+      "directions": ["북쪽", "동쪽", "남쪽", "서쪽"],
+      "country": "Korea, Republic of",
+      "latitude": 37,
+      "longitude": 127.5
+  },
+  "Kurdish": {
+      "directions": ["bakûr", "rohilat", "başûr", "rojava"],
+      "country": "Turkey",
+      "latitude": 39,
+      "longitude": 35
+  },
+  "Kyrgz": {
+      "directions": ["түндүк", "чыгыш", "түштүк", "батыш"],
+      "country": "Kyrgyzstan",
+      "latitude": 41,
+      "longitude": 75
+  },
+  "Lao": {
+      "directions": ["ພາກເຫນືອ", "ພາກຕາເວັນອອກ", "ພາກໃຕ້", "ຕາເວັນຕົກ"],
+      "country": "Lao People's Democratic Republic",
+      "latitude": 18,
+      "longitude": 105
+  },
+  "Lithuanian": {
+      "directions": ["šiaurė", "rytuose", "pietuose", "vakaruose"],
+      "country": "Lithuania",
+      "latitude": 56,
+      "longitude": 24
+  },
+  "Luxembourgish": {
+      "directions": ["norden", "osten", "süden", "westen"],
+      "country": "Luxembourg",
+      "latitude": 49.75,
+      "longitude": 6.1667
+  },
+  "Macedonian": {
+      "directions": ["север", "исток", "југ", "запад"],
+      "country": "Macedonia, the former Yugoslav Republic of",
+      "latitude": 41.8333,
+      "longitude": 22
+  },
+  "Malay": {
+      "directions": ["utara", "timur", "selatan", "barat"],
+      "country": "Malaysia",
+      "latitude": 2.5,
+      "longitude": 112.5
+  },
+  "Maltese": {
+      "directions": ["tramuntana", "lvant", "nofsinhar", "punent"],
+      "country": "Malta",
+      "latitude": 35.8333,
+      "longitude": 14.5833
+  },
+  "Manx": {
+      "directions": ["twoaie", "hiar", "jiass", "eear"],
+      "country": "United Kingdom",
+      "latitude": 54,
+      "longitude": -2
+  },
+  "Maori": {
+      "directions": ["raki", "rawhiti", "tonga", "hauauru"],
+      "country": "New Zealand",
+      "latitude": -41,
+      "longitude": 174
+  },
+  "Marathi": {
+      "directions": ["उत्तर", "पूर्व", "दक्षिण", "पश्चिम"],
+      "country": "India",
+      "latitude": 20,
+      "longitude": 77
+  },
+  "Nahuatl": {
+      "directions": ["mictlāmpa", "tlāhuiztlāmpa", "huitztlāmpa", "cihuātlāmpa"],
+      "country": "Belize",
+      "latitude": 17.25,
+      "longitude": -88.75
+  },
+  "Nepali": {
+      "directions": ["उत्तर", "पूर्व", "दक्षिण", "पश्चिम"],
+      "country": "Nepal",
+      "latitude": 28,
+      "longitude": 84
+  },
+  "Norweigan": {
+      "directions": ["nord", "øst", "sør, syd", "vest"],
+      "country": "Norway",
+      "latitude": 62,
+      "longitude": 10
+  },
+  "Occitan": {
+      "directions": ["nòrd", "èst", "orient", "pojant","sud",
+          "miègjorn",
+          "oèst",
+          "occident"
+      ],
+      "country": "Monaco",
+      "latitude": 43.7333,
+      "longitude": 7.4
+  },
+  "Ojibwe": {
+      "directions": ["giiwedin", "waaban", "zhaawan", "ningaabii'an"],
+      "country": "Canada",
+      "latitude": 60,
+      "longitude": -95
+  },
+  "Pashto": {
+      "directions": ["شمال", "ختیځ", "سویل", "لویدیځ"],
+      "country": "Afghanistan",
+      "latitude": 33,
+      "longitude": 65
+  },
+  "Persian": {
+      "directions": ["شمال", "شرق", "جنوب", "غرب"],
+      "country": "Iran, Islamic Republic of",
+      "latitude": 32,
+      "longitude": 53
+  },
+  "Polish": {
+      "directions": ["północ", "wschód", "południe", "zachód"],
+      "country": "Poland",
+      "latitude": 52,
+      "longitude": 20
+  },
+  "Portuguese": {
+      "directions": ["norte", "leste", "sul", "oeste"],
+      "country": "Portugal",
+      "latitude": 39.5,
+      "longitude": -8
+  },
+  "Punjabi": {
+      "directions": ["ਉੱਤਰ", "ਪੂਰਬ", "ਦੱਖਣ", "ਪੱਛਮ"],
+      "country": "India",
+      "latitude": 20,
+      "longitude": 77
+  },
+  "Romanian": {
+      "directions": ["nord", "est", "sud", "vest"],
+      "country": "Romania",
+      "latitude": 46,
+      "longitude": 25
+  },
+  "Romanian Tatar": {
+      "directions": ["sırt", "küntuwar", "qıbla", "künbatar"],
+      "country": "Romania",
+      "latitude": 46,
+      "longitude": 25
+  },
+  "Russian": {
+      "directions": ["север", "восток", "юг", "запад"],
+      "country": "Russian Federation",
+      "latitude": 60,
+      "longitude": 100
+  },
+  "Samoan": {
+      "directions": ["matu", "sase", "saute", "sisifo"],
+      "country": "Samoa",
+      "latitude": -13.5833,
+      "longitude": -172.3333
+  },
+  "Saterland Frisian": {
+      "directions": ["Noude, Nudden", "Aaste", "Suude", "Wääste"],
+      "country": "Germany",
+      "latitude": 51,
+      "longitude": 9
+  },
+  "Scots": {
+      "directions": ["north", "east", "sooth", "wast"],
+      "country": "United Kingdom",
+      "latitude": 54,
+      "longitude": -2
+  },
+  "Scottish Gaelic": {
+      "directions": ["tuath", "ear", "deas", "iar"],
+      "country": "United Kingdom",
+      "latitude": 54,
+      "longitude": -2
+  },
+  "Serbian": {
+      "directions": ["север", "исток", "југ", "запад"],
+      "country": "Serbia",
+      "latitude": 44,
+      "longitude": 21
+  },
+  "Shona": {
+      "directions": ["mawodzanyemba", "mabvazuva", "chamhembe", "kumadokero"],
+      "country": "Zimbabwe",
+      "latitude": -20,
+      "longitude": 30
+  },
+  "Sindhi": {
+      "directions": ["اتر", "اوڀر", "ڏکڻ", "اولھ"],
+      "country": "Pakistan",
+      "latitude": 30,
+      "longitude": 70
+  },
+  "Sinhala": {
+      "directions": ["උතුරු", "නැගෙනහිර", "දකුණු", "බටහිර"],
+      "country": "Sri Lanka",
+      "latitude": 7,
+      "longitude": 81
+  },
+  "Slovak": {
+      "directions": ["sever", "východ", "juh", "západ"],
+      "country": "Slovakia",
+      "latitude": 48.6667,
+      "longitude": 19.5
+  },
+  "Slovenian": {
+      "directions": ["sever", "vzhod", "jug", "zahod"],
+      "country": "Slovenia",
+      "latitude": 46,
+      "longitude": 15
+  },
+  "Somali": {
+      "directions": ["waqooyiga", "bari", "konnfur", "galbeed"],
+      "country": "Somalia",
+      "latitude": 10,
+      "longitude": 49
+  },
+  "Southern Sotho": {
+      "directions": ["leboea", "ka bochabela", "ka boroa", "bophirimela"],
+      "country": "Lesotho",
+      "latitude": -29.5,
+      "longitude": 28.5
+  },
+  "Spanish": {
+      "directions": ["norte", "este", "sur", "oeste"],
+      "country": "Mexico",
+      "latitude": 23,
+      "longitude": -102
+  },
+  "Sundanese": {
+      "directions": ["kaler", "wetan", "kidul", "kulon"],
+      "country": "Indonesia",
+      "latitude": -5,
+      "longitude": 120
+  },
+  "Swahili": {
+      "directions": ["kaskazini", "mashariki", "kusini", "magharibi"],
+      "country": "Kenya",
+      "latitude": 1,
+      "longitude": 38
+  },
+  "Swedish": {
+      "directions": ["nord, norr", "öst, öster", "syd, söder", "väst, väster"],
+      "country": "Sweden",
+      "latitude": 62,
+      "longitude": 15
+  },
+  "Tagalog": {
+      "directions": ["hilaga", "silangan", "timog", "kanluran"],
+      "country": "Philippines",
+      "latitude": 13,
+      "longitude": 122
+  },
+  "Tajik": {
+      "directions": ["шимол", "шарқ", "ҷануб", "ғарб"],
+      "country": "Tajikistan",
+      "latitude": 39,
+      "longitude": 71
+  },
+  "Tamil": {
+      "directions": ["வடக்கு", "கிழக்கு", "தெற்கு", "மேற்கு"],
+      "country": "India",
+      "latitude": 20,
+      "longitude": 77
+  },
+  "Telugu": {
+      "directions": ["ఉత్తర", "తూర్పు", "దక్షిణ", "పశ్చిమ"],
+      "country": "India",
+      "latitude": 20,
+      "longitude": 77
+  },
+  "Thai": {
+      "directions": ["เหนือ", "ตะวันออก", "ใต้", "ตะวันตก"],
+      "country": "Thailand",
+      "latitude": 15,
+      "longitude": 100
+  },
+  "Tok Pisin": {
+      "directions": ["not", "hap sankamap", "saut", "wes"],
+      "country": "Papua New Guinea",
+      "latitude": -6,
+      "longitude": 147
+  },
+  "Turkish": {
+      "directions": ["kuzeyinde", "doğu", "güney", "batı"],
+      "country": "Cyprus",
+      "latitude": 35,
+      "longitude": 33
+  },
+  "Tuvaluan": {
+      "directions": ["maatuu", "sopogaalaa", "saegaalaa", "haegaalaa","saute",
+          "sulu",
+          "toga",
+          "toogaalaa",
+          "sisifo"
+      ],
+      "country": "Tuvalu",
+      "latitude": -8,
+      "longitude": 178
+  },
+  "Ukrainian": {
+      "directions": ["північ", "схід", "південь", "захід"],
+      "country": "Ukraine",
+      "latitude": 49,
+      "longitude": 32
+  },
+  "Urdu": {
+      "directions": ["شمال", "مشرق", "جنوب", "مغرب"],
+      "country": "Pakistan",
+      "latitude": 30,
+      "longitude": 70
+  },
+  "Uyghur": {
+      "directions": ["شىمال‎", "شەرق‎", "جەنۇب‎", "غەرب‎"],
+      "country": "Mongolia",
+      "latitude": 46,
+      "longitude": 105
+  },
+  "Vietnamese": {
+      "directions": ["bắc, bấc", "đông", "nam", "tây"],
+      "country": "Viet Nam",
+      "latitude": 16,
+      "longitude": 106
+  },
+  "Welsh": {
+      "directions": ["gogledd", "dwyrain", "de", "gorllewin"],
+      "country": "United Kingdom",
+      "latitude": 54,
+      "longitude": -2
+  },
+  "Xhosa": {
+      "directions": ["mantla", "ngasekhohlo", "mazantsi", "entshona"],
+      "country": "Botswana",
+      "latitude": -22,
+      "longitude": 24
+  },
+  "Yiddish": {
+      "directions": ["צפֿון", "מזרח", "דרום", "מערבֿ"],
+      "country": "Israel",
+      "latitude": 31.5,
+      "longitude": 34.75
+  },
+  "Yoruba": {
+      "directions": ["ariwa", "õrùn", "guusu", "oorun"],
+      "country": "Benin",
+      "latitude": 9.5,
+      "longitude": 2.25
+  },
+  "Zulu": {
+      "directions": ["enyakatho", "empumalanga", "eningizimu", "entshonalanga"],
+      "country": "South Africa",
+      "latitude": -29,
+      "longitude": 24
+  },
+  "English": {
+      "directions": ["North", "East", "South", "West"],
+      "country": "United States",
+      "latitude": 38,
+      "longitude": -97
+  }
+}
