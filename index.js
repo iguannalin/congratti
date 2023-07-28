@@ -5,7 +5,9 @@ window.addEventListener("load", () => {
   const right = document.getElementById("right");
   const select = document.getElementById("select");
   const table = document.getElementById("projects-table");
+  const greeting = document.getElementById("greeting");
   let previousSelect = center;
+  let previousSelectSub = greeting;
 
   const codeProjects = ["ai loves horror", "text me smth nice", "baby killer", "spotify recently added"]
   // ["ai", "text", "baby", "spotify"];
@@ -45,7 +47,9 @@ window.addEventListener("load", () => {
         left.style.display = "none";
         center.style.display = "block";
       }
+      previousSelectSub.style.display = "none";
       subelem.style.display = "block";
+      previousSelectSub = subelem;
       select.value = "center";
     }
   }
@@ -72,9 +76,15 @@ window.addEventListener("load", () => {
     }
   }
 
+  function oops(ev) {
+    document.getElementById("wallpaper").src = "public/anna.jpg";
+    ev.preventDefault(); 
+  }
+
   select.onchange = (e) => onSelect(e);
+  document.getElementById("oops").onclick = (ev) => oops(ev);
   // onSelect(null, "projects"); // remove later
 
   loadProjects(codeProjects, "code");
-  loadProjects(printProjects, "print");
+  // loadProjects(printProjects, "print"); // TODO
 });

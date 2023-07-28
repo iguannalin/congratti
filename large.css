@@ -17,20 +17,21 @@
 
 #left {
   display: flex;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   flex: 1;
+  align-items: flex-start;
 }
 
 #center {
   display: flex;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   flex: 4;
   padding: 16px 12px;
 }
 
 #right {
   display: flex;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   flex: 1;
 }
 

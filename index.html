@@ -11,12 +11,12 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="anna y lin">
         <meta name="twitter:description" content="the website of anna y lin. anna is a creative technologist currently pursuing a masters at NYU ITP. this is a work in progress">
-        <meta name="twitter:image" content="annaylin.com/public/congratti.png">
+        <meta name="twitter:image" content="annaylin.com/public/wallpaper.png">
         <meta property="og:locale" content="en_US">
         <meta property="og:title" content="anna y lin">
         <meta property="og:description" content="the website of anna y lin. anna is a creative technologist currently pursuing a masters at NYU ITP. this is a work in progress">
         <meta property="og:url" content="annaylin.com">
-        <meta property="og:image" content="annaylin.com/public/congratti.png">
+        <meta property="og:image" content="annaylin.com/public/wallpaper.png">
         <meta property="og:type" content="website">
         <title>anna y lin</title>
         <!--[if lt IE 7]>
@@ -42,7 +42,6 @@
     </head>
     <body>
         <div class="theme" id="container">
-            
             <div id="main">
                 <div id="top">
                     <h1>anna y lin</h1>
@@ -67,25 +66,74 @@
                 </div>
                 <div id="center">
                     <div id="greeting">
-                        <img src="public/wallpaper.png"/>
+                        <img id="wallpaper" src="public/wallpaper.png"/>
                     </div>
                     <div id="ai">
                         <h2>
                             ai loves horror
                         </h2>
-                        <div>
-                            <img src="https://annaylin.com/public/projects/ai-loves-horror.jpg"/>
-                        </div>
-                        <p>A <a href="https://iguannalin.github.io/ai-loves-horror/about.html">horror text-based adventure game</a> made using OpenAI's GPT-3 (Davinci model) API. This project was shown during the ITP Winter Show, 2022.</p>
+                        <span>
+                            <img alt="An old tv set with a green screen surround by piles of books sitting atop a lace-covered desk." src="https://annaylin.com/public/projects/ai-loves-horror.jpg"/>
+                            <p>A <a href="https://iguannalin.github.io/ai-loves-horror/about.html">horror text-based adventure game</a> made using OpenAI's GPT-3 (Davinci model) API. This project was shown during the ITP Winter Show, 2022.</p>
+                        </span>
                         <h3>Why</h3>
                         <p>It's an homage to old-school text based adventure games, and an exploration of AI's ability to write an emotionally compelling story for the player.</p>
                         <h3>How</h3>
-                        <p>The app sends a prompt to Davinci to write a text-based adventure game that will give players choices numbered 1-3. When a choice is made, it is added back to the entire story and sent as a prompt to Davinci to send more choices, until the story is finished.</p><p>The story changes every time it is run, and it is generated live during gameplay. Ony Davinci has control over the choices and when to end the game.</p><p>The pace of the text also increases the longer the player plays.</p><h2>Conclusion</h2><p>It's interesting how Davinci is able to create a cohesive story that follows the theme of a horror adventure game. The stories Davinci generates usually consists of one spooky figure in a strange place, and the player is given choices to confront the figure or run away.</p><p>Somehow, the story always ends in about 5 minutes or so, and Davinci almost always gives a somewhat optimistic ending.</p>
+                        <p>The app sends a prompt to Davinci to write a text-based adventure game that will give players choices numbered 1-3. When a choice is made, it is added back to the entire story and sent as a prompt to Davinci to send more choices, until the story is finished.</p>
+                        <p>The story changes every time it is run, and it is generated live during gameplay. Ony Davinci has control over the choices and when to end the game.</p><p>The pace of the text also increases the longer the player plays.</p>
+                        <h2>Conclusion</h2>
+                        <p>It's interesting how Davinci is able to create a cohesive story that follows the theme of a horror adventure game. The stories Davinci generates usually consists of one spooky figure in a strange place, and the player is given choices to confront the figure or run away.</p>
+                        <p>Somehow, the story always ends in about 5 minutes or so, and Davinci almost always gives a somewhat optimistic ending.</p>
                         <a href="https://annaylin.notion.site/ai-loves-horror-Winter-Show-7298b61fd37d40a9b93778572fbce217">Read more about it here.</a>
                     </div>
-                    <div id="text">text-me-smth-nice</div>
-                    <div id="baby">baby-killer</div>
-                    <div id="spotify">spotify recently added</div>
+                    <div id="text">
+                        <h2>
+                            text me smth nice
+                        </h2>
+                        <span>
+                            <img alt="Phone receiving texts from the text-me-smth-nice app." src="https://annaylin.com/public/projects/text-me-smth-nice.gif"/>
+                            <p>A messaging app that uses the Twilio SMS API to send out nice texts periodically.</p>
+                        </span>
+                        <h3>Why</h3>
+                        <p>During the pandemic, i wanted to remind my friends and myself that there are brighter times ahead.</p>
+                        <h3>How</h3>
+                        <p>I created Python app that runs on a scheduler to use the Twilio SMS API to send a text to subscribed numbers.</p>
+                        <h3>Conclusion</h3>
+                        <p>Texting seems to be a pretty non-intrusive way of reaching out to people that can be made into a positive experience.</p>
+                        <p>It made me happy to hear from a friend that the random texts throughout the day did help them through a tough time.</p>
+                        <a href="https://www.notion.so/annaylin/text-me-smth-nice-40c991825d5845ae923595b89e436dde">Read more about it here.</a>
+                    </div>
+                    <div id="baby">
+                        <h2>
+                            baby killer
+                        </h2>
+                        <span>
+                            <img alt="An assortment of small, pastel-colored silicone shapes attached to wires on a wooden slab." src="https://annaylin.com/public/projects/baby-killer.jpg"/>
+                            <p>Squishy Sounds (AKA baby killer as our friends called it) was a collaborative project with Efrat Levy, to make playing music a sensory experience.</p>
+                        </span>
+                        <h3>Why</h3>
+                        <p>We wanted to reimagine what musical peripherals could be like if we experiemented with color, shape and material.</p>
+                        <h3>How</h3>
+                        <p>We created pastel colored shapes using molded silicon and connected them to wires to use as a capacitive sensor. Then we added sounds to it via serial communication from an Arduino to p5.</p>
+                        <h3>Conclusion</h3>
+                        <p>While possible, it was difficult to control the sensitivity of the silicon as sensors. The silicon is delightful to play with but in the future i would explore different sensory materials.</p><a href="https://annaylin.notion.site/Squishy-Sounds-7924d6fe83d74175b406fa459df959b7">Read more about it here.</a></div>
+                    <div id="spotify">
+                        <h2>
+                            spotify recently added
+                        </h2>
+                        <span>
+                            <img alt="My top 20 recently added songs on Spotify." src="https://annaylin.com/public/projects/spotify-recently-added-screenshot.jpg"/>
+                            <p>Generate a playlist of your top most recently added songs in your Spotify library.</p>
+                        </span>
+                        <h3>Why</h3>
+                        <p>Growing up using Apple Music, I enjoyed the auto-generated top 20 songs playlist--a feature that I miss since using Spotify.</p>
+                        <h3>How</h3>
+                        <p>I found out that closest I could get to creating an auto-generated top 20 songs playlist was to use the Spotify API to get a list of all my tracks, sorted in the order they were added, and send the latest 20 to the playlist creation endpoint.</p>
+                        <p>It took some time figuring out the authentication, and while it is a hassle, it works pretty well once you authenticate and get redirected to the app.</p>
+                        <h3>Conclusion</h3>
+                        <p>There's not much customization you could do with generating playlists this way--for example, it would have been fun to play around with making an auto-generated playlist cover image as well.</p>
+                        <a href="https://annaylin.notion.site/Spotify-recently-added-1311bf53622e4785951cc847889b3af8">Read more about it here.</a>
+                    </div>
 
                     <div id="generative">generative riso poster</div>
                     <div id="filmotography">filmotography</div>
@@ -104,8 +152,8 @@
                             <tr><td>this summer, i'm working on: <a class="link" href="https://annaylin.com/100-days">100 days of websites</a></td></tr>
                             <tr><td>besides making things on the internet i also like to make things with my hands and read</td></tr>
                             <tr><td>say hi at <a class="link" href="mailto:al7215@nyu.edu?subject=there's%20a%20pizza%20party%20in%20rm%20370" target="_top">al7215(@)nyu.edu</a></td></tr>                            
-                            <tr><td>you can find a <a href="https://annaylin.com/public/resume.pdf">photo of me here</a></td></tr>
-                            <tr><td>you can find my <a href="https://annaylin.com/public/anna.jpg">resume here</a></td></tr>
+                            <tr><td>you can find my <a href="https://annaylin.com/public/resume.pdf">resume here</a></td></tr>
+                            <tr><td>you can find a <a id="oops" href="#">photo of me here</a></td></tr>
                         </tbody>
                     </table>
                 </div>
