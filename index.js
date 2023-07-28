@@ -54,21 +54,21 @@ window.addEventListener("load", () => {
         elem = left;
         break;
       case "about":
-          elem = right;
-          break;
+        elem = right;
+        break;
       default:
         elem = center;
     }
+    console.log({elem}, {previousSelect})
     if (elem) {
       previousSelect.style.display = "none";
-      center.style.display = "none";
       elem.style.display = "block";
       previousSelect = elem;
     }
   }
 
   select.onchange = (e) => onSelect(e);
-  onSelect(null, "projects"); // remove later
+  // onSelect(null, "projects"); // remove later
 
   loadProjects(codeProjects, "code");
   loadProjects(printProjects, "print");
