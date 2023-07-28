@@ -38,13 +38,13 @@
   flex: 25;
   padding: 16px 12px;
   width: 100%;
-  border: 2px solid blue;
+  border: var(--default-border);
 }
 
 #center {
   display: flex;
   flex: 25;
-  border: 2px solid blue;
+  border: var(--default-border);
   padding: 16px 12px;
   width: 100%;
 }
@@ -54,5 +54,5 @@
   flex: 25;
   padding: 16px 12px;
   width: 100%;
-  border: 2px solid blue;
+  border: var(--default-border);
 }

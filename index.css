@@ -4,6 +4,7 @@
 :root {
   --default-bg: #fdfaf6;
   --default-text: rgb(35, 35, 35);
+  --default-border: 2px solid yellow;
 }
 
 .theme {
@@ -15,6 +16,7 @@
   .theme {
     --default-bg: rgb(35, 35, 35);
     --default-text: rgb(89 255 66);
+    --default-border: 2px solid blue;
   }
 }
 
