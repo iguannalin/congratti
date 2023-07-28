@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
   const select = document.getElementById("select");
   const table = document.getElementById("projects-table");
   const greeting = document.getElementById("greeting");
-  const isSmallScreen = () => getComputedStyle(top).display != "none";
+  const isSmallScreen = getComputedStyle(top).display != "none";
   let previousSelect = center;
   let previousSelectSub = greeting;
 
@@ -20,6 +20,7 @@ window.addEventListener("load", () => {
   }
 
   function switchView(currentElement, isSubView = false) {
+    console.log({isSmallScreen})
     if (isSubView) { // project view
       if (isSmallScreen) {
         left.style.display = "none";
@@ -34,11 +35,15 @@ window.addEventListener("load", () => {
       previousSelectSub = currentElement;
     } else { // all other tabs
       if (isSmallScreen) {
-        // TODO -- make this a function?
         previousSelect.style.display = "none";
         currentElement.style.display = "block";
         previousSelect = currentElement;
       }
+      previousSelectSub.style.display = "none";
+      previousSelect.style.display = "none";
+      currentElement.style.display = "block";
+      previousSelect = currentElement;
+      // if (elem != center) center.style.display = "none";
     }
   }
 
@@ -84,14 +89,7 @@ window.addEventListener("load", () => {
         elem = center;
         break;
     }
-    console.log({elem}, {previousSelect})
-    if (elem) {
-      previousSelectSub.style.display = "none";
-      previousSelect.style.display = "none";
-      elem.style.display = "block";
-      previousSelect = elem;
-      if (elem != center) center.style.display = "none";
-    }
+    switchView(elem);
   }
 
   function oops(ev) {
@@ -99,13 +97,14 @@ window.addEventListener("load", () => {
     wp.src = "public/anna.jpg";
     ev.preventDefault(); 
     switchView(center);
-    greeting.style.display = "block";
-    setTimeout(wp => wp.src='wallpaper.png', 1000);
+    greeting.style.display = "flex";
+    setTimeout(() => wp.src="public/wallpaper.png", 10000);
   }
 
   loadProjects(codeProjects, "code");
   // loadProjects(printProjects, "print"); // TODO
 
   select.onchange = (e) => onSelect(e);
+  document.getElementById("home").onclick = () => switchView(center);
   document.getElementById("oops").onclick = (ev) => oops(ev);
 });

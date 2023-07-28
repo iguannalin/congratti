@@ -1,3 +1,8 @@
+body {
+  --default-font: 12px;
+  --default-line-height: 24px;
+}
+
 #main {
   display: flex;
   width: auto;
@@ -19,7 +24,9 @@
   display: flex;
   /* border: 2px solid red; */
   flex: 1;
-  align-items: flex-start;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #center {
@@ -37,4 +44,13 @@
 
 #left, #right {
   padding: 16px 12px;
+}
+
+#home {
+  font-size: 1.5em;
+  border-style: dashed;
+  border-width: 3px;
+  border-top-color: red;
+  border-bottom-color: #ff9200b8;
+  border-radius: 5px;
 }
