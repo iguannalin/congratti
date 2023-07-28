@@ -13,6 +13,7 @@ window.addEventListener("load", () => {
 
   const codeProjects = ["ai loves horror", "text me smth nice", "baby killer", "spotify recently added"];
   const printProjects = ["generative riso poster", "badwatercolor", "creative coding"];  // "filmotography",
+  const workshopProjects = ["hacking with the browser workshop"];
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -104,6 +105,7 @@ window.addEventListener("load", () => {
 
   loadProjects(codeProjects, "code");
   loadProjects(printProjects, "print");
+  loadProjects(workshopProjects, "workshop");
 
   select.onchange = (e) => onSelect(e);
   oopsies.onclick = (ev) => oops(ev);
