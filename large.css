@@ -47,6 +47,12 @@ body {
   border: none;
 }
 
+span > span > img {
+  width: auto !important;
+  object-fit: cover;
+  max-height: 400px !important;;
+}
+
 #home {
   display: block;
   background: none;
