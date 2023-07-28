@@ -6,9 +6,10 @@ window.addEventListener("load", () => {
   const select = document.getElementById("select");
   const table = document.getElementById("projects-table");
   const greeting = document.getElementById("greeting");
+  const oopsies = document.getElementById("oops");
   const isSmallScreen = getComputedStyle(top).display != "none";
-  let previousSelect = center;
-  let previousSelectSub = greeting;
+  let previousElement = center;
+  let previousElementSub = greeting;
 
   const codeProjects = ["ai loves horror", "text me smth nice", "baby killer", "spotify recently added"];
   const printProjects = ["generative", "filmotography", "badwatercolor", "creative"];
@@ -19,32 +20,31 @@ window.addEventListener("load", () => {
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
 
-  function switchView(currentElement, isSubView = false) {
-    console.log({isSmallScreen})
+  function switchView(currentElement, isSubView = false, isHome = false) {
     if (isSubView) { // project view
       if (isSmallScreen) {
         left.style.display = "none";
         right.style.display = "none";
         center.style.display = "block";
         select.value = "center";
-        previousSelect = left; // since we got here from projects tab
+        previousElement = left; // since we got here from projects tab
       }
       // turn off previous, turn on current
-      previousSelectSub.style.display = "none";
+      previousElementSub.style.display = "none";
       currentElement.style.display = "block";
-      previousSelectSub = currentElement;
+      previousElementSub = currentElement;
     } else { // all other tabs
       if (isSmallScreen) {
-        previousSelect.style.display = "none";
+        previousElement.style.display = "none";
         currentElement.style.display = "block";
-        previousSelect = currentElement;
+        previousElement = currentElement;
       }
-      previousSelectSub.style.display = "none";
-      previousSelect.style.display = "none";
+      previousElementSub.style.display = "none";
+      previousElement.style.display = "none";
       currentElement.style.display = "block";
-      previousSelect = currentElement;
-      // if (elem != center) center.style.display = "none";
+      previousElement = currentElement;
     }
+    greeting.style.display = isHome ? "flex" : "none";
   }
 
   function loadProjects(projects, label) {
@@ -70,7 +70,6 @@ window.addEventListener("load", () => {
     const selected = e.target.innerText.split(" ")[0];
     if (document.getElementById(selected)) {
       let subelem = document.getElementById(selected);
-      console.log({previousSelect},{previousSelectSub},{subelem})
       switchView(subelem, true);
     }
   }
@@ -93,18 +92,22 @@ window.addEventListener("load", () => {
   }
 
   function oops(ev) {
+    oopsies.onclick = null;
     const wp = document.getElementById("wallpaper");
     wp.src = "public/anna.jpg";
-    ev.preventDefault(); 
-    switchView(center);
-    greeting.style.display = "flex";
-    setTimeout(() => wp.src="public/wallpaper.png", 10000);
+    switchView(center, false, true);
+    setTimeout(() => {
+      wp.src="public/wallpaper.png";
+      oopsies.onclick = (ev) => oops(ev);
+    }, 250);
   }
 
   loadProjects(codeProjects, "code");
   // loadProjects(printProjects, "print"); // TODO
 
   select.onchange = (e) => onSelect(e);
-  document.getElementById("home").onclick = () => switchView(center);
-  document.getElementById("oops").onclick = (ev) => oops(ev);
+  oopsies.onclick = (ev) => oops(ev);
+  document.getElementById("home").onclick = () => {
+    switchView(center, false, true);
+  };
 });
