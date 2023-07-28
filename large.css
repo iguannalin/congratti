@@ -38,3 +38,15 @@
 #left, #right {
   padding: 16px 12px;
 }
+
+span img {
+  max-width: 80%;
+  max-height: 400px;
+}
+
+span p {
+  display: flex;
+  flex: 1;
+  box-sizing: border-box;
+  padding: 0 12px;
+}
