@@ -47,6 +47,7 @@ window.addEventListener("load", () => {
         left.style.display = "none";
         center.style.display = "block";
         select.value = "center";
+        previousSelect = left;
       }
       previousSelectSub.style.display = "none";
       subelem.style.display = "block";
@@ -84,6 +85,7 @@ window.addEventListener("load", () => {
       previousSelect.style.display = "none";
       center.style.display = "block";
       previousSelect = center;
+      select.value = "center";
     }
   }
 
