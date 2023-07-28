@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
   let previousElementSub = greeting;
 
   const codeProjects = ["ai loves horror", "text me smth nice", "baby killer", "spotify recently added"];
-  const printProjects = ["generative", "filmotography", "badwatercolor", "creative"];
+  const printProjects = ["generative riso poster", "badwatercolor", "creative coding"];  // "filmotography",
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -103,7 +103,7 @@ window.addEventListener("load", () => {
   }
 
   loadProjects(codeProjects, "code");
-  // loadProjects(printProjects, "print"); // TODO
+  loadProjects(printProjects, "print");
 
   select.onchange = (e) => onSelect(e);
   oopsies.onclick = (ev) => oops(ev);

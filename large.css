@@ -1,5 +1,5 @@
 body {
-  --default-font: 12px;
+  --default-font: 16px;
   --default-line-height: 24px;
 }
 
@@ -44,6 +44,7 @@ body {
 
 #left, #right {
   padding: 16px 12px;
+  border: none;
 }
 
 #home {
