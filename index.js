@@ -81,10 +81,10 @@ window.addEventListener("load", () => {
     ev.preventDefault(); 
   }
 
+  loadProjects(codeProjects, "code");
   select.onchange = (e) => onSelect(e);
   document.getElementById("oops").onclick = (ev) => oops(ev);
   // onSelect(null, "projects"); // remove later
 
-  loadProjects(codeProjects, "code");
   // loadProjects(printProjects, "print"); // TODO
 });
