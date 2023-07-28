@@ -1,4 +1,5 @@
 window.addEventListener("load", () => {
+  const top = document.getElementById("top");
   const left = document.getElementById("left");
   const center = document.getElementById("center");
   const right = document.getElementById("right");
@@ -6,7 +7,8 @@ window.addEventListener("load", () => {
   const table = document.getElementById("projects-table");
   let previousSelect = center;
 
-  const codeProjects = ["ai", "text", "baby", "spotify"];
+  const codeProjects = ["ai loves horror", "text me smth nice", "baby killer", "spotify recently added"]
+  // ["ai", "text", "baby", "spotify"];
   const printProjects = ["generative", "filmotography", "badwatercolor", "creative"];
 
   function getRandomInt(min, max) {
@@ -35,11 +37,14 @@ window.addEventListener("load", () => {
   }
 
   function onSelectProject(e) {
-    const selected = e.target.innerText;
+    const selected = e.target.innerText.split(" ")[0];
+    console.log({selected})
     if (document.getElementById(selected)) {
       let subelem = document.getElementById(selected);
-      left.style.display = "none";
-      center.style.display = "block";
+      if (getComputedStyle(top).display != "none") {
+        left.style.display = "none";
+        center.style.display = "block";
+      }
       subelem.style.display = "block";
       select.value = "center";
     }
