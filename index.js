@@ -40,9 +40,9 @@ window.addEventListener("load", () => {
 
   function onSelectProject(e) {
     const selected = e.target.innerText.split(" ")[0];
-    console.log({selected})
     if (document.getElementById(selected)) {
       let subelem = document.getElementById(selected);
+      console.log({previousSelect},{previousSelectSub},{subelem})
       if (isSmallScreen) {
         left.style.display = "none";
         center.style.display = "block";
@@ -50,6 +50,7 @@ window.addEventListener("load", () => {
         previousSelect = left;
       }
       previousSelectSub.style.display = "none";
+      previousSelect.style.display = "none";
       subelem.style.display = "block";
       previousSelectSub = subelem;
     }
@@ -71,9 +72,11 @@ window.addEventListener("load", () => {
     }
     console.log({elem}, {previousSelect})
     if (elem) {
+      previousSelectSub.style.display = "none";
       previousSelect.style.display = "none";
       elem.style.display = "block";
       previousSelect = elem;
+      if (elem != center) center.style.display = "none";
     }
   }
 
