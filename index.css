@@ -66,12 +66,26 @@ body {
 
 span {
   display: flex;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* width: auto; */
-  /* height: 10%; */
   flex-flow: row;
   justify-content: center;
+}
+
+span > span {
+  display: flex;
+  flex: 2;
+}
+
+span > span > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+span p {
+  display: flex;
+  flex: 1;
+  box-sizing: border-box;
+  padding: 0 12px;
+  flex-flow: column wrap;
 }
 
 a {
