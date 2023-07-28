@@ -6,11 +6,11 @@ window.addEventListener("load", () => {
   const select = document.getElementById("select");
   const table = document.getElementById("projects-table");
   const greeting = document.getElementById("greeting");
+  const isSmallScreen = () => getComputedStyle(top).display != "none";
   let previousSelect = center;
   let previousSelectSub = greeting;
 
-  const codeProjects = ["ai loves horror", "text me smth nice", "baby killer", "spotify recently added"]
-  // ["ai", "text", "baby", "spotify"];
+  const codeProjects = ["ai loves horror", "text me smth nice", "baby killer", "spotify recently added"];
   const printProjects = ["generative", "filmotography", "badwatercolor", "creative"];
 
   function getRandomInt(min, max) {
@@ -43,14 +43,14 @@ window.addEventListener("load", () => {
     console.log({selected})
     if (document.getElementById(selected)) {
       let subelem = document.getElementById(selected);
-      if (getComputedStyle(top).display != "none") {
+      if (isSmallScreen) {
         left.style.display = "none";
         center.style.display = "block";
+        select.value = "center";
       }
       previousSelectSub.style.display = "none";
       subelem.style.display = "block";
       previousSelectSub = subelem;
-      select.value = "center";
     }
   }
 
@@ -79,12 +79,17 @@ window.addEventListener("load", () => {
   function oops(ev) {
     document.getElementById("wallpaper").src = "public/anna.jpg";
     ev.preventDefault(); 
+    if (isSmallScreen) {
+      // TODO -- make this a function?
+      previousSelect.style.display = "none";
+      center.style.display = "block";
+      previousSelect = center;
+    }
   }
 
   loadProjects(codeProjects, "code");
+  // loadProjects(printProjects, "print"); // TODO
+
   select.onchange = (e) => onSelect(e);
   document.getElementById("oops").onclick = (ev) => oops(ev);
-  // onSelect(null, "projects"); // remove later
-
-  // loadProjects(printProjects, "print"); // TODO
 });
