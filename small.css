@@ -56,16 +56,3 @@
   width: 100%;
   border: 2px solid var(--default-border);
 }
-
-span img {
-  display: flex;
-  flex: 1;
-  box-sizing: border-box;
-}
-
-span p {
-  display: flex;
-  flex: 1;
-  box-sizing: border-box;
-  padding: 0 12px;
-}

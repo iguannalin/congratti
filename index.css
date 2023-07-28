@@ -80,7 +80,7 @@ span > span > img {
   object-fit: cover;
 }
 
-span p {
+span > p {
   display: flex;
   flex: 1;
   box-sizing: border-box;

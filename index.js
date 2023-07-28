@@ -19,6 +19,29 @@ window.addEventListener("load", () => {
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
 
+  function switchView(currentElement, isSubView = false) {
+    if (isSubView) { // project view
+      if (isSmallScreen) {
+        left.style.display = "none";
+        right.style.display = "none";
+        center.style.display = "block";
+        select.value = "center";
+        previousSelect = left; // since we got here from projects tab
+      }
+      // turn off previous, turn on current
+      previousSelectSub.style.display = "none";
+      currentElement.style.display = "block";
+      previousSelectSub = currentElement;
+    } else { // all other tabs
+      if (isSmallScreen) {
+        // TODO -- make this a function?
+        previousSelect.style.display = "none";
+        currentElement.style.display = "block";
+        previousSelect = currentElement;
+      }
+    }
+  }
+
   function loadProjects(projects, label) {
     const ptr = document.createElement('tr');
     const th = document.createElement('td');
@@ -43,22 +66,12 @@ window.addEventListener("load", () => {
     if (document.getElementById(selected)) {
       let subelem = document.getElementById(selected);
       console.log({previousSelect},{previousSelectSub},{subelem})
-      if (isSmallScreen) {
-        left.style.display = "none";
-        center.style.display = "block";
-        select.value = "center";
-        previousSelect = left;
-      }
-      previousSelectSub.style.display = "none";
-      previousSelect.style.display = "none";
-      subelem.style.display = "block";
-      previousSelectSub = subelem;
+      switchView(subelem, true);
     }
   }
 
-  function onSelect(e, name="") {
-    const selected = e ? e.target.value : name;
-    if (!e) select.value = name
+  function onSelect(e) {
+    const selected = e.target.value;
     let elem;
     switch (selected) {
       case "projects":
@@ -69,6 +82,7 @@ window.addEventListener("load", () => {
         break;
       default:
         elem = center;
+        break;
     }
     console.log({elem}, {previousSelect})
     if (elem) {
@@ -81,15 +95,12 @@ window.addEventListener("load", () => {
   }
 
   function oops(ev) {
-    document.getElementById("wallpaper").src = "public/anna.jpg";
+    const wp = document.getElementById("wallpaper");
+    wp.src = "public/anna.jpg";
     ev.preventDefault(); 
-    if (isSmallScreen) {
-      // TODO -- make this a function?
-      previousSelect.style.display = "none";
-      center.style.display = "block";
-      previousSelect = center;
-      select.value = "center";
-    }
+    switchView(center);
+    greeting.style.display = "block";
+    setTimeout(wp => wp.src='wallpaper.png', 1000);
   }
 
   loadProjects(codeProjects, "code");
