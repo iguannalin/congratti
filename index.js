@@ -28,7 +28,7 @@ window.addEventListener("load", () => {
         right.style.display = "none";
         center.style.display = "block";
         select.value = "center";
-        previousElement = left; // since we got here from projects tab
+        previousElement = center; // since we got here from projects tab
       }
       // turn off previous, turn on current
       previousElementSub.style.display = "none";
