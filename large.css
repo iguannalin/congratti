@@ -24,7 +24,7 @@ body {
   display: flex;
   /* border: 2px solid red; */
   flex: 1;
-  flex-flow: column wrap;
+  flex-flow: column;
   justify-content: space-between;
   align-items: center;
 }
