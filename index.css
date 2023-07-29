@@ -49,6 +49,10 @@ body {
   overflow-y: scroll;
 }
 
+#left, #right {
+  overflow: scroll;
+}
+
 #center > div:not(#greeting) {
   display: none;
 }
