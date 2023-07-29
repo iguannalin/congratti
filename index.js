@@ -12,8 +12,8 @@ window.addEventListener("load", () => {
   let previousElementSub = greeting;
 
   const codeProjects = ["ai loves horror", "text me smth nice", "baby killer", "spotify recently added"];
-  const printProjects = ["generative riso poster", "badwatercolor", "creative coding"];  // "filmotography",
-  const workshopProjects = ["hacking with the browser workshop"];
+  const printProjects = ["filmotography", "generative riso poster", "badwatercolor", "creative coding"];
+  const workshopProjects = ["hacking with the browser"];
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
