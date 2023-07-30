@@ -110,15 +110,15 @@ a {
   overflow: scroll;
 }
 
-#yosemite {
+#yosemite, #alaska, #eastcoast {
   display: flex;
   overflow: scroll;
   width: 700px;
   height: 50%;
-  margin-top: 20%;
+  margin-top: 200px;
 }
 
-#yosemite div {
+#yosemite div, #alaska div, #eastcoast div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,8 +126,15 @@ a {
   opacity: 0.9;
 }
 
+#alaska div img {
+  height: 70%;
+  width: auto;
+}
+
 .film-heading {
   font-size: 50px;
   color: #38516a;
   text-shadow: none;
+  padding: 0 128px;
+  min-width: 80%;
 }

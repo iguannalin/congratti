@@ -20,8 +20,7 @@ window.addEventListener("load", () => {
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
 
-  function switchFilmView(e) {
-    console.log(e.target.title);
+  function switchFilmView(e = {target:{title:""}}) {
     let switches = [1,0,0]; 
     const titles = ["yosemite", "alaska", "eastcoast"];
     switch (e.target.title) {
@@ -66,6 +65,8 @@ window.addEventListener("load", () => {
       previousElement = currentElement;
     }
     greeting.style.display = currentElement == center ? "flex" : "none";
+    if (currentElement.id.includes("filmotography")) switchFilmView();
+    console.log({currentElement},{previousElementSub});
   }
 
   function loadProjects(projects, label) {
