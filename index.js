@@ -22,6 +22,17 @@ window.addEventListener("load", () => {
 
   function switchFilmView(e) {
     console.log(e.target.title);
+    const switches = [1,0,0]; // "yosemite", "alaska", "east coast"
+    switch (e.target.title) {
+      case "yosemite":
+        break;
+      case "alaska":
+        break;
+      case "east coast":
+        break;
+      default:
+        break;
+    }
   }
 
   function switchView(currentElement, isSubView = false) {
