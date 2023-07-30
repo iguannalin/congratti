@@ -103,3 +103,31 @@ a {
   background: none;
   cursor: pointer;
 }
+
+#center {
+  display: flex;
+  flex-flow: column;
+  overflow: scroll;
+}
+
+#yosemite {
+  display: flex;
+  overflow: scroll;
+  width: 700px;
+  height: 50%;
+  margin-top: 20%;
+}
+
+#yosemite div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 64px;
+  opacity: 0.9;
+}
+
+.film-heading {
+  font-size: 50px;
+  color: #38516a;
+  text-shadow: none;
+}

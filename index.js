@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
   let previousElementSub = greeting;
 
   const codeProjects = ["ai loves horror", "text me smth nice", "baby killer", "spotify recently added"];
-  const printProjects = ["filmotography", "generative riso poster", "badwatercolor", "creative coding"];
+  const printProjects = ["filmotography", "generative riso poster"];
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -22,17 +22,23 @@ window.addEventListener("load", () => {
 
   function switchFilmView(e) {
     console.log(e.target.title);
-    const switches = [1,0,0]; // "yosemite", "alaska", "east coast"
+    let switches = [1,0,0]; 
+    const titles = ["yosemite", "alaska", "eastcoast"];
     switch (e.target.title) {
-      case "yosemite":
-        break;
       case "alaska":
+        switches = [0,1,0];
         break;
-      case "east coast":
+        case "east coast":
+        switches = [0,0,1];
         break;
       default:
+        switches = [1,0,0]; // yosemite by default
         break;
     }
+    switches.forEach((on, index) => {
+      if (on) document.getElementById(titles[index]).style.display = "flex";
+      else document.getElementById(titles[index]).style.display = "none";
+    })
   }
 
   function switchView(currentElement, isSubView = false) {
