@@ -13,7 +13,6 @@ window.addEventListener("load", () => {
 
   const codeProjects = ["ai loves horror", "text me smth nice", "baby killer", "spotify recently added"];
   const printProjects = ["filmotography", "generative riso poster", "badwatercolor", "creative coding"];
-  const workshopProjects = ["hacking with the browser"];
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -21,7 +20,11 @@ window.addEventListener("load", () => {
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
 
-  function switchView(currentElement, isSubView = false, isHome = false) {
+  function switchFilmView(e) {
+    console.log(e.target.title);
+  }
+
+  function switchView(currentElement, isSubView = false) {
     if (isSubView) { // project view
       if (isSmallScreen) {
         left.style.display = "none";
@@ -45,7 +48,7 @@ window.addEventListener("load", () => {
       currentElement.style.display = "block";
       previousElement = currentElement;
     }
-    greeting.style.display = isHome ? "flex" : "none";
+    greeting.style.display = currentElement == center ? "flex" : "none";
   }
 
   function loadProjects(projects, label) {
@@ -89,27 +92,29 @@ window.addEventListener("load", () => {
         elem = center;
         break;
     }
-    switchView(elem);
+    switchView(elem, false, elem == center);
   }
 
   function oops(ev) {
     oopsies.onclick = null;
     const wp = document.getElementById("wallpaper");
     wp.src = "public/anna.jpg";
-    switchView(center, false, true);
+    switchView(center, false);
     setTimeout(() => {
       wp.src="public/wallpaper.png";
       oopsies.onclick = (ev) => oops(ev);
-    }, 250);
+    }, 350);
   }
 
   loadProjects(codeProjects, "code");
   loadProjects(printProjects, "print");
-  loadProjects(workshopProjects, "workshop");
 
   select.onchange = (e) => onSelect(e);
   oopsies.onclick = (ev) => oops(ev);
   document.getElementById("home").onclick = () => {
-    switchView(center, false, true);
+    switchView(center, false);
   };
+  Array.from(document.getElementsByClassName("film-button")).forEach((elem) => {
+    elem.addEventListener("click", switchFilmView);
+  })
 });

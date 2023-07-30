@@ -97,3 +97,9 @@ span > p {
 a {
   text-shadow: 1px 0px 1px #4CAF50;
 }
+
+.film-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
