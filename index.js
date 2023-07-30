@@ -7,6 +7,7 @@ window.addEventListener("load", () => {
   const table = document.getElementById("projects-table");
   const greeting = document.getElementById("greeting");
   const oopsies = document.getElementById("oops");
+  const radioButtons = Array.from(document.getElementsByClassName("film-button"));
   const isSmallScreen = getComputedStyle(top).display != "none";
   let previousElement = center;
   let previousElementSub = greeting;
@@ -37,6 +38,7 @@ window.addEventListener("load", () => {
     switches.forEach((on, index) => {
       if (on) document.getElementById(titles[index]).style.display = "flex";
       else document.getElementById(titles[index]).style.display = "none";
+      radioButtons[index].selected = on == 1;
     })
   }
 
@@ -66,7 +68,7 @@ window.addEventListener("load", () => {
     }
     greeting.style.display = currentElement == center ? "flex" : "none";
     if (currentElement.id.includes("filmotography")) switchFilmView();
-    console.log({currentElement},{previousElementSub});
+    // console.log({currentElement},{previousElementSub});
   }
 
   function loadProjects(projects, label) {
@@ -132,7 +134,7 @@ window.addEventListener("load", () => {
   document.getElementById("home").onclick = () => {
     switchView(center, false);
   };
-  Array.from(document.getElementsByClassName("film-button")).forEach((elem) => {
-    elem.addEventListener("click", switchFilmView);
-  })
+  radioButtons.forEach((button) => {
+      button.addEventListener("click", switchFilmView);
+  });
 });

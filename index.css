@@ -101,7 +101,19 @@ a {
 .film-button {
   border: none;
   background: none;
+  transform: scale(1.2);
   cursor: pointer;
+  font-size: 1.2em;
+}
+
+.film-button:nth-child(1), .film-button:nth-child(1):hover {
+  accent-color: tan;
+}
+.film-button:nth-child(2), .film-button:nth-child(2):hover {
+  accent-color: deepskyblue;
+}
+.film-button:nth-child(3), .film-button:nth-child(3):hover {
+  accent-color: palegreen;
 }
 
 #center {
@@ -126,7 +138,7 @@ a {
   opacity: 0.9;
 }
 
-#alaska div img {
+#yosemite div img, #alaska div img, #eastcoast div img {
   height: 70%;
   width: auto;
 }
