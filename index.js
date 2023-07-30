@@ -118,10 +118,11 @@ window.addEventListener("load", () => {
   function oops(ev) {
     oopsies.onclick = null;
     const wp = document.getElementById("wallpaper");
+    const temp = wp.src;
     wp.src = "public/anna.jpg";
     switchView(center, false);
     setTimeout(() => {
-      wp.src="public/wallpaper.png";
+      wp.src= temp;
       oopsies.onclick = (ev) => oops(ev);
     }, 350);
   }

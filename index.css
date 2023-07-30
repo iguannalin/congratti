@@ -21,6 +21,12 @@
     --default-text: rgb(89 255 66);
     --default-border: blue;
   }
+  #wallpaper {
+    content: url(public/wallpaper_dark.jpg);
+    margin-top: -25%;
+    clip-path: circle(40% at 48% 64%) !important;
+    width: 95% !important;
+  }
 }
 
 html {
@@ -66,7 +72,8 @@ body {
 }
 
 #greeting img {
-  clip-path: circle(40% at 50% 50%);
+  margin-left: 4.5%;
+  clip-path: circle(44% at 49% 56%);
   width: 100%;
 }
 
