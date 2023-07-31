@@ -137,7 +137,6 @@ a {
 #yosemite, #alaska, #eastcoast, #tableware {
   display: flex;
   overflow: scroll;
-  width: 800px;
   height: 50%;
   margin-top: 30%;
 }
@@ -159,7 +158,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffffbd;
+  background-color: white;
   padding: 0 10px;
 }
 

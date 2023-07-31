@@ -70,3 +70,7 @@ a:hover, #home:hover {
   color: var(--default-text);
   background: var(--default-border);
 }
+
+#yosemite, #alaska, #eastcoast, #tableware {
+  width: 1000px;
+}

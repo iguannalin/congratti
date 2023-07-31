@@ -60,3 +60,7 @@
 #home {
   display: none;
 }
+
+#yosemite, #alaska, #eastcoast, #tableware {
+  width: 800px;
+}
