@@ -21,10 +21,13 @@ window.addEventListener("load", () => {
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
 
+  const titles = ["yosemite", "alaska", "eastcoast", "tableware"];
   function switchFilmView(e = {target:{title:""}}) {
     let switches = [1,0,0,0];
-    const titles = ["yosemite", "alaska", "eastcoast", "tableware"];
     switch (e.target.title) {
+      case "tableware":
+        switches = [0,0,0,1];
+        break;
       case "yosemite":
         switches = [1,0,0,0];
         break;
@@ -35,7 +38,7 @@ window.addEventListener("load", () => {
         switches = [0,0,1,0];
         break;
       default:
-        switches = [0,0,0,1];
+        switches = [0,0,0,0];
         break;
     }
     switches.forEach((on, index) => {
@@ -70,8 +73,7 @@ window.addEventListener("load", () => {
       previousElement = currentElement;
     }
     greeting.style.display = currentElement == center ? "flex" : "none";
-    if (currentElement.id.includes("filmotography")) switchFilmView({target:{title:"yosemite"}});
-    if (currentElement.id.includes("tableware")) switchFilmView();
+    if (titles.includes(currentElement.id)) switchFilmView({target:{title:currentElement.id}});
     if (currentElement == center) select.value = "center";
   }
 
