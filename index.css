@@ -1,6 +1,6 @@
 @import url(background.css) (min-width: 0px);
 @import url(small.css) (min-width: 0px);
-@import url(large.css) (min-width: 800px);
+@import url(large.css) (min-width: 900px);
 
 :root {
   --default-bg: #fdfaf6;
@@ -79,6 +79,7 @@ body {
   margin-left: 4.5%;
   clip-path: var(--default-clip-path);
   width: var(--default-wallpaper-width);
+  max-width: 900px;
 }
 
 span {

@@ -45,6 +45,7 @@ body {
 #left, #right {
   padding: 16px 12px;
   border: none;
+  opacity: 0.8;
 }
 
 span > span > img {
