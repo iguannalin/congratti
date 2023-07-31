@@ -8,6 +8,9 @@
   --default-border: yellow;
   --default-font: 16px;
   --default-line-height: 24px;
+  --default-wallpaper: url(public/wallpaper.png);
+  --default-clip-path: circle(44% at 49% 56%);
+  --default-wallpaper-width: 100%;
 }
 
 .theme {
@@ -22,10 +25,10 @@
     --default-border: blue;
   }
   #wallpaper {
-    content: url(public/wallpaper_dark.jpg) !important;
+    --default-wallpaper: url(public/wallpaper_dark.jpg);
+    --default-clip-path: circle(40% at 48% 64%);
+    --default-wallpaper-width: 95% !important;
     margin-top: -25%;
-    clip-path: circle(40% at 48% 64%) !important;
-    width: 95% !important;
   }
 }
 
@@ -72,10 +75,10 @@ body {
 }
 
 #wallpaper {
-  content: url("public/wallpaper.png");
+  content: var(--default-wallpaper);
   margin-left: 4.5%;
-  clip-path: circle(44% at 49% 56%);
-  width: 100%;
+  clip-path: var(--default-clip-path);
+  width: var(--default-wallpaper-width);
 }
 
 span {

@@ -48,7 +48,6 @@ window.addEventListener("load", () => {
         left.style.display = "none";
         right.style.display = "none";
         center.style.display = "block";
-        select.value = "center";
         previousElement = center; // since we got here from projects tab
       }
       // turn off previous, turn on current
@@ -68,7 +67,7 @@ window.addEventListener("load", () => {
     }
     greeting.style.display = currentElement == center ? "flex" : "none";
     if (currentElement.id.includes("filmotography")) switchFilmView();
-    // console.log({currentElement},{previousElementSub});
+    if (currentElement == center) select.value = "center";
   }
 
   function loadProjects(projects, label) {
@@ -120,10 +119,8 @@ window.addEventListener("load", () => {
     const wp = document.getElementById("wallpaper");
     const temp = wp.style.content;
     wp.style.content = "url('public/anna.jpg')";
-    console.log(wp.style.content)
     switchView(center, false);
     setTimeout(() => {
-      console.log(temp)
       wp.style.content = temp;
       oopsies.onclick = (ev) => oops(ev);
     }, 350);
