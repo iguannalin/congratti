@@ -71,7 +71,8 @@ body {
   width: 100%;
 }
 
-#greeting img {
+#wallpaper {
+  content: url("public/wallpaper.png");
   margin-left: 4.5%;
   clip-path: circle(44% at 49% 56%);
   width: 100%;
