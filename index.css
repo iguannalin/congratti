@@ -79,7 +79,7 @@ body {
   margin-left: 4.5%;
   clip-path: var(--default-clip-path);
   width: var(--default-wallpaper-width);
-  max-width: 900px;
+  max-width: 800px;
 }
 
 span {
@@ -134,7 +134,7 @@ a {
   overflow: scroll;
 }
 
-#yosemite, #alaska, #eastcoast {
+#yosemite, #alaska, #eastcoast, #tableware {
   display: flex;
   overflow: scroll;
   width: 800px;
@@ -151,6 +151,19 @@ a {
 }
 
 #yosemite div img, #alaska div img, #eastcoast div img {
+  height: 70%;
+  width: auto;
+}
+
+#tableware div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffffbd;
+  padding: 0 10px;
+}
+
+#tableware div img {
   height: 70%;
   width: auto;
 }

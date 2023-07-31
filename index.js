@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
   let previousElementSub = greeting;
 
   const codeProjects = ["eeg cloud", "ai loves horror", "text me smth nice", "baby killer", "spotify recently added"];
-  const printProjects = ["filmotography", "generative riso poster"];
+  const printProjects = ["tableware", "filmotography", "generative riso poster"];
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -22,23 +22,26 @@ window.addEventListener("load", () => {
   }
 
   function switchFilmView(e = {target:{title:""}}) {
-    let switches = [1,0,0]; 
-    const titles = ["yosemite", "alaska", "eastcoast"];
+    let switches = [1,0,0,0];
+    const titles = ["yosemite", "alaska", "eastcoast", "tableware"];
     switch (e.target.title) {
-      case "alaska":
-        switches = [0,1,0];
+      case "yosemite":
+        switches = [1,0,0,0];
         break;
-        case "east coast":
-        switches = [0,0,1];
+      case "alaska":
+        switches = [0,1,0,0];
+        break;
+      case "east coast":
+        switches = [0,0,1,0];
         break;
       default:
-        switches = [1,0,0]; // yosemite by default
+        switches = [0,0,0,1];
         break;
     }
     switches.forEach((on, index) => {
       if (on) document.getElementById(titles[index]).style.display = "flex";
       else document.getElementById(titles[index]).style.display = "none";
-      radioButtons[index].selected = on == 1;
+      if (index < 3) radioButtons[index].selected = on == 1;
     })
   }
 
@@ -51,6 +54,7 @@ window.addEventListener("load", () => {
         previousElement = center; // since we got here from projects tab
       }
       // turn off previous, turn on current
+      if (previousElementSub.id.includes("filmotography")) switchFilmView();
       previousElementSub.style.display = "none";
       currentElement.style.display = "block";
       previousElementSub = currentElement;
@@ -66,7 +70,8 @@ window.addEventListener("load", () => {
       previousElement = currentElement;
     }
     greeting.style.display = currentElement == center ? "flex" : "none";
-    if (currentElement.id.includes("filmotography")) switchFilmView();
+    if (currentElement.id.includes("filmotography")) switchFilmView({target:{title:"yosemite"}});
+    if (currentElement.id.includes("tableware")) switchFilmView();
     if (currentElement == center) select.value = "center";
   }
 
