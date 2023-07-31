@@ -1,3 +1,6 @@
 [submodule "100-days"]
 	path = 100-days
 	url = https://github.com/iguannalin/100-days-websites.git
+[submodule "unwholesome"]
+	path = unwholesome
+	url = https://github.com/iguannalin/unwholesome.git
