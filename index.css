@@ -137,9 +137,6 @@ a {
 #yosemite, #alaska, #eastcoast, #tableware {
   display: flex;
   overflow: scroll;
-  height: 50%;
-  margin-top: 30%;
-  width: 800px;
 }
 
 #yosemite div, #alaska div, #eastcoast div {
@@ -150,22 +147,12 @@ a {
   opacity: 0.9;
 }
 
-#yosemite div img, #alaska div img, #eastcoast div img {
-  height: 70%;
-  width: auto;
-}
-
 #tableware div {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
   padding: 0 10px;
-}
-
-#tableware div img {
-  height: 70%;
-  width: auto;
 }
 
 .film-heading {

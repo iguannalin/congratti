@@ -61,6 +61,17 @@
   display: none;
 }
 
-#tableware div img {
-  max-width: 600px;
+#yosemite, #alaska, #eastcoast, #tableware {
+  height: 70%;
+  margin-top: 20%;
+  width: 800px;
+}
+
+#yosemite div, #alaska div, #eastcoast div , #tableware div img {
+  max-width: 800px;
+}
+
+#yosemite div img, #alaska div img, #eastcoast div img, #tableware div img {
+  height: 80%;
+  width: auto;
 }
