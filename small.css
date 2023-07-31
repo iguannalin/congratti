@@ -61,6 +61,6 @@
   display: none;
 }
 
-#yosemite, #alaska, #eastcoast, #tableware {
-  width: 800px;
+#tableware div img {
+  max-width: 600px;
 }

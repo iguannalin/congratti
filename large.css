@@ -74,3 +74,7 @@ a:hover, #home:hover {
 #yosemite, #alaska, #eastcoast, #tableware {
   width: 1000px;
 }
+
+#tableware div img {
+  max-width: 1000px;
+}

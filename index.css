@@ -139,6 +139,7 @@ a {
   overflow: scroll;
   height: 50%;
   margin-top: 30%;
+  width: 800px;
 }
 
 #yosemite div, #alaska div, #eastcoast div {
