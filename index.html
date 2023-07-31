@@ -98,7 +98,7 @@
                     <div style="line-height: 16px;">
                         <h4>about this website</h3>
                         <p>the last time i completely changed my website was in 2018.</p>
-                        <p>websites are always a work in progress; this change has been due for a long time, when my old website no longer reflected my thoughts and aesthetics––as a person who both continues to work in, and have a love-hate relationship with technology.</p>
+                        <p>websites are always a work in progress; this change has been due for a long time, when my old website no longer reflected my thoughts and aesthetics--as a person who both continues to work in, and have a love-hate relationship with technology.</p>
                         <p>my old website had ~406 MB of assets; this one has <a target="_blank" title="link to the github repo for this website" href="https://github.com/iguannalin/congratti/tree/main">~50 MB</a></p>
                         <p>if the old website described me as a person, it would paint this picture: someone getting into complex javascript libraries, server-side bundling, and a bit of a code-hoarder for fear of needing it later in the future.</p>
                         <p>i hope this new website is a better reflection of how i feel about websites now--they can be plain javascript + html, and they can be fun (!) because it leaves room for more important things--like accessiblity, maintenance, and room to grow.</p>
@@ -111,6 +111,25 @@
                     </div>
 
                     <!-- CODE -->
+                    <div id="eeg">
+                        <h2>
+                            eeg cloud
+                        </h2>
+                        <span>
+                            <span><img loading="lazy" alt="Two kids with black EEG headsets on stand in front of 2 pairs of LEG lights suspended from the ceiling--the pair of lights on the left shine green and the two on the right shine orange." src="public/eeg.jpg"/></span>
+                            <p>Twins using the EEG devices and controlling different sets of the lights in the EEG cloud, based on activity levels in their brain.</p>
+                        </span>
+                        <h3>Why</h3>
+                        <p>Communication often fails us--mispronunciation, misinterpretation, other mishaps; we wanted to explore a different way of communicating our thoughts and feelings about a situation, using our brainwaves.</p>
+                        <h3>How</h3>
+                        <p>This project was created with Daniel Wai, and with a lot of advice on EEG devices and how to read its data from Jason Snell.</p>
+                        <p>The EEG cloud consists of two sets of LED lights suspended in the air. Each pair of lights is connected to one of the two Muse 2 (EEG sensing device) devices. Participants are invited in pairs to put on one of the Muse 2 devices, which will record their brain activity. The EEG data is sent to the Arduino paired with the LED lights via WiFi, and the LED lights reflect a different color based on the state of the participants' mind.
+                        </p>
+                        <h2>Conclusion</h2>
+                        <p>This was an interesting exploration of what alternate forms of communication and expression could look like. When this project was presented as part of the ITP 2023 Spring Show (for the class Intangible Interactions by Yeseul Song), we received a lot of interesting ideas from people. For example, what if we could have EEG-controlled lighting in our homes--a pre-anticipation of mood lighting? Or what if we use this as a trauma recovery therapeutic device, to guide us in our mental state on how we feel about a certain subject before we can verbalize it by allowing us to express it in a gentler, passive way?</p>
+                        <p></p>
+                        <a href="https://annaylin.notion.site/Final-Project-EEG-114233b5b4e64bcca9523cfdff4cce7e?pvs=4">Read more about it here.</a>
+                    </div>
                     <div id="ai">
                         <h2>
                             ai loves horror
@@ -140,7 +159,7 @@
                         <h3>Why</h3>
                         <p>During the pandemic, i wanted to remind my friends and myself that there are brighter times ahead.</p>
                         <h3>How</h3>
-                        <p>I created Python app that runs on a scheduler to use the Twilio SMS API to send a text to subscribed numbers.</p>
+                        <p>I created a Python app that runs on a scheduler to use the Twilio SMS API, sending a text to subscribed numbers during random times of throughout the day.</p>
                         <h3>Conclusion</h3>
                         <p>Texting seems to be a pretty non-intrusive way of reaching out to people that can be made into a positive experience.</p>
                         <p>It made me happy to hear from a friend that the random texts throughout the day did help them through a tough time.</p>
@@ -157,7 +176,7 @@
                         <h3>Why</h3>
                         <p>We wanted to reimagine what musical peripherals could be like if we experiemented with color, shape and material.</p>
                         <h3>How</h3>
-                        <p>We created pastel colored shapes using molded silicon and connected them to wires to use as a capacitive sensor. Then we added sounds to it via serial communication from an Arduino to p5.</p>
+                        <p>We created pastel-colored shapes using molded silicon and connected them to wires to use as a capacitive sensor. Then we added sounds to it via serial communication from an Arduino to p5.</p>
                         <h3>Conclusion</h3>
                         <p>While possible, it was difficult to control the sensitivity of the silicon as sensors. The silicon is delightful to play with but in the future i would explore different sensory materials.</p><a href="https://annaylin.notion.site/Squishy-Sounds-7924d6fe83d74175b406fa459df959b7">Read more about it here.</a></div>
                     <div id="spotify">
@@ -169,10 +188,10 @@
                             <p>Generate a playlist of your top most recently added songs in your Spotify library.</p>
                         </span>
                         <h3>Why</h3>
-                        <p>Growing up using Apple Music, I enjoyed the auto-generated top 20 songs playlist--a feature that I miss since using Spotify.</p>
+                        <p>Growing up using Apple Music, i enjoyed the auto-generated top 20 songs playlist--a feature that i miss since using Spotify.</p>
                         <h3>How</h3>
-                        <p>I found out that closest I could get to creating an auto-generated top 20 songs playlist was to use the Spotify API to get a list of all my tracks, sorted in the order they were added, and send the latest 20 to the playlist creation endpoint.</p>
-                        <p>It took some time figuring out the authentication, and while it is a hassle, it works pretty well once you authenticate and get redirected to the app.</p>
+                        <p>I found out that closest i could get to creating an auto-generated top 20 songs playlist was to use the Spotify API to get a list of all my tracks, sorted in the order they were added, and send the latest 20 to the playlist creation endpoint.</p>
+                        <p>It took some time figuring out the authentication, and while it was a hassle, it works pretty well once you authenticate and get redirected to the app.</p>
                         <h3>Conclusion</h3>
                         <p>There's not much customization you could do with generating playlists this way--for example, it would have been fun to play around with making an auto-generated playlist cover image as well.</p>
                         <a href="https://annaylin.notion.site/Spotify-recently-added-1311bf53622e4785951cc847889b3af8">Read more about it here.</a>
@@ -203,7 +222,7 @@
                         <p>The code creates a unique combination of petals and stems every time it's run, given rules to resemble a flower.</p>
                         <p>It picks from a list of communities i wish were better represented and more supported financially to generate the phrase in the piece. The final pieces were each printed with 2 Riso colors on ecru paper.</p>
                         <h3>Conclusion</h3>
-                        <p>It was a good introduction for me to Riso printing with P5 in a class called Print &amp; Code by Tega Brain. The assignment was to create a political poster, but i don't know how well this serves as a message. i definitely had a lot of fun creating the code for generating a unique composition.</p>
+                        <p>It was a good introduction for me to Riso printing with P5 in a class called Print &amp; Code by Tega Brain. The assignment was to create a political poster, though i don't know how well this serves as a political message i thoroughly enjoyed creating the code for generating a randomly-seeded unique poster paying in mind its aesthetic as well as functional composition.</p>
                         <a href='https://annaylin.notion.site/Week-6-d5dfe1348af240749dfa660d21de53e7'>Read more about it here.</a>
                     </div>
 

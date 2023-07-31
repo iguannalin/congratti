@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
   let previousElement = center;
   let previousElementSub = greeting;
 
-  const codeProjects = ["ai loves horror", "text me smth nice", "baby killer", "spotify recently added"];
+  const codeProjects = ["eeg cloud", "ai loves horror", "text me smth nice", "baby killer", "spotify recently added"];
   const printProjects = ["filmotography", "generative riso poster"];
 
   function getRandomInt(min, max) {
