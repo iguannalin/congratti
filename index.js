@@ -15,12 +15,6 @@ window.addEventListener("load", () => {
   const codeProjects = ["eeg cloud", "ai loves horror", "text me smth nice", "baby killer", "spotify recently added"];
   const printProjects = ["tableware", "filmotography", "generative riso poster"];
 
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
-  }
-
   const titles = ["yosemite", "alaska", "eastcoast", "tableware"];
   function switchFilmView(e = {target:{title:""}}) {
     let switches = [1,0,0,0];
@@ -73,7 +67,8 @@ window.addEventListener("load", () => {
       previousElement = currentElement;
     }
     greeting.style.display = currentElement == center ? "flex" : "none";
-    if (titles.includes(currentElement.id)) switchFilmView({target:{title:currentElement.id}});
+    if (currentElement.id == "filmotography") switchFilmView({target:{title:"yosemite"}});
+    if (currentElement.id == "tableware") switchFilmView({target:{title:"tableware"}});
     if (currentElement == center) select.value = "center";
   }
 
