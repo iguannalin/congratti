@@ -11,6 +11,7 @@
   --default-wallpaper: url(public/wallpaper.png);
   --default-clip-path: circle(44% at 49% 56%);
   --default-wallpaper-width: 100%;
+  --default-dot: green;
 }
 
 .theme {
@@ -23,6 +24,7 @@
     --default-bg: rgb(35, 35, 35);
     --default-text: rgb(89 255 66);
     --default-border: blue;
+    --default-dot: pink;
   }
   #wallpaper {
     --default-wallpaper: url(public/wallpaper_dark.png);
@@ -186,4 +188,9 @@ a {
   text-shadow: none;
   padding: 0 128px;
   min-width: 80%;
+}
+
+dot {
+  position: absolute;
+  color: var(--default-dot);
 }

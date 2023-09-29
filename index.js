@@ -137,10 +137,20 @@ window.addEventListener("load", () => {
 
   select.onchange = (e) => onSelect(e);
   oopsies.onclick = (ev) => oops(ev);
+  
   document.getElementById("home").onclick = () => {
     switchView(center, false);
   };
+  
   radioButtons.forEach((button) => {
       button.addEventListener("click", switchFilmView);
   });
+
+  document.body.addEventListener("mousemove", (e) => {
+    const dot = document.createElement("dot");
+    dot.style.left = `${e.x}px`;
+    dot.style.top = `${e.y}px`;
+    dot.innerText = '.';
+    document.body.appendChild(dot);
+  })
 });
