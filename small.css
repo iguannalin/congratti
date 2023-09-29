@@ -61,18 +61,24 @@
   display: none;
 }
 
-#yosemite, #alaska, #eastcoast, #tableware {
+#yosemite, #alaska, #eastcoast, #tableware, #reveries  {
   height: 70%;
   margin-top: 20%;
   width: 800px;
   margin-right: 200px;
 }
 
-#yosemite div, #alaska div, #eastcoast div , #tableware div img {
+#yosemite div, #alaska div, #eastcoast div , #tableware div img, #reveries div img  {
   max-width: 800px;
 }
 
 #yosemite div img, #alaska div img, #eastcoast div img, #tableware div img {
   height: 80%;
   width: auto;
+}
+
+#reveries div img  {
+  height: 60%;
+  width: auto;
+  margin: 0 48px;
 }

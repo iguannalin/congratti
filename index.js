@@ -13,26 +13,29 @@ window.addEventListener("load", () => {
   let previousElementSub = greeting;
 
   const codeProjects = ["eeg cloud", "ai loves horror", "text me smth nice", "baby killer", "spotify recently added"];
-  const printProjects = ["tableware", "filmotography", "generative riso poster"];
+  const printProjects = ["tableware", "filmotography", "reveries"]; // "generative riso poster"
 
-  const titles = ["yosemite", "alaska", "eastcoast", "tableware"];
+  const titles = ["yosemite", "alaska", "eastcoast", "tableware", "reveries"];
   function switchFilmView(e = {target:{title:""}}) {
-    let switches = [1,0,0,0];
+    let switches = [1,0,0,0,0];
     switch (e.target.title) {
       case "tableware":
-        switches = [0,0,0,1];
+        switches = [0,0,0,1,0];
         break;
       case "yosemite":
-        switches = [1,0,0,0];
+        switches = [1,0,0,0,0];
         break;
       case "alaska":
-        switches = [0,1,0,0];
+        switches = [0,1,0,0,0];
         break;
       case "east coast":
-        switches = [0,0,1,0];
+        switches = [0,0,1,0,0];
+        break;
+      case "reveries":
+        switches = [0,0,0,0,1];
         break;
       default:
-        switches = [0,0,0,0];
+        switches = [0,0,0,0,0];
         break;
     }
     switches.forEach((on, index) => {
@@ -69,6 +72,7 @@ window.addEventListener("load", () => {
     greeting.style.display = currentElement == center ? "flex" : "none";
     if (currentElement.id == "filmotography") switchFilmView({target:{title:"yosemite"}});
     if (currentElement.id == "tableware") switchFilmView({target:{title:"tableware"}});
+    if (currentElement.id == "reveries") switchFilmView({target:{title:"reveries"}});
     if (currentElement == center) select.value = "center";
   }
 

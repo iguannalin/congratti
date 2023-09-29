@@ -71,22 +71,34 @@ a:hover, #home:hover {
   background: var(--default-border);
 }
 
-#yosemite, #alaska, #eastcoast, #tableware {
+#yosemite, #alaska, #eastcoast, #tableware, #reveries {
   height: 50%;
   margin-top: 30%;
   width: 1000px;
 }
 
-#yosemite div img, #alaska div img, #eastcoast div img, #tableware div img {
+
+#yosemite div, #alaska div, #eastcoast div , #tableware div img, #reveries div img {
+  max-width: 1000px;
+}
+
+#yosemite div img, #alaska div img, #eastcoast div img, #tableware div img, #reveries div img {
   height: 70%;
   width: auto;
 }
 
-#yosemite div, #alaska div, #eastcoast div , #tableware div img {
-  max-width: 1000px;
+#reveries div img  {
+  height: 80%;
+  width: auto;
+  margin: 0 48px;
 }
 
-#tableware h2 {
+#tableware h2, #reveries h2 {
   position: absolute;
   top: 0;
+}
+
+#reveries h3 {
+  position: absolute;
+  top: 48px;
 }

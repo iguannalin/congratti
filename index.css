@@ -134,12 +134,12 @@ a {
   overflow: scroll;
 }
 
-#yosemite, #alaska, #eastcoast, #tableware {
+#yosemite, #alaska, #eastcoast, #tableware, #reveries {
   display: flex;
   overflow: scroll;
 }
 
-#yosemite div, #alaska div, #eastcoast div {
+#yosemite div, #alaska div, #eastcoast div, #reveries div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,7 +147,7 @@ a {
   opacity: 0.9;
 }
 
-#tableware div {
+#tableware div, #reveries div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,6 +158,26 @@ a {
 #tableware h2 {
   position: absolute;
   top: 128px;
+}
+
+#reveries h2 {
+  position: absolute;
+  top: 128px;
+}
+
+#reveries h3 {
+  position: absolute;
+  top: 160px;
+  text-transform: lowercase;
+}
+
+.reveries-heading {
+  position: relative;
+  font-size: 50px;
+  color: var(--default-text);
+  text-shadow: none;
+  padding: 0 128px;
+  min-width: 80%;
 }
 
 .film-heading {
