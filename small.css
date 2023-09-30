@@ -1,7 +1,11 @@
+body {
+  overflow-y: hidden;
+}
+
 #main {
   display: flex;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   flex-flow: column;
   justify-content: stretch; 
   align-items: center;
@@ -14,7 +18,6 @@
 #top {
   display: flex;
   width: 100%;
-  /* border: 2px solid yellow; */
   flex: 1;
   padding: 16px 12px;
   justify-content: center;
@@ -39,6 +42,10 @@
   padding: 16px 12px;
   width: 100%;
   border: 2px solid var(--default-border);
+}
+
+body {
+  overflow-y: hidden;
 }
 
 #center {

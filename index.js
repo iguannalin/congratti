@@ -152,5 +152,19 @@ window.addEventListener("load", () => {
     dot.style.top = `${e.y}px`;
     dot.innerText = '.';
     document.body.appendChild(dot);
-  })
+  });
+  
+  document.body.addEventListener("touchmove", (e) => {
+    if (getComputedStyle(center).display == "none") {
+      document.body.style.overflow = "visible";
+      return;
+    }
+    e.preventDefault();
+    document.body.style.overflow = "hidden";
+    const dot = document.createElement("dot");
+    dot.style.left = `${e.targetTouches[0].pageX}px`;
+    dot.style.top = `${e.targetTouches[0].pageY}px`;
+    dot.innerText = '.';
+    document.body.appendChild(dot);
+  });
 });
