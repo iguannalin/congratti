@@ -124,7 +124,7 @@ window.addEventListener("load", () => {
     oopsies.onclick = null;
     const wp = document.getElementById("wallpaper");
     const temp = wp.style.content;
-    wp.style.content = "url('public/anna.jpg')";
+    wp.style.content = "url('public/anna.png')";
     switchView(center, false);
     setTimeout(() => {
       wp.style.content = temp;
