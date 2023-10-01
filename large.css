@@ -12,33 +12,31 @@ body {
   align-items: stretch;
 }
 
-#main div {
-  box-sizing: border-box;
-}
-
 #top {
   display: none;
 }
 
+#center {
+  display: flex;
+  border: 2px solid var(--default-border);
+  flex: 4;
+  padding: 0px 12px;
+}
+
 #left {
   display: flex;
-  /* border: 2px solid red; */
   flex: 1;
   flex-flow: column;
   justify-content: space-between;
   align-items: center;
 }
 
-#center {
-  display: flex;
-  /* border: 2px solid blue; */
-  flex: 4;
-  padding: 0px 12px;
+table {
+  width: 100%;
 }
 
 #right {
   display: flex;
-  /* border: 2px solid green; */
   flex: 1;
 }
 

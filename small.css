@@ -15,8 +15,12 @@ body {
   align-items: center;
 }
 
-#main div {
-  box-sizing: border-box;
+#center {
+  display: flex;
+  flex: 25;
+  border: 2px solid var(--default-border);
+  padding: 16px 12px;
+  width: 100%;
 }
 
 #top {
@@ -46,14 +50,6 @@ body {
   padding: 16px 12px 120px;
   width: 100%;
   border: 2px solid var(--default-border);
-}
-
-#center {
-  display: flex;
-  flex: 25;
-  border: 2px solid var(--default-border);
-  padding: 16px 12px;
-  width: 100%;
 }
 
 #right {

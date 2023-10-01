@@ -56,16 +56,22 @@ body {
   z-index: 1000;
 }
 
-#center {
-  overflow-y: scroll;
+#main div {
+  box-sizing: border-box;
 }
 
-#left, #right {
-  overflow: scroll;
+#center {
+  display: flex;
+  flex-flow: column;
+  overflow-y: scroll;
 }
 
 #center > div:not(#greeting) {
   display: none;
+}
+
+#left, #right {
+  overflow: scroll;
 }
 
 #greeting {
@@ -128,12 +134,6 @@ a {
 }
 .film-button:nth-child(3), .film-button:nth-child(3):hover {
   accent-color: palegreen;
-}
-
-#center {
-  display: flex;
-  flex-flow: column;
-  overflow: scroll;
 }
 
 #yosemite, #alaska, #eastcoast, #tableware, #reveries {
