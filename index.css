@@ -24,7 +24,7 @@
     --default-bg: rgb(35, 35, 35);
     --default-text: rgb(89 255 66);
     --default-border: blue;
-    --default-dot: #ff5722;
+    --default-dot: #ff5722;;
   }
   #wallpaper {
     --default-wallpaper: url(public/wallpaper_dark.png);
