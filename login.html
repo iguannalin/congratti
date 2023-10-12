@@ -3,33 +3,70 @@
   <head>
     <meta charset="utf-8">
     <title>annaylin - login</title>
-    <link rel="stylesheet" href="index.css" type="text/css">
+    <style>
+      form {
+        font-family: Helvetica, sans-serif;
+        margin-top: 25vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        font-size: 16px;
+      }
+      input {
+        display: block;
+      }
+      div {
+        text-align: center;
+      }
+      button {
+        font-size: 12px;
+        border: none;
+        background-color: snow;
+      }
+      button:hover, button:active {
+        text-shadow: #0fcd0f 2px 2px 16px;
+        cursor: pointer;
+      }
+      * {
+        margin: 16px 0 0;
+      }
+    </style>
+    <script>
+      window.addEventListener("load", () => {
+        const form = document.getElementById("form");
+        const input = document.getElementById("password-input");
+        const validation = document.getElementById("validation");
+
+        function login(e){
+          e.preventDefault();  
+          fetch(`https://seasons986.pythonanywhere.com/login?password=${input.value}`).then((r) => r.json()).then((d) => {
+            if (!d || d.val == "False") {
+              validation.style.display = "block";
+            } else if (d) {
+              window.open(d.val, "_self");
+            }
+          });
+        }
+        form.addEventListener("submit", login);
+      });
+    </script>
   </head>
   <body>
-  <div class="App">
-    <div class="App-container">
-        <form class="Login" action="./" method="post">
+  <div>
+    <div>
+        <form id="form">
             <div class="input-box">
-                <label for="password-input">Enter password</label>
-                <span class="password-hint">For graduate programs, enter the name of the program in all lowercase (i.e. <em>berkeleyhaas</em>).</span>
-                <input name="key"
-                      id="password-input"
-                      type="password"
-                      required/>
-                <span id="validateished">Nice try!</span>
+            <label for="password-input">Enter password</label>
+            <input name="key"
+              id="password-input"
+              type="password"
+              required/>
             </div>
-            <button type="Submit">Submit</button>
+            <button type="submit">Submit</button>
         </form>
+        <div id="validation" style="display:none;">🙅🏻‍♀️</div>
     </div>
   </div>
   </body>
-  <script>
-    const p = document.querySelector('#password-input');
-    function validateish(e) {
-        const v = document.querySelector('#validateished');
-        if (e.target.value === 'berkeleyhaas') v.style.animation = '1s ease-in-out 0s 1 none running fadeOut';
-        else v.style.animation = '';
-    }
-    if (p) p.onkeyup = validateish;
-  </script>
 </html>
