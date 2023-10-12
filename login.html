@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>annaylin - login</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+  </head>
+  <body>
+  <div class="App">
+    <div class="App-container">
+        <form class="Login" action="./" method="post">
+            <div class="input-box">
+                <label for="password-input">Enter password</label>
+                <span class="password-hint">For graduate programs, enter the name of the program in all lowercase (i.e. <em>berkeleyhaas</em>).</span>
+                <input name="key"
+                      id="password-input"
+                      type="password"
+                      required/>
+                <span id="validateished">Nice try!</span>
+            </div>
+            <button type="Submit">Submit</button>
+        </form>
+    </div>
+  </div>
+  </body>
+  <script>
+    const p = document.querySelector('#password-input');
+    function validateish(e) {
+        const v = document.querySelector('#validateished');
+        if (e.target.value === 'berkeleyhaas') v.style.animation = '1s ease-in-out 0s 1 none running fadeOut';
+        else v.style.animation = '';
+    }
+    if (p) p.onkeyup = validateish;
+  </script>
+</html>
