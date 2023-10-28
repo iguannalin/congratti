@@ -146,13 +146,13 @@ window.addEventListener("load", () => {
       button.addEventListener("click", switchFilmView);
   });
 
-  // document.body.addEventListener("mousemove", (e) => {
-  //   const dot = document.createElement("dot");
-  //   dot.style.left = `${e.x}px`;
-  //   dot.style.top = `${e.y}px`;
-  //   dot.innerText = '.';
-  //   document.body.appendChild(dot);
-  // });
+  document.body.addEventListener("mousemove", (e) => {
+    const dot = document.createElement("dot");
+    dot.style.left = `${e.x}px`;
+    dot.style.top = `${e.y}px`;
+    dot.innerText = '.';
+    document.body.appendChild(dot);
+  });
   
   document.body.addEventListener("touchmove", (e) => {
     if (getComputedStyle(center).display == "none") {
