@@ -99,6 +99,7 @@ window.addEventListener("load", () => {
     const selected = e.target.innerText.split(" ")[0];
     if (document.getElementById(selected)) {
       let subelem = document.getElementById(selected);
+      location.hash = selected;
       switchView(subelem, true);
     }
   }
@@ -167,4 +168,6 @@ window.addEventListener("load", () => {
     dot.innerText = '.';
     document.body.appendChild(dot);
   });
+
+  if (location.hash) onSelectProject({target:{innerText:location.hash.split("#")[1]}});
 });
