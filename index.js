@@ -147,12 +147,22 @@ window.addEventListener("load", () => {
       button.addEventListener("click", switchFilmView);
   });
 
+  let dotIndex = 0;
+  const dotMax = 150;
   document.body.addEventListener("mousemove", (e) => {
-    const dot = document.createElement("dot");
+    const dots = Array.from(document.getElementsByTagName("dot"));
+    let dot;
+    if (dots.length < dotMax) {
+      dot = document.createElement("dot");
+      dot.innerText = '.';
+      document.body.appendChild(dot);
+    } else {
+      dot = dots[dotIndex];
+      dotIndex++;
+    }
+    if (dotIndex >= dotMax) dotIndex = 0;
     dot.style.left = `${e.x}px`;
     dot.style.top = `${e.y}px`;
-    dot.innerText = '.';
-    document.body.appendChild(dot);
   });
   
   document.body.addEventListener("touchmove", (e) => {
