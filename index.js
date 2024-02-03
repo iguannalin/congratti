@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
   let previousElement = center;
   let previousElementSub = greeting;
 
-  const codeProjects = ["eeg cloud", "ai loves horror", "text me smth nice", "baby killer", "spotify recently added"];
+  const codeProjects = ["handhold mouse", "eeg cloud", "ai loves horror", "text me smth nice", "baby killer"];
   const printProjects = ["tableware", "filmotography", "reveries"]; // "generative riso poster"
 
   const titles = ["yosemite", "alaska", "eastcoast", "tableware", "reveries"];
