@@ -29,7 +29,7 @@
   #wallpaper {
     --default-wallpaper: url(public/wallpaper_dark.png);
     --default-clip-path: circle(40% at 48% 64%);
-    --default-wallpaper-width: 95% !important;
+    --default-wallpaper-width: 85% !important;
     margin-top: -25%;
   }
 }
@@ -64,6 +64,7 @@ body {
   display: flex;
   flex-flow: column;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #center > div:not(#greeting) {
@@ -84,10 +85,11 @@ body {
 
 #wallpaper {
   content: var(--default-wallpaper);
+  margin-top: min(-110px, -35%);
   margin-left: 4.5%;
   clip-path: var(--default-clip-path);
   width: var(--default-wallpaper-width);
-  max-height: 80vh;
+  object-fit: cover;
 }
 
 span {
@@ -157,12 +159,7 @@ a {
   padding: 0 10px;
 }
 
-#tableware h2 {
-  position: absolute;
-  top: 128px;
-}
-
-#reveries h2 {
+#tableware h2, #reveries h2, #filmotography h2 {
   position: absolute;
   top: 128px;
 }
