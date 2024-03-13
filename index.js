@@ -179,9 +179,5 @@ window.addEventListener("load", () => {
     document.body.appendChild(dot);
   });
 
-  const season = document.getElementById("season");
-  const getSeason = () => ["Winter", "Winter", "Spring", "Spring", "Summer", "Summer", "Summer", "Summer", "Fall", "Fall", "Winter", "Winter"][new Date().getMonth()].toLowerCase();
-  season.innerText = "this " + getSeason() + ", ";
-
   if (location.hash) onSelectProject({target:{innerText:location.hash.split("#")[1]}});
 });
