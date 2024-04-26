@@ -21,3 +21,16 @@ body {
   color: var(--main-text-color);
   text-shadow: var(--shadow-color) -2px 2px 8px;
 }
+
+#container {
+  height: 100vh;
+  width: 100vw;
+}
+
+#left {
+  overflow: scroll;
+}
+
+#right {
+  overflow: scroll;
+}
