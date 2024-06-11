@@ -1,36 +1,129 @@
-/* @import url(small.css) (min-width:0px);
-@import url(large.css) (min-width:900px); */
+/* @media screen and url(small.css) (min-width:0px);
+@media screen and url(large.css) (min-width:900px); */
+@media screen and url('https://fonts.googleapis.com/css2?family=Jomolhari&display=swap');
 
 :root {
-  --main-bg-color: rgb(35, 35, 35);
-  --main-text-color: #f9faffde;
+  --main-bg-color: #f9faffde;
+  --main-text-color: rgb(35, 35, 35);
   --shadow-color: #858ebc;
 }
 
 html {
   display: block;
   width: 100%;
+  
+}
+
+@page {
+  size: 8.5in 11in;
+  margin: 0.2in 0.5in;
+}
+
+@media print {
+  body {
+    font-size: 12px;
+    margin: 0 auto;
+  }
+   a {
+    text-decoration: none;
+    color: inherit;
+    font-style: italic;
+   }
+}
+
+@media screen and (min-width:0px) {
+  body {
+    font-size: 16px;
+  }
+  p {
+    max-width: 60ch;
+  }
+}
+
+@media screen and (min-width:900px) {
+  body {
+    font-size: 24px;
+  }
+  p {
+    max-width: 75ch;
+  }
 }
 
 body {
+  margin: 0.5rem 1rem;
+  font-family: "Jomolhari", "Times New Roman", serif;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
-  text-shadow: var(--shadow-color) -2px 2px 8px;
+  text-transform: lowercase;
 }
 
-#container {
-  height: 100vh;
-  width: 100vw;
+td {
+  vertical-align: top;
+  padding: 0.75em;
 }
 
-#left {
-  overflow: scroll;
+h1 {
+  font-size: 2em;
+  margin: 0em 0 0.25em;
 }
 
-#right {
-  overflow: scroll;
+.header p {
+  margin: 0.3em 0;
+  font-style: italic;
+  color: #4a4a4a;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+a {
+  color: #4a4a4a;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-style: normal;
+  color: #9fff2f;
+  background-color: #4a4a4a3f;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.75em 0 0.25em;
+}
+
+h3 {
+  font-size: 1em;
+  margin: 0.25em 0;
+  color: #4a4a4a;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 0.25em 0;
+  text-transform: initial;
+}
+
+.location {
+  font-style: italic;
+}
+
+p {
+  font-size: 1em;
+}
+
+p.tags {
+  margin: 0.5em 0;
+  font-style: italic;
+  color: #4a4a4a;
+}
+
+p.indent {
+  margin: 0 0 1em;
+  line-height: 1.3em;
 }
