@@ -1,6 +1,6 @@
 /* @media screen and url(small.css) (min-width:0px);
 @media screen and url(large.css) (min-width:900px); */
-@media screen and url('https://fonts.googleapis.com/css2?family=Jomolhari&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jomolhari&display=swap');
 
 :root {
   --main-bg-color: #f9faffde;
@@ -126,4 +126,8 @@ p.tags {
 p.indent {
   margin: 0 0 1em;
   line-height: 1.3em;
+}
+
+p.indent::before {
+  content: "✦ ";
 }
