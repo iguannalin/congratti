@@ -22,30 +22,32 @@ html {
 @media print {
   body {
     font-size: 12px;
-    margin: 0 auto;
   }
    a {
     text-decoration: none;
     color: inherit;
     font-style: italic;
-   }
+  }
+  td * {
+    max-width: 45ch;
+  }
 }
 
 @media screen and (min-width:0px) {
   body {
     font-size: 14px;
   }
-  p {
+  td * {
     max-width: 60ch;
   }
 }
 
 @media screen and (min-width:900px) {
   body {
-    font-size: 24px;
+    font-size: 16px;
   }
-  p {
-    max-width: 75ch;
+  td * {
+    max-width: 50ch;
   }
 }
 
@@ -65,9 +67,19 @@ table {
   max-width: 1250px;
 }
 
+tr {
+  display: flex;
+  height: 98vh;
+}
+
 td {
   vertical-align: top;
   padding: 0.75em;
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  overflow-y: scroll;
+  padding: 1.5em 1em;
 }
 
 h1 {
@@ -98,7 +110,7 @@ a:hover {
 
 h2 {
   font-size: 1.5em;
-  margin: 0.75em 0 0.25em;
+  margin: 0.5em 0 0.25em;
 }
 
 h3 {
