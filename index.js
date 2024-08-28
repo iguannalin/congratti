@@ -12,8 +12,8 @@ window.addEventListener("load", () => {
   let previousElement = center;
   let previousElementSub = greeting;
 
-  const codeProjects = ["handhold mouse", "eeg cloud", "ai loves horror", "text me smth nice"];
-  const printProjects = ["tableware", "filmotography", "reveries"]; // "generative riso poster"
+  const physicalProjects = ["handhold mouse", "eeg cloud", "ai loves horror", "text me smth nice"];
+  const analogProjects = ["tableware", "filmotography", "reveries"]; // "generative riso poster"
 
   const titles = ["yosemite", "alaska", "eastcoast", "tableware", "reveries"];
   function switchFilmView(e = {target:{title:""}}) {
@@ -78,8 +78,10 @@ window.addEventListener("load", () => {
 
   function loadProjects(projects, label) {
     const ptr = document.createElement('tr');
-    const th = document.createElement('td');
-    th.innerText = label;
+    const th = document.createElement('th');
+    const th3 = document.createElement('h3');
+    th3.innerText = label;
+    th.appendChild(th3);
     ptr.appendChild(th);
     table.appendChild(ptr);
     projects.forEach((p) => {
@@ -133,8 +135,9 @@ window.addEventListener("load", () => {
     }, 350);
   }
 
-  loadProjects(codeProjects, "code");
-  loadProjects(printProjects, "print");
+  loadProjects(physicalProjects, "physical");
+  loadProjects(analogProjects, "analog");
+  loadProjects([], "digital");
 
   select.onchange = (e) => onSelect(e);
   oopsies.onclick = (ev) => oops(ev);

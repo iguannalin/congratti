@@ -1,6 +1,6 @@
 @import url(background.css) (min-width: 0px);
 @import url(small.css) (min-width: 0px);
-@import url(large.css) (min-width: 900px);
+@import url(large.css) (min-width: 800px);
 
 :root {
   --default-bg: #fdfaf6;
@@ -12,6 +12,7 @@
   --default-clip-path: circle(44% at 49% 56%);
   --default-wallpaper-width: 100%;
   --default-dot: green;
+  --default-link: rgb(0, 0, 255);
 }
 
 .theme {
@@ -23,8 +24,8 @@
   .theme {
     --default-bg: rgb(35, 35, 35);
     --default-text: rgb(89 255 66);
-    --default-border: blue;
-    --default-dot: #ff5722;;
+    --default-border: rgb(0, 0, 255);
+    --default-link: #fff;
   }
   #wallpaper {
     --default-wallpaper: url(public/wallpaper_dark.png);
@@ -44,6 +45,15 @@ body {
   font-size: var(--default-font);
   line-height: var(--default-line-height);
   text-shadow: #acb5bd 1px 1px 6px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: left;
+}
+
+.aria-hidden {
+  position: absolute;
+  visibility: hidden;
 }
 
 #container {
@@ -116,8 +126,9 @@ span > p {
   flex-flow: column wrap;
 }
 
-a {
-  text-shadow: 1px 0px 1px #4CAF50;
+a, a:visited, a:active {
+  color: var(--default-link);
+  text-shadow: 1px 1px 6px #00985c;
 }
 
 .film-button {
