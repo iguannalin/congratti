@@ -25,7 +25,7 @@
     --default-bg: rgb(35, 35, 35);
     --default-text: rgb(89 255 66);
     --default-border: rgb(0, 0, 255);
-    --default-link: #fff;
+    --default-link: #d5ffbd;
   }
   #wallpaper {
     --default-wallpaper: url(public/wallpaper_dark.png);
