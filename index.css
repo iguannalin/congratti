@@ -128,7 +128,7 @@ span > p {
 
 a, a:visited, a:active {
   color: var(--default-link);
-  text-shadow: 1px 1px 6px #00985c;
+  text-shadow: 1px 1px 6px #00e78c;
 }
 
 .film-button {
