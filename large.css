@@ -19,7 +19,7 @@ body {
 #center {
   display: flex;
   border: 2px solid var(--default-border);
-  flex: 4;
+  flex: 2.5;
   padding: 0px 12px;
 }
 
