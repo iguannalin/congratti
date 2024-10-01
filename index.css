@@ -89,6 +89,7 @@ h6 {
   display: flex;
   flex-flow: column;
   overflow: scroll;
+  padding: 12px 12px 24px;
 }
 
 #center > div:not(#greeting) {
@@ -152,6 +153,10 @@ span > p {
   box-sizing: border-box;
   padding: 0 12px;
   flex-flow: column wrap;
+}
+
+.thumbnail p {
+  font-style: italic;
 }
 
 p,
