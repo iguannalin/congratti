@@ -131,7 +131,7 @@ window.addEventListener("load", () => {
     switchView(center, false);
     setTimeout(() => {
       wp.style.content = temp;
-      oopsies.onclick = oops();
+      oopsies.onclick = () => oops();
     }, 350);
   }
 
