@@ -16,26 +16,26 @@ window.addEventListener("load", () => {
   const analogProjects = ["tableware", "filmotography", "reveries"]; // "generative riso poster"
 
   const titles = ["yosemite", "alaska", "eastcoast", "tableware", "reveries"];
-  function switchFilmView(e = {target:{title:""}}) {
-    let switches = [1,0,0,0,0];
+  function switchFilmView(e = { target: { title: "" } }) {
+    let switches = [1, 0, 0, 0, 0];
     switch (e.target.title) {
       case "tableware":
-        switches = [0,0,0,1,0];
+        switches = [0, 0, 0, 1, 0];
         break;
       case "yosemite":
-        switches = [1,0,0,0,0];
+        switches = [1, 0, 0, 0, 0];
         break;
       case "alaska":
-        switches = [0,1,0,0,0];
+        switches = [0, 1, 0, 0, 0];
         break;
       case "east coast":
-        switches = [0,0,1,0,0];
+        switches = [0, 0, 1, 0, 0];
         break;
       case "reveries":
-        switches = [0,0,0,0,1];
+        switches = [0, 0, 0, 0, 1];
         break;
       default:
-        switches = [0,0,0,0,0];
+        switches = [0, 0, 0, 0, 0];
         break;
     }
     switches.forEach((on, index) => {
@@ -70,9 +70,9 @@ window.addEventListener("load", () => {
       previousElement = currentElement;
     }
     greeting.style.display = currentElement == center ? "flex" : "none";
-    if (currentElement.id == "filmotography") switchFilmView({target:{title:"yosemite"}});
-    if (currentElement.id == "tableware") switchFilmView({target:{title:"tableware"}});
-    if (currentElement.id == "reveries") switchFilmView({target:{title:"reveries"}});
+    if (currentElement.id == "filmotography") switchFilmView({ target: { title: "yosemite" } });
+    if (currentElement.id == "tableware") switchFilmView({ target: { title: "tableware" } });
+    if (currentElement.id == "reveries") switchFilmView({ target: { title: "reveries" } });
     if (currentElement == center) select.value = "center";
   }
 
@@ -123,7 +123,7 @@ window.addEventListener("load", () => {
     switchView(elem, false, elem == center);
   }
 
-  function oops(ev) {
+  function oops() {
     oopsies.onclick = null;
     const wp = document.getElementById("wallpaper");
     const temp = wp.style.content;
@@ -131,7 +131,7 @@ window.addEventListener("load", () => {
     switchView(center, false);
     setTimeout(() => {
       wp.style.content = temp;
-      oopsies.onclick = (ev) => oops(ev);
+      oopsies.onclick = oops();
     }, 350);
   }
 
@@ -141,13 +141,13 @@ window.addEventListener("load", () => {
 
   select.onchange = (e) => onSelect(e);
   oopsies.onclick = (ev) => oops(ev);
-  
+
   document.getElementById("home").onclick = () => {
     switchView(center, false);
   };
-  
+
   radioButtons.forEach((button) => {
-      button.addEventListener("click", switchFilmView);
+    button.addEventListener("click", switchFilmView);
   });
 
   let dotIndex = 0;
@@ -167,7 +167,7 @@ window.addEventListener("load", () => {
     dot.style.left = `${e.x}px`;
     dot.style.top = `${e.y}px`;
   });
-  
+
   document.body.addEventListener("touchmove", (e) => {
     if (getComputedStyle(center).display == "none") {
       document.body.style.overflow = "visible";
@@ -182,5 +182,5 @@ window.addEventListener("load", () => {
     document.body.appendChild(dot);
   });
 
-  if (location.hash) onSelectProject({target:{innerText:location.hash.split("#")[1]}});
+  if (location.hash) onSelectProject({ target: { innerText: location.hash.split("#")[1] } });
 });

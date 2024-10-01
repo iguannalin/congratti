@@ -11,7 +11,7 @@ body {
   width: 100vw;
   height: 100vh;
   flex-flow: column;
-  justify-content: stretch; 
+  justify-content: stretch;
   align-items: center;
 }
 
@@ -53,6 +53,10 @@ body {
   border: 2px solid var(--default-border);
 }
 
+#left .name {
+  display: none;
+}
+
 #right {
   display: none;
   flex: 25;
@@ -65,18 +69,29 @@ body {
   display: none;
 }
 
-#yosemite, #alaska, #eastcoast, #tableware, #reveries  {
-  height: 70%;
-  margin-top: 20%;
-  width: 800px;
+#yosemite,
+#alaska,
+#eastcoast,
+#tableware,
+#reveries {
+  height: 42vh;
+  margin-top: 30vh;
+  width: 100vw;
   margin-right: 200px;
 }
 
-#yosemite div, #alaska div, #eastcoast div , #tableware div img, #reveries div img  {
+#yosemite div,
+#alaska div,
+#eastcoast div,
+#tableware div img,
+#reveries div img {
   max-width: 800px;
 }
 
-#yosemite div img, #alaska div img, #eastcoast div img, #tableware div img {
+#yosemite div img,
+#alaska div img,
+#eastcoast div img,
+#tableware div img {
   height: 80%;
   width: auto;
 }

@@ -31,6 +31,10 @@ body {
   align-items: center;
 }
 
+#left .name {
+  display: block;
+}
+
 table {
   width: 100%;
 }
@@ -40,7 +44,8 @@ table {
   flex: 1;
 }
 
-#left, #right {
+#left,
+#right {
   padding: 16px 12px;
   border: none;
   opacity: 0.8;
@@ -49,7 +54,7 @@ table {
 span > span > img {
   width: auto !important;
   object-fit: cover;
-  max-height: 400px !important;;
+  max-height: 400px !important;
 }
 
 #home {
@@ -64,34 +69,47 @@ span > span > img {
   cursor: pointer;
 }
 
-a:hover, #home:hover {
+a:hover,
+#home:hover {
   color: var(--default-text);
   background: var(--default-border);
 }
 
-#yosemite, #alaska, #eastcoast, #tableware, #reveries {
+#yosemite,
+#alaska,
+#eastcoast,
+#tableware,
+#reveries {
   height: 50%;
   margin-top: 30%;
   width: 1000px;
 }
 
-
-#yosemite div, #alaska div, #eastcoast div , #tableware div img, #reveries div img {
+#yosemite div,
+#alaska div,
+#eastcoast div,
+#tableware div img,
+#reveries div img {
   max-width: 1000px;
 }
 
-#yosemite div img, #alaska div img, #eastcoast div img, #tableware div img, #reveries div img {
+#yosemite div img,
+#alaska div img,
+#eastcoast div img,
+#tableware div img,
+#reveries div img {
   height: 70%;
   width: auto;
 }
 
-#reveries div img  {
+#reveries div img {
   height: 80%;
   width: auto;
   margin: 0 48px;
 }
 
-#tableware h2, #reveries h2 {
+#tableware h2,
+#reveries h2 {
   position: absolute;
   top: 0;
 }
