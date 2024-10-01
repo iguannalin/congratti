@@ -28,7 +28,7 @@ body {
   flex: 1;
   flex-flow: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 #left .name {

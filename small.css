@@ -28,7 +28,7 @@ body {
   width: 100%;
   flex: 1;
   padding: 16px 12px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   line-height: 18px;
 }

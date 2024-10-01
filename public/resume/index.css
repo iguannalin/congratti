@@ -1,6 +1,6 @@
 /* @media screen and url(small.css) (min-width:0px);
 @media screen and url(large.css) (min-width:900px); */
-@import url('https://fonts.googleapis.com/css2?family=Jomolhari&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jomolhari&display=swap");
 
 :root {
   --main-bg-color: #f9faffde;
@@ -11,7 +11,6 @@
 html {
   display: block;
   width: 100%;
-  
 }
 
 @page {
@@ -23,7 +22,7 @@ html {
   body {
     font-size: 12px;
   }
-   a {
+  a {
     text-decoration: none;
     color: inherit;
     font-style: italic;
@@ -33,7 +32,7 @@ html {
   }
 }
 
-@media screen and (min-width:0px) {
+@media screen and (min-width: 0px) {
   body {
     font-size: 14px;
   }
@@ -42,7 +41,7 @@ html {
   }
 }
 
-@media screen and (min-width:900px) {
+@media screen and (min-width: 900px) {
   body {
     font-size: 16px;
   }
@@ -103,6 +102,12 @@ h1 {
 
 .header a {
   text-decoration: none;
+}
+
+.name {
+  font-size: 32px;
+  line-height: 25px;
+  max-width: 110px;
 }
 
 a {

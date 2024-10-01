@@ -1,7 +1,7 @@
 @import url(background.css) (min-width: 0px);
 @import url(small.css) (min-width: 0px);
 @import url(large.css) (min-width: 800px);
-@import url(small.css) (min-width: 1200px);
+@import url(small.css) (min-width: 1700px);
 
 :root {
   --default-bg: #fdfaf6;
@@ -102,8 +102,10 @@ h6 {
 
 .name {
   text-align: left;
-  margin: 0 auto;
-  max-width: 7ch;
+  margin: 0 0;
+  font-size: 32px;
+  line-height: 25px;
+  max-width: 110px;
 }
 
 .name a {
@@ -120,7 +122,7 @@ h6 {
 
 #wallpaper {
   content: var(--default-wallpaper);
-  margin-top: min(-110px, -35%);
+  margin-top: min(-110px, -25%);
   margin-left: 4.5%;
   clip-path: var(--default-clip-path);
   width: var(--default-wallpaper-width);
