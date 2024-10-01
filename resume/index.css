@@ -1,0 +1,163 @@
+/* @media screen and url(small.css) (min-width:0px);
+@media screen and url(large.css) (min-width:900px); */
+@import url("https://fonts.googleapis.com/css2?family=Jomolhari&display=swap");
+
+:root {
+  --main-bg-color: #f9faffde;
+  --main-text-color: rgb(35, 35, 35);
+  --shadow-color: #858ebc;
+}
+
+html {
+  display: block;
+  width: 100%;
+}
+
+@page {
+  size: 8.5in 11in;
+  margin: 0.2in 0.5in;
+}
+
+@media print {
+  body {
+    font-size: 12px;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-style: italic;
+  }
+  td * {
+    max-width: 50ch;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  body {
+    font-size: 14px;
+  }
+  td * {
+    max-width: 70ch;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    font-size: 16px;
+  }
+  td * {
+    max-width: 60ch;
+  }
+}
+
+body {
+  margin: 0.5rem 1rem;
+  font-family: "Jomolhari", "Times New Roman", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  text-transform: lowercase;
+}
+
+table {
+  max-width: 1250px;
+}
+
+tr {
+  display: flex;
+  height: 98vh;
+}
+
+td {
+  display: flex;
+  flex-flow: column;
+  vertical-align: top;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 1.5em 0em 1.5em 1em;
+}
+
+#left {
+  flex: 1;
+  padding: none;
+}
+
+#right {
+  flex: 1.25;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0em 0 0.25em;
+}
+
+.header p {
+  margin: 0.3em 0;
+  font-style: italic;
+  color: #4a4a4a;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.name {
+  font-size: 32px;
+  line-height: 26px;
+  max-width: 110px;
+}
+
+a {
+  color: #4a4a4a;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-style: normal;
+  color: #9fff2f;
+  background-color: #4a4a4a3f;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.25em;
+}
+
+h3 {
+  font-size: 1em;
+  margin: 0.25em 0;
+  color: #4a4a4a;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1em 0 0.25em;
+  text-shadow: #00000087 0px 0px 0.1px;
+  text-transform: initial;
+}
+
+.location {
+  font-style: italic;
+}
+
+p {
+  font-size: 1em;
+}
+
+p.tags {
+  margin: 0.25em 0.5em;
+  font-style: italic;
+  color: #4a4a4a;
+}
+
+p.indent {
+  margin: 0 0 1em;
+  line-height: 1.3em;
+}
+
+p.indent::before {
+  content: "✦ ";
+}
