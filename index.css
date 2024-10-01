@@ -1,6 +1,7 @@
 @import url(background.css) (min-width: 0px);
 @import url(small.css) (min-width: 0px);
 @import url(large.css) (min-width: 800px);
+@import url(small.css) (min-width: 1200px);
 
 :root {
   --default-bg: #fdfaf6;
@@ -47,7 +48,12 @@ body {
   text-shadow: #acb5bd 1px 1px 6px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-align: left;
 }
 
@@ -59,6 +65,15 @@ h1, h2, h3, h4, h5, h6 {
 #container {
   height: 100vh;
   width: 100vw;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+#container::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
 }
 
 #main {
@@ -81,8 +96,15 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-#left, #right {
+#left,
+#right {
   overflow: scroll;
+}
+
+.name {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 7ch;
 }
 
 #greeting {
@@ -100,6 +122,7 @@ h1, h2, h3, h4, h5, h6 {
   clip-path: var(--default-clip-path);
   width: var(--default-wallpaper-width);
   object-fit: cover;
+  max-width: 1200px;
 }
 
 span {
@@ -126,7 +149,9 @@ span > p {
   flex-flow: column wrap;
 }
 
-a, a:visited, a:active {
+a,
+a:visited,
+a:active {
   color: var(--default-link);
   text-shadow: 1px 1px 6px #00e78c;
 }
@@ -139,22 +164,32 @@ a, a:visited, a:active {
   font-size: 1.2em;
 }
 
-.film-button:nth-child(1), .film-button:nth-child(1):hover {
+.film-button:nth-child(1),
+.film-button:nth-child(1):hover {
   accent-color: tan;
 }
-.film-button:nth-child(2), .film-button:nth-child(2):hover {
+.film-button:nth-child(2),
+.film-button:nth-child(2):hover {
   accent-color: deepskyblue;
 }
-.film-button:nth-child(3), .film-button:nth-child(3):hover {
+.film-button:nth-child(3),
+.film-button:nth-child(3):hover {
   accent-color: palegreen;
 }
 
-#yosemite, #alaska, #eastcoast, #tableware, #reveries {
+#yosemite,
+#alaska,
+#eastcoast,
+#tableware,
+#reveries {
   display: flex;
   overflow: scroll;
 }
 
-#yosemite div, #alaska div, #eastcoast div, #reveries div {
+#yosemite div,
+#alaska div,
+#eastcoast div,
+#reveries div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,7 +197,8 @@ a, a:visited, a:active {
   opacity: 0.9;
 }
 
-#tableware div, #reveries div {
+#tableware div,
+#reveries div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,7 +206,9 @@ a, a:visited, a:active {
   padding: 0 10px;
 }
 
-#tableware h2, #reveries h2, #filmotography h2 {
+#tableware h2,
+#reveries h2,
+#filmotography h2 {
   position: absolute;
   top: 128px;
 }
