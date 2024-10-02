@@ -62,41 +62,44 @@ body {
   text-transform: lowercase;
 }
 
-table {
-  max-width: 1250px;
-  overflow-y: scroll;
+.table {
+  max-width: 800px;
+  overflow-y: hidden;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  height: 98vh;
 }
 
-table::-webkit-scrollbar, table td::-webkit-scrollbar {
+.table::-webkit-scrollbar,
+.table div::-webkit-scrollbar {
   display: none;
   background: transparent; /* Chrome/Safari/Webkit */
   width: 0;
   height: 0;
 }
 
-tr {
-  display: flex;
-  height: 98vh;
-}
-
-td {
+#left,
+#right {
   display: flex;
   flex-flow: column;
   vertical-align: top;
   overflow-x: hidden;
   overflow-y: scroll;
   padding: 1.5em 0em 1.5em 1em;
+  height: 97%;
 }
 
 #left {
-  flex: 1;
+  flex: 1 1 30ch;
   padding: none;
 }
 
 #right {
-  flex: 1.25;
+  flex: 1.25 1.25 50ch;
 }
 
 .header p {
@@ -114,6 +117,7 @@ td {
   line-height: 25px;
   max-width: 110px;
   font-weight: 900;
+  margin-bottom: 0.5em;
 }
 
 a {
