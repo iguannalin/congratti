@@ -33,6 +33,8 @@ body {
   font-style: normal;
   font-variation-settings: "wdth" 100;
   counter-reset: section;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .container {
