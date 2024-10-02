@@ -102,6 +102,7 @@ window.addEventListener("load", () => {
     if (document.getElementById(selected)) {
       let subelem = document.getElementById(selected);
       location.hash = selected;
+      select.value = selected;
       switchView(subelem, true);
     }
   }
