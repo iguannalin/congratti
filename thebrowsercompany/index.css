@@ -1,0 +1,101 @@
+/* @import url(small.css) (min-width:0px);
+@import url(large.css) (min-width:900px); */
+
+:root {
+  --main-bg-color: rgb(7, 19, 251);
+  --main-text-color: #f7fb11de;
+  --shadow-color: #f10000;
+  --color-1: #003f5c;
+  --color-2: #374c80;
+  --color-3: #7a5195;
+  --color-4: #bc5090;
+  --color-5: #ef5675;
+  --color-6: #ff764a;
+  --color-7: #ffa600;
+}
+
+html {
+  display: block;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  text-shadow: var(--shadow-color) -2px 2px 8px;
+  font-family: "Noto Sans Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  counter-reset: section;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1200px;
+}
+
+.container-image {
+  display: block;
+  width: 300px;
+  height: 300px;
+  background: var(--shadow-color);
+  opacity: 1;
+  transition: all ease-in-out 0.2s;
+  top: calc(50% - 150px);
+  left: 10%;
+  position: fixed;
+}
+
+.column {
+  display: flex;
+  position: relative;
+  padding: 12px;
+  max-width: 75ch;
+}
+
+.column:nth-child(1) {
+  flex: 1;
+}
+
+.column:nth-child(2) {
+  flex: 3;
+}
+
+table th {
+  text-align: left;
+  color: white;
+}
+
+table td {
+  color: var(--main-text-color);
+  font-weight: 300;
+  padding: 2px 4px;
+}
+
+table td::before {
+  counter-increment: section;
+  content: counter(section) ". ";
+}
+
+table th.header-1 {
+  background-color: var(--color-1);
+}
+table th.header-2 {
+  background-color: var(--color-2);
+}
+table th.header-3 {
+  background-color: var(--color-3);
+}
+table th.header-4 {
+  background-color: var(--color-5);
+}
+table th.header-5 {
+  background-color: var(--color-7);
+}
