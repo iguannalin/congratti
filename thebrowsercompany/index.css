@@ -55,6 +55,27 @@ body {
   position: fixed;
 }
 
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column;
+}
+
+.name {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 32px;
+  line-height: 25px;
+  max-width: 110px;
+  font-weight: 900;
+  margin-bottom: 0.5em;
+}
+
+.name a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .column {
   display: flex;
   position: relative;

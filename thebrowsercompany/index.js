@@ -13,9 +13,9 @@ window.addEventListener("load", () => {
 
   const tBody = document.querySelector("tbody");
   function displayContent(elements) {
-    elements.forEach((elem) => {
+    elements.forEach((elem, i) => {
       const h2 = document.createElement("h2");
-      h2.style.backgroundColor = `var(--color-${getRandomInt(1, 8)})`;
+      h2.style.backgroundColor = `var(--color-${7-i})`;
       h2.innerText = elem.summary;
       tBody.appendChild(h2);
       elem.details.forEach((detail) => {
