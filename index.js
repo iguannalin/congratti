@@ -171,10 +171,20 @@ window.addEventListener("load", () => {
     }
     e.preventDefault();
     document.body.style.overflow = "hidden";
-    const dot = document.createElement("dot");
+
+    const dots = Array.from(document.getElementsByTagName("dot"));
+    let dot;
+    if (dots.length < dotMax) {
+      dot = document.createElement("dot");
+      dot.innerText = '.';
+      document.body.appendChild(dot);
+    } else {
+      dot = dots[dotIndex];
+      dotIndex++;
+    }
+    if (dotIndex >= dotMax) dotIndex = 0;
     dot.style.left = `${e.targetTouches[0].pageX}px`;
     dot.style.top = `${e.targetTouches[0].pageY}px`;
-    dot.innerText = '.';
     document.body.appendChild(dot);
   });
 
