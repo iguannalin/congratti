@@ -1,6 +1,6 @@
 /* @media screen and url(small.css) (min-width:0px);
 @media screen and url(large.css) (min-width:900px); */
-@import url("https://fonts.googleapis.com/css2?family=Jomolhari&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
 
 :root {
   --main-bg-color: #f9faffde;
@@ -20,7 +20,7 @@ html {
 
 @media print {
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
   a {
     text-decoration: none;
@@ -34,25 +34,33 @@ html {
 
 @media screen and (min-width: 0px) {
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
-  td * {
-    max-width: 70ch;
+  .table {
+    overflow-y: scroll;
+  }
+  #left,
+  #right {
+    height: auto;
   }
 }
 
 @media screen and (min-width: 900px) {
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
-  td * {
-    max-width: 60ch;
+  .table {
+    overflow-y: hidden;
+  }
+  #left,
+  #right {
+    height: 97%;
   }
 }
 
 body {
   margin: 0.5rem 1rem;
-  font-family: "Jomolhari", "Times New Roman", serif;
+  font-family: "Times New Roman", serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,16 +70,27 @@ body {
   text-transform: lowercase;
 }
 
-table {
-  max-width: 1250px;
-}
-
-tr {
+.table {
+  max-width: 900px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row wrap;
   height: 98vh;
 }
 
-td {
+.table::-webkit-scrollbar,
+.table div::-webkit-scrollbar {
+  display: none;
+  background: transparent; /* Chrome/Safari/Webkit */
+  width: 0;
+  height: 0;
+}
+
+#left,
+#right {
   display: flex;
   flex-flow: column;
   vertical-align: top;
@@ -81,17 +100,15 @@ td {
 }
 
 #left {
-  flex: 1;
-  padding: none;
+  flex: 1 1 30ch;
 }
 
 #right {
-  flex: 1.25;
+  flex: 1.25 1.25 50ch;
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0em 0 0.25em;
+.description {
+  padding: 6px 0;
 }
 
 .header p {
@@ -106,8 +123,10 @@ h1 {
 
 .name {
   font-size: 32px;
-  line-height: 26px;
+  line-height: 25px;
   max-width: 110px;
+  font-weight: 900;
+  margin-bottom: 0.5em;
 }
 
 a {
@@ -119,6 +138,22 @@ a:hover {
   font-style: normal;
   color: #9fff2f;
   background-color: #4a4a4a3f;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  line-height: 1.1em;
+  font-family: "Nanum Myeongjo", "Times New Roman", serif;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0em 0 0.25em;
 }
 
 h2 {
@@ -135,7 +170,6 @@ h3 {
 h4 {
   font-size: 1em;
   margin: 1em 0 0.25em;
-  text-shadow: #00000087 0px 0px 0.1px;
   text-transform: initial;
 }
 
@@ -159,5 +193,5 @@ p.indent {
 }
 
 p.indent::before {
-  content: "✦ ";
+  content: "✴︎ ";
 }
