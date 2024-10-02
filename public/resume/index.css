@@ -36,8 +36,12 @@ html {
   body {
     font-size: 16px;
   }
-  td * {
-    max-width: 70ch;
+  .table {
+    overflow-y: scroll;
+  }
+  #left,
+  #right {
+    height: auto;
   }
 }
 
@@ -45,8 +49,12 @@ html {
   body {
     font-size: 18px;
   }
-  td * {
-    max-width: 60ch;
+  .table {
+    overflow-y: hidden;
+  }
+  #left,
+  #right {
+    height: 97%;
   }
 }
 
@@ -63,8 +71,7 @@ body {
 }
 
 .table {
-  max-width: 800px;
-  overflow-y: hidden;
+  max-width: 900px;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   display: flex;
@@ -90,16 +97,18 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   padding: 1.5em 0em 1.5em 1em;
-  height: 97%;
 }
 
 #left {
   flex: 1 1 30ch;
-  padding: none;
 }
 
 #right {
   flex: 1.25 1.25 50ch;
+}
+
+.description {
+  padding: 6px 0;
 }
 
 .header p {
