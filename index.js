@@ -142,10 +142,6 @@ window.addEventListener("load", () => {
   select.onchange = (e) => onSelect(e);
   oopsies.onclick = (ev) => oops(ev);
 
-  document.getElementById("home").onclick = () => {
-    switchView(center, false);
-  };
-
   radioButtons.forEach((button) => {
     button.addEventListener("click", switchFilmView);
   });
