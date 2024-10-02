@@ -17,10 +17,12 @@ window.addEventListener("load", () => {
     elements.forEach((elem) => {
       const h2 = document.createElement("h2");
       h2.innerText = elem.summary;
-      const p = document.createElement("p");
-      p.innerText = elem.details;
       tBody.appendChild(h2);
-      tBody.appendChild(p);
+      elem.details.forEach((detail) => {
+        const p = document.createElement("p");
+        p.innerText = detail;
+        tBody.appendChild(p);
+      });
     });
   }
   fetch("index.json").then((r) => r.json()).then((content) => {
