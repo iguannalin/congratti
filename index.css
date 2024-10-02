@@ -71,7 +71,7 @@ h6 {
 }
 
 #container::-webkit-scrollbar {
-  /* WebKit */
+  background: transparent; /* Chrome/Safari/Webkit */
   width: 0;
   height: 0;
 }
