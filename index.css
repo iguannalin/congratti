@@ -10,8 +10,6 @@
   --default-font: 16px;
   --default-line-height: 24px;
   --default-wallpaper: url(public/wallpaper.png);
-  --default-clip-path: circle(44% at 49% 56%);
-  --default-wallpaper-width: 100%;
   --default-dot: green;
   --default-link: rgb(0, 0, 255);
 }
@@ -30,9 +28,6 @@
   }
   #wallpaper {
     --default-wallpaper: url(public/wallpaper_dark.png);
-    --default-clip-path: circle(40% at 48% 64%);
-    --default-wallpaper-width: 85% !important;
-    margin-top: -25%;
   }
 }
 
@@ -127,12 +122,9 @@ h6 {
 
 #wallpaper {
   content: var(--default-wallpaper);
-  margin-top: min(-110px, -25%);
-  margin-left: 4.5%;
-  clip-path: var(--default-clip-path);
-  width: var(--default-wallpaper-width);
   object-fit: cover;
-  max-width: 700px;
+  max-width: 550px;
+  width: 77%;
 }
 
 span {
