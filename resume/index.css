@@ -47,7 +47,7 @@ html {
 
 @media screen and (min-width: 900px) {
   body {
-    font-size: 18px;
+    font-size: 14px;
   }
   .table {
     overflow-y: hidden;
@@ -67,7 +67,7 @@ body {
   flex-flow: column;
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
 }
 
 .table {
@@ -100,7 +100,7 @@ body {
 }
 
 #left {
-  flex: 1 1 30ch;
+  flex: 1 1 40ch;
 }
 
 #right {
