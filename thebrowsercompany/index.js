@@ -4,28 +4,38 @@ window.addEventListener("load", () => {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
-  const imageContainer = document.querySelector(".container-image");
-  let delta = -1;
-  setInterval(() => {
-    if (+(imageContainer.style.opacity) == 1 || +(imageContainer.style.opacity) == 0) delta *= -1;
-    imageContainer.style.opacity = +(imageContainer.style.opacity) + (delta * 0.05);
-  }, 200);
 
-  const tBody = document.querySelector("tbody");
-  function displayContent(elements) {
-    elements.forEach((elem, i) => {
-      const h2 = document.createElement("h2");
-      h2.style.backgroundColor = `var(--color-${7-i})`;
-      h2.innerText = elem.summary;
-      tBody.appendChild(h2);
-      elem.details.forEach((detail) => {
-        const p = document.createElement("p");
-        p.innerText = detail;
-        tBody.appendChild(p);
-      });
-    });
-  }
-  fetch("index.json").then((r) => r.json()).then((content) => {
-    displayContent(content);
+  let infos = [];
+  let begin = document.getElementById("begin");
+
+  fetch("index.json").then((r)=>r.json()).then((d) => {
+    infos = Array.from(d);
+    begin.innerHTML = "begin here";
+    begin.addEventListener('click', start, {passive: false});
   });
+
+  function start(e) {
+    e.preventDefault();
+    for (let i = 0; i < infos.length; i++) {
+      setTimeout(()=>{createWindow(i);}, (i+1) * 2000);
+      // setTimeout(()=>{createWindow(i);}, (i+1) * 500);
+    }
+  }
+
+  function createWindow(index) {
+    let WW = 480; //getRandomInt(200,500);
+    let HH = 240; //getRandomInt(200,500);
+    let color = "white";
+    const info = infos[index];
+    if (info.includes("img")) {
+      HH = 480;
+      color = "rgb(35, 35, 35)";
+    } else {
+      const text = `<!DOCTYPE html><html><head> <title>HCI</title> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="http://127.0.0.1:8000/index.css"/></head><body><div id="container" data-info=${btoa(info)}></div></body><script>let container = document.getElementById('container'); if (container.dataset.info) container.innerHTML = atob(container.dataset.info); document.body.style.backgroundColor = '${color}';</script></html>`;
+      const blob = new Blob([text], {type: "text/html"});
+      const blobUrl = URL.createObjectURL(blob);
+      window.open(blobUrl, '_blank', `location=0,menubar=0,status=0,scrollbars=0,toolbar=0,resizable=0,popup,width=${WW},height=${HH},left=${getRandomInt(200,screen.width-200)},top=${getRandomInt(200,screen.height-200)}`);
+      window.URL.revokeObjectURL(blobUrl);
+    }
+  }
 });
