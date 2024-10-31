@@ -1,28 +1,38 @@
 [
   {
-    "title": "infrastructures",
-    "text": "The Arc browser has transformed the way I browse the web, and organize my endless open tabs in the form of notes, folders, spaces. It has also transformed the way I think about personalized technology--there is a lot of room to challenge the traditional software paradigms, and experiment with alternate infrastructures.",
+    "title": "Hello world",
+    "text": "I'm anna y lin (林 she/her), a cantonese-american frontend and fullstack engineer, focused on accessibility, user experience, and challenging existing paradigms within web standards.",
     "image": ""
   },
   {
-    "title": "Program",
+    "title": "infrastructures",
+    "text": "The Arc browser has transformed the way I browse the web, and organize my endless open tabs in the form of notes, folders, spaces. It has also influenced the way I think about personalized technology--there is a lot of room to challenge the traditional software paradigms, and experiment with alternate infrastructures.",
+    "image": ""
+  },
+  {
+    "title": "BCNY",
     "text": "I believe my unique background in psychology, user experience / frontend software design engineering, and masters in creative technology will be a valuable asset for the BCNY Product Engineering Fellowship Program.",
     "image": ""
   },
   {
     "title": "implementation",
-    "text": "I am passionate about the intersection of research and technological implementation.",
+    "text": "I am passionate about the intersection of research, user experience, and technological implementation.",
     "image": ""
   },
   {
-    "title": "NYU",
+    "title": "creative technology",
     "text": "As an undergraduate studying psychology, I participated and conducted research experiments, and taught a class on psychological research methods as a teaching assistant. However, my interest in coding led me to pursue computer science. Though I graduated with a degree in psychology, I taught myself code and began working full-time as a frontend software engineer after college. After 4 years, my desire to explore more creative implementations of technology led me to pursue a masters degree in creative technology at NYU.",
     "image": ""
   },
   {
-    "title": "requests",
+    "title": "teams",
     "text": "Generally, my past work has involved working with teams, ranging from small to large, to provide access to data to a greater group of people. I have worked in all stages of development–from design, to building accessible prototypes to be used in user research, to production-ready software, as well as maintaining the codebase and pull requests.",
     "image": ""
+  },
+  {
+    "title": "projects",
+    "text": "Besides software, I've also worked on hardware and other more corporeal projects",
+    "image": "<img src=''/>"
   },
   {
     "title": "resume",
@@ -30,18 +40,18 @@
     "image": ""
   },
   {
-    "title": "touch",
-    "text": "Thank you, and I look forward to staying in touch.",
+    "title": "!",
+    "text": "Thank you, and I look forward to staying in touch. \n - anna",
     "image": ""
   },
   {
-    "title": "lin",
-    "text": "anna y lin",
+    "title": "website",
+    "text": "website: annaylin.com \n email: anna@annaylin.com",
     "image": ""
   },
   {
-    "title": "com",
-    "text": "annaylin.com | anna@annaylin.com",
+    "title": "information",
+    "text": "this site was built with custom ShadowDOM Web Components",
     "image": ""
   }
 ]
