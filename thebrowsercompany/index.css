@@ -141,3 +141,7 @@ browser-window {
     color: var(--color-7);
     font-weight: 400;
 }
+
+.window .body-image img {
+    max-width: 100%;
+}

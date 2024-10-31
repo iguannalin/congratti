@@ -31,8 +31,8 @@
   },
   {
     "title": "projects",
-    "text": "Besides software, I've also worked on hardware and other more corporeal projects",
-    "image": "<img src=''/>"
+    "text": "Besides software, I've also worked on hardware and other more <a href='https://annaylin.com/#ai'>corporeal projects</a>.",
+    "image": "<img src='https://annaylin.com/public/ai-loves-horror.png'/>"
   },
   {
     "title": "resume",

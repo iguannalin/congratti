@@ -50,12 +50,12 @@ window.addEventListener("load", () => {
       document.body.appendChild(browserWindow);
       ["title", "text", "image"].forEach((attr) => {
         if (node[attr])
-          browserWindow.shadowRoot.querySelector(`[name="browser-${attr}"]`).innerText = node[attr];
+          browserWindow.shadowRoot.querySelector(`[name="browser-${attr}"]`).innerHTML = node[attr];
       });
       browserWindow.shadowRoot.querySelector(".window").classList.add((index % 2 === 0) ? "even" : "odd");
       browserWindow.style.top = `${top + 100}px`;
       browserWindow.style.left = `${left + 100}px`;
-      browserWindow.style.zIndex = `${-index}`;
+      browserWindow.style.zIndex = index;
 
       const emojiWindow = document.createElement("browser-window");
       document.body.appendChild(emojiWindow);
@@ -64,7 +64,7 @@ window.addEventListener("load", () => {
       emojiWindow.style.top = `${top}px`;
       emojiWindow.style.left = `${left}px`;
       emojiWindow.style.visibility = "visible";
-      emojiWindow.style.zIndex = `${-index}`;
+      emojiWindow.style.zIndex = index;
       emojiWindow.addEventListener("click", (e) => {
         browserWindow.style.visibility = "visible";
         emojiWindow.style.display = "none";
