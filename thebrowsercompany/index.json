@@ -1,11 +1,47 @@
 [
-      "<p>The Arc browser has transformed the way I browse the web, and organize my endless open tabs in the form of notes, folders, spaces. It has also transformed the way I think about personalized technology--there is a lot of room to challenge the traditional software paradigms, and experiment with alternate infrastructures</p>.",
-      "<p>I believe my unique background in psychology, user experience / frontend software design engineering, and masters in creative technology will be a valuable asset for the BCNY Product Engineering Fellowship Program.</p>",
-      "<p>I am passionate about the intersection of research and technological implementation.</p>",
-      "<p>As an undergraduate studying psychology, I participated and conducted research experiments, and taught a class on psychological research methods as a teaching assistant. However, my interest in coding led me to pursue computer science. Though I graduated with a degree in psychology, I taught myself code and began working full-time as a frontend software engineer after college. After 4 years, my desire to explore more creative implementations of technology led me to pursue a masters degree in creative technology at NYU.</p>",
-      "<p>Generally, my past work has involved working with teams, ranging from small to large, to provide access to data to a greater group of people. I have worked in all stages of development–from design, to building accessible prototypes to be used in user research, to production-ready software, as well as maintaining the codebase and pull requests.</p>",
-      "<p>You can find more information on my resume at: annaylin.com/resume.</p>",
-      "<p>Thank you, and I look forward to staying in touch.</p>",
-      "<p>anna y lin</p>",
-      "<p>annaylin.com | anna@annaylin.com</p>"
+  {
+    "title": "infrastructures",
+    "text": "The Arc browser has transformed the way I browse the web, and organize my endless open tabs in the form of notes, folders, spaces. It has also transformed the way I think about personalized technology--there is a lot of room to challenge the traditional software paradigms, and experiment with alternate infrastructures.",
+    "image": ""
+  },
+  {
+    "title": "Program",
+    "text": "I believe my unique background in psychology, user experience / frontend software design engineering, and masters in creative technology will be a valuable asset for the BCNY Product Engineering Fellowship Program.",
+    "image": ""
+  },
+  {
+    "title": "implementation",
+    "text": "I am passionate about the intersection of research and technological implementation.",
+    "image": ""
+  },
+  {
+    "title": "NYU",
+    "text": "As an undergraduate studying psychology, I participated and conducted research experiments, and taught a class on psychological research methods as a teaching assistant. However, my interest in coding led me to pursue computer science. Though I graduated with a degree in psychology, I taught myself code and began working full-time as a frontend software engineer after college. After 4 years, my desire to explore more creative implementations of technology led me to pursue a masters degree in creative technology at NYU.",
+    "image": ""
+  },
+  {
+    "title": "requests",
+    "text": "Generally, my past work has involved working with teams, ranging from small to large, to provide access to data to a greater group of people. I have worked in all stages of development–from design, to building accessible prototypes to be used in user research, to production-ready software, as well as maintaining the codebase and pull requests.",
+    "image": ""
+  },
+  {
+    "title": "resume",
+    "text": "You can find more information on my resume at: annaylin.com/resume.",
+    "image": ""
+  },
+  {
+    "title": "touch",
+    "text": "Thank you, and I look forward to staying in touch.",
+    "image": ""
+  },
+  {
+    "title": "lin",
+    "text": "anna y lin",
+    "image": ""
+  },
+  {
+    "title": "com",
+    "text": "annaylin.com | anna@annaylin.com",
+    "image": ""
+  }
 ]

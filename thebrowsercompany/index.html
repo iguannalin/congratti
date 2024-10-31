@@ -7,29 +7,37 @@
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💾</text></svg>"
     rel="icon">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="index.css" />
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="index.css" rel="stylesheet"/>
   <script src="index.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap"
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 </head>
-
 <body>
-  <div class="header">
-    <h1 class="name"><a href="https://annaylin.com">anna y lin</a></h1>
-    <h2>Product Engineering Fellowship Program (2025) Application</h2>
-  </div>
-  <div class="container">
-    <div class="column">
-      <div class="container-image">
+<div class="header">
+  <h1 class="name"><a href="https://annaylin.com">anna y lin</a></h1>
+  <h2>Product Engineering Fellowship Program (2025) Application</h2>
+</div>
+<div class="container">
+  <template id="browser-template">
+    <div>
+      <div>
+        <h2>
+          <slot name="browser-title">hello world!</slot>
+        </h2>
+      </div>
+      <div>
+        <slot name="browser-text"></slot>
+      </div>
+      <div>
+        <slot name="browser-image"></slot>
       </div>
     </div>
-    <div class="column">
-      <div id="begin"></div>
-    </div>
-  </div>
+  </template>
+</div>
 </body>
 
 </html>

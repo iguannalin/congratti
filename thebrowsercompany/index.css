@@ -2,123 +2,73 @@
 @import url(large.css) (min-width:900px); */
 
 :root {
-  --main-bg-color: rgb(7, 19, 251);
-  --main-text-color: #f7fb11de;
-  --shadow-color: #f10000;
-  --color-1: #003f5c;
-  --color-2: #374c80;
-  --color-3: #7a5195;
-  --color-4: #bc5090;
-  --color-5: #ef5675;
-  --color-6: #ff764a;
-  --color-7: #ffa600;
+    --main-bg-color: rgb(7, 19, 251);
+    --main-text-color: #f7fb11de;
+    --shadow-color: #f10000;
+    --color-1: #003f5c;
+    --color-2: #374c80;
+    --color-3: #7a5195;
+    --color-4: #bc5090;
+    --color-5: #ef5675;
+    --color-6: #ff764a;
+    --color-7: #ffa600;
+    --font-size: 12px;
 }
 
 html {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
-  text-shadow: var(--shadow-color) -2px 2px 8px;
-  font-family: "Noto Sans Display", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-  counter-reset: section;
-  font-size: 18px;
-  font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    text-shadow: var(--shadow-color) -2px 2px 8px;
+    font-family: "Noto Sans Display", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    counter-reset: section;
+    font-size: var(--font-size);
+    font-weight: 300;
 }
 
 .container {
-  display: flex;
-  flex-flow: row wrap;
-  max-width: 1200px;
-}
-
-.container-image {
-  display: block;
-  width: 300px;
-  height: 300px;
-  background: var(--shadow-color);
-  opacity: 1;
-  transition: all ease-in-out 0.2s;
-  top: calc(50% - 150px);
-  left: 10%;
-  position: fixed;
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1200px;
 }
 
 .header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-flow: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column;
 }
 
 .name {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 32px;
-  line-height: 25px;
-  max-width: 110px;
-  font-weight: 900;
-  margin-bottom: 0.5em;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 32px;
+    line-height: 25px;
+    max-width: 110px;
+    font-weight: 900;
+    margin-bottom: 0.5em;
 }
 
 .name a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
-.column {
-  display: flex;
-  position: relative;
-  padding: 12px;
-  max-width: 75ch;
-}
-
-.column:nth-child(1) {
-  flex: 1;
-}
-
-.column:nth-child(2) {
-  flex: 3;
-}
-
-table th {
-  text-align: left;
-  color: white;
-}
-
-table td {
-  color: var(--main-text-color);
-  font-weight: 300;
-  padding: 2px 4px;
-}
-
-table td::before {
-  counter-increment: section;
-  content: counter(section) ". ";
-}
-
-table th.header-1 {
-  background-color: var(--color-1);
-}
-table th.header-2 {
-  background-color: var(--color-2);
-}
-table th.header-3 {
-  background-color: var(--color-3);
-}
-table th.header-4 {
-  background-color: var(--color-5);
-}
-table th.header-5 {
-  background-color: var(--color-7);
+browser-window {
+    display: flex;
+    position: absolute;
+    background-color: var(--shadow-color);
+    font-size: var(--font-size);
+    margin: 1em;
+  
 }

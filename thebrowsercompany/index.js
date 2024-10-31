@@ -1,41 +1,49 @@
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+}
+
 window.addEventListener("load", () => {
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
-  }
 
-  let infos = [];
-  let begin = document.getElementById("begin");
-
-  fetch("index.json").then((r)=>r.json()).then((d) => {
-    infos = Array.from(d);
-    begin.innerHTML = "begin here";
-    begin.addEventListener('click', start, {passive: false});
+  fetch("index.json").then((r) => r.json()).then((d) => {
+    displayText(Array.from(d));
   });
 
-  function start(e) {
-    e.preventDefault();
-    for (let i = 0; i < infos.length; i++) {
-      setTimeout(()=>{createWindow(i);}, (i+1) * 2000);
-      // setTimeout(()=>{createWindow(i);}, (i+1) * 500);
-    }
-  }
-
-  function createWindow(index) {
-    let WW = 480; //getRandomInt(200,500);
-    let HH = 240; //getRandomInt(200,500);
-    let color = "white";
-    const info = infos[index];
-    if (info.includes("img")) {
-      HH = 480;
-      color = "rgb(35, 35, 35)";
-    } else {
-      const text = `<!DOCTYPE html><html><head> <title>HCI</title> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="http://127.0.0.1:8000/index.css"/></head><body><div id="container" data-info=${btoa(info)}></div></body><script>let container = document.getElementById('container'); if (container.dataset.info) container.innerHTML = atob(container.dataset.info); document.body.style.backgroundColor = '${color}';</script></html>`;
-      const blob = new Blob([text], {type: "text/html"});
-      const blobUrl = URL.createObjectURL(blob);
-      window.open(blobUrl, '_blank', `location=0,menubar=0,status=0,scrollbars=0,toolbar=0,resizable=0,popup,width=${WW},height=${HH},left=${getRandomInt(200,screen.width-200)},top=${getRandomInt(200,screen.height-200)}`);
-      window.URL.revokeObjectURL(blobUrl);
-    }
+  function displayText(texts) {
+    let order = texts.length;
+    const offset = 150;
+    texts.forEach((node, index) => {
+      const browserWindow = document.createElement("browser-window");
+      document.body.appendChild(browserWindow);
+      ["title", "text", "image"].forEach((attr) => {
+        if (node[attr])
+          browserWindow.shadowRoot.querySelector(`[name="browser-${attr}"]`).innerText = node[attr];
+      });
+      browserWindow.style.top = `${+getRandomInt(index * offset, window.innerHeight + index * offset)}px`;
+      browserWindow.style.left = `${+getRandomInt(-offset, window.innerWidth - offset)}px`;
+      browserWindow.style.zIndex = index;
+      browserWindow.addEventListener("click", (e) => {
+        browserWindow.style.zIndex = `${order += 1}`;
+      })
+    });
   }
 });
+
+customElements.define('browser-window',
+  class extends HTMLElement {
+    constructor() {
+      super();
+
+      const template = document.getElementById('browser-template');
+      const templateContent = template.content;
+
+      const shadowRoot = this.attachShadow({mode: 'open'});
+
+      const style = document.createElement('style');
+      style.src = "index.css";
+
+      shadowRoot.appendChild(style);
+      shadowRoot.appendChild(templateContent.cloneNode(true));
+    }
+  });
