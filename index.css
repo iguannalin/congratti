@@ -142,6 +142,7 @@ span > span {
 span > span > img {
   width: 100%;
   object-fit: cover;
+  min-width: 300px
 }
 
 span > p {
