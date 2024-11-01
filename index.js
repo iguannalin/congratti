@@ -12,11 +12,12 @@ window.addEventListener("load", () => {
   let previousElement = center;
   let previousElementSub = greeting;
 
-  const physicalProjects = ["handhold mouse", "eeg cloud", "ai loves horror", "text me smth nice"];
+  const physicalProjects = ["soft networks", "handhold mouse", "eeg cloud", "ai loves horror", "text me smth nice"];
   const analogProjects = ["tableware", "filmotography", "reveries"]; // "generative riso poster"
 
   const titles = ["yosemite", "alaska", "eastcoast", "tableware", "reveries"];
-  function switchFilmView(e = { target: { title: "" } }) {
+
+  function switchFilmView(e = {target: {title: ""}}) {
     let switches = [1, 0, 0, 0, 0];
     switch (e.target.title) {
       case "tableware":
@@ -41,7 +42,7 @@ window.addEventListener("load", () => {
     switches.forEach((on, index) => {
       if (on) document.getElementById(titles[index]).style.display = "flex";
       else document.getElementById(titles[index]).style.display = "none";
-      if (index < 3) radioButtons[index].selected = on == 1;
+      if (index < 3) radioButtons[index].selected = on === 1;
     })
   }
 
@@ -69,11 +70,11 @@ window.addEventListener("load", () => {
       currentElement.style.display = "block";
       previousElement = currentElement;
     }
-    greeting.style.display = currentElement == center ? "flex" : "none";
-    if (currentElement.id == "filmotography") switchFilmView({ target: { title: "yosemite" } });
-    if (currentElement.id == "tableware") switchFilmView({ target: { title: "tableware" } });
-    if (currentElement.id == "reveries") switchFilmView({ target: { title: "reveries" } });
-    if (currentElement == center) select.value = "center";
+    greeting.style.display = currentElement === center ? "flex" : "none";
+    if (currentElement.id === "filmotography") switchFilmView({target: {title: "yosemite"}});
+    if (currentElement.id === "tableware") switchFilmView({target: {title: "tableware"}});
+    if (currentElement.id === "reveries") switchFilmView({target: {title: "reveries"}});
+    if (currentElement === center) select.value = "center";
   }
 
   function loadProjects(projects, label) {
@@ -100,10 +101,10 @@ window.addEventListener("load", () => {
   function onSelectProject(e) {
     const selected = e.target.innerText.split(" ")[0];
     if (document.getElementById(selected)) {
-      let subelem = document.getElementById(selected);
+      let subelement = document.getElementById(selected);
       location.hash = selected;
       select.value = selected;
-      switchView(subelem, true);
+      switchView(subelement, true);
     }
   }
 
@@ -141,7 +142,7 @@ window.addEventListener("load", () => {
   loadProjects([], "digital");
 
   select.onchange = (e) => onSelect(e);
-  oopsies.onclick = (ev) => oops(ev);
+  oopsies.onclick = oops;
 
   radioButtons.forEach((button) => {
     button.addEventListener("click", switchFilmView);
@@ -166,7 +167,7 @@ window.addEventListener("load", () => {
   });
 
   document.body.addEventListener("touchmove", (e) => {
-    if (getComputedStyle(center).display == "none") {
+    if (getComputedStyle(center).display === "none") {
       document.body.style.overflow = "visible";
       return;
     }
@@ -189,5 +190,5 @@ window.addEventListener("load", () => {
     document.body.appendChild(dot);
   });
 
-  if (location.hash) onSelectProject({ target: { innerText: location.hash.split("#")[1] } });
+  if (location.hash) onSelectProject({target: {innerText: location.hash.split("#")[1]}});
 });
