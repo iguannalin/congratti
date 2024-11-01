@@ -82,7 +82,7 @@ a:hover,
 #reveries {
   height: 50%;
   margin-top: 30%;
-  width: 1000px;
+  width: max(60vw, 900px);
 }
 
 #yosemite div,

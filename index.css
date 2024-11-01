@@ -26,6 +26,7 @@
     --default-border: rgb(0, 0, 255);
     --default-link: #d5ffbd;
   }
+
   #wallpaper {
     --default-wallpaper: url(public/wallpaper_dark.png);
   }
@@ -91,7 +92,7 @@ h6 {
 
 #center > div:not(#greeting) {
   display: none;
-  max-width: 75ch;
+  max-width: min(100%, 60vw);
 }
 
 #left,
@@ -179,10 +180,12 @@ a:active {
 .film-button:nth-child(1):hover {
   accent-color: tan;
 }
+
 .film-button:nth-child(2),
 .film-button:nth-child(2):hover {
   accent-color: deepskyblue;
 }
+
 .film-button:nth-child(3),
 .film-button:nth-child(3):hover {
   accent-color: palegreen;
