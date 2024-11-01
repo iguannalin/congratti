@@ -34,14 +34,14 @@
 
 <body>
   <div class="theme" id="container">
-    <div id="main" role="main">
+    <main id="main">
       <div id="top">
         <h1 class="name"><a href="https://annaylin.com">anna y lin</a></h1>
         <label for="select">select the page you would like to visit:</label>
         <select id="select">
-          <optgroup>
+          <optgroup label="select">
             <option selected value="center" id="d">
-              <script>for (i = 0; i < Math.max(7, d.parentElement.parentElement.clientWidth / 40); i++)d.innerHTML += `"~._.~`</script>
+              <script>for (let i = 0; i < Math.max(7, d.parentElement.parentElement.clientWidth / 40); i++) d.innerHTML += `"~._.~`</script>
             </option>
             <option>about</option>
             <option>projects</option>
@@ -61,10 +61,7 @@
           <tbody id="projects-table">
             <tr>
               <td>✴︎ <a title="external link to resume" target="_blank"
-                  href="https://annaylin.com/resume/">resume</a></td>
-            </tr>
-            <tr>
-              <td>✴︎ <a title="external link to private work portfolio" target="_blank"
+                  href="https://annaylin.com/resume/">resume</a>, <a title="external link to private work portfolio" target="_blank"
                   href="https://annaylin.com/portfolio/">portfolio</a></td>
             </tr>
           </tbody>
@@ -91,7 +88,7 @@
             </tr>
             <tr>
               <td>
-                <h3>workshop</h2>
+                <h3>workshop</h3>
               </td>
             </tr>
             <tr>
@@ -105,6 +102,7 @@
         </table>
         <div style="line-height: 16px;">
           <h4>about this website</h4>
+          <p>hello, welcome to my website.</p>
           <p>the last time this website was completely changed was in 2018.</p>
           <p>websites are always a work in progress; this change has been overdue--my old website no
             longer reflected my thoughts as someone who continues to both work in, and have a love-hate
@@ -114,7 +112,7 @@
             future.</p>
           <p>i hope this new website is a better reflection of how i feel about websites now--they can be plain
             javascript + html, and they can be fun (!) because it leaves room for more important things--like
-            accessiblity, maintenance, and room to grow.</p>
+            accessibility, maintenance, and room to grow.</p>
           <p>my old website had ~406 MB of assets; this one has <a target="_blank"
               title="link to the github repo for this website"
               href="https://github.com/iguannalin/congratti/tree/main">~50 MB</a></p>
@@ -123,10 +121,13 @@
       </div>
       <div id="center">
         <div id="greeting">
-          <img id="wallpaper" />
+          <img id="wallpaper" alt="desktop wallpaper" />
         </div>
 
-        <!-- CODE -->
+        <!-- PHYSICAL -->
+        <div id="soft">
+
+        </div>
         <div id="handhold">
           <h2 title="the handhold mouse is the mouse you hold that holds you back"
             style="text-decoration:underline;cursor:help">handhold mouse</h2>
@@ -144,7 +145,7 @@
           <h3>How</h3>
           <p>This was a project created in collaboration with <a href="https://k--k.net/">Kat Kitay</a>.</p>
           <p>The model was a modified version of a <a href="https://www.turbosquid.com/3d-models/hands-3d-1961009">hand
-              model</a> that was 3D-printed, and <a alt="picture of hand being spray-painted"
+              model</a> that was 3D-printed, and <a title="picture of hand being spray-painted"
               href="public/handpaint.jpg">lovingly spray-painted</a>.
             The hardware was taken from an HP optical mouse, and fit into the back of the handhold mouse.</p>
           <h3>Conclusion</h3>
@@ -249,7 +250,7 @@
           <a href="https://www.notion.so/annaylin/text-me-smth-nice-40c991825d5845ae923595b89e436dde">Read more about it
             here.</a>
         </div>
-        <!-- PRINT -->
+        <!-- ANALOG -->
         <div id="tableware">
           <h2>
             tableware zine
@@ -269,7 +270,7 @@
           <div>
             <img loading="lazy" src="public/tableware4.png"
               alt="a round bowl holding balls of pink, and orange yarn, and crochet hooks"
-              title="topograpghy bowl - laser-cut plywood" />
+              title="topography bowl - laser-cut plywood" />
           </div>
           <div>
             <img loading="lazy" src="public/tableware5.png"
@@ -402,25 +403,25 @@
             <img loading="lazy" src="public/alaska/skater-buds.png" alt="Vertical shot of sunrise" />
           </div>
           <div style="background: #ffc2c4;">
-            <img loading="lazy" loading="lazy" src="public/alaska/mountain-evening.png"
+            <img loading="lazy" src="public/alaska/mountain-evening.png"
               alt="Near evening shot of a snowy mountainside in Alaska." />
           </div>
           <div style="background: #ff7827;">
-            <img loading="lazy" loading="lazy" src="public/alaska/little-friend.png"
+            <img loading="lazy" src="public/alaska/little-friend.png"
               title="Hiking a lot in the cold with this one."
               alt="Motion shot of a lady in hiker gear in the middle of an ice field." />
           </div>
           <div style="background: #ff7827;">
-            <img loading="lazy" loading="lazy" src="public/alaska/ice-field.png"
+            <img loading="lazy" src="public/alaska/ice-field.png"
               title="Stepping on these are not good for the soul."
               alt="Shot of partially-broken ice in a dry frozen river." />
           </div>
           <div style="background: #ffffff;">
-            <img loading="lazy" loading="lazy" src="public/alaska/shed-blue.png"
+            <img loading="lazy" src="public/alaska/shed-blue.png"
               alt="A big, baby blue shed on the side of the snowy road, with mountains in the background." />
           </div>
           <div style="background: #ffffff;">
-            <img loading="lazy" loading="lazy" src="public/alaska/shed-white.png"
+            <img loading="lazy" src="public/alaska/shed-white.png"
               title="Blurry shots of lonely sheds on the Alaskan road, from Fairbanks to Valdez."
               alt="A small white shed on the side of the snowy road, with mountains in the background." />
           </div>
@@ -555,8 +556,8 @@
                   href="https://www.are.na/anna-y-lin">are.na</a>
               </td>
             </tr>
-            <!-- TODO!! -->
-            <!-- <tr>
+            <!-- TODO!!
+            <tr>
               <td>
                 <p>here are the people who inspire me:</p>
                 <marquee></marquee>
@@ -565,7 +566,7 @@
           </tbody>
         </table>
       </div>
-    </div>
+    </main>
     <div id="background"></div>
   </div>
 </body>
