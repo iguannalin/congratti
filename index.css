@@ -92,7 +92,7 @@ h6 {
 
 #center > div:not(#greeting) {
   display: none;
-  max-width: min(100%, 60vw);
+  max-width: max(100%, 60vw);
 }
 
 #left,
