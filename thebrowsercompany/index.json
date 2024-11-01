@@ -1,5 +1,10 @@
 [
   {
+    "title": "How-to",
+    "text": "To use this website, hover or click on the icons for more details. Clicking on the icons will make them disappear.",
+    "image": ""
+  },
+  {
     "title": "Hello world",
     "text": "I'm anna y lin (林 she/her), a cantonese-american frontend and fullstack engineer, focused on accessibility, user experience, and challenging existing paradigms within web standards.",
     "image": ""
@@ -51,7 +56,7 @@
   },
   {
     "title": "information",
-    "text": "this site was built with custom ShadowDOM Web Components",
+    "text": "this site was built with <a href='https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM'>custom ShadowDOM Web Components</a>, and the <a href='https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html#the-color-scales'>viridis color palette</a>",
     "image": ""
   }
 ]
