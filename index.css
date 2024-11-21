@@ -10,7 +10,6 @@
   --default-font: 16px;
   --default-line-height: 24px;
   --default-wallpaper: url(public/wallpaper.png);
-  --default-dot: green;
   --default-link: rgb(0, 0, 255);
 }
 
@@ -29,6 +28,10 @@
 
   #wallpaper {
     --default-wallpaper: url(public/wallpaper_dark.png);
+  }
+
+  dot {
+    color: green;
   }
 }
 
@@ -252,6 +255,6 @@ a:active {
 }
 
 dot {
+  color: blue;
   position: absolute;
-  color: var(--default-dot);
 }
