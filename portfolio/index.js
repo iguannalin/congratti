@@ -76,7 +76,7 @@ window.addEventListener("load", () => {
     const selected = e.target.value;
     let elem;
     switch (selected) {
-      case "projects":
+      case "work":
         elem = left;
         break;
       case "about":
