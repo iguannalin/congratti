@@ -94,51 +94,178 @@
       </div>
 
       <div id="hjl">
-        <h2>TODO</h2>
+        <h2>Healing Justice Lineages</h2>
         <span class="thumbnail">
             <span>
-                <img alt="TODO" loading="lazy" src="TODO"/>
+                <img
+                  alt="Screenshot of the HJL homepage, the mouse hovering over a picture of Harriet Tubman to show a tooltip describing the image. In the background is a dark blue map of yellow lights across America, like constellations in the night sky."
+                  loading="lazy" src="assets/hjl.png"/>
             </span>
-            <em>TODO</em>
+            <em>The HJL homepage, with tooltips providing more context on the project.</em>
         </span>
+        <p>⇱ <a href="https://healingjusticelineages.com/"
+                target="_blank"
+                title="external link to the Healing Justice Lineages website">Healing
+          Justice Lineages website</a>
+        </p>
+        <p><em>PHP, WordPress, HTML, CSS, JavaScript</em></p>
+        <h3>What</h3>
+        <p>Healing Justice Lineages is an archival project of collective
+          care and safety strategies.</p>
         <h3>Why</h3>
-        <p>TODO</p>
+        <p>To continue the work of educating the community on these
+          strategies, HJL wanted to create a website for people to learn
+          more about the project.</p>
         <h3>How</h3>
-        <h3>Conclusion</h3>
-        <p>TODO</p>
-        <a href="TODO">Read more about it here.</a>
+        <p>The HJL website was redesigned with a custom WordPress theme
+          based on the project’s needs and design specifications, to
+          reflect the organization’s dedication to promote strategies
+          toward collective care. The project involved 4 months of work
+          until launch, with accessibility features such as the
+          low-fidelity color mode, an accessibility tagging system for
+          picture descriptions, as well as a temporary password-protected
+          mode.</p>
       </div>
 
       <div id="att&ck">
-        <h2>TODO</h2>
+        <h2>ATT&CK Navigator</h2>
+        <p>As a UX engineer at MITRE, I was responsible for the UX design
+          and development for four projects at different stages: ATT&CK,
+          CALDERA, and two other projects related to policymaking.
+
+          The ATT&CK Navigator and CALDERA are both public, open-source
+          cybersecurity projects that are used by cybersecurity researchers
+          and experts.
+        </p>
         <span class="thumbnail">
             <span>
-                <img alt="TODO" loading="lazy" src="TODO"/>
+                <img
+                  alt="Demo of the ATT&CK Navigator web interface."
+                  loading="lazy"
+                  src="assets/mitre-navigator-demo.gif"/>
             </span>
-            <em>TODO</em>
+            <em>A demo of the dark mode and search features on the ATT&CK Navigator.</em>
         </span>
+        <p>⇱ <a href="https://mitre-attack.github.io/attack-navigator/"
+                target="_blank"
+                title="external link to the MITRE ATT&CK Navigator">ATT&CK
+          Navigator</a>
+        </p>
+        <p><em>Angular, Node.js, TypeScript, HTML, CSS, JavaScript</em></p>
+        <h3>What</h3>
+        <p>The Navigator is one of MITRE's most active projects, enabled by
+          its widely-accessible platform. It visualizes an extensive
+          database of known cybersecurity threats and methods.
+
+          I was a good fit to work on this team because of my prior
+          experience and knowledge working with backend-heavy Angular apps.
+        </p>
         <h3>Why</h3>
-        <p>TODO</p>
+        <p>The ATT&CK Navigator is a large open-source project, with many
+          contributors and community supporters. There are constantly many
+          pull requests made on the repository to request a new feature, or
+          to fix a bug. As one of the UX engineers on the small team
+          maintaining the project, I was tasked with these pull
+          requests.</p>
         <h3>How</h3>
-        <h3>Conclusion</h3>
-        <p>TODO</p>
-        <a href="TODO">Read more about it here.</a>
+        <p>Two new features I worked on for the Navigator, which were both
+          popular requests from the community, were: 1) dark mode, and 2)
+          the search and multi-select interface.
+
+          The features were tricky in that they required storing cookies to
+          set the dark mode based on the user’s preference (falling back on
+          their device’s default mode by using CSS and JS if unset), as
+          well as updating the Angular app infrastructure to accommodate
+          these two new interface features.
+        </p>
       </div>
 
       <div id="caldera">
-        <h2>TODO</h2>
+        <h2>CALDERA</h2>
+        <p>As a UX engineer at MITRE, I was responsible for the UX design
+          and development for four projects at different stages: ATT&CK,
+          CALDERA, and two other projects related to policymaking.
+
+          The ATT&CK Navigator and CALDERA are both public, open-source
+          cybersecurity projects that are used by cybersecurity researchers
+          and experts.
+        </p>
         <span class="thumbnail">
             <span>
-                <img alt="TODO" loading="lazy" src="TODO"/>
+                <img
+                  alt="Screenshot of the operations page on the CALDERA interface."
+                  loading="lazy"
+                  src="assets/mitre-caldera-alpha-operations.png"/>
             </span>
-            <em>TODO</em>
+            <em>The redesigned CALDERA web app.</em>
         </span>
+        <p>⇱ <a href="https://github.com/mitre/caldera"
+                target="_blank"
+                title="external link to the CALDERA repository on GitHub">CALDERA</a>
+        </p>
+        <p><em>Python, HTML, CSS, JavaScript, Alpine.js</em></p>
+        <h3>What</h3>
+        <p>CALDERA is a cybersecurity attack simulation software, used to
+          emulate red-team (adversary) and blue-team (defense) campaigns.
+        </p>
         <h3>Why</h3>
-        <p>TODO</p>
+        <p>The CALDERA project has built a library of APIs for simulation
+          purposes, but for users who are not familiar with terminal
+          interfaces, we wanted to create a more user-friendly interface to
+          provide more visual feedback and call the APIs.</p>
         <h3>How</h3>
+        <p>I recreated the architecture flow based on the team's
+          requirement that the new user interface (UI) is fairly
+          non-intrusive and lightweight. The app is largely in Python, and
+          used Jinja as its template rendering engine.
+
+          After some research, I found a fairly simple way to reduce code
+          maintenance burden with the alpine.js library.
+
+          With faster, dynamic templates, we were free to recreate the
+          CALDERA UI's look-and-feel.
+
+          I conducted user outreach to better understand the use cases of
+          CALDERA's features, as well as to gain an insight into
+          cybersecurity tooling basics. We were finally able to repackage
+          CALDERA with a new UI, called the Alpha release.
+        </p>
         <h3>Conclusion</h3>
-        <p>TODO</p>
-        <a href="TODO">Read more about it here.</a>
+        <p>The Operations Page is one of the most heavily-used features in
+          CALDERA. It's a useful page with a lot of information and
+          available interactions for users to play around with. With the
+          previous UI, some of this information (such as the color legend
+          and what statuses they were indicating, and what was being run in
+          this operation) was lost because either the associations made
+          between interactive and informational elements were unclear, or
+          it was overshadowed by other more visible elements on the same
+          page.
+
+          A lot of the consideration was put into making the new version of
+          the Operations page, most importantly, on the presentation of
+          information.
+
+          What is the key piece of information users need from this page?
+
+          What is necessary to give users the sense that they have control
+          over this page?
+
+          To accomplish this, I borrowed and reinforced the timeline idea
+          from the previous UI, and changed its layout in the new UI to
+          become the main focus of the Operations page, including more
+          informative status labels as well.
+
+          Since there are so many actions available on the page, I also
+          grouped the actionable elements by what elements they affect, in
+          hierarchical order. For example, located on the top left of the
+          page are the actionable items that affect the operations as a
+          whole and to the right, are the ones that affect each individual
+          operation.
+
+          The main information on the page is laid out as a table, so the
+          user can interact with each operation command as an individual
+          entry, while still able to view them in a timeline-style.
+        </p>
       </div>
 
       <div id="rmd">
@@ -149,10 +276,10 @@
             </span>
             <em>TODO</em>
         </span>
-        <h3>Why</h3>
+        <h3>What</h3>
         <p>TODO</p>
+        <h3>Why</h3>
         <h3>How</h3>
-        <h3>Conclusion</h3>
         <p>TODO</p>
         <a href="TODO">Read more about it here.</a>
       </div>
@@ -165,10 +292,10 @@
             </span>
             <em>TODO</em>
         </span>
-        <h3>Why</h3>
+        <h3>What</h3>
         <p>TODO</p>
+        <h3>Why</h3>
         <h3>How</h3>
-        <h3>Conclusion</h3>
         <p>TODO</p>
         <a href="TODO">Read more about it here.</a>
       </div>
@@ -181,10 +308,10 @@
             </span>
             <em>TODO</em>
         </span>
-        <h3>Why</h3>
+        <h3>What</h3>
         <p>TODO</p>
+        <h3>Why</h3>
         <h3>How</h3>
-        <h3>Conclusion</h3>
         <p>TODO</p>
         <a href="TODO">Read more about it here.</a>
       </div>
@@ -197,10 +324,10 @@
             </span>
             <em>TODO</em>
         </span>
-        <h3>Why</h3>
+        <h3>What</h3>
         <p>TODO</p>
+        <h3>Why</h3>
         <h3>How</h3>
-        <h3>Conclusion</h3>
         <p>TODO</p>
         <a href="TODO">Read more about it here.</a>
       </div>
