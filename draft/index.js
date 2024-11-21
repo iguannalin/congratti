@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
   let previousElement = center;
   let previousElementSub = greeting;
 
-  const work = ["HJL Archive", "ATT&CK Navigator", "CALDERA", "RMD", "Notifier", "Inheritance Center", "Pacific Workers' University"];
+  const work = ["HJL Archive", "ATT&CK Navigator", "CALDERA", "RMD", "Notifier", "Inheritance Center", "Superdiversity", "Pacific Workers' University"];
   const titles = ["Healing Justice Lineages", "MITRE", "Charles Schwab", "Stamen Design", "Farber & Co"];
 
   function switchView(currentElement, isSubView = false) {
@@ -91,9 +91,9 @@ window.addEventListener("load", () => {
 
   loadProjects(work.slice(0, 1), titles[0]);
   loadProjects(work.slice(1, 3), titles[1]);
-  loadProjects(work.slice(3, 5), titles[2]);
-  loadProjects(work.slice(5, 6), titles[3]);
-  loadProjects(work.slice(6, 7), titles[4]);
+  loadProjects(work.slice(3, 6), titles[2]);
+  loadProjects(work.slice(6, 7), titles[3]);
+  loadProjects(work.slice(7, 8), titles[4]);
 
   select.onchange = (e) => onSelect(e);
 
