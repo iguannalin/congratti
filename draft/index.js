@@ -62,7 +62,8 @@ window.addEventListener("load", () => {
   }
 
   function onSelectProject(e) {
-    const selected = e.target.innerText.split(" ")[0];
+    const selected = e.target.innerText.split(" ")[0].toLowerCase();
+
     if (document.getElementById(selected)) {
       let subelement = document.getElementById(selected);
       location.hash = selected;
@@ -93,6 +94,8 @@ window.addEventListener("load", () => {
   loadProjects(work.slice(3, 5), titles[2]);
   loadProjects(work.slice(5, 6), titles[3]);
   loadProjects(work.slice(6, 7), titles[4]);
+
+  select.onchange = (e) => onSelect(e);
 
   let dotIndex = 0;
   const dotMax = 150;
