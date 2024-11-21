@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
 .portfolio-theme {
   background-color: var(--default-bg);
   color: var(--default-text);
@@ -14,6 +16,12 @@
 }
 
 #work-table td:not(.links) a {
-  /*font-family: Arial, sans-serif;*/
+  font-family: "Noto Sans Display", sans-serif;
+  font-size: 0.9em;
   padding: 0 0 0 0.5em;
+}
+
+#center p {
+  font-family: "Noto Sans Display", sans-serif;
+  line-height: 1.75em;
 }
