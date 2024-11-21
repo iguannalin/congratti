@@ -1,2 +1,19 @@
-@import url(small.css) (min-width:0px);
-@import url(large.css) (min-width:700px);
+.portfolio-theme {
+  background-color: var(--default-bg);
+  color: var(--default-text);
+}
+
+#portfolio-wallpaper {
+  object-fit: cover;
+  max-width: 550px;
+  width: 77%;
+}
+
+#work-table th h3 {
+  margin: 1em 0 0;
+}
+
+#work-table td:not(.links) a {
+  /*font-family: Arial, sans-serif;*/
+  padding: 0 0 0 0.5em;
+}

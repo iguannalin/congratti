@@ -1,107 +1,425 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>private work</title>
+  <!--
+  hiya, anna y lin is looking for opportunities.
+  contact anna@annaylin.com 🪸
+  --->
+  <title>anna y lin</title>
+  <link
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍊</text></svg>"
+    rel="icon">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="index.css" />
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="index,follow" name="robots">
+  <meta content="anna y lin" name="author">
+  <meta
+    content="the portfolio of anna y lin. anna is a frontend & UX developer based in Brooklyn, NY."
+    name="description">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="anna y lin" name="twitter:title">
+  <meta
+    content="the portfolio of anna y lin. anna is a frontend & UX developer based in Brooklyn, NY."
+    name="twitter:description">
+  <meta content="https://annaylin.com/public/wallpaper.png"
+        name="twitter:image">
+  <meta content="en_US" property="og:locale">
+  <meta content="anna y lin" property="og:title">
+  <meta
+    content="the portfolio of anna y lin. anna is a frontend & UX developer based in Brooklyn, NY."
+    property="og:description">
+  <meta content="annaylin.com" property="og:url">
+  <meta content="https://annaylin.com/public/wallpaper.png"
+        property="og:image">
+  <meta content="website" property="og:type">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="../index.css" rel="stylesheet"/>
+  <link href="index.css" rel="stylesheet"/>
+  <script src="index.js"></script>
 </head>
-
 <body>
-  <div id="container">
-    <div id="sidebar">
-      <h1 class="name">
-        <a href=".">anna y lin</a>
-      </h1>
+<div class="portfolio-theme" id="container">
+  <main id="main">
+    <div id="top">
+      <h1 class="name"><a href="https://annaylin.com/portfolio">anna y
+        lin</a></h1>
+      <label for="select">select the page you would like to visit:</label>
+      <select id="select">
+        <optgroup label="select">
+          <option id="d" selected value="center">
+            <script>for (let i = 0; i < Math.max(7, d.parentElement.parentElement.clientWidth / 10); i++) d.innerHTML += `---`</script>
+          </option>
+          <option>TODO</option>
+          <option>TODO</option>
+        </optgroup>
+      </select>
     </div>
-    <footer>
-      <div><a href="https://annaylin.com/resume.pdf">resume</a></div>
-      <div><a href="mailto:anna@annaylin.com?subject=Hi" target="_top">say hi</a></div>
-      <div><a href="https://annaylin.com/">annaylin.com</a></div>
-      <div><a href="https://github.com/iguannalin">github</a>, <a
-          href="https://www.instagram.com/iguannalin/reels/">instagram</a>, <a
-          href="https://www.linkedin.com/in/anna-y-lin/">linkedin</a></div>
-    </footer>
-    <div id="main">
-      <div id="intro">
-        anna y lin (林 she/her) is a cantonese-american frontend and fullstack engineer, focused on accessibility, user experience, and challenging existing paradigms within web standards.
-        <br />
-        She has 4+ years industrial experience working as a frontend engineer in cybersecurity and financial services, and has worked on 3 fullstack web development projects as a freelance web developer.
-        <br />
-        Her resume can be found <a href="https://annaylin.com/resume">here</a>.
-        <br />
-        <em>technologies</em>: Javascript, Typescript, Angular, Vue.js, React.js, PHP, three.js, D3.js, P5.js, HTML/CSS/SCSS/Tailwind, Node.js, Jasmine, Python, Flask, Git, Firebase, SQL, Bash, C++, Java, Illustrator, Photoshop, Figma
-
-        <em>skills</em>: prototyping, frontend architecture design, UX research, design iteration, testing, deployment to production
+    <div id="left">
+      <h1 class="name"><a href="https://annaylin.com/portfolio/">anna y
+        lin</a></h1>
+      <table>
+        <thead>
+        <tr>
+          <th>
+            <h2>work</h2>
+          </th>
+        </tr>
+        </thead>
+        <tbody id="work-table">
+        <tr>
+          <td class="links">✴︎ <a href="https://annaylin.com/resume/"
+                                  target="_blank"
+                                  title="link to resume">resume</a>, <a
+            href="https://annaylin.com/" target="_blank"
+            title="link to website">website</a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <div>
+        <p><em>technologies: Javascript, Typescript, Angular, Vue.js,
+          React.js, PHP, HTML, CSS, Tailwind, Node.js, Jasmine, Python,
+          Flask, Git, Firebase, SQL, Bash, C++, Java, Illustrator</em>
+        </p>
+        <p><em>skills: prototyping, frontend architecture design, UX
+          research, design iteration, testing, deployment to
+          production</em></p>
       </div>
     </div>
-  </div>
+    <div id="center">
+      <div id="greeting">
+        <img alt="desktop wallpaper" id="portfolio-wallpaper"
+             src="https://annaylin.com/public/wallpaper.png"/>
+      </div>
+
+      <div id="hjl">
+        <h2>Healing Justice Lineages</h2>
+        <span class="thumbnail">
+            <span>
+                <img
+                  alt="Screenshot of the HJL homepage, the mouse hovering over a picture of Harriet Tubman to show a tooltip describing the image. In the background is a dark blue map of yellow lights across America, like constellations in the night sky."
+                  loading="lazy" src="assets/hjl.png"/>
+            </span>
+            <em>The HJL homepage, with tooltips providing more context on the project.</em>
+        </span>
+        <p>⇱ <a href="https://healingjusticelineages.com/"
+                target="_blank"
+                title="external link to the Healing Justice Lineages website">Healing
+          Justice Lineages website</a>
+        </p>
+        <p><em>PHP, WordPress, HTML, CSS, JavaScript</em></p>
+        <h3>What</h3>
+        <p>Healing Justice Lineages is an archival project of collective
+          care and safety strategies.</p>
+        <h3>Why</h3>
+        <p>To continue the work of educating the community on these
+          strategies, HJL wanted to create a website for people to learn
+          more about the project.</p>
+        <h3>How</h3>
+        <p>The HJL website was redesigned with a custom WordPress theme
+          based on the project’s needs and design specifications, to
+          reflect the organization’s dedication to promote strategies
+          toward collective care. The project involved 4 months of work
+          until launch, with accessibility features such as the
+          low-fidelity color mode, an accessibility tagging system for
+          picture descriptions, as well as a temporary password-protected
+          mode.</p>
+      </div>
+
+      <div id="att&ck">
+        <h2>ATT&CK Navigator</h2>
+        <p>As a UX engineer at MITRE, I was responsible for the UX design
+          and development for four projects at different stages: ATT&CK,
+          CALDERA, and two other projects related to policymaking.
+
+          The ATT&CK Navigator and CALDERA are both public, open-source
+          cybersecurity projects that are used by cybersecurity researchers
+          and experts.
+        </p>
+        <span class="thumbnail">
+            <span>
+                <img
+                  alt="Demo of the ATT&CK Navigator web interface."
+                  loading="lazy"
+                  src="assets/mitre-navigator-demo.gif"/>
+            </span>
+            <em>A demo of the dark mode and search features on the ATT&CK Navigator.</em>
+        </span>
+        <p>⇱ <a href="https://mitre-attack.github.io/attack-navigator/"
+                target="_blank"
+                title="external link to the MITRE ATT&CK Navigator">ATT&CK
+          Navigator</a>
+        </p>
+        <p><em>Angular, Node.js, TypeScript, HTML, CSS, JavaScript</em></p>
+        <h3>What</h3>
+        <p>The Navigator is one of MITRE's most active projects, enabled by
+          its widely-accessible platform. It visualizes an extensive
+          database of known cybersecurity threats and methods.
+
+          I was a good fit to work on this team because of my prior
+          experience and knowledge working with backend-heavy Angular apps.
+        </p>
+        <h3>Why</h3>
+        <p>The ATT&CK Navigator is a large open-source project, with many
+          contributors and community supporters. There are constantly many
+          pull requests made on the repository to request a new feature, or
+          to fix a bug. As one of the UX engineers on the small team
+          maintaining the project, I was tasked with these pull
+          requests.</p>
+        <h3>How</h3>
+        <p>Two new features I worked on for the Navigator, which were both
+          popular requests from the community, were: 1) dark mode, and 2)
+          the search and multi-select interface.
+
+          The features were tricky in that they required storing cookies to
+          set the dark mode based on the user’s preference (falling back on
+          their device’s default mode by using CSS and JS if unset), as
+          well as updating the Angular app infrastructure to accommodate
+          these two new interface features.
+        </p>
+      </div>
+
+      <div id="caldera">
+        <h2>CALDERA</h2>
+        <p>As a UX engineer at MITRE, I was responsible for the UX design
+          and development for four projects at different stages: ATT&CK,
+          CALDERA, and two other projects related to policymaking.
+
+          The ATT&CK Navigator and CALDERA are both public, open-source
+          cybersecurity projects that are used by cybersecurity researchers
+          and experts.
+        </p>
+        <span class="thumbnail">
+            <span>
+                <img
+                  alt="Screenshot of the operations page on the CALDERA interface."
+                  loading="lazy"
+                  src="assets/mitre-caldera-alpha-operations.png"/>
+            </span>
+            <em>The redesigned CALDERA web app.</em>
+        </span>
+        <p>⇱ <a href="https://github.com/mitre/caldera"
+                target="_blank"
+                title="external link to the CALDERA repository on GitHub">CALDERA</a>
+        </p>
+        <p><em>Python, HTML, CSS, JavaScript, Alpine.js</em></p>
+        <h3>What</h3>
+        <p>CALDERA is a cybersecurity attack simulation software, used to
+          emulate red-team (adversary) and blue-team (defense) campaigns.
+        </p>
+        <h3>Why</h3>
+        <p>The CALDERA project has built a library of APIs for simulation
+          purposes, but for users who are not familiar with terminal
+          interfaces, we wanted to create a more user-friendly interface to
+          provide more visual feedback and call the APIs.</p>
+        <h3>How</h3>
+        <p>I recreated the architecture flow based on the team's
+          requirement that the new user interface (UI) is fairly
+          non-intrusive and lightweight. The app is largely in Python, and
+          used Jinja as its template rendering engine.
+
+          After some research, I found a fairly simple way to reduce code
+          maintenance burden with the alpine.js library.
+
+          With faster, dynamic templates, we were free to recreate the
+          CALDERA UI's look-and-feel.
+
+          I conducted user outreach to better understand the use cases of
+          CALDERA's features, as well as to gain an insight into
+          cybersecurity tooling basics. We were finally able to repackage
+          CALDERA with a new UI, called the Alpha release.
+        </p>
+        <h3>Conclusion</h3>
+        <p>The Operations Page is one of the most heavily-used features in
+          CALDERA. It's a useful page with a lot of information and
+          available interactions for users to play around with. With the
+          previous UI, some of this information (such as the color legend
+          and what statuses they were indicating, and what was being run in
+          this operation) was lost because either the associations made
+          between interactive and informational elements were unclear, or
+          it was overshadowed by other more visible elements on the same
+          page.
+
+          A lot of the consideration was put into making the new version of
+          the Operations page, most importantly, on the presentation of
+          information.
+
+          What is the key piece of information users need from this page?
+
+          What is necessary to give users the sense that they have control
+          over this page?
+
+          To accomplish this, I borrowed and reinforced the timeline idea
+          from the previous UI, and changed its layout in the new UI to
+          become the main focus of the Operations page, including more
+          informative status labels as well.
+
+          Since there are so many actions available on the page, I also
+          grouped the actionable elements by what elements they affect, in
+          hierarchical order. For example, located on the top left of the
+          page are the actionable items that affect the operations as a
+          whole and to the right, are the ones that affect each individual
+          operation.
+
+          The main information on the page is laid out as a table, so the
+          user can interact with each operation command as an individual
+          entry, while still able to view them in a timeline-style.
+        </p>
+      </div>
+
+      <div id="rmd">
+        <h2>Required Minimum Distribution (RMD)</h2>
+        <p>I worked on the Digital Accelerator (DARE) team at Charles
+          Schwab, which focuses on transitioning physical (traditional,
+          paper-heavy) to digital services.
+
+          As the accessibility and UX liaison on the frontend team, I
+          bridged the gap between front-end, UX, and product teams, to
+          digitalize the retirement and inheritance process at Schwab.
+          Collaborating with the UX Research & Design team, I developed
+          prototypes for three projects and developed the products for
+          production.
+        </p>
+        <span class="thumbnail">
+            <span>
+                <img
+                  alt="Demo of the 3-step RMD web app."
+                  loading="lazy"
+                  src="assets/schwab-rmd.gif"/>
+            </span>
+            <em>Demo of the RMD web app.</em>
+        </span>
+        <p><em>Angular, Node.js, TypeScript, HTML, CSS, JavaScript</em></p>
+        <h3>What</h3>
+        <p>The Required Minimum Distribution (RMD) web-app is the first
+          project DARE tackled as a team. It was important to the Schwab
+          brand to take care of all clients, and services for retired
+          clients had a lot of room for improvement.</p>
+        <h3>Why</h3>
+        <p>One of the main issues we were particularly passionate about was
+          the fact that a lot of these retired individuals–when it came
+          time to take their annual RMDs–would receive stacks of paper
+          forms in their mail. They would then have to manually go through
+          all these documents, fill out the forms, and mail back what was
+          needed to Schwab.
+          The whole process could take months to process, and a lot of
+          times, clients would default to visiting a branch in-person, or
+          calling a Schwab branch for individual support.
+
+          We wanted to replicate this one-on-one, hand-holding process by
+          digitalizing the Schwab retirement experience. What we started
+          with was a web app that took this manual paper-process, and
+          turned it into a 3-step online application.
+        </p>
+        <h3>How</h3>
+        <p>To design this we did multiple design workshops, user-testing
+          sessions with paper and coded prototypes, and technical
+          discussions to figure out what clients features they expected,
+          and what they would like to see in the app.
+
+          As accessibility advocate, I participated in user research
+          sessions, and collaborated with researchers to reduce confusion
+          and enhance the user experience in each prototype iteration. I
+          ensured the code was accessible and facilitated regular
+          accessibility reviews for every new feature.
+        </p>
+      </div>
+
+      <div id="notifier">
+        <h2>coming soon!</h2>
+      </div>
+
+      <div id="inheritance">
+        <h2>coming soon!</h2>
+      </div>
+
+      <div id="superdiversity">
+        <h2>coming soon!</h2>
+      </div>
+
+      <div id="pacific">
+        <h2>Pacific Workers' University</h2>
+        <span class="thumbnail">
+            <span>
+                <img
+                  alt="Demo of the PWU lessons page."
+                  loading="lazy"
+                  src="assets/pwu-course-demo.gif"/>
+            </span>
+            <em>A demo of the learning management system.</em>
+        </span>
+        <p><em>PHP, WordPress, HTML, CSS, JavaScript</em></p>
+        <p>⇱ <a href="https://codepen.io/collection/XzwqKr/"
+                target="_blank"
+                title="external link to prototypes for the PWU lessons interface">Prototypes</a>
+        </p>
+        <h3>What</h3>
+        <p>The Pacific Workers' University is an interactive learning
+          system for lawyers, legal assistants, and case managers at Farber
+          & Co.</p>
+        <h3>Why</h3>
+        <p>As the law firm expands and takes on more clients, the amount of
+          legal information and the number of people who need access to
+          them increases. I converted their library of information to an
+          online learning management system on WordPress that can be edited
+          and accessed by current and new staff.</p>
+        <h3>How</h3>
+        <p>An online learning management system built on WordPress, with a
+          login, dark mode, and a card display for training lessons.
+        </p>
+      </div>
+
+    </div>
+    <div id="right">
+      <table>
+        <thead>
+        <tr>
+          <th>
+            <h2>about</h2>
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>
+            <p>anna y lin (林 she/her) is a frontend and fullstack
+              engineer, focused on accessibility, user experience, and
+              challenging existing paradigms within web standards.
+            </p>
+            <p>She has 3+ years industrial experience working as a frontend
+              engineer in cybersecurity and financial services, and has
+              worked on 3 fullstack web development projects as a freelance
+              web developer.
+            </p>
+            <p>
+              She is currently based in
+              <a
+                href="https://maps.app.goo.gl/dX2h2x4GbhVy2CNF8">lenapehoking
+                (brooklyn)</a>, NY.
+            </p>
+            <p>
+              Her other projects can be found
+              <a href="https://annaylin.com/" target="_blank"
+                 title="link to website of anna y lin">here</a>.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><a href="mailto:anna@annaylin.com?subject=💾%20hello"
+                 target="_top">email</a></td>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://github.com/iguannalin/">github</a>,
+            <a href="https://annaylin.com/portfolio/">resume</a>,
+            <a href="https://www.linkedin.com/in/anna-y-lin/">linkedin</a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
 </body>
-<script>
-  window.addEventListener("load", () => {
-    const main = document.getElementById("main");
-    const sidebar = document.getElementById("sidebar");
-    const iframe = document.createElement("iframe");
-
-    function showMain(url, hash) {
-      iframe.src = url;
-      iframe.width = main.clientWidth;
-      iframe.height = main.clientHeight;
-      location.hash = hash;
-      main.innerHTML = "";
-      main.appendChild(iframe);
-    }
-    const createImg = (parent, src, alt, link, size) => {
-      const img = document.createElement("img");
-      img.width = size;
-      img.src = src;
-      img.alt = alt;
-      img.style.paddingTop = "12px";
-      img.style.cursor = "pointer";
-      img.onclick = () => showMain(link);
-      parent.appendChild(img);
-    }
-    fetch("projects.json").then((r) => r.json()).then((d) => {
-      let jump = "";
-      if (location.hash) {
-        jump = location.hash.split("#")[1].toLowerCase();
-      }
-      d.forEach((item) => {
-        const ul = document.createElement("ul");
-        const heading = document.createElement("heading");
-        heading.innerText = item.title;
-
-        // heading.appendChild(ul);
-        sidebar.appendChild(heading);
-
-        item.projects.forEach((project) => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          a.innerText = project.title;
-          a.style.display = "block";
-          // a.href = project.link;
-          a.onclick = () => showMain(project.link, project.hash);
-          li.appendChild(a);
-          ul.appendChild(li);
-          sidebar.appendChild(ul);
-
-          const h1 = document.createElement("h1");
-          const span = document.createElement("span");
-          const h2 = document.createElement("h2");
-          const mark = document.createElement("mark");
-          const sub = document.createElement("sub");
-          const img = document.createElement("img");
-          img.style.paddingRight = "8px";
-          span.innerText = project.title;
-          // div.appendChild(span);
-          // main.appendChild(div);
-          // createImg(div, project.image, project.alt, project.link, 220);
-          if (jump == project.hash.toLowerCase()) showMain(project.link, project.hash);
-        });
-      });
-    });
-  });
-</script>
-
 </html>
