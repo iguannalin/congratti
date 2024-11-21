@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
   const greeting = document.getElementById("greeting");
   const oopsies = document.getElementById("oops");
   const radioButtons = Array.from(document.getElementsByClassName("film-button"));
-  const isSmallScreen = getComputedStyle(top).display != "none";
+  const isSmallScreen = getComputedStyle(top).display !== "none";
   let previousElement = center;
   let previousElementSub = greeting;
 
@@ -122,7 +122,7 @@ window.addEventListener("load", () => {
         elem = center;
         break;
     }
-    switchView(elem, false, elem == center);
+    switchView(elem, false);
   }
 
   function oops() {
