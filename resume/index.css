@@ -1,5 +1,3 @@
-/* @media screen and url(small.css) (min-width:0px);
-@media screen and url(large.css) (min-width:900px); */
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
 
 :root {
@@ -22,11 +20,13 @@ html {
   body {
     font-size: 14px;
   }
+
   a {
     text-decoration: none;
     color: inherit;
     font-style: italic;
   }
+
   td * {
     max-width: 50ch;
   }
@@ -36,9 +36,11 @@ html {
   body {
     font-size: 16px;
   }
+
   .table {
     overflow-y: scroll;
   }
+
   #left,
   #right {
     height: auto;
@@ -49,9 +51,11 @@ html {
   body {
     font-size: 14px;
   }
+
   .table {
     overflow-y: hidden;
   }
+
   #left,
   #right {
     height: 97%;

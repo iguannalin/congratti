@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
 @import url(background.css) (min-width: 0px);
 @import url(small.css) (min-width: 0px);
 @import url(large.css) (min-width: 800px);
@@ -7,7 +8,7 @@
   --default-bg: #fdfaf6;
   --default-text: rgb(35, 35, 35);
   --default-border: yellow;
-  --default-font: 16px;
+  --default-font: 14px;
   --default-line-height: 24px;
   --default-wallpaper: url(public/wallpaper.png);
   --default-link: rgb(0, 0, 255);
@@ -46,6 +47,7 @@ body {
   font-size: var(--default-font);
   line-height: var(--default-line-height);
   text-shadow: #acb5bd 1px 1px 6px;
+  font-family: "Noto Sans", Arial, sans-serif;
 }
 
 h1,
@@ -54,6 +56,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Varela Round", serif;
   text-align: left;
 }
 
