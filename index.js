@@ -110,13 +110,13 @@ window.addEventListener("load", () => {
     const selected = e.target.innerText;
     let elem;
     switch (selected) {
-      case "☼":
+      case "projects":
         elem = left;
         break;
       case "about":
         elem = right;
         break;
-      case "work":
+      case "☾":
         location.href = "https://annaylin.com/portfolio/";
         break;
       default:

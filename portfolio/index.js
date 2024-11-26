@@ -74,7 +74,7 @@ window.addEventListener("load", () => {
     const selected = e.target.innerText;
     let elem;
     switch (selected) {
-      case "work":
+      case "projects":
         elem = left;
         break;
       case "about":
