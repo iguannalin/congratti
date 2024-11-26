@@ -116,7 +116,7 @@ window.addEventListener("load", () => {
       case "about":
         elem = right;
         break;
-      case "☾":
+      case "☼":
         location.href = "https://annaylin.com/portfolio/";
         break;
       default:
