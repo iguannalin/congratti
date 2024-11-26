@@ -10,7 +10,6 @@ body {
   line-height: 25px;
   max-width: 110px;
   font-weight: 900;
-  margin-bottom: 0.5em;
 }
 
 h1,
@@ -35,11 +34,11 @@ h6 {
 }
 
 #work-table th h3 {
-  margin: 1em 0 0;
+  margin: 0.5em 0 0;
 }
 
 #work-table td:not(.links) a {
-  padding: 0 0 0 0.5em;
+  padding: 0 0 0 0.3em;
 }
 
 #center p, .postscript {
