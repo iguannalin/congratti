@@ -80,7 +80,7 @@ window.addEventListener("load", () => {
       case "about":
         elem = right;
         break;
-      case "projects":
+      case "☾":
         location.href = "https://annaylin.com/";
         break;
       default:
