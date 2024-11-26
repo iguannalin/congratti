@@ -111,14 +111,36 @@ h6 {
 .name {
   text-align: left;
   margin: 0 0;
-  font-size: 32px;
-  line-height: 25px;
+  font-size: 31px;
+  line-height: 24px;
   max-width: 110px;
-  font-weight: 200;
+  font-weight: 100;
 }
 
 .name a {
   text-decoration: none;
+}
+
+div#select {
+  flex-flow: row;
+  display: flex;
+  flex: 3;
+  justify-content: space-around;
+}
+
+div#select button {
+  border: none;
+  background-color: transparent;
+  font-family: "Varela Round", sans-serif;
+  font-size: var(--default-font);
+  line-height: var(--default-line-height);
+  color: var(--default-link);
+  text-shadow: 1px 1px 6px #00e78c;
+}
+
+div#select button:hover {
+  text-shadow: 1px 1px 12px #00e78c;
+  cursor: pointer;
 }
 
 #greeting {

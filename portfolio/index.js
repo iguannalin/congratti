@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
   const left = document.getElementById("left");
   const center = document.getElementById("center");
   const right = document.getElementById("right");
-  const select = document.getElementById("select");
+  const tabButtons = Array.from(document.querySelectorAll("#select > button"));
   const table = document.getElementById("work-table");
   const greeting = document.getElementById("greeting");
   const isSmallScreen = getComputedStyle(top).display !== "none";
@@ -37,7 +37,6 @@ window.addEventListener("load", () => {
       previousElement = currentElement;
     }
     greeting.style.display = currentElement === center ? "flex" : "none";
-    if (currentElement === center) select.value = "center";
   }
 
   function loadProjects(projects, label) {
@@ -67,13 +66,12 @@ window.addEventListener("load", () => {
     if (document.getElementById(selected)) {
       let subelement = document.getElementById(selected);
       location.hash = selected;
-      select.value = selected;
       switchView(subelement, true);
     }
   }
 
   function onSelect(e) {
-    const selected = e.target.value;
+    const selected = e.target.innerText;
     let elem;
     switch (selected) {
       case "work":
@@ -95,7 +93,9 @@ window.addEventListener("load", () => {
   loadProjects(work.slice(6, 7), titles[3]);
   loadProjects(work.slice(7, 8), titles[4]);
 
-  select.onchange = (e) => onSelect(e);
+  tabButtons.forEach((elem) => {
+    elem.onclick = (e) => onSelect(e);
+  });
 
   let dotIndex = 0;
   const dotMax = 150;

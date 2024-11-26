@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Junge&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
 
 body {
   font-family: "Nanum Myeongjo", "Times New Roman", serif;
@@ -51,4 +50,8 @@ h6 {
 
 span > span > img {
   max-width: 425px;
+}
+
+div#select button {
+  font-family: "Times New Roman", serif;
 }

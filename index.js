@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
   const left = document.getElementById("left");
   const center = document.getElementById("center");
   const right = document.getElementById("right");
-  const select = document.getElementById("select");
+  const tabButtons = Array.from(document.querySelectorAll("#select > button"));
   const table = document.getElementById("projects-table");
   const greeting = document.getElementById("greeting");
   const oopsies = document.getElementById("oops");
@@ -74,7 +74,6 @@ window.addEventListener("load", () => {
     if (currentElement.id === "filmotography") switchFilmView({target: {title: "yosemite"}});
     if (currentElement.id === "tableware") switchFilmView({target: {title: "tableware"}});
     if (currentElement.id === "reveries") switchFilmView({target: {title: "reveries"}});
-    if (currentElement === center) select.value = "center";
   }
 
   function loadProjects(projects, label) {
@@ -103,13 +102,12 @@ window.addEventListener("load", () => {
     if (document.getElementById(selected)) {
       let subelement = document.getElementById(selected);
       location.hash = selected;
-      select.value = selected;
       switchView(subelement, true);
     }
   }
 
   function onSelect(e) {
-    const selected = e.target.value;
+    const selected = e.target.innerText;
     let elem;
     switch (selected) {
       case "projects":
@@ -141,7 +139,9 @@ window.addEventListener("load", () => {
   loadProjects(analogProjects, "analog");
   loadProjects([], "digital");
 
-  select.onchange = (e) => onSelect(e);
+  tabButtons.forEach((elem) => {
+    elem.onclick = (e) => onSelect(e);
+  });
   oopsies.onclick = oops;
 
   radioButtons.forEach((button) => {
