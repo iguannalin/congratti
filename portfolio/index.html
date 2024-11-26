@@ -333,7 +333,54 @@
 
       <div id="superdiversity">
         <h2>Superdiversity</h2>
-        <p>coming soon!</p>
+        <span class="thumbnail">
+            <span>
+                <img
+                  alt="Screenshot of the Superdiversity web app."
+                  loading="lazy"
+                  src="assets/superdiversity-screenshot.png"/>
+            </span>
+            <em>Viewing the Superdiversity web app.</em>
+        </span>
+        <p>⇱ <a href="http://www.superdiv.mmg.mpg.de/"
+                target="_blank"
+                title="external link to the Superdiversity project">Superdiversity</a>
+        </p>
+        <p><em>React, JavaScript, HTML, CSS</em></p>
+        <h3>What</h3>
+        <p>
+          I built a React web app for Stamen Design, in collaboration with
+          Max Planck Institute to visualize data collected on diversity
+          patterns in different countries.
+        </p>
+        <h3>Why</h3>
+        <p>
+          It is a single-page application (SPA) built in React to host all
+          the data visualizations, with dynamic controls as
+          users interact with the page.
+        </p>
+        <h3>How</h3>
+        <p>
+          The data highlights three large cities, and users will be able to
+          alternate between the three cities by clicking on buttons located
+          at the top of the page.
+          <br><br>
+          I implemented a hash-scrolling feature for this app to keep track
+          of: 1) where the user has scrolled to on the page, and 2) what
+          the user has clicked on to customize the data visualization. This
+          way, say if you wanted to share a particular data visualization
+          with a friend, then they will be able to see exactly what you
+          wanted to share, with the settings you’ve customized it to.
+          <br><br>
+          At the time, the Intersection Observer API was still new, and I
+          discovered it while researching how to implement this feature.
+          Though it was not fully compatible with IE, it does have a
+          polyfill, which I added in for cross-browser compatibility.
+          <br><br>
+          With Intersection Observer, I was then able to track custom user
+          settings within the data visualizations by adding them as hash
+          parameters to the page.
+        </p>
       </div>
 
       <div id="pacific">
