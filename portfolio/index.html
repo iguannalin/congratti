@@ -375,7 +375,66 @@
 
       <div id="inheritance">
         <h2>Inheritance Center</h2>
-        <p>coming soon!</p>
+        <p>I worked on the Digital Accelerator (DARE) team at Charles
+          Schwab, which focuses on transitioning physical (traditional,
+          paper-heavy) to digital services.
+          <br><br>
+          As the accessibility and UX liaison on the frontend team, I
+          bridged the gap between front-end, UX, and product teams, to
+          digitalize the retirement and inheritance process at Schwab.
+          Collaborating with the UX Research & Design team, I developed
+          prototypes for three projects and developed the products for
+          production.
+        </p>
+        <span class="thumbnail">
+            <span>
+                <img
+                  alt="Demo of the Inheritance Center web app."
+                  loading="lazy"
+                  src="assets/schwab-inheritance-demo.gif"/>
+            </span>
+            <em>Demo of the Inheritance Center web app.</em>
+        </span>
+        <p><em>Angular, Node.js, TypeScript, HTML, CSS, JavaScript</em></p>
+        <h3>What</h3>
+        <p>
+          The Inheritance Center presented more of a user experience and
+          interface challenge, in that we wanted to figure out what was the
+          best way to present to a client a list of things Schwab requires
+          of them for this process, during what could be a very distressful
+          time in their life.
+          <br><br>
+          I worked with the design team to build prototypes for and took
+          notes during user-testing sessions, which helped me gain insight
+          into our end-users.
+        </p>
+        <h3>Why</h3>
+        <p>
+          One problem we encountered in preparing for a user-testing
+          session was the amount of hand-holding we would need to provide
+          the test participant, in order for them to test the app in a
+          logical way. This was due to how our mocked data worked. For
+          example, if our app was mocked so that it would present task 1 as
+          “not started”, and later to “in progress,” then we would have to
+          instruct the participant to make sure to click on only task 1,
+          otherwise it can become confusing.
+          <br><br>
+          I did not believe this made for true testing because it would not
+          give us an accurate picture of what a client would do and how
+          they would feel while using the app, realistically.
+        </p>
+        <h3>How</h3>
+        <p>
+          I solved this problem by writing a piece of code that would
+          intercept the way our mocked data was being passed into the app
+          as the user interacts with it, and swap it with the correct piece
+          of data to match what the user should expect to see.
+          <br><br>
+          With this, it wouldn't matter whether the participant clicked on
+          first task 1, task 2, or whichever task first, because the app
+          would always return the correctly mapped data based on what they
+          clicked on.
+        </p>
       </div>
 
       <div id="superdiversity">
