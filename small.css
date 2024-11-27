@@ -53,7 +53,7 @@ body {
   border: 2px solid var(--default-border);
 }
 
-#left .name {
+#left .mode-container {
   display: none;
 }
 
