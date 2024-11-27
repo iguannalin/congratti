@@ -121,6 +121,19 @@ h6 {
   text-decoration: none;
 }
 
+.mode-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row;
+  width: 100%;
+}
+
+.mode-container a {
+  text-decoration: none;
+  padding-right: 0.5em;
+}
+
 div#select {
   flex-flow: row wrap;
   display: flex;
