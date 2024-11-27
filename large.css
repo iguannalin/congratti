@@ -31,8 +31,8 @@ body {
   align-items: flex-start;
 }
 
-#left .name {
-  display: block;
+#left .mode-container {
+  display: flex;
 }
 
 table {
