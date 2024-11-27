@@ -47,10 +47,6 @@ h6 {
   font-weight: 100;
 }
 
-span > span > img {
-  max-width: 425px;
-}
-
 div#select button {
   font-family: "Times New Roman", serif;
 }
