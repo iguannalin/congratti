@@ -126,12 +126,14 @@ h6 {
   justify-content: space-between;
   align-items: center;
   flex-flow: row;
+  flex: 2;
   width: 100%;
 }
 
-.mode-container a {
+.mode-container a:last-child {
   text-decoration: none;
-  padding-right: 0.5em;
+  padding-right: 1em;
+  font-size: 1.2em;
 }
 
 div#select {
