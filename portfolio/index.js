@@ -139,5 +139,6 @@ window.addEventListener("load", () => {
     document.body.appendChild(dot);
   });
 
+  if (isSmallScreen) switchView(right);
   if (location.hash) onSelectProject({target: {innerText: location.hash.split("#")[1]}});
 });

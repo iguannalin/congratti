@@ -199,6 +199,10 @@ span > p {
   flex-flow: column wrap;
 }
 
+span.thumbnail {
+  max-width: 425px;
+}
+
 .thumbnail p {
   font-style: italic;
 }
