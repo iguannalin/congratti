@@ -94,7 +94,7 @@ window.addEventListener("load", () => {
       td.appendChild(a);
       tr.appendChild(td);
       table.appendChild(tr);
-    })
+    });
   }
 
   function onSelectProject(e) {

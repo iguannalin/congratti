@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 @import url(background.css) (min-width: 0px);
 @import url(small.css) (min-width: 0px);
 @import url(large.css) (min-width: 800px);
@@ -47,7 +47,7 @@ body {
   font-size: var(--default-font);
   line-height: var(--default-line-height);
   text-shadow: #acb5bd 1px 1px 6px;
-  font-family: "Noto Sans", Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 h1,
