@@ -176,6 +176,7 @@ h4 {
   margin: 1em 0 0.25em 3.5em;
   text-indent: -3.5em;
   line-height: 1.2em;
+  text-transform: initial;
 }
 
 .location {
