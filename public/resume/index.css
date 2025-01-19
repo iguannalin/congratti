@@ -49,7 +49,7 @@ html {
 
 @media screen and (min-width: 900px) {
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .table {
@@ -173,7 +173,9 @@ h3 {
 
 h4 {
   font-size: 1em;
-  margin: 1em 0 0.25em;
+  margin: 1em 0 0.25em 3.5em;
+  text-indent: -3.5em;
+  line-height: 1.2em;
   text-transform: initial;
 }
 
@@ -192,8 +194,9 @@ p.tags {
 }
 
 p.indent {
-  margin: 0 0 1em;
+  margin: 0.3em 0 0.4em 1.5em;
   line-height: 1.3em;
+  text-indent: -1em;
 }
 
 p.indent::before {
