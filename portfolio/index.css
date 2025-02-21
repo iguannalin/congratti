@@ -1,15 +1,146 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
 
+:root {
+  --main-bg-color: #f9faffde;
+  --main-text-color: rgb(35, 35, 35);
+  --shadow-color: #858ebc;
+}
+
+html {
+  display: block;
+  width: 100%;
+}
+
+@page {
+  size: 8.5in 11in;
+  margin: 0.2in 0.5in;
+}
+
+@media print {
+  body {
+    font-size: 14px;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-style: italic;
+  }
+
+  td * {
+    max-width: 50ch;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  body {
+    font-size: 16px;
+  }
+
+  .table {
+    overflow-y: scroll;
+  }
+
+  #left,
+  #right {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    font-size: 16px;
+  }
+
+  .table {
+    overflow-y: hidden;
+  }
+
+  #left,
+  #right {
+    height: 97%;
+  }
+}
+
 body {
-  font-family: "Nanum Myeongjo", "Times New Roman", serif;
+  margin: 0.5rem 2.5rem;
+  font-family: "Times New Roman", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+.table {
+  max-width: 900px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  height: 98vh;
+}
+
+.table::-webkit-scrollbar,
+.table div::-webkit-scrollbar {
+  display: none;
+  background: transparent; /* Chrome/Safari/Webkit */
+  width: 0;
+  height: 0;
+}
+
+#left,
+#right {
+  display: flex;
+  flex-flow: column;
+  vertical-align: top;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 1.5em 0em 1.5em 1em;
+}
+
+#left {
+  flex: 1 1 40ch;
+}
+
+#right {
+  flex: 1.25 1.25 50ch;
+}
+
+.description {
+  padding: 6px 0;
+}
+
+.header p {
+  margin: 0.3em 0;
+  font-style: italic;
+  color: #4a4a4a;
+}
+
+.header a {
+  text-decoration: none;
 }
 
 .name {
-  font-family: "Nanum Myeongjo", "Times New Roman", serif;
   font-size: 32px;
   line-height: 25px;
   max-width: 110px;
   font-weight: 900;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: #4a4a4a;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-style: normal;
+  color: #9fff2f;
+  background-color: #4a4a4a3f;
 }
 
 h1,
@@ -18,35 +149,55 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Times New Roman", serif;
-  text-align: left;
+  font-weight: 900;
+  line-height: 1.1em;
+  font-family: "Nanum Myeongjo", "Times New Roman", serif;
 }
 
-.portfolio-theme {
-  background-color: var(--default-bg);
-  color: var(--default-text);
+h1 {
+  font-size: 2em;
+  margin: 0em 0 0.25em;
 }
 
-#portfolio-wallpaper {
-  object-fit: cover;
-  max-width: 550px;
-  width: 77%;
+h2 {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.25em;
 }
 
-#work-table th h3 {
-  margin: 0.5em 0 0;
+h3 {
+  font-size: 1em;
+  margin: 0.25em 0;
+  color: #4a4a4a;
 }
 
-#work-table td:not(.links) a {
-  padding: 0 0 0 0.3em;
+h4 {
+  font-size: 1em;
+  margin: 1em 0 0.25em 3.5em;
+  text-indent: -3.5em;
+  line-height: 1.2em;
+  text-transform: initial;
 }
 
-#center p, .postscript {
-  font-family: sans-serif;
-  line-height: 1.75em;
-  font-weight: 100;
+.location {
+  font-style: italic;
 }
 
-div#select button {
-  font-family: "Times New Roman", serif;
+p {
+  font-size: 1em;
+}
+
+p.tags {
+  margin: 0.25em 0.5em;
+  font-style: italic;
+  color: #4a4a4a;
+}
+
+p.indent {
+  margin: 0.3em 0 0.4em 1.5em;
+  line-height: 1.3em;
+  text-indent: -1em;
+}
+
+p.indent::before {
+  content: "✴︎ ";
 }

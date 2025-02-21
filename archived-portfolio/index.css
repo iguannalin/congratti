@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
+
+body {
+  font-family: "Nanum Myeongjo", "Times New Roman", serif;
+}
+
+.name {
+  font-family: "Nanum Myeongjo", "Times New Roman", serif;
+  font-size: 32px;
+  line-height: 25px;
+  max-width: 110px;
+  font-weight: 900;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Times New Roman", serif;
+  text-align: left;
+}
+
+.portfolio-theme {
+  background-color: var(--default-bg);
+  color: var(--default-text);
+}
+
+#portfolio-wallpaper {
+  object-fit: cover;
+  max-width: 550px;
+  width: 77%;
+}
+
+#work-table th h3 {
+  margin: 0.5em 0 0;
+}
+
+#work-table td:not(.links) a {
+  padding: 0 0 0 0.3em;
+}
+
+#center p, .postscript {
+  font-family: sans-serif;
+  line-height: 1.75em;
+  font-weight: 100;
+}
+
+div#select button {
+  font-family: "Times New Roman", serif;
+}
