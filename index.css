@@ -27,6 +27,7 @@ body {
   -webkit-font-smoothing: antialiased;
   height: 100vh;
   margin: 0 auto;
+  max-width: 1000px;
   padding: 1em;
   text-shadow: var(--shadow-color) -2px 2px 8px;
   width: 100vw;
@@ -45,6 +46,8 @@ dot {
   color: blue;
   position: absolute;
 }
+
+dot:nth-of-type(even) { color: blueviolet; }
 
 .flex-room {
   box-sizing: border-box;
