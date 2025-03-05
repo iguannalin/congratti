@@ -20,21 +20,34 @@
     ]
   },
   "skills"   : {
-    "title"    : "Skills",
-    "frontend" : [
-      "Javascript", "Typescript", "Angular", "Vue", "React", "PHP", "vis.js", "D3.js", "P5.js", "HTML", "CSS", "Tailwind", "Node.js", "Jasmine"
-    ],
-    "backend"  : [
-      "Python", "Flask", "Git", "Firebase", "SQL", "Bash", "C++", "Java"
-    ],
-    "hardware" : [
-      "Raspberry Pi", "debugging", "EEG", "Arduino", "wireless communication & networking"
-    ],
-    "design"   : [
-      "Illustrator", "Figma"
-    ],
-    "languages": [
-      "Cantonese", "Mandarin"
+    "title": "Skills",
+    "types": [
+      {
+        "title" : "frontend",
+        "skills": [
+          "Javascript", "Typescript", "Angular", "Vue", "React", "PHP", "vis.js", "D3.js", "P5.js", "HTML", "CSS", "Tailwind", "Node.js", "Jasmine"
+        ]
+      }, {
+        "title" : "backend",
+        "skills": [
+          "Python", "Flask", "Git", "Firebase", "SQL", "Bash", "C++", "Java"
+        ]
+      }, {
+        "title" : "hardware",
+        "skills": [
+          "Raspberry Pi", "debugging", "EEG", "Arduino", "wireless communication & networking"
+        ]
+      }, {
+        "title" : "design",
+        "skills": [
+          "Illustrator", "Figma"
+        ]
+      }, {
+        "title" : "languages",
+        "skills": [
+          "Cantonese", "Mandarin"
+        ]
+      }
     ]
   },
   "work"     : {
