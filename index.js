@@ -39,5 +39,5 @@ window.addEventListener( "load", () => {
   }
 
   document.body.addEventListener( "mousemove", ( e ) => drawDots( e ) );
-  document.body.addEventListener( "touchmove", ( e ) => drawDots( e ) );
+  document.body.addEventListener( "touchmove", ( e ) => drawDots( e, true ) );
 } );
