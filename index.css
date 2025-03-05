@@ -1,7 +1,7 @@
+@import url(small.css) (min-width:0px);
+@import url(large.css) (min-width:900px);
 @import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap");
 
-/*@import url(small.css) (min-width:0px);*/
-/*@import url(large.css) (min-width:900px);*/
 
 :root {
   --em-base: 16px;
@@ -24,7 +24,6 @@ body {
   font-family: "Zen Old Mincho", "Times New Roman", serif;
   font-size: 1em;
   -webkit-font-smoothing: antialiased;
-  height: 100vh;
   margin: 0 auto;
   max-width: 1000px;
   padding: 1em;
