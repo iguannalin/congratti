@@ -1,3 +1,5 @@
 .vscode/
-private-work/
 .idea/
+.parcel-cache
+node_modules
+
