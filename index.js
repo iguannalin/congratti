@@ -28,7 +28,6 @@ window.addEventListener( "load", () => {
 
     if ( isTouch ) {
       e.preventDefault();
-      document.body.style.overflow = "hidden";
       dot.style.left = `${ e.targetTouches[0].pageX }px`;
       dot.style.top = `${ e.targetTouches[0].pageY }px`;
     } else {
