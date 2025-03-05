@@ -63,6 +63,7 @@ dot:nth-of-type(even) { color: blueviolet; }
   display: flex;
   flex: 1 1 50px;
   outline: 1px dashed orange;
+  padding: 1em 0.5em;
 }
 
 .flex-floor {
@@ -70,6 +71,7 @@ dot:nth-of-type(even) { color: blueviolet; }
   display: flex;
   flex: 1 1 50px;
   outline: 1px dashed orange;
+  padding: 1em 0.5em;
 }
 
 .flex-window {
@@ -81,6 +83,7 @@ dot:nth-of-type(even) { color: blueviolet; }
   outline: 1px dashed orange;
   overflow: scroll;
   width: 100%;
+  padding: 1em 0.5em;
 }
 
 .flex-pane {
@@ -110,7 +113,6 @@ dot:nth-of-type(even) { color: blueviolet; }
   flex-flow: row wrap;
   gap: 1em;
   justify-content: flex-end;
-  padding: 1em 0.5em;
   width: 100%;
 }
 
