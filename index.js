@@ -34,8 +34,8 @@ cleanWindow();
             descriptionContainer.innerHTML = image.title ? image.title : image.alt ? image.alt : "";
           });
           imageElement.src = image.src;
-          imageElement.alt = image.alt;
-          imageElement.title = image.title;
+          if (image.alt) imageElement.alt = image.alt;
+          if (image.title) imageElement.title = image.title;
           div.appendChild(imageElement);
           getRandomInt(0, 2) === 0 ? right.appendChild(div) : left.appendChild(div);
         }
