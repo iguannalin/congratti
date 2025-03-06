@@ -6,7 +6,7 @@
 :root {
   --em-base: 16px;
   --main-bg-color: #f2e683;
-  --shadow-color: #858ebc;
+  --shadow-color: #c2c1ec;
   --main-text-color: rgba(30, 30, 30, 0.87);
 }
 
@@ -87,9 +87,7 @@ dot:nth-of-type(even) { color: blueviolet; }
 .flex-pane {
   box-sizing: border-box;
   display: flex;
-  height: 100%;
   outline: 1px dashed orange;
-  overflow: scroll;
 }
 
 .flex-pane.panel {
