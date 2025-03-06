@@ -27,7 +27,7 @@ body {
   margin: 0 auto;
   max-width: 1000px;
   padding: 1em;
-  text-shadow: var(--shadow-color) -2px 2px 8px;
+  /* text-shadow: var(--shadow-color) -2px 2px 8px; */
   width: 100vw;
 }
 
