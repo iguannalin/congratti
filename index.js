@@ -7,7 +7,7 @@ window.addEventListener( "load", () => {
 
   const floorContainer = document.querySelector( ".flex-floor" );
 
-  const pictureFolders = [ { name: "projects", count: 11 }, { name:"yosemite", count: 7 }, { name:"reveries", count: 9}, { name:"eastcoast", count: 16}, { name:"alaska", count: 7}];
+  const pictureFolders = [ { name: "projects", count: 11 }, { name:"yosemite", count: 7 }, { name:"reveries", count: 9}, { name:"eastcoast", count: 16}, { name:"alaska", count: 7}, { name:"exposure", count: 21}];
   function loadPictures() {
     const directory = pictureFolders[getRandomInt(0,pictureFolders.length)];
     for (let i = 0; i < directory.count; i++)
