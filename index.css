@@ -1,5 +1,5 @@
-@import url(small.css) (min-width:0px);
-@import url(large.css) (min-width:900px);
+@import url(small.css) (min-width: 0px);
+@import url(large.css) (min-width: 900px);
 @import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap");
 
 
@@ -65,15 +65,16 @@ dot:nth-of-type(even) { color: blueviolet; }
 }
 
 .flex-floor {
+  align-items: center;
   box-sizing: border-box;
   display: flex;
   flex: 1 1 100px;
-  outline: 1px dashed orange;
-  padding: 1em 0.5em;
-  align-items: center;
   gap: 1em;
+  justify-content: space-evenly;
+  outline: 1px dashed orange;
   overflow-x: scroll;
   overflow-y: hidden;
+  padding: 1em 0.5em;
 }
 
 .flex-floor img {
@@ -89,8 +90,8 @@ dot:nth-of-type(even) { color: blueviolet; }
   gap: 16px;
   outline: 1px dashed orange;
   overflow: scroll;
-  width: 100%;
   padding: 1em 0.5em;
+  width: 100%;
 }
 
 .flex-pane {
