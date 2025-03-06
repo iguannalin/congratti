@@ -87,13 +87,13 @@ dot:nth-of-type(even) { color: blueviolet; }
 .flex-pane {
   box-sizing: border-box;
   display: flex;
-  outline: 1px dashed orange;
+  /* outline: 1px dashed orange; */
 }
 
 .flex-pane.panel {
   flex: 2 1 200px;
   flex-flow: column nowrap;
-  outline: 1px dashed orange;
+  /* outline: 1px dashed orange; */
 }
 
 .flex-pane .side {
