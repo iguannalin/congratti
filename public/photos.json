@@ -6,23 +6,23 @@
       "images": [
         {
           "alt": "portrait of family of projects",
-          "src": "public/tableware1.png",
+          "src": "public/projects/tableware1.png",
           "title": "tableware - by anna y lin; credits to jaxon wang"
         }, {
           "alt": "5 small, stacked wooden cups",
-          "src": "public/tableware2.png",
+          "src": "public/projects/tableware2.png",
           "title": "cups - sanded plywood"
         }, {
           "alt": "hand pulling a tissue out of a tissue box",
-          "src": "public/tableware3.png",
+          "src": "public/projects/tableware3.png",
           "title": "tissue box - laser-cut finger joint plywood box"
         }, {
           "alt": "a round bowl holding balls of pink, and orange yarn, and crochet hooks",
-          "src": "public/tableware4.png",
+          "src": "public/projects/tableware4.png",
           "title": "topography bowl - laser-cut plywood"
         }, {
           "alt": "a wooden candelabra shaped like a fan, and holding colorful birthday candles",
-          "src": "public/tableware5.png",
+          "src": "public/projects/tableware5.png",
           "title": "fan candle holder - cut poplar wood with yarn"
         }, {
           "alt": "A pink, orange, and dark purple net cascades from the ceiling, obscuring two people hugging nodes inside the net, one person is holding a phone, and the other person is smiling.",
@@ -205,7 +205,7 @@
           "alt": "Vertical shot of sunrise on Valdez mountain range.",
           "src": "public/alaska/mountain-sunrise-vertical.png"
         }, {
-          "alt": "Vertical shot of sunrise",
+          "alt": "Really cool skater buds",
           "src": "public/alaska/skater-buds.png"
         }, {
           "alt": "Near evening shot of a snowy mountainside in Alaska.",

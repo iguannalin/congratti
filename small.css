@@ -1,1 +1,14 @@
 body { height: 90vh; }
+
+
+/* PHOTOS */
+.flex-pane.panel img {
+  width: 100%;
+  height: auto;
+}
+
+.flex-pane.body img {
+  width: 100%;
+  height: auto;
+  padding-right: 0.5em;
+}

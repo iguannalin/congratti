@@ -6,39 +6,46 @@ window.addEventListener("load", () => {
                                                           // minimum is inclusive
   }
 
+  const left = document.querySelector(".flex-pane.panel");
+  const right = document.querySelector(".flex-pane.body");
+
+  function cleanWindow() {
+    left.innerHTML = "";
+    right.innerHTML = "";
+  }
+
   //
   // PHOTOS
   //
 
-  const floorContainer = document.querySelector(".flex-floor");
-
+  const descriptionContainer = document.querySelector(".description-container");
 
   function loadPhotos() {
+cleanWindow();
     let photoFolders;
     fetch("public/photos.json").then((r => r.json())).then((d => {
         photoFolders = d.photos
         const directory = photoFolders[getRandomInt(0, photoFolders.length)];
-        console.log(directory);
         for ( let i = 0; i < directory.count; i++ ) {
           const image = directory.images[i];
+          const div = document.createElement("div");
           const imageElement = document.createElement("img");
+          imageElement.addEventListener("mouseenter", () => {
+            descriptionContainer.innerHTML = image.title ? image.title : image.alt ? image.alt : "";
+          });
           imageElement.src = image.src;
           imageElement.alt = image.alt;
           imageElement.title = image.title;
-          floorContainer.appendChild(imageElement);
+          div.appendChild(imageElement);
+          getRandomInt(0, 2) === 0 ? right.appendChild(div) : left.appendChild(div);
         }
       }
     ));
   }
 
-  loadPhotos();
-
   //
   // RESUME
   //
-
-  const left = document.querySelector(".flex-pane.panel");
-  const right = document.querySelector(".flex-pane.body");
 
   function createSection(data) {
     const container = document.createElement("div");
@@ -108,6 +115,7 @@ window.addEventListener("load", () => {
   }
 
   function loadResume() {
+    cleanWindow();
     fetch("resume/resume.json").then(res => res.json()).then((data) => {
       Object.keys(data).forEach((key) => {
         if ( key === "header" ) return;
@@ -117,8 +125,6 @@ window.addEventListener("load", () => {
       })
     });
   }
-
-  loadResume();
 
   //
   // DOTS
@@ -157,4 +163,11 @@ window.addEventListener("load", () => {
 
   document.body.addEventListener("mousemove", (e) => drawDots(e));
   document.body.addEventListener("touchmove", (e) => drawDots(e, true));
+
+  const resumeView = document.querySelector("#resume-view");
+  resumeView.addEventListener("click", loadResume);
+  const photosView = document.querySelector("#photos-view");
+  photosView.addEventListener("click", loadPhotos);
+
+  loadPhotos();
 });
