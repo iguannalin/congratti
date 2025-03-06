@@ -64,7 +64,7 @@ html {
 
 body {
   margin: 0.5rem 2.5rem;
-  font-family: "Arial Narrow", sans-serif;
+  font-family: "Times New Roman", serif;
   letter-spacing: -0.03em;
   line-height: 1em;
   display: flex;
@@ -207,5 +207,7 @@ p.indent {
 }
 
 p.indent::before {
-  content: "〜 ";
+  content: "⮑ ";
+  font-size: 0.5em;
+  vertical-align: top;
 }
