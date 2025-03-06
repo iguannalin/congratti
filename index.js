@@ -31,7 +31,7 @@ cleanWindow();
           const div = document.createElement("div");
           const imageElement = document.createElement("img");
           imageElement.addEventListener("mouseenter", () => {
-            descriptionContainer.innerHTML = image.title ? image.title : image.alt ? image.alt : "";
+            descriptionContainer.innerHTML = image.alt ? image.alt : image.title ? image.title : "";
           });
           imageElement.src = image.src;
           if (image.alt) imageElement.alt = image.alt;
