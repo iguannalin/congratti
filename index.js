@@ -2,12 +2,25 @@ window.addEventListener( "load", () => {
   function getRandomInt( min, max ) {
     min = Math.ceil( min );
     max = Math.floor( max );
-    return Math.floor( Math.random() * (max - min) + min ); // The maximum is exclusive and the
-                                                            // minimum is inclusive
+    return Math.floor( Math.random() * (max - min) + min ); // The maximum is exclusive and the// minimum is inclusive
   }
 
+  const floorContainer = document.querySelector( ".flex-floor" );
+
+  const pictureFolders = [ { name: "projects", count: 11 }, { name:"yosemite", count: 7 }, { name:"reveries", count: 9}, { name:"eastcoast", count: 16}, { name:"alaska", count: 7}];
+  function loadPictures() {
+    const directory = pictureFolders[getRandomInt(0,pictureFolders.length)];
+    for (let i = 0; i < directory.count; i++)
+      fetch(`public/${directory.name}/${i}.png`).then(r => r.blob()).then(blob => {
+        const imageUrl = URL.createObjectURL(blob);
+        const imageElement = document.createElement("img");
+        imageElement.src = imageUrl;
+        floorContainer.appendChild(imageElement);
+    })
+  }
+  loadPictures();
+
   const dotsContainer = document.getElementById( "dots-container" );
-  const container = document.getElementById( "container" );
 
   let dotIndex = 0;
   const dotMax = 500;

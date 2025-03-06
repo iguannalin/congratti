@@ -67,9 +67,18 @@ dot:nth-of-type(even) { color: blueviolet; }
 .flex-floor {
   box-sizing: border-box;
   display: flex;
-  flex: 1 1 50px;
+  flex: 1 1 100px;
   outline: 1px dashed orange;
   padding: 1em 0.5em;
+  align-items: center;
+  gap: 1em;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.flex-floor img {
+  height: 65px;
+  width: auto;
 }
 
 .flex-window {
