@@ -226,4 +226,8 @@ p.indent::before {
   vertical-align: top;
 }
 
+/* RESUME */
+.resume h2 {
+  text-transform: capitalize;
+}
 

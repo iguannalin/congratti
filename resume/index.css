@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap");
 
 :root {
   --main-bg-color: #f9faffde;
-  --main-text-color: rgb(35, 35, 35);
   --shadow-color: #858ebc;
+  --main-text-color: rgb(35, 35, 35);
 }
 
 html {
@@ -22,9 +22,9 @@ html {
   }
 
   a {
-    text-decoration: none;
     color: inherit;
     font-style: italic;
+    text-decoration: none;
   }
 
   td * {
@@ -63,44 +63,44 @@ html {
 }
 
 body {
-  margin: 0.5rem 2.5rem;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  display: flex;
+  flex-flow: column wrap;
   font-family: "Times New Roman", serif;
   letter-spacing: -0.03em;
   line-height: 1em;
-  display: flex;
+  margin: 0.5rem 2.5rem;
   place-content: center;
-  flex-flow: column wrap;
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
 }
 
 .table {
-  max-width: 900px;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  display: flex;
-  justify-content: center;
   align-items: flex-start;
+  display: flex;
   flex-flow: row wrap;
   height: 98vh;
+  justify-content: center;
+  max-width: 900px;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 }
 
 .table::-webkit-scrollbar,
 .table div::-webkit-scrollbar {
-  display: none;
   background: transparent; /* Chrome/Safari/Webkit */
-  width: 0;
+  display: none;
   height: 0;
+  width: 0;
 }
 
 #left,
 #right {
   display: flex;
   flex-flow: column;
-  vertical-align: top;
   overflow-x: hidden;
   overflow-y: scroll;
   padding: 1.5em 0em 1.5em 1em;
+  vertical-align: top;
 }
 
 #left {
@@ -116,9 +116,9 @@ body {
 }
 
 .header p {
-  margin: 0.3em 0;
-  font-style: italic;
   color: #4a4a4a;
+  font-style: italic;
+  margin: 0.3em 0;
 }
 
 .header a {
@@ -127,11 +127,11 @@ body {
 
 .name {
   font-size: 36px;
-  line-height: 28px;
-  max-width: 6ch;
   font-weight: 600;
-  margin-bottom: 0.5em;
   letter-spacing: -0.005em;
+  line-height: 28px;
+  margin-bottom: 0.5em;
+  max-width: 6ch;
 }
 
 a {
@@ -139,10 +139,10 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
-  font-style: normal;
-  color: #9fff2f;
   background-color: #4a4a4a3f;
+  color: #9fff2f;
+  font-style: normal;
+  text-decoration: underline;
 }
 
 h1,
@@ -151,10 +151,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
-  line-height: 0.8em;
-  letter-spacing: -0.06em;
   font-family: "Zen Old Mincho", "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.8em;
 }
 
 h1 {
@@ -168,15 +168,15 @@ h2 {
 }
 
 h3 {
+  color: #4a4a4a;
   font-size: 1em;
   margin: 0.25em 0;
-  color: #4a4a4a;
 }
 
 h4 {
   font-size: 1em;
-  margin: 0.7em 0 0.25em 0em;
   line-height: 1.2em;
+  margin: 0.7em 0 0.25em 0em;
   text-transform: initial;
 }
 
@@ -189,20 +189,23 @@ p {
 }
 
 p.tags {
-  margin: 0.05em 0 0;
-  font-size: 0.9em;
-  font-style: italic;
   color: #4a4a4a;
+  font-size: 0.9em;
+  margin: 0.05em 0 0;
 }
 
-p.skills-tags {
-  margin: 0.25em 0.5em;
+.skills p.tags {
   color: #4a4a4a;
+  margin: 0.25em 0.5em;
+}
+
+.work p.tags {
+  font-style: italic;
 }
 
 p.indent {
-  margin: 0.2em 0 0.1em 1.2em;
   line-height: 1.3em;
+  margin: 0.2em 0 0.1em 1.2em;
   text-indent: -1em;
 }
 
@@ -210,4 +213,8 @@ p.indent::before {
   content: "⮑ ";
   font-size: 0.5em;
   vertical-align: top;
+}
+
+.resume h2 {
+  text-transform: capitalize;
 }

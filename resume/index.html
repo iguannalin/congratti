@@ -43,129 +43,92 @@
         </p>
       </div>
     </div>
-
-    <h2>Education</h2>
-    <h4>Masters | Interactive Telecommunications Program, NYU
-      Tisch – 2024</h4>
-    <p class="indent">Activities: Lead Coding Lab Mentor, Graduate
-      Assistant, ITP Fall & Spring Showcase</p>
-    <h4>B.A. Psychology | University of California, Santa Cruz – 2017</h4>
-    <p class="indent">Awards: Dean's Honor</p>
-    <p class="indent">Activities: Psychology Research Methods Teaching
-      Assistant, Girls in Engineering Summer Camp
-      Teacher</p>
-    <h4>Study Abroad | Yonsei University, Seoul – 2016</h4>
-    <p class="indent">Courses & activities: AI Robotics & Ethics, Tech
-      Startup R&D Intern, After-school Program Teaching
-      Assistant</p>
-
-    <h2>Skills</h2>
-    <h3>Frontend</h3>
-    <p class="skills-tags">
-      Javascript, Typescript, Angular, Vue, React, PHP,
-      vis.js, D3.js, P5.js, HTML, CSS, Tailwind, Node.js, Jasmine</p>
-    <h3>Backend</h3>
-    <p class="skills-tags">Python, Flask, Git, Firebase, SQL, Bash, C++,
-      Java</p>
-    <h3>Hardware</h3>
-    <p class="skills-tags">Raspberry Pi, debugging, EEG, Arduino, wireless
-      communication & networking</p>
-    <h3>Design</h3>
-    <p class="skills-tags">Illustrator, Figma</p>
-    <h3>Languages</h3>
-    <p class="skills-tags">Cantonese & Mandarin</p>
-
   </div>
-  <div id="right">
-    <h2>Work</h2>
-    <h3>Projects</h3>
-    <h4>Web development for the <a
-      href="https://neweconomy.net/"
-      title="New Economy Coalition website">New Economy
-      Coalition</a> – 2025</h4>
-    <p class="tags">WordPress, PHP, Javascript, HTML, CSS</p>
-
-    <h4>Web development and accessibility-first design for
-      archival project <a
-        href="https://healingjusticelineages.com/"
-        title="Healing Justice Lineages site">Healing
-        Justice Lineages</a> | <a
-        href="https://www.instagram.com/hjlineages"
-        title="Healing Justice Lineages Instagram">HJL</a> – 2024</h4>
-    <p class="tags">WordPress, PHP, Javascript, HTML, CSS</p>
-
-    <h4>React web app development for the
-      <a href="https://superdiv.mmg.mpg.de/"
-         title="Superdiversity project site">Superdiversity data-viz
-        project</a> with the Max
-      Planck Institute | <a href="https://stamen.com/"
-                            title="Stamen Design website">Stamen Design</a>,
-      San Francisco – 2018
-    </h4>
-    <p class="tags">HTML, CSS, Javascript, React, D3.js</p>
-
-    <h4>Learning Management System web development and design for legal
-      workers | <a
-        href="https://www.pacificworkers.com/"
-        title="Farber & Co. website">Farber & Co.</a>, Oakland –
-      2017</h4>
-    <p class="tags">WordPress, Javascript, HTML, CSS, PHP</p>
-
-    <br/>
-    <h3>Roles</h3>
-    <h4>UX Engineer | <a
-      href="https://www.mitre.org/"
-      title="MITRE website">MITRE</a> Boston – Feb. 2021 - May
-      2022</h4>
-    <p class="tags">Angular, Typescript, Python, Vue, Alpine.js,
-      Tailwind, vis.js</p>
-    <p class="indent">Full-stack web development & UX design for
-      cybersecurity and health policymaking tools on 4 different projects.
-    </p>
-    <p class="indent">Prototyping and full-stack development on <a
-      href="https://caldera.mitre.org/"
-      title="Caldera project site">CALDERA</a>, a
-      red-team simulation software, using Python RESTful APIs.</p>
-    <p class="indent">Full-stack development and maintenance of the <a
-      href="https://github.com/mitre-attack/attack-navigator"
-      title="ATT&CL Navigator GitHub project site">ATT&CK&reg;
-      Navigator</a>, an open-source cybersecurity database; features
-      include the dark mode, search, and filter.</p>
-
-    <h4>Frontend Engineer | <a
-      href="https://www.schwab.com/"
-      title="Charles Schwab website">Charles Schwab</a> San Francisco –
-      Nov. 2018 - Dec. 2020</h4>
-    <p class="tags">Angular, RxJS, Typescript, Node.js, Jasmine</p>
-    <p class="indent">Led prototype design & development for user research
-      tests.
-    <p class="indent">
-      Full-stack web development and unit-testing for client-facing web
-      applications.</p>
-    <p class="indent">Accessibility lead for a WCAG-compatible web
-      application used by 150,000+
-      clients.</p>
-    <p class="indent">
-      Wrote <a
-      alt="Medium article: Why Your Grandma's Images Are Being Rotated Wrong"
-      href="https://medium.com/@inceptiondeveloper/why-your-grandmas-images-are-being-rotated-wrong-bfeeae5cf91a"
-      title="Sample documentation I wrote on Medium">documentation</a>
-      to share technical knowledge.
-    </p>
-
-    <h4>Code Mentor | <a
-      href="https://codinglab.itp.io/"
-      title="Coding Lab website">The
-      Coding Lab</a> @ NYU, Brooklyn – Oct. 2022 - May 2024</h4>
-    <p class="indent">Workshop and speaker events planning; invited 4
-      creative coding artists to talk at ITP.</p>
-    <p class="indent">Managed mentor schedules and taught students.</p>
-    <p class="indent">Workshop development and teaching the <a
-      href="https://annaylin.notion.site/April-4th-Hacking-with-the-Browser-Workshop-a89fc8556f3a43d4acd27af132b8c8a8?pvs=4"
-      title="Hacking with the Browser workshop published on Notion">Hacking
-      with the Browser</a> workshop every semester.
-    </p>
-  </div>
+  <div id="right"></div>
 </div>
 </body>
+<script>
+  const left = document.querySelector("#left");
+  const right = document.querySelector("#right");
+
+  function createSection(data) {
+    const container = document.createElement("div");
+    container.className = "resume " + data.title;
+    const h2 = document.createElement("h2");
+    h2.className = "title"
+    h2.innerHTML = data.title;
+    container.appendChild(h2);
+
+    switch ( data.title ) {
+      case "education":
+        data.programs.forEach(section => {
+          const h4 = document.createElement("h4");
+          h4.innerHTML = section.title;
+          container.appendChild(h4);
+          const p = document.createElement("p");
+          p.className = "indent";
+          p.innerHTML = section.activities;
+          container.appendChild(p);
+        });
+        break;
+      case "skills":
+        data.types.forEach((type) => {
+          const h4 = document.createElement("h4");
+          h4.innerHTML = type.title;
+          container.appendChild(h4);
+          const p = document.createElement("p");
+          p.innerText = type.skills.join(", ");
+          p.className = "tags";
+          container.appendChild(p);
+        });
+        break;
+      case "work":
+        data.projects.forEach((project) => {
+          const h4 = document.createElement("h4");
+          h4.innerHTML = project.title;
+          container.appendChild(h4);
+          const p = document.createElement("p");
+          p.innerText = project.skills.join(", ");
+          p.className = "tags";
+          container.appendChild(p);
+        });
+        data.roles.forEach((project) => {
+          const h4 = document.createElement("h4");
+          h4.innerHTML = project.title;
+          container.appendChild(h4);
+          if ( project["skills"] ) {
+            const p = document.createElement("p");
+            p.className = "tags";
+            p.innerText = project["skills"].join(", ");
+            container.appendChild(p);
+          }
+          if ( project ["tasks"] ) {
+            project["tasks"].forEach(task => {
+              const p = document.createElement("p");
+              p.className = "indent";
+              p.innerHTML = task;
+              container.appendChild(p);
+            })
+          }
+        });
+        break;
+      default:
+        break;
+    }
+    return container;
+  }
+
+  function loadResume() {
+    fetch("resume.json").then(res => res.json()).then((data) => {
+      Object.keys(data).forEach((key) => {
+        if ( key === "header" ) return;
+        const section = createSection(data[key]);
+        if ( key === "work" ) right.appendChild(section);
+        else left.appendChild(section);
+      })
+    });
+  }
+
+  loadResume();
+</script>
 </html>

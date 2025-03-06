@@ -5,7 +5,7 @@
     "email": "anna@annaylin.com"
   },
   "education": {
-    "title"   : "Education",
+    "title"   : "education",
     "programs": [
       {
         "title"     : "Masters | Interactive Telecommunications Program, NYU – 2024",
@@ -20,7 +20,7 @@
     ]
   },
   "skills"   : {
-    "title": "Skills",
+    "title": "skills",
     "types": [
       {
         "title" : "frontend",
@@ -30,7 +30,7 @@
       }, {
         "title" : "backend",
         "skills": [
-          "Python", "Flask", "Git", "Firebase", "SQL", "Bash", "C++", "Java"
+          "Python", "Flask", "Git", "Firebase", "SQL", "Bash", "C", "Java"
         ]
       }, {
         "title" : "hardware",
@@ -51,10 +51,10 @@
     ]
   },
   "work"     : {
-    "title"   : "Work",
+    "title"   : "work",
     "projects": [
       {
-        "title" : "Web development for the <a href='https://neweconomy.net/' title='New Economy Coalition website'>New Economy Coalition</a> – 2025<",
+        "title" : "Web development for the <a href='https://neweconomy.net/' title='New Economy Coalition website'>New Economy Coalition</a> – 2025",
         "skills": [
           "WordPress", "PHP", "Javascript", "HTML", "CSS"
         ]
@@ -64,7 +64,7 @@
           "WordPress", "PHP", "Javascript", "HTML", "CSS"
         ]
       }, {
-        "title" : "React web app development for the <a href='https://superdiv.mmg.mpg.de/' title='Superdiversity project site'>Superdiversity data-viz project</a> with the Max Planck Institute | <a href='https://stamen.com/' title='Stamen Design website'>Stamen Design</a>, San Francisco – 2018 ",
+        "title" : "React web app development for the <a href='https://superdiv.mmg.mpg.de/' title='Superdiversity project site'>Superdiversity</a> data-viz project with the Max Planck Institute | <a href='https://stamen.com/' title='Stamen Design website'>Stamen Design</a>, San Francisco – 2018 ",
         "skills": [
           "HTML", "CSS", "Javascript", "React", "D3.js"
         ]
@@ -82,7 +82,7 @@
           "Angular", "Typescript", "Python", "Vue", "Alpine.js", "Tailwind", "vis.js"
         ],
         "tasks" : [
-          "Full-stack web development & UX design for cybersecurity and health policymaking tools on 4 different projects.", "Prototyping and full-stack development on <a href='https: //caldera.mitre.org/'  title='Caldera project site'>CALDERA</a>, a red-team simulation software, using Python RESTful APIs.", "Full-stack development and maintenance of the <a href='https://github.com/mitre-attack/attack-navigator'title='ATT&CL Navigator GitHub project site'>ATT&CK&reg; Navigator</a>, an open-source cybersecurity database; features include the dark mode, search, and filter."
+          "Full-stack web development & UX design for cybersecurity and health policymaking tools on 4 different projects.", "Prototyping and full-stack development on <a href='https://caldera.mitre.org/'  title='Caldera project site'>CALDERA</a>, a red-team simulation software, using Python RESTful APIs.", "Full-stack development and maintenance of the <a href='https://github.com/mitre-attack/attack-navigator'title='ATT&CL Navigator GitHub project site'>ATT&CK&reg; Navigator</a>, an open-source cybersecurity database; features include the dark mode, search, and filter."
         ]
       }, {
         "title" : "Frontend Engineer | <a href='https://www.schwab.com/' title='Charles Schwab website'>Charles Schwab</a> San Francisco – Nov. 2018 - Dec. 2020",
