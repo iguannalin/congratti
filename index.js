@@ -7,31 +7,31 @@ window.addEventListener("load", () => {
   }
 
   //
-  // PICTURES
+  // PHOTOS
   //
 
   const floorContainer = document.querySelector(".flex-floor");
 
-  const pictureFolders = [{ name: "projects", count: 11 }, {
-    name: "yosemite",
-    count: 7
-  }, { name: "reveries", count: 9 }, { name: "eastcoast", count: 16 }, {
-    name: "alaska",
-    count: 7
-  }, { name: "exposure", count: 21 }];
 
-  function loadPictures() {
-    const directory = pictureFolders[getRandomInt(0, pictureFolders.length)];
-    for ( let i = 0; i < directory.count; i++ )
-      fetch(`public/${ directory.name }/${ i }.png`).then(r => r.blob()).then(blob => {
-        const imageUrl = URL.createObjectURL(blob);
-        const imageElement = document.createElement("img");
-        imageElement.src = imageUrl;
-        floorContainer.appendChild(imageElement);
-      })
+  function loadPhotos() {
+    let photoFolders;
+    fetch("public/photos.json").then((r => r.json())).then((d => {
+        photoFolders = d.photos
+        const directory = photoFolders[getRandomInt(0, photoFolders.length)];
+        console.log(directory);
+        for ( let i = 0; i < directory.count; i++ ) {
+          const image = directory.images[i];
+          const imageElement = document.createElement("img");
+          imageElement.src = image.src;
+          imageElement.alt = image.alt;
+          imageElement.title = image.title;
+          floorContainer.appendChild(imageElement);
+        }
+      }
+    ));
   }
 
-  loadPictures();
+  loadPhotos();
 
   //
   // RESUME

@@ -1,0 +1,327 @@
+{
+  "photos": [
+    {
+      "name": "projects",
+      "count": 12,
+      "images": [
+        {
+          "alt": "portrait of family of projects",
+          "src": "public/tableware1.png",
+          "title": "tableware - by anna y lin; credits to jaxon wang"
+        }, {
+          "alt": "5 small, stacked wooden cups",
+          "src": "public/tableware2.png",
+          "title": "cups - sanded plywood"
+        }, {
+          "alt": "hand pulling a tissue out of a tissue box",
+          "src": "public/tableware3.png",
+          "title": "tissue box - laser-cut finger joint plywood box"
+        }, {
+          "alt": "a round bowl holding balls of pink, and orange yarn, and crochet hooks",
+          "src": "public/tableware4.png",
+          "title": "topography bowl - laser-cut plywood"
+        }, {
+          "alt": "a wooden candelabra shaped like a fan, and holding colorful birthday candles",
+          "src": "public/tableware5.png",
+          "title": "fan candle holder - cut poplar wood with yarn"
+        }, {
+          "alt": "A pink, orange, and dark purple net cascades from the ceiling, obscuring two people hugging nodes inside the net, one person is holding a phone, and the other person is smiling.",
+          "src": "public/projects/touched.jpg",
+          "title": "The soft networks is a net made of nodes that communicate to each other by touches--when one person hugs a node, a message is sent to all the other nodes which can be felt by another person."
+        }, {
+          "title": "Each node consists of recycled burlap and fleece yarn, a small board with a Raspberry Pi Zero, which starts a server and listens for messages, and also controls 2 mini haptic motors.",
+          "src": "public/projects/microcontroller.jpeg"
+        }, {
+          "alt": "A table display with the handhold mouse, on top of a light blue mousepad, connected to a iMac G4 computer--people to play with an old drawing program called Kid Pix (2000) on the iMac.",
+          "src": "public/projects/handhold.jpg",
+          "title": "The handhold mouse--connected to a iMac G4 computer, inviting people to play with an old drawing program called Kid Pix (2000) on the iMac."
+        }, {
+          "src": "public/projects/handpaint.jpg",
+          "title": "picture of hand being spray-painted"
+        }, {
+          "alt": "Two kids with black EEG headsets on stand in front of 2 pairs of LEG lights suspended from the ceiling--the pair of lights on the left shine green, and the two on the right shine orange.",
+          "src": "public/projects/eeg.png",
+          "title": "Twins using the EEG devices, and controlling different sets of the lights in the EEG cloud, based on activity levels in their brain."
+        }, {
+          "alt": "An old tv set with a green screen surround by piles of books sitting atop a lace-covered desk.",
+          "src": "public/projects/ai-loves-horror.png"
+        }, {
+          "alt": "Phone receiving texts from the text-me-smth-nice app.",
+          "src": "public/projects/text-me-smth-nice.gif",
+          "title": "A messaging app that uses the Twilio SMS API to send out nice texts periodically."
+        }
+      ]
+    }, {
+      "name": "yosemite",
+      "count": 5,
+      "images": [
+        {
+          "alt": "Waves crashing onto a lone rock on an empty beach, somewhat overcast clouds in the sky.",
+          "src": "public/yosemite/Daytime-Beach.png",
+          "title": "Daytime at a beach, somewhere on the north-western coast of California"
+        }, {
+          "alt": "Evening shot of a rock in the ocean.",
+          "src": "public/yosemite/Evening-Rock.png",
+          "title": "Evening at the beach"
+        }, {
+          "alt": "Evening shot of the waves receding on the beach.",
+          "src": "public/yosemite/Evening-Beach.png",
+          "title": "Evening at the beach"
+        }, {
+          "alt": "The waves crashing onto a beach at sunset.",
+          "src": "public/yosemite/Sunset-Waves.png",
+          "title": "Sunset"
+        }, {
+          "alt": "El Capitan in all its glory at dusk.",
+          "src": "public/yosemite/Dusk-ElCapitan.png",
+          "title": "Dusk at El Capitan"
+        }
+      ]
+    }, {
+      "name": "reveries",
+      "count": 10,
+      "images": [
+        {
+          "alt": "DALL·E generated watercolor-like abstract art for the line: You will know her presence in the half-light,",
+          "src": "public/reveries/reveries-1.png",
+          "title": "You will know her presence in the half-light,"
+        }, {
+          "alt": "DALL·E generated watercolor-like abstract art for the line: New flowers upon her yellow head;",
+          "src": "public/reveries/reveries-2.png",
+          "title": "New flowers upon her yellow head;"
+        }, {
+          "alt": "DALL·E generated watercolor-like abstract art for the line: Swift as the night, and full with the night,",
+          "src": "public/reveries/reveries-3.png",
+          "title": "Swift as the night, and full with the night,"
+        }, {
+          "alt": "DALL·E generated watercolor-like abstract art for the line: She'll put the water true.",
+          "src": "public/reveries/reveries-4.png",
+          "title": "She'll put the water true."
+        }, {
+          "alt": "DALL·E generated watercolor-like abstract art for the line: Making all men as the sea to sea-",
+          "src": "public/reveries/reveries-5.png",
+          "title": "Making all men as the sea to sea-"
+        }, {
+          "alt": "DALL·E generated watercolor-like abstract art for the line: She, the signal to my oxygen;",
+          "src": "public/reveries/reveries-6.png",
+          "title": "She, the signal to my oxygen;"
+        }, {
+          "alt": "DALL·E generated watercolor-like abstract art for the line: High in the haze of the ecstasy,",
+          "src": "public/reveries/reveries-7.png",
+          "title": "High in the haze of the ecstasy,"
+        }, {
+          "alt": "DALL·E generated watercolor-like abstract art for the line: Encircle me, and take this hour.",
+          "src": "public/reveries/reveries-8.png",
+          "title": "Encircle me, and take this hour."
+        }, {
+          "alt": "DALL·E generated watercolor-like abstract art for the line: Succor in the dark,",
+          "src": "public/reveries/reveries-9.png",
+          "title": "Succor in the dark,"
+        }, {
+          "alt": "DALL·E generated watercolor-like abstract art for the line: be sun in the dark",
+          "src": "public/reveries/reveries-10.png",
+          "title": "be sun in the dark"
+        }
+      ]
+    }, {
+      "name": "eastcoast",
+      "count": 16,
+      "images": [
+        {
+          "alt": "Shot of top of cathedral against the blue sky.",
+          "src": "public/eastcoast/Cathedral.png",
+          "title": "Cathedral, NYC"
+        }, {
+          "alt": "Dark shot of the interior of a cathedral, the pews, and the altar lit by candlelight.",
+          "src": "public/eastcoast/Cathedral-inside.png",
+          "title": "Cathedral Interior, NYC"
+        }, {
+          "alt": "Vertical shot of window cleaners on side of skyscraper.",
+          "src": "public/eastcoast/Skyscrapers.png",
+          "title": "Sky-scrapers, NYC"
+        }, {
+          "alt": "Gloomy shot of concrete jungle skyline.",
+          "src": "public/eastcoast/Skyline.png",
+          "title": "Skyline, NYC"
+        }, {
+          "alt": "Shot of domed building reflected on side of mirror-like skyscraper.",
+          "src": "public/eastcoast/Dome.png",
+          "title": "Domed building, NYC"
+        }, {
+          "alt": "Blue, and white tiles spell out Spring Street, for the metro station.",
+          "src": "public/eastcoast/SpringSt.png",
+          "title": "Spring Street Metro Station, NYC"
+        }, {
+          "alt": "A large copper, and red-bricked building at an intersection, against an overcast grey sky.",
+          "src": "public/eastcoast/Downtown.png",
+          "title": "Downtown, NYC"
+        }, {
+          "alt": "Colorful tenement buildings side-by-side, against an overcast grey sky.",
+          "src": "public/eastcoast/Storiedbuildings.png",
+          "title": "Residential storied-buildings, NYC"
+        }, {
+          "alt": "Large red-brick buildings side-by-side, against an overcast grey sky.",
+          "src": "public/eastcoast/Buildings.png",
+          "title": "Buildings, NYC"
+        }, {
+          "alt": "Blurry shot of a bright-green okra dish, a fried fish dish topped with red chili peppers, with a plate of fried rice, and a basket of dumplings in the background.",
+          "src": "public/eastcoast/Brekkie.png",
+          "title": "Chinese Breakfast, NYC"
+        }, {
+          "alt": "Shadow of a tree on a softly-lit yellow wood-paneled building.",
+          "src": "public/eastcoast/Treeshadow.png",
+          "title": "Brooklyn, NYC"
+        }, {
+          "alt": "Blurry shot of two rapid transit passengers looking down at phone while sitting down on the train.",
+          "src": "public/eastcoast/MBTA.png",
+          "title": "MBTA, Boston-Cambridge"
+        }, {
+          "alt": "Art installation of iridescent geometric shapes together form a mesh wire, hung amidst the buildings.",
+          "src": "public/eastcoast/DowntownArt.png",
+          "title": "Art Installation, Boston"
+        }, {
+          "alt": "People sitting around a lake, generously shaded by a large willow tree hanging low.",
+          "src": "public/eastcoast/BostonCommons1.png",
+          "title": "Boston Commons, Boston"
+        }, {
+          "alt": "A wedding photoshoot underneath a large willow tree, the vast lake in the foreground.",
+          "src": "public/eastcoast/BostonCommons2.png",
+          "title": "Boston Commons, Boston"
+        }, {
+          "alt": "Boston skyline from the Charles River, set against an overcast grey sky.",
+          "src": "public/eastcoast/BostonCommons3.png",
+          "title": "Boston Commons, Boston"
+        }
+      ]
+    }, {
+      "name": "alaska",
+      "count": 8,
+      "images": [
+        {
+          "alt": "Sunrise dawning on the Valdez mountain range.",
+          "src": "public/alaska/mountain-sunrise.png",
+          "title": "Sunrise by the seaside in Valdez."
+        }, {
+          "alt": "Vertical shot of sunrise on Valdez mountain range.",
+          "src": "public/alaska/mountain-sunrise-vertical.png"
+        }, {
+          "alt": "Vertical shot of sunrise",
+          "src": "public/alaska/skater-buds.png"
+        }, {
+          "alt": "Near evening shot of a snowy mountainside in Alaska.",
+          "src": "public/alaska/mountain-evening.png"
+        }, {
+          "alt": "Motion shot of a lady in hiker gear in the middle of an ice field.",
+          "src": "public/alaska/little-friend.png",
+          "title": "Hiking a lot in the cold with this one."
+        }, {
+          "alt": "Shot of partially-broken ice in a dry frozen river.",
+          "src": "public/alaska/ice-field.png",
+          "title": "Stepping on these are not good for the soul."
+        }, {
+          "alt": "A big, baby blue shed on the side of the snowy road, with mountains in the background.",
+          "src": "public/alaska/shed-blue.png",
+          "title": "Blurry shots of lonely sheds on the Alaskan road, from Fairbanks to Valdez."
+        }, {
+          "alt": "A small white shed on the side of the snowy road, with mountains in the background.",
+          "src": "public/alaska/shed-white.png",
+          "title": "Blurry shots of lonely sheds on the Alaskan road, from Fairbanks to Valdez."
+        }
+      ]
+    }, {
+      "name": "exposure",
+      "count": 21,
+      "images": [
+        {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/0.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/1.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/2.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/3.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/4.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/5.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/6.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/7.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/8.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/9.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/10.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/11.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/12.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/13.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/14.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/15.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/16.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/17.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/18.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/19.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/20.png"
+        }, {
+          "alt": "",
+          "title": "tbd",
+          "src": "public/exposure/21.png"
+        }
+      ]
+    }
+  ]
+}
