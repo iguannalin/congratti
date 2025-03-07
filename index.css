@@ -240,4 +240,9 @@ p.indent::before {
   text-decoration: underline;
 }
 
+.description-container {
+  height: 50px;
+  overflow-y: scroll;
+}
+
 /* background: #ffffffad; */
