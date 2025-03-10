@@ -105,5 +105,5 @@ window.addEventListener("load", () => {
   const photosView = document.querySelector("#photos-view");
   photosView.addEventListener("click", loadPhotos);
 
-  loadPhotos();
+  loadResume();
 });
