@@ -4,7 +4,8 @@ window.addEventListener("load", () => {
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the
+                                                          // minimum is inclusive
   }
 
   const left = document.querySelector(".flex-pane.panel");
@@ -14,11 +15,12 @@ window.addEventListener("load", () => {
   function resetWindow() {
     left.innerHTML = "";
     right.innerHTML = "";
-    provideContext("anna y lin (she/her) is a frontend developer, focused on accessibility, user experience and interested in public archives, open-source, and hacking.")
+    provideContext();
   }
 
-  function provideContext(context) {
-    descriptionContainer.innerHTML = context;
+  function provideContext(context = "") {
+    if ( !context ) descriptionContainer.innerHTML = ("anna y lin (she/her) is a frontend developer, focused on accessibility, user experience and interested in public archives, open-source, and hacking.")
+    else descriptionContainer.innerHTML = context;
   }
 
   //
@@ -59,8 +61,13 @@ window.addEventListener("load", () => {
       Object.keys(data).forEach((key) => {
         if ( key === "header" ) return;
         const section = createSection(data[key]);
-        if ( key === "work" ) right.appendChild(section);
-        else left.appendChild(section);
+        if ( key === "work" ) {
+          section.title = "Freelance web development projects at a few non-profit and public interest groups, and full-time positions as a frontend software engineer."
+          right.appendChild(section);
+        } else {
+          if ( key === "education" ) section.title = "Graduated from UC Santa Cruz in Psychology, and most recently from ITP, the creative technology masters program at NYU."
+          left.appendChild(section);
+        }
       })
     });
   }
@@ -100,7 +107,7 @@ window.addEventListener("load", () => {
     dotsContainer.appendChild(dot);
   }
 
-  document.body.addEventListener("mousemove", (e) => drawDots(e));
+  // document.body.addEventListener("mousemove", (e) => drawDots(e));
   document.body.addEventListener("touchmove", (e) => drawDots(e, true));
 
   const resumeView = document.querySelector("#resume-view");
@@ -111,4 +118,9 @@ window.addEventListener("load", () => {
   photosView.addEventListener("click", loadPhotos);
 
   loadResume();
+  setTimeout(() => {
+    document.querySelectorAll(".education, .work, .header").forEach((elem) => elem.addEventListener("mouseover", (e) => {
+      if (e.target.className === "header" || e.target.title) provideContext(e.target.title);
+    }))
+  }, 200);
 });

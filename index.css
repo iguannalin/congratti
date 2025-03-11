@@ -114,7 +114,6 @@ dot:nth-of-type(even) { color: blueviolet; }
 
 .header p {
   color: #4a4a4a;
-  font-style: italic;
   margin: 0 auto;
 }
 
@@ -145,7 +144,7 @@ a {
 a:hover {
   background-color: #4a4a4a3f;
   color: #9fff2f;
-  font-style: normal;
+  font-style: italic;
   text-decoration: underline;
 }
 
@@ -229,19 +228,19 @@ p.indent::before {
 .views button {
   cursor: pointer;
   font-size:1.5em;
-  font-style: italic;
   border: none;
   background: none;
 }
 
 .views button:hover{
   background-color: #4a4a4a3f;
-  font-style: normal;
+  font-style: italic;
   text-decoration: underline;
 }
 
 .description-container {
   height: 50px;
+  font-style: italic;
   overflow-y: scroll;
 }
 
