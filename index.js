@@ -4,26 +4,30 @@ window.addEventListener("load", () => {
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the//
-                                                          // minimum is inclusive
+    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
 
   const left = document.querySelector(".flex-pane.panel");
   const right = document.querySelector(".flex-pane.body");
+  const descriptionContainer = document.querySelector(".description-container");
 
-  function cleanWindow() {
+  function resetWindow() {
     left.innerHTML = "";
     right.innerHTML = "";
+    provideContext("anna y lin (she/her) is a frontend developer, focused on accessibility, user experience and interested in public archives, open-source, and hacking.")
+  }
+
+  function provideContext(context) {
+    descriptionContainer.innerHTML = context;
   }
 
   //
   // PHOTOS
   //
 
-  const descriptionContainer = document.querySelector(".description-container");
 
   function loadPhotos() {
-    cleanWindow();
+    resetWindow();
     let photoFolders;
     fetch("public/photos.json").then((r => r.json())).then((d => {
         photoFolders = d.photos;
@@ -50,8 +54,7 @@ window.addEventListener("load", () => {
   //
 
   function loadResume() {
-    cleanWindow();
-    descriptionContainer.innerHTML = "";
+    resetWindow();
     fetch("resume/resume.json").then(res => res.json()).then((data) => {
       Object.keys(data).forEach((key) => {
         if ( key === "header" ) return;
@@ -101,8 +104,10 @@ window.addEventListener("load", () => {
   document.body.addEventListener("touchmove", (e) => drawDots(e, true));
 
   const resumeView = document.querySelector("#resume-view");
+  resumeView.addEventListener("mouseover", () => provideContext("view resume"))
   resumeView.addEventListener("click", loadResume);
   const photosView = document.querySelector("#photos-view");
+  photosView.addEventListener("mouseover", () => provideContext("view photos"))
   photosView.addEventListener("click", loadPhotos);
 
   loadResume();
