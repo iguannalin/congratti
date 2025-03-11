@@ -83,7 +83,7 @@ dot:nth-of-type(even) { color: blueviolet; }
   flex: 7 1 600px;
   flex-flow: row wrap;
   gap: 16px;
-  outline: 1px dashed orange;
+  /* outline: 1px dashed orange; */
   overflow: scroll;
   padding: 1em 0.5em;
   width: 100%;
@@ -240,7 +240,6 @@ p.indent::before {
 
 .description-container {
   height: 50px;
-  font-style: italic;
   overflow-y: scroll;
 }
 
