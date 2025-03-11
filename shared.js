@@ -9,9 +9,9 @@ export function createSection(data) {
   switch ( data.title ) {
     case "education":
       data.programs.forEach(section => {
-        const h4 = document.createElement("h4");
-        h4.innerHTML = section.title;
-        container.appendChild(h4);
+        const h3 = document.createElement("h3");
+        h3.innerHTML = section.title;
+        container.appendChild(h3);
         const p = document.createElement("p");
         p.className = "indent";
         p.innerHTML = section.activities;
@@ -20,9 +20,9 @@ export function createSection(data) {
       break;
     case "skills":
       data.types.forEach((type) => {
-        const h4 = document.createElement("h4");
-        h4.innerHTML = type.title;
-        container.appendChild(h4);
+        const h3 = document.createElement("h3");
+        h3.innerHTML = type.title;
+        container.appendChild(h3);
         const p = document.createElement("p");
         p.innerText = type.skills.join(", ");
         p.className = "tags";
@@ -30,6 +30,9 @@ export function createSection(data) {
       });
       break;
     case "work":
+      const projectsH3 = document.createElement("h3");
+      projectsH3.innerHTML = "Projects";
+      container.appendChild(projectsH3);
       data.projects.forEach((project) => {
         const h4 = document.createElement("h4");
         h4.innerHTML = project.title;
@@ -39,6 +42,9 @@ export function createSection(data) {
         p.className = "tags";
         container.appendChild(p);
       });
+      const rolesH3 = document.createElement("h3");
+      rolesH3.innerHTML = "Roles";
+      container.appendChild(rolesH3);
       data.roles.forEach((project) => {
         const h4 = document.createElement("h4");
         h4.innerHTML = project.title;

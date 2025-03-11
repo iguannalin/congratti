@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap");
+
+.resume h1,
+.resume h2,
+.resume h3,
+.resume h4,
+.resume h5,
+.resume h6 {
+  font-family: "Zen Old Mincho", "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.8em;
+}
+
+.resume h1 {
+  font-size: 2em;
+  margin: 0 0 0.25em;
+}
+
+.resume h2 {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.25em;
+  text-transform: capitalize;
+}
+
+.resume h3 {
+  color: #4a4a4a;
+  font-size: 1em;
+  line-height: 1.2em;
+  margin: 1em 0 0;
+}
+
+.resume h4 {
+  font-size: 1em;
+  line-height: 1.2em;
+  margin: 1em 0 0.2rem;
+  text-transform: initial;
+}
+
+.resume .location {
+  font-style: italic;
+}
+
+.resume p {
+  font-size: 1em;
+}
+
+.resume p.tags {
+  color: #4a4a4a;
+  font-size: 0.9em;
+  margin: 0.15em 0.6em 0;
+  text-transform: lowercase;
+}
+
+.resume .skills p.tags {
+  color: #4a4a4a;
+  margin: 0.25em 0.5em;
+}
+
+.resume .work p.tags {
+  font-style: italic;
+}
+
+.resume p.indent {
+  line-height: 1.3em;
+  margin: 0.2em 0 0.1em 1.2em;
+  text-indent: -1em;
+}
+
+.resume p.indent::before {
+  content: "⮑ ";
+  font-size: 0.5em;
+  vertical-align: top;
+}

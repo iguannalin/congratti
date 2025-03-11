@@ -1,7 +1,7 @@
+@import url(resume/resume.css);
 @import url(small.css) (min-width: 0px);
 @import url(large.css) (min-width: 900px);
 @import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap");
-
 
 :root {
   --em-base: 16px;
@@ -244,5 +244,3 @@ p.indent::before {
   height: 50px;
   overflow-y: scroll;
 }
-
-/* background: #ffffffad; */

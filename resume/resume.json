@@ -1,99 +1,102 @@
 {
-  "header"   : {
-    "name" : "anna y lin",
+  "header": {
+    "name": "anna y lin",
     "title": "UX Frontend Engineer",
     "email": "anna@annaylin.com"
   },
   "education": {
-    "title"   : "education",
+    "title": "education",
     "programs": [
       {
-        "title"     : "Masters | Interactive Telecommunications Program, NYU – 2024",
+        "title": "Masters | Interactive Telecommunications Program, NYU – 2024",
         "activities": "Lead Coding Lab Mentor, Graduate Assistant, ITP Fall & Spring Showcase"
       }, {
-        "title"     : "B.A. Psychology | University of California, Santa Cruz – 2017",
+        "title": "B.A. Psychology | University of California, Santa Cruz – 2017",
         "activities": "Psychology Research Methods Teaching Assistant, Girls in Engineering Summer Camp Teacher"
       }, {
-        "title"     : "Study Abroad | Yonsei University, Seoul – 2016",
+        "title": "Study Abroad | Yonsei University, Seoul – 2016",
         "activities": "AI Robotics & Ethics, Tech Startup R & D Intern, After-school Program Teaching Assistant"
       }
     ]
   },
-  "skills"   : {
+  "skills": {
     "title": "skills",
     "types": [
       {
-        "title" : "frontend",
+        "title": "frontend",
         "skills": [
           "Javascript", "Typescript", "Angular", "Vue", "React", "PHP", "vis.js", "D3.js", "P5.js", "HTML", "CSS", "Tailwind", "Node.js", "Jasmine"
         ]
       }, {
-        "title" : "backend",
+        "title": "backend",
         "skills": [
           "Python", "Flask", "Git", "Firebase", "SQL", "Bash", "C", "Java"
         ]
       }, {
-        "title" : "hardware",
+        "title": "hardware",
         "skills": [
           "Raspberry Pi", "debugging", "EEG", "Arduino", "wireless communication & networking"
         ]
       }, {
-        "title" : "design",
+        "title": "design",
         "skills": [
-          "Illustrator", "Figma"
+          "web accessibility", "Illustrator", "Figma"
         ]
       }, {
-        "title" : "languages",
+        "title": "languages",
         "skills": [
           "Cantonese", "Mandarin"
         ]
       }
     ]
   },
-  "work"     : {
-    "title"   : "work",
+  "work": {
+    "title": "work",
     "projects": [
       {
-        "title" : "Web development for the <a href='https://neweconomy.net/' title='New Economy Coalition website'>New Economy Coalition</a> – 2025",
+        "title": "Web development for the <a href='https://neweconomy.net/' title='New Economy Coalition website'>New Economy Coalition</a> – 2025",
         "skills": [
           "WordPress", "PHP", "Javascript", "HTML", "CSS"
         ]
       }, {
-        "title" : "Web development and accessibility-first design for archival project <a href='https://healingjusticelineages.com/' title='Healing Justice Lineages site'>Healing Justice Lineages</a> | <a href='https://www.instagram.com/hjlineages' title='Healing Justice Lineages Instagram'>HJL</a> – 2024",
+        "title": "Web development and accessibility-first design for archival project <a href='https://healingjusticelineages.com/' title='Healing Justice Lineages site'>Healing Justice Lineages</a> | <a href='https://www.instagram.com/hjlineages' title='Healing Justice Lineages Instagram'>HJL</a> – 2024",
         "skills": [
           "WordPress", "PHP", "Javascript", "HTML", "CSS"
         ]
       }, {
-        "title" : "React web app development for the <a href='https://superdiv.mmg.mpg.de/' title='Superdiversity project site'>Superdiversity</a> data-viz project with the Max Planck Institute | <a href='https://stamen.com/' title='Stamen Design website'>Stamen Design</a>, San Francisco – 2018 ",
+        "title": "React web app development for the <a href='https://superdiv.mmg.mpg.de/' title='Superdiversity project site'>Superdiversity</a> data-viz project with the Max Planck Institute | <a href='https://stamen.com/' title='Stamen Design website'>Stamen Design</a>, San Francisco – 2018 ",
         "skills": [
           "HTML", "CSS", "Javascript", "React", "D3.js"
         ]
       }, {
-        "title" : "Learning Management System web development and design for legal workers | <a href='https://www.pacificworkers.com/' title='Farber & Co. website'>Farber & Co.</a>, Oakland – 2017",
+        "title": "Learning Management System web development and design for legal workers | <a href='https://www.pacificworkers.com/' title='Farber & Co. website'>Farber & Co.</a>, Oakland – 2017",
         "skills": [
           "WordPress", "Javascript", "HTML", "CSS", "PHP"
         ]
       }
     ],
-    "roles"   : [
+    "roles": [
       {
-        "title" : "UX Engineer | <a href='https://www.mitre.org/' title='MITRE website'>MITRE</a> Boston – Feb. 2021 - May 2022",
+        "title": "UX Engineer | <a href='https://www.mitre.org/' title='MITRE website'>MITRE</a> Boston – Feb. 2021 - May 2022",
         "skills": [
           "Angular", "Typescript", "Python", "Vue", "Alpine.js", "Tailwind", "vis.js"
         ],
-        "tasks" : [
+        "tasks": [
           "Full-stack web development & UX design for cybersecurity and health policymaking tools on 4 different projects.", "Prototyping and full-stack development on <a href='https://caldera.mitre.org/'  title='Caldera project site'>CALDERA</a>, a red-team simulation software, using Python RESTful APIs.", "Full-stack development and maintenance of the <a href='https://github.com/mitre-attack/attack-navigator'title='ATT&CL Navigator GitHub project site'>ATT&CK&reg; Navigator</a>, an open-source cybersecurity database; features include the dark mode, search, and filter."
         ]
       }, {
-        "title" : "Frontend Engineer | <a href='https://www.schwab.com/' title='Charles Schwab website'>Charles Schwab</a> San Francisco – Nov. 2018 - Dec. 2020",
+        "title": "Frontend Engineer | <a href='https://www.schwab.com/' title='Charles Schwab website'>Charles Schwab</a> San Francisco – Nov. 2018 - Dec. 2020",
         "skills": [
           "Angular", "RxJS", "Typescript", "Node.js", "Jasmine"
         ],
-        "tasks" : [
+        "tasks": [
           "Led prototype design & development for user research tests.", "Full-stack web development and unit-testing for client-facing web applications.", "Accessibility lead for a WCAG-compatible web application used by 150, 000 + clients.", "Wrote <a alt=\"Medium article: Why Your Grandma's Images Are Being Rotated Wrong\" href=\"https://medium.com/@inceptiondeveloper/why-your-grandmas-images-are-being-rotated-wrong-bfeeae5cf91a' title='Sample documentation I wrote on Medium'\">documentation</a> to share technical knowledge."
         ]
       }, {
         "title": "Code Mentor | The Coding Lab @ NYU, Brooklyn – Oct. 2022 - May 2024",
+        "skills": [
+          "teaching", "organizing"
+        ],
         "tasks": [
           "Workshop and speaker events planning; invited 4 creative coding artists to talk at ITP.", "Managed mentor schedules and taught students.", "Workshop development and teaching the Hacking with the Browser workshop every semester."
         ]

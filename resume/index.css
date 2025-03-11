@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap");
+@import url(resume.css);
 
 :root {
   --main-bg-color: #f9faffde;
@@ -99,7 +99,7 @@ body {
   flex-flow: column;
   overflow-x: hidden;
   overflow-y: scroll;
-  padding: 1.5em 0em 1.5em 1em;
+  padding: 1.5em 0 1.5em 1em;
   vertical-align: top;
 }
 
@@ -132,6 +132,7 @@ body {
   line-height: 28px;
   margin-bottom: 0.5em;
   max-width: 6ch;
+  margin-top: 8px;
 }
 
 a {
@@ -143,78 +144,4 @@ a:hover {
   color: #9fff2f;
   font-style: normal;
   text-decoration: underline;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Zen Old Mincho", "Times New Roman", serif;
-  font-weight: 500;
-  letter-spacing: -0.06em;
-  line-height: 0.8em;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0em 0 0.25em;
-}
-
-h2 {
-  font-size: 1.5em;
-  margin: 0.5em 0 0.25em;
-}
-
-h3 {
-  color: #4a4a4a;
-  font-size: 1em;
-  margin: 0.25em 0;
-}
-
-h4 {
-  font-size: 1em;
-  line-height: 1.2em;
-  margin: 0.7em 0 0.25em 0em;
-  text-transform: initial;
-}
-
-.location {
-  font-style: italic;
-}
-
-p {
-  font-size: 1em;
-}
-
-p.tags {
-  color: #4a4a4a;
-  font-size: 0.9em;
-  margin: 0.05em 0 0;
-}
-
-.skills p.tags {
-  color: #4a4a4a;
-  margin: 0.25em 0.5em;
-}
-
-.work p.tags {
-  font-style: italic;
-}
-
-p.indent {
-  line-height: 1.3em;
-  margin: 0.2em 0 0.1em 1.2em;
-  text-indent: -1em;
-}
-
-p.indent::before {
-  content: "⮑ ";
-  font-size: 0.5em;
-  vertical-align: top;
-}
-
-.resume h2 {
-  text-transform: capitalize;
 }
