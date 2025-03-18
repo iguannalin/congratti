@@ -107,7 +107,7 @@ window.addEventListener("load", () => {
     dotsContainer.appendChild(dot);
   }
 
-  // document.body.addEventListener("mousemove", (e) => drawDots(e));
+  document.body.addEventListener("mousemove", (e) => drawDots(e));
   document.body.addEventListener("touchmove", (e) => drawDots(e, true));
 
   const resumeView = document.querySelector("#resume-view");
