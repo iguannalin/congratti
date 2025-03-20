@@ -71,14 +71,13 @@ window.addEventListener("load", () => {
 
     if ( isTouch ) {
       e.preventDefault();
-      document.body.style.overflow = "hidden";
       dot.style.left = `${ e.targetTouches[0].pageX }px`;
       dot.style.top = `${ e.targetTouches[0].pageY }px`;
     } else {
       dot.style.left = `${ e.x - 10 }px`;
       dot.style.top = `${ e.y - 12 }px`;
-      e.target.alt ? provideContext(e.target.alt) : e.target.title ? provideContext(e.target.title) : null;
     }
+    e.target.alt ? provideContext(e.target.alt) : e.target.title ? provideContext(e.target.title) : null;
     dotsContainer.appendChild(dot);
   }
 
