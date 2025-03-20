@@ -1,5 +1,3 @@
-import { createSection } from "./shared.js";
-
 window.addEventListener("load", () => {
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -8,25 +6,21 @@ window.addEventListener("load", () => {
                                                           // minimum is inclusive
   }
 
-  const left = document.querySelector(".flex-pane.panel");
-  const right = document.querySelector(".flex-pane.body");
-  const descriptionContainer = document.querySelector(".description-container");
+  const photos = document.querySelector("#photos");
+  const description = document.querySelector("#description");
 
   function resetWindow() {
-    left.innerHTML = "";
-    right.innerHTML = "";
+    photos.innerHTML = "";
     provideContext();
   }
 
-  function provideContext(context = "") {
-    if ( !context ) descriptionContainer.innerHTML = ("anna y lin (she/her) is a frontend developer, focused on accessibility, user experience and interested in public archives, open-source, and hacking.")
-    else descriptionContainer.innerHTML = context;
+  function provideContext(context = "hello!") {
+    description.innerHTML = context;
   }
 
   //
   // PHOTOS
   //
-
 
   function loadPhotos() {
     resetWindow();
@@ -39,37 +33,16 @@ window.addEventListener("load", () => {
           const div = document.createElement("div");
           const imageElement = document.createElement("img");
           imageElement.addEventListener("mouseenter", () => {
-            descriptionContainer.innerHTML = image.title ? image.title : image.alt ? image.alt : "";
+            description.innerHTML = image.title ? image.title : image.alt ? image.alt : "";
           });
           imageElement.src = image.src;
           if ( image.alt ) imageElement.alt = image.alt;
           if ( image.title ) imageElement.title = image.title;
           div.appendChild(imageElement);
-          getRandomInt(0, 2) === 0 ? right.appendChild(div) : left.appendChild(div);
+          photos.appendChild(div);
         }
       }
     ));
-  }
-
-  //
-  // RESUME
-  //
-
-  function loadResume() {
-    resetWindow();
-    fetch("resume/resume.json").then(res => res.json()).then((data) => {
-      Object.keys(data).forEach((key) => {
-        if ( key === "header" ) return;
-        const section = createSection(data[key]);
-        if ( key === "work" ) {
-          section.title = "Freelance web development projects at a few non-profit and public interest groups, and full-time positions as a frontend software engineer."
-          right.appendChild(section);
-        } else {
-          if ( key === "education" ) section.title = "Graduated from UC Santa Cruz in Psychology, and most recently from ITP, the creative technology masters program at NYU."
-          left.appendChild(section);
-        }
-      })
-    });
   }
 
   //
@@ -110,17 +83,9 @@ window.addEventListener("load", () => {
   document.body.addEventListener("mousemove", (e) => drawDots(e));
   document.body.addEventListener("touchmove", (e) => drawDots(e, true));
 
-  const resumeView = document.querySelector("#resume-view");
-  resumeView.addEventListener("mouseover", () => provideContext("view resume"))
-  resumeView.addEventListener("click", loadResume);
-  const photosView = document.querySelector("#photos-view");
-  photosView.addEventListener("mouseover", () => provideContext("view photos"))
-  photosView.addEventListener("click", loadPhotos);
+  const photoButton = document.querySelector("#photo-button");
+  photoButton.addEventListener("mouseover", () => provideContext("view photos"))
+  photoButton.addEventListener("click", loadPhotos);
 
-  loadResume();
-  setTimeout(() => {
-    document.querySelectorAll(".education, .work, .header").forEach((elem) => elem.addEventListener("mouseover", (e) => {
-      if (e.target.className === "header" || e.target.title) provideContext(e.target.title);
-    }))
-  }, 200);
+  loadPhotos();
 });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>anna y lin</title>
   <link href="https://annaylin.com/public/favicon-serif.ico" rel="icon"
@@ -26,39 +26,115 @@
   <meta content="annaylin.com" property="og:url">
   <meta content="https://annaylin.com/public/wallpaper.png"
         property="og:image">
-  <link rel="stylesheet" href="index.css"/>
+  <!--   <link rel="stylesheet" href="index.css"/> -->
   <script src="index.js" type="module"></script>
+  <style>
+    body {
+      font-size: 16px;
+      font-family: "Helvetica Neue", sans-serif;
+      margin: 0 auto;
+      cursor: crosshair;
+      width: 98vw;
+      padding: 0.25em 0.5em;
+      box-sizing: border-box;
+    }
+
+    #name {
+      font-family: "Arial Rounded MT Bold", sans-serif;
+      font-size: 2.5em;
+      line-height: 0.8em;
+      margin-left: 0;
+      margin-right: auto;
+      max-width: 4ch;
+      cursor: pointer;
+    }
+
+    dot {
+      z-index: -999;
+      color: #40ff00;
+      position: absolute;
+    }
+
+    dot:nth-of-type(even) { color: blueviolet; }
+
+    #photo-button:before {
+      content: "📷";
+      cursor: pointer;
+      font-size: 2em;
+    }
+
+    #photo-button:hover:before {content: "📸";}
+
+    #photo-container {
+      margin: 2em auto;
+      width: 100%;
+      border: 25px solid lightgoldenrodyellow;
+      box-sizing: border-box;
+    }
+
+    #photos {
+      width: 100%;
+      max-height: 400px;
+      display: flex;
+      flex-flow: row;
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+
+    footer {
+      margin: 3em 0;
+    }
+  </style>
 </head>
 <body>
+
 <div id="dots-container"></div>
-<!--~~~ my website will be a 12x12 flex room ~~~-->
-<div class="flex-room">
-  <!--~~~ the ceiling will be tall--the room feels light and airy, like i'm inside a tall tree ~~~-->
-  <div class="flex-ceiling">
-    <div class="header">
-      <h1 class="name">anna y lin</h1>
-      <div class="links">
-        <p><a href="https://annaylin.com/resume/"
-              title="link to PDF resume">📄</a>,
-        <a href="https://www.instagram.com/iguannalin/reels/" title="link to ig">ig</a>
-        </p>
-        <p><a href="mailto:anna@annaylin.com" title="snail mail preferred">anna@annaylin.com</a></p>
-      </div>
-    </div>
-  </div>
-  <!--~~~ the window will be as big as the wall, so i can watch the clouds ~~~-->
-  <article class="flex-window">
-    <div class="flex-pane panel"></div>
-    <div class="flex-pane body"></div>
-  </article>
-  <!--~~~ the floor will be made of a warm hardwood with a heater underneath, my favorite ~~~-->
-  <div class="flex-floor">
-    <div class="description-container"></div>
-    <div class="views">
-      <button id="photos-view" title="switch to photos view">📷</button>
-      <button id="resume-view" title="switch to resume view">💼</button>
-    </div>
+
+<div class="header">
+  <h1 id="name" onclick="location.reload()">anna y lin</h1>
+  <div id="links">
+    <p><a href="https://annaylin.com/resume/"
+          title="link to PDF resume">resume</a>,
+      <a href="https://www.instagram.com/iguannalin/reels/"
+         title="link to ig">ig</a>
+    </p>
+    <p><a href="mailto:al7215@nyu.edu"
+          title="snail mail preferred">email</a></p>
   </div>
 </div>
+<article>
+  <div id="about">
+    <p>
+      hi, welcome to the site of anna y lin (林).
+      anna is doing well in brooklyn (lenapehoking), and was based in
+      the bay area (ohlone land) before.
+      she makes work on the <a
+      href="https://thehtml.review/03/#anna-y-lin">web</a>, though
+      she also makes physical
+      work--most recently <a
+      href="https://itp.nyu.edu/thesis/archive/2024/10862-anna-lin/">nets
+      and the raspberry pi</a>.
+    </p>
+    <p>before attaining her <a href="https://itp.nyu.edu/itp/">masters
+      in creative technology</a>, she worked
+      in the industry as a user-experience and accessibility focused
+      frontend developer, in the realms of <a
+        href="https://schwab.com/">finance tech</a>, <a
+        href="https://www.mitre.org/">cybersecurity</a>,
+      and freelanced for a <a href="https://stamen.com/">data
+        visualization studio</a>, and <a
+        href="https://healingjusticelineages.com/">non-profit</a> /
+      public interest organizations.
+    </p>
+  </div>
+  <div>
+    <button id="photo-button" title="click for more photos"></button>
+  </div>
+  <div id="photo-container">
+    <div id="photos"></div>
+  </div>
+  <div><p>✴︎ <em id="description"></em></p></div>
+</article>
+<footer><p><em>last updated March 20th, 2025</em></p></footer>
 </body>
 </html>
