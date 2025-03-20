@@ -14,7 +14,7 @@ window.addEventListener("load", () => {
     provideContext();
   }
 
-  function provideContext(context = "hello!") {
+  function provideContext(context = "") {
     description.innerHTML = context;
   }
 
@@ -76,6 +76,8 @@ window.addEventListener("load", () => {
     } else {
       dot.style.left = `${ e.x - 10 }px`;
       dot.style.top = `${ e.y - 12 }px`;
+      console.log(e);
+      e.target.alt ? provideContext(e.target.alt) : e.target.title ? provideContext(e.target.title) : null;
     }
     dotsContainer.appendChild(dot);
   }
