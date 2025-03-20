@@ -30,6 +30,7 @@ window.addEventListener("load", () => {
         const directory = photoFolders[getRandomInt(0, photoFolders.length)];
         for ( let i = 0; i < directory.count; i++ ) {
           const image = directory.images[i];
+          if (!image.src) return;
           const div = document.createElement("div");
           const imageElement = document.createElement("img");
           imageElement.addEventListener("mouseenter", () => {
@@ -76,7 +77,6 @@ window.addEventListener("load", () => {
     } else {
       dot.style.left = `${ e.x - 10 }px`;
       dot.style.top = `${ e.y - 12 }px`;
-      console.log(e);
       e.target.alt ? provideContext(e.target.alt) : e.target.title ? provideContext(e.target.title) : null;
     }
     dotsContainer.appendChild(dot);
