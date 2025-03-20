@@ -49,6 +49,10 @@
       cursor: pointer;
     }
 
+    article {
+      max-width: 100ch;
+    }
+
     dot {
       z-index: -999;
       color: #40ff00;
@@ -79,6 +83,7 @@
       flex-flow: row;
       overflow-x: scroll;
       overflow-y: hidden;
+      align-items: center;
     }
 
     footer {
@@ -87,9 +92,7 @@
   </style>
 </head>
 <body>
-
 <div id="dots-container"></div>
-
 <div class="header">
   <h1 title="hello!" id="name" onclick="location.reload()">anna y lin</h1>
   <div id="links">
@@ -109,13 +112,15 @@
       anna is doing well in brooklyn (lenapehoking), and was based in
       the bay area (ohlone land) before.
       she makes work on the <a title="the html review, 03"
-      href="https://thehtml.review/03/#anna-y-lin">web</a>, though
+                               href="https://thehtml.review/03/#anna-y-lin">web</a>,
+      though
       she also makes physical
       work--most recently <a title="itp thesis: soft networks"
-      href="https://itp.nyu.edu/thesis/archive/2024/10862-anna-lin/">nets
+                             href="https://itp.nyu.edu/thesis/archive/2024/10862-anna-lin/">nets
       and the raspberry pi</a>.
     </p>
-    <p>before attaining her <a title="nyu itp" href="https://itp.nyu.edu/itp/">masters
+    <p>before attaining her <a title="nyu itp"
+                               href="https://itp.nyu.edu/itp/">masters
       in creative technology</a>, she worked
       in the industry as a user-experience and accessibility focused
       frontend developer, in the realms of <a
