@@ -26,7 +26,6 @@
   <meta content="annaylin.com" property="og:url">
   <meta content="https://annaylin.com/public/wallpaper.png"
         property="og:image">
-  <!--   <link rel="stylesheet" href="index.css"/> -->
   <script src="index.js" type="module"></script>
   <style>
     body {
@@ -49,6 +48,13 @@
       cursor: pointer;
     }
 
+    a:hover {
+      background-color: #4a4a4a3f;
+      color: #9fff2f;
+      font-style: normal;
+      text-decoration: underline;
+    }
+
     article {
       max-width: 100ch;
     }
@@ -59,8 +65,6 @@
       position: absolute;
     }
 
-    /* dot:nth-of-type(even) { color: blueviolet; } */
-
     #photo-button:before {
       content: "📷";
       cursor: pointer;
@@ -70,10 +74,9 @@
     #photo-button:hover:before {content: "📸";}
 
     #photo-container {
-      margin: 0.75em auto;
-      width: 100%;
-      border: 25px solid lightgoldenrodyellow;
-      box-sizing: border-box;
+      position: relative;
+      margin: 2.5em auto 4.4em;
+      width: 95vw;
     }
 
     #photos {
@@ -84,6 +87,31 @@
       overflow-x: scroll;
       overflow-y: hidden;
       align-items: center;
+    }
+
+    #photos div {
+      padding-right: 16px;
+    }
+
+    /* inspired by-- https://mfabiennial2025.risd.gd/ */
+    /* add noise filter */
+    #photo-container::after {
+      margin: 0.75em auto;
+      width: 100%;
+      box-sizing: border-box;
+      content: "";
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      filter: url(#noiseFilter);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    svg {
+      position: fixed;
+      z-index: 3000;
     }
 
     footer {
@@ -97,12 +125,11 @@
   <h1 title="hello!" id="name" onclick="location.reload()">anna y lin</h1>
   <div id="links">
     <p><a href="https://annaylin.com/resume/"
-          title="link to PDF resume">resume</a>,
+          title="link to PDF resume">resume</a> |
       <a href="https://www.instagram.com/iguannalin/reels/"
-         title="link to ig">ig</a>
+         title="link to ig">ig</a> | <a href="mailto:al7215@nyu.edu"
+                                        title="snail mail preferred">email</a>
     </p>
-    <p><a href="mailto:al7215@nyu.edu"
-          title="snail mail preferred">email</a></p>
   </div>
 </div>
 <article>
@@ -117,7 +144,7 @@
       (ohlone land)</a> before.
       she makes work on the <a title="the html review, 03"
                                href="https://thehtml.review/03/#anna-y-lin">web</a>,
-      though she also makes physical work--most recently <a
+      though she also makes physical work--most recently, <a
       title="itp thesis: soft networks"
       href="https://itp.nyu.edu/thesis/archive/2024/10862-anna-lin/">nets
       and the raspberry pi</a>.
@@ -135,17 +162,24 @@
         visualization studio</a>, and <a
         title="healing justice lineages"
         href="https://healingjusticelineages.com/">non-profit</a> /
-      public interest organizations.
+      <a title="new economy coalition" href="https://neweconomy.net/">public
+        interest organizations</a>.
     </p>
   </div>
   <div>
     <button id="photo-button" title="click for more photos"></button>
   </div>
   <div><p>✴︎ <em id="description"></em></p></div>
+  <svg width="0" height="0">
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3"
+                    stitchTiles="stitch"></feTurbulence>
+    </filter>
+  </svg>
   <div id="photo-container">
     <div id="photos"></div>
   </div>
 </article>
-<footer><p><em>last updated March 20th, 2025</em></p></footer>
+<footer><p><em>last updated April 4th, 2025</em></p></footer>
 </body>
 </html>
