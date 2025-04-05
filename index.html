@@ -75,8 +75,9 @@
 
     #photo-container {
       position: relative;
-      margin: 2.5em auto 4.4em;
-      width: 95vw;
+      margin: 3em auto 1em;
+      width: 100%;
+      height: 100%;
     }
 
     #photos {
@@ -96,7 +97,7 @@
     /* inspired by-- https://mfabiennial2025.risd.gd/ */
     /* add noise filter */
     #photo-container::after {
-      margin: 0.75em auto;
+      margin: 0 auto;
       width: 100%;
       box-sizing: border-box;
       content: "";
@@ -107,6 +108,7 @@
       filter: url(#noiseFilter);
       opacity: 0.5;
       pointer-events: none;
+      outline: 1px solid transparent;
     }
 
     svg {
@@ -180,6 +182,6 @@
     <div id="photos"></div>
   </div>
 </article>
-<footer><p><em>last updated April 4th, 2025</em></p></footer>
+<footer><p><em>last updated April 5th, 2025</em></p></footer>
 </body>
 </html>
