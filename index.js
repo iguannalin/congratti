@@ -2,12 +2,24 @@ window.addEventListener("load", () => {
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the
-                                                          // minimum is inclusive
+    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
 
   const photos = document.querySelector("#photos");
   const description = document.querySelector("#description");
+  const name = document.querySelector("#name");
+  const meow = document.querySelector("#meow");
+
+  name.addEventListener("mouseenter", () => {
+    meow.style.display = "block";
+    name.addEventListener("mouseleave", () => {
+      meow.style.display = "none";
+    });
+  });
+
+  document.addEventListener('touchstart', () => {
+    meow.style.display = "none" ? "block" : "none";
+  }, { passive: false });
 
   function resetWindow() {
     photos.innerHTML = "";
@@ -30,7 +42,7 @@ window.addEventListener("load", () => {
         const directory = photoFolders[getRandomInt(0, photoFolders.length)];
         for ( let i = 0; i < directory.count; i++ ) {
           const image = directory.images[i];
-          if (!image.src) return;
+          if ( !image.src ) return;
           const div = document.createElement("div");
           const imageElement = document.createElement("img");
           imageElement.addEventListener("mouseenter", () => {

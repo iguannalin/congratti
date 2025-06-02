@@ -36,6 +36,7 @@
       width: 100vw;
       padding: 0.25em 0.5em;
       box-sizing: border-box;
+      height: 100vh;
     }
 
     #name {
@@ -122,6 +123,15 @@
       z-index: 3000;
     }
 
+    #meow {
+      position: fixed;
+      top: calc(50vh - calc(min(500px, 100vw) / 2));
+      left: calc(50vw - calc(min(500px, 100vw) / 2));
+      z-index: 1000;
+      width: min(500px, 100vw);
+      display: none;
+    }
+
     footer {
       margin: 3em 0;
     }
@@ -144,30 +154,31 @@
   <div id="about">
     <p>
       hi, welcome to the site of anna y lin (林).
-      anna is doing well in <a title="prospect park"
+      anna is doing well in <a title="near prospect park"
                                href="https://osm.org/go/Zct5LhoHI--?relation=9760157">brooklyn
-      (lenapehoking)</a>, and was based in
-      the <a title="albany hill"
-             href="https://osm.org/go/TZNUOwG~Q--?node=358805939">bay area
-      (ohlone land)</a> before.
+      / lenapehoking</a> currently, and was previously based in
+      <a title="near albany hill"
+         href="https://osm.org/go/TZNUOwG~Q--?node=358805939">the bay area
+        / ohlone land</a>.
       she makes work on the <a title="the html review, 03"
                                href="https://thehtml.review/03/#anna-y-lin">web</a>,
       though she also makes physical work--most recently, <a
-      title="itp thesis: soft networks"
+      title="soft networks, thesis project"
       href="https://itp.nyu.edu/thesis/archive/2024/10862-anna-lin/">nets
       and the raspberry pi</a>.
     </p>
-    <p>before attaining her <a title="nyu itp"
-                               href="https://itp.nyu.edu/itp/">masters
+    <p>before attaining her <a
+      title="interactive telecommunications program, nyu"
+      href="https://itp.nyu.edu/itp/">masters
       in creative technology</a>, she worked in the industry as a
       user-experience and accessibility focused
-      frontend developer, in the realms of <a
+      frontend software engineer, in the realms of <a
         title="charles schwab"
         href="https://schwab.com/">finance tech</a>, <a
         title="mitre"
         href="https://www.mitre.org/">cybersecurity</a>,
       and freelanced for a <a title="stamen" href="https://stamen.com/">data
-        visualization studio</a>, and <a
+        visualization studio</a>. currently freelancing with <a
         title="healing justice lineages"
         href="https://healingjusticelineages.com/">non-profit</a> /
       <a title="new economy coalition" href="https://neweconomy.net/">public
@@ -185,9 +196,10 @@
     </filter>
   </svg>
   <div id="photo-container">
+    <img alt="meow" id="meow" src="public/anna.png"/>
     <div id="photos"></div>
   </div>
 </article>
-<footer><p><em>last updated April 5th, 2025</em></p></footer>
+<footer><p><em>last updated June 2nd, 2025</em></p></footer>
 </body>
 </html>
