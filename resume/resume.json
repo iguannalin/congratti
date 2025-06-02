@@ -1,7 +1,7 @@
 {
   "header": {
     "name": "anna y lin",
-    "title": "UX Frontend Engineer",
+    "title": "UX - Frontend Engineer",
     "email": "anna@annaylin.com"
   },
   "education": {
@@ -54,12 +54,17 @@
     "title": "work",
     "projects": [
       {
-        "title": "Web development for the <a href='https://neweconomy.net/' title='New Economy Coalition website'>New Economy Coalition</a> – 2025",
+        "title": "Web development and accessibility-first design for archival project <a href='https://healingjusticelineages.com/' title='Healing Justice Lineages site'>Healing Justice Lineages</a> | <a href='https://www.instagram.com/hjlineages' title='Healing Justice Lineages Instagram'>HJL</a> – ongoing",
         "skills": [
           "WordPress", "PHP", "Javascript", "HTML", "CSS"
         ]
       }, {
-        "title": "Web development and accessibility-first design for archival project <a href='https://healingjusticelineages.com/' title='Healing Justice Lineages site'>Healing Justice Lineages</a> | <a href='https://www.instagram.com/hjlineages' title='Healing Justice Lineages Instagram'>HJL</a> – 2024",
+        "title": "Web development for <a href='https://grayarea.org/' title='Gray Area site'>the Gray Area</a> – ongoing",
+        "skills": [
+          "WordPress", "PHP", "Javascript", "HTML", "CSS"
+        ]
+      }, {
+        "title": "Web development for the <a href='https://neweconomy.net/' title='New Economy Coalition website'>New Economy Coalition</a> – 2025",
         "skills": [
           "WordPress", "PHP", "Javascript", "HTML", "CSS"
         ]
@@ -85,7 +90,7 @@
           "Full-stack web development & UX design for cybersecurity and health policymaking tools on 4 different projects.", "Prototyping and full-stack development on <a href='https://caldera.mitre.org/'  title='Caldera project site'>CALDERA</a>, a red-team simulation software, using Python RESTful APIs.", "Full-stack development and maintenance of the <a href='https://github.com/mitre-attack/attack-navigator'title='ATT&CL Navigator GitHub project site'>ATT&CK&reg; Navigator</a>, an open-source cybersecurity database; features include the dark mode, search, and filter."
         ]
       }, {
-        "title": "Frontend Engineer | <a href='https://www.schwab.com/' title='Charles Schwab website'>Charles Schwab</a> San Francisco – Nov. 2018 - Dec. 2020",
+        "title": "Frontend Software Engineer | <a href='https://www.schwab.com/' title='Charles Schwab website'>Charles Schwab</a> San Francisco – Nov. 2018 - Dec. 2020",
         "skills": [
           "Angular", "RxJS", "Typescript", "Node.js", "Jasmine"
         ],
