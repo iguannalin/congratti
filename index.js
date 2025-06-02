@@ -17,7 +17,7 @@ window.addEventListener("load", () => {
     });
   });
 
-  document.addEventListener('touchstart', () => {
+  name.addEventListener('touchstart', () => {
     meow.style.display = "none" ? "block" : "none";
   }, { passive: false });
 
