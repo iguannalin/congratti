@@ -58,6 +58,11 @@ window.addEventListener("load", () => {
     ));
   }
 
+  function riverSpace() {
+    const visibility = riverSpacing.style.getPropertyValue("display") === "none" ? "inline-block" : "none";
+    riverSpacing.style.setProperty("display", visibility);
+  }
+
   //
   // DOTS
   //
@@ -99,6 +104,15 @@ window.addEventListener("load", () => {
   const photoButton = document.querySelector("#photo-button");
   photoButton.addEventListener("mouseover", () => provideContext("view photos"))
   photoButton.addEventListener("click", loadPhotos);
+
+  const riverButton = document.querySelector("#river-button");
+  const stylesheet = document.styleSheets[0];
+  const riverSpacing = [...stylesheet.cssRules].find(
+    (r) => r.selectorText === "span.river-space",
+  );
+  if ( riverSpacing ) {
+    riverButton.addEventListener("click", riverSpace);
+  }
 
   loadPhotos();
 });

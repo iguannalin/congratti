@@ -4,12 +4,17 @@ body {
   box-sizing: border-box;
   cursor: crosshair;
   font-family: "Pontano Sans", "Helvetica", sans-serif;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   height: 100vh;
   margin: 0 auto;
   padding: 0.25em 0.5em;
   width: 100vw;
+}
+
+span.river-space {
+  display: none;
+  padding: 0 1em;
 }
 
 #name {
@@ -43,13 +48,22 @@ dot {
   z-index: -999;
 }
 
-#photo-button:before {
-  content: "📷";
+.icon-buttons {
   cursor: pointer;
   font-size: 2em;
 }
 
-#photo-button:hover:before {content: "📸";}
+#river-button:before {
+  content: "💦";
+}
+
+#river-button:hover:before, #river-button:active:before {content: "🛶";}
+
+#photo-button:before {
+  content: "📷";
+}
+
+#photo-button:hover:before, #photo-button:active:before {content: "📸";}
 
 #photo-container {
   box-sizing: border-box;
