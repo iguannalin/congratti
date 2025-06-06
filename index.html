@@ -27,115 +27,7 @@
   <meta content="https://annaylin.com/public/wallpaper.png"
         property="og:image">
   <script src="index.js" type="module"></script>
-  <style>
-    body {
-      font-size: 16px;
-      font-family: "Helvetica", sans-serif;
-      margin: 0 auto;
-      cursor: crosshair;
-      width: 100vw;
-      padding: 0.25em 0.5em;
-      box-sizing: border-box;
-      height: 100vh;
-    }
-
-    #name {
-      font-family: "Arial Rounded MT Bold", sans-serif;
-      font-size: 2.5em;
-      line-height: 0.8em;
-      margin-left: 0;
-      margin-right: auto;
-      max-width: 4ch;
-      cursor: pointer;
-    }
-
-    a:hover {
-      background-color: #4a4a4a3f;
-      color: #9fff2f;
-      font-style: normal;
-      text-decoration: underline;
-    }
-
-    article {
-      width: 100%;
-    }
-
-    article p {
-      max-width: 100ch;
-    }
-
-    dot {
-      z-index: -999;
-      color: lawngreen;
-      position: absolute;
-    }
-
-    #photo-button:before {
-      content: "📷";
-      cursor: pointer;
-      font-size: 2em;
-    }
-
-    #photo-button:hover:before {content: "📸";}
-
-    #photo-container {
-      position: relative;
-      box-sizing: border-box;
-      margin: 3em auto 2em;
-      width: 100%;
-      height: 100%;
-    }
-
-    #photos {
-      width: 100%;
-      max-height: 400px;
-      display: flex;
-      flex-flow: row;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      align-items: center;
-    }
-
-    #photos div {
-      padding-right: 16px;
-      width: 100%;
-    }
-
-    /* inspired by-- https://mfabiennial2025.risd.gd/ */
-    /* add noise filter */
-    #photo-container::after {
-      margin: 0 auto;
-      width: 100%;
-      box-sizing: border-box;
-      content: "";
-      position: absolute;
-      height: 100%;
-      top: 0;
-      left: 0;
-      filter: url(#noiseFilter);
-      opacity: 0.5;
-      pointer-events: none;
-      outline: 1px solid transparent;
-    }
-
-    svg {
-      position: fixed;
-      z-index: 3000;
-    }
-
-    #meow {
-      position: fixed;
-      top: calc(50vh - calc(min(500px, 100vw) / 2));
-      left: calc(50vw - calc(min(500px, 100vw) / 2));
-      z-index: 1000;
-      width: min(500px, 100vw);
-      display: none;
-    }
-
-    footer {
-      margin: 3em 0;
-    }
-  </style>
+  <link href="index.css" rel="stylesheet"/>
 </head>
 <body>
 <div id="dots-container"></div>
@@ -151,21 +43,24 @@
   </div>
 </div>
 <article>
-  <div id="about"><p> hi, welcome to the site of anna y lin (林, she/her).
-    she is a frontend and full-stack engineer, focused on accessibility,
-    user experience, and challenging existing web paradigms. anna is developing her <a
+  <div id="about">
+    <p> hi, welcome to the site of anna y lin (林, she/her).
+      she is a frontend and full-stack engineer, focused on accessibility,
+      user experience, and challenging existing web paradigms.</p>
+    <p>anna is developing her <a
       href="/" title="working on it!">technology subversion
       practice</a> in <a title="near prospect park"
                          href="https://osm.org/go/Zct5LhoHI--?relation=9760157">brooklyn
       / lenapehoking</a>; she was previously based in <a
       title="near albany hill"
       href="https://osm.org/go/TZNUOwG~Q--?node=358805939">the bay area /
-      ohlone land</a>. she makes work on the <a title="the html review, 03"
-                                                href="https://thehtml.review/03/#anna-y-lin">web</a>,
-    though she also makes physical work--most recently, <a
-      title="soft networks, thesis project"
-      href="https://www.instagram.com/p/DBPVTfQy1Ja/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">nets
-      and the raspberry pi</a>. </p>
+      ohlone land</a>. she makes work on the web <sup><a title="the html review, 03"
+                                                     href="https://thehtml.review/03/#anna-y-lin">1</a>, <a title="taper, issue #11"
+                                                     href="https://taper.badquar.to/11/diaspora_radicals.html">2</a></sup>,
+      though she also makes physical work--most recently, <a
+        title="soft networks, thesis project"
+        href="https://www.instagram.com/p/DBPVTfQy1Ja/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">nets
+        and the raspberry pi</a>. </p>
     <p>before attaining her <a
       title="interactive telecommunications program, nyu"
       href="https://itp.nyu.edu/itp/">masters in creative technology</a>,
@@ -178,7 +73,8 @@
         title="healing justice lineages"
         href="https://healingjusticelineages.com/">non-profit</a> / <a
         title="new economy coalition" href="https://neweconomy.net/">public
-        interest organizations</a>. </p></div>
+        interest organizations</a>. </p>
+  </div>
   <div>
     <button id="photo-button" title="click for more photos"></button>
   </div>
@@ -194,6 +90,6 @@
     <div id="photos"></div>
   </div>
 </article>
-<footer><p><em>last updated June 6th, 2025</em></p></footer>
+<footer><small><em>last updated June 6th, 2025</em></small></footer>
 </body>
 </html>

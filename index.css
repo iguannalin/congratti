@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@300..700&display=swap");
+
+body {
+  box-sizing: border-box;
+  cursor: crosshair;
+  font-family: "Pontano Sans", "Helvetica", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0.25em 0.5em;
+  width: 100vw;
+}
+
+#name {
+  cursor: pointer;
+  font-family: "Arial Rounded MT Bold", sans-serif;
+  font-size: 2.5em;
+  line-height: 0.8em;
+  margin-left: 0;
+  margin-right: auto;
+  max-width: 4ch;
+}
+
+a:hover {
+  background-color: #4a4a4a3f;
+  color: #9fff2f;
+  font-style: normal;
+  text-decoration: underline;
+}
+
+article {
+  width: 100%;
+}
+
+article p {
+  max-width: 100ch;
+}
+
+dot {
+  color: lawngreen;
+  position: absolute;
+  z-index: -999;
+}
+
+#photo-button:before {
+  content: "📷";
+  cursor: pointer;
+  font-size: 2em;
+}
+
+#photo-button:hover:before {content: "📸";}
+
+#photo-container {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 3em auto 2em;
+  position: relative;
+  width: 100%;
+}
+
+#photos {
+  align-items: center;
+  display: flex;
+  flex-flow: row;
+  max-height: 400px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+#photos div {
+  padding-right: 16px;
+  width: 100%;
+}
+
+/* inspired by-- https://mfabiennial2025.risd.gd/ */
+/* add noise filter */
+#photo-container::after {
+  box-sizing: border-box;
+  content: "";
+  filter: url(#noiseFilter);
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  opacity: 0.5;
+  outline: 1px solid transparent;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+svg {
+  position: fixed;
+  z-index: 3000;
+}
+
+#meow {
+  display: none;
+  left: calc(50vw - calc(min(500px, 100vw) / 2));
+  position: fixed;
+  top: calc(50vh - calc(min(500px, 100vw) / 2));
+  width: min(500px, 100vw);
+  z-index: 1000;
+}
+
+footer {
+  margin: 3em 0;
+}
