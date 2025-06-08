@@ -57,7 +57,7 @@ dot {
   content: "💦";
 }
 
-#river-button:hover:before, #river-button:active:before {content: "🛶";}
+#river-button:hover:before, #river-button.selected:before {content: "🛶";}
 
 #photo-button:before {
   content: "📷";

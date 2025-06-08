@@ -9,6 +9,12 @@ window.addEventListener("load", () => {
   const description = document.querySelector("#description");
   const name = document.querySelector("#name");
   const meow = document.querySelector("#meow");
+  const photoButton = document.querySelector("#photo-button");
+  const riverButton = document.querySelector("#river-button");
+  const stylesheet = document.styleSheets[0];
+  const riverSpacing = [...stylesheet.cssRules].find(
+    (r) => r.selectorText === "span.river-space",
+  );
 
   name.addEventListener("mouseenter", () => {
     meow.style.display = "block";
@@ -59,8 +65,9 @@ window.addEventListener("load", () => {
   }
 
   function riverSpace() {
-    const visibility = riverSpacing.style.getPropertyValue("display") === "none" ? "inline-block" : "none";
+    const visibility = riverSpacing.style.getPropertyValue("display") === "none" ? "inline-block" : "none"; // update style for entire class instead of each element
     riverSpacing.style.setProperty("display", visibility);
+    riverButton.classList.toggle("selected");
   }
 
   //
@@ -101,15 +108,9 @@ window.addEventListener("load", () => {
   document.body.addEventListener("mousemove", (e) => drawDots(e));
   document.body.addEventListener("touchmove", (e) => drawDots(e, true));
 
-  const photoButton = document.querySelector("#photo-button");
   photoButton.addEventListener("mouseover", () => provideContext("view photos"))
   photoButton.addEventListener("click", loadPhotos);
 
-  const riverButton = document.querySelector("#river-button");
-  const stylesheet = document.styleSheets[0];
-  const riverSpacing = [...stylesheet.cssRules].find(
-    (r) => r.selectorText === "span.river-space",
-  );
   if ( riverSpacing ) {
     riverButton.addEventListener("click", riverSpace);
   }
