@@ -26,10 +26,6 @@ html {
     font-style: italic;
     text-decoration: none;
   }
-
-  td * {
-    max-width: 50ch;
-  }
 }
 
 @media screen and (min-width: 0px) {
@@ -37,7 +33,7 @@ html {
     font-size: 16px;
   }
 
-  .table {
+  .grid {
     overflow-y: scroll;
   }
 
@@ -52,7 +48,7 @@ html {
     font-size: 16px;
   }
 
-  .table {
+  .grid {
     overflow-y: hidden;
   }
 
@@ -68,13 +64,14 @@ body {
   display: flex;
   flex-flow: column wrap;
   font-family: "Times New Roman", serif;
-  letter-spacing: -0.03em;
-  line-height: 1em;
-  margin: 0.5rem 2.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2em;
+  margin: 0.5rem 1.5rem;
   place-content: center;
+  text-wrap-style: balance;
 }
 
-.table {
+.grid {
   align-items: flex-start;
   display: flex;
   flex-flow: row wrap;
@@ -85,8 +82,8 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
-.table::-webkit-scrollbar,
-.table div::-webkit-scrollbar {
+.grid::-webkit-scrollbar,
+.grid div::-webkit-scrollbar {
   background: transparent; /* Chrome/Safari/Webkit */
   display: none;
   height: 0;
@@ -99,16 +96,17 @@ body {
   flex-flow: column;
   overflow-x: hidden;
   overflow-y: scroll;
-  padding: 1.5em 0 1.5em 1em;
   vertical-align: top;
 }
 
 #left {
-  flex: 1 1 40ch;
+  flex: 1 1 35ch;
+  padding: 1.5em 0 0 1em;
 }
 
 #right {
-  flex: 1.25 1.25 50ch;
+  flex: 1 2 55ch;
+  padding: 1.5em 0 2em 1em;
 }
 
 .description {
@@ -131,8 +129,8 @@ body {
   letter-spacing: -0.005em;
   line-height: 28px;
   margin-bottom: 0.5em;
-  max-width: 4ch;
   margin-top: 8px;
+  max-width: 4ch;
 }
 
 a {

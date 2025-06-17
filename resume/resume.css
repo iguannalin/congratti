@@ -27,13 +27,13 @@
   color: #4a4a4a;
   font-size: 1em;
   line-height: 1.2em;
-  margin: 1em 0 0;
+  margin: 0.5em 0 0;
 }
 
 .resume h4 {
   font-size: 1em;
   line-height: 1.2em;
-  margin: 1em 0 0.2rem;
+  margin: 0.7em 0 0.2rem;
   text-transform: initial;
 }
 
@@ -47,8 +47,9 @@
 
 .resume p.tags {
   color: #4a4a4a;
+  font-family: "Zen Old Mincho", "Times New Roman", serif;
   font-size: 0.9em;
-  margin: 0.15em 0.6em 0;
+  margin: 0.2em 1em 0.5em;
   text-transform: lowercase;
 }
 
