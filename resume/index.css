@@ -19,6 +19,7 @@ html {
 @media print {
   body {
     font-size: 14px;
+    margin: 0.2in 1in 0 0.5in !important;
   }
 
   a {
@@ -124,10 +125,10 @@ body {
 }
 
 .name {
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 600;
   letter-spacing: -0.005em;
-  line-height: 28px;
+  line-height: 35px;
   margin-bottom: 0.5em;
   margin-top: 8px;
   max-width: 4ch;
