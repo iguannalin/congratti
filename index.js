@@ -65,10 +65,6 @@ window.addEventListener("load", () => {
   }
 
   function riverSpace() {
-    const about = document.querySelector("#about")
-    const replacement = "<span class=\"river-space\"></span>";
-    about.innerHTML = about.innerText.replace(/((?:[^ ]* ){3}[^ ]*) /g, `$1${ replacement }`);
-
     const visibility = riverSpacing.style.getPropertyValue("display") === "none" ? "inline-block" : "none"; // update style for entire class instead of each element
     riverSpacing.style.setProperty("display", visibility);
     riverButton.classList.toggle("selected");

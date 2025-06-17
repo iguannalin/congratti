@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@300..700&display=swap");
+@import url("https://use.typekit.net/cml7jkz.css");
 
 body {
   box-sizing: border-box;
   cursor: crosshair;
-  font-family: "Pontano Sans", "Helvetica", sans-serif;
+  font-family: "textbook-new", sans-serif;
   font-size: 16px;
   font-weight: 500;
   height: 100vh;
@@ -13,8 +13,8 @@ body {
 }
 
 span.river-space {
-  display: none;
-  padding: 0 1em;
+  /* display: none; */
+  padding: 0 4ch;
 }
 
 #name {
@@ -39,7 +39,8 @@ article {
 }
 
 article p {
-  max-width: 35ch;
+  max-width: 40ch;
+  text-wrap-style: balance;
 }
 
 dot {
