@@ -17,8 +17,7 @@ body {
   font-family: "Arial Rounded MT Bold", sans-serif;
   font-size: 2.5em;
   line-height: 0.8em;
-  margin-left: 0;
-  margin-right: auto;
+  margin: 8px auto 24px 0;
   max-width: 4ch;
 }
 

@@ -13,13 +13,17 @@ html {
 
 @page {
   size: 8.5in 11in;
-  margin: 0.2in 0.5in;
 }
 
 @media print {
   body {
     font-size: 14px;
-    margin: 0.2in 1in 0 0.5in !important;
+    margin: 0.2in 0.2in 0 1in;
+    box-sizing: border-box;
+  }
+
+  #right * {
+    max-width: 48ch;
   }
 
   a {
@@ -32,6 +36,8 @@ html {
 @media screen and (min-width: 0px) {
   body {
     font-size: 16px;
+    margin: 0 auto;
+    padding: 0.25em 0.5em;
   }
 
   .grid {
@@ -41,12 +47,15 @@ html {
   #left,
   #right {
     height: auto;
+    padding: 0;
   }
 }
 
 @media screen and (min-width: 900px) {
   body {
     font-size: 16px;
+    margin: 0.5rem 1.5rem;
+    padding: 0;
   }
 
   .grid {
@@ -56,6 +65,14 @@ html {
   #left,
   #right {
     height: 97%;
+  }
+
+  #left {
+    padding: 1.5em 0 0 1em;
+  }
+
+  #right {
+    padding: 1.5em 0 2em 1em;
   }
 }
 
@@ -67,7 +84,6 @@ body {
   font-family: "Times New Roman", serif;
   letter-spacing: -0.02em;
   line-height: 1.2em;
-  margin: 0.5rem 1.5rem;
   place-content: center;
   text-wrap-style: balance;
 }
@@ -102,12 +118,10 @@ body {
 
 #left {
   flex: 1 1 35ch;
-  padding: 1.5em 0 0 1em;
 }
 
 #right {
   flex: 1 2 55ch;
-  padding: 1.5em 0 2em 1em;
 }
 
 .description {
@@ -129,7 +143,7 @@ body {
   font-weight: 600;
   letter-spacing: -0.005em;
   line-height: 35px;
-  margin-bottom: 0.5em;
+  margin-bottom: 24px;
   margin-top: 8px;
   max-width: 4ch;
 }
