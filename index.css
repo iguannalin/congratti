@@ -12,11 +12,6 @@ body {
   width: 100vw;
 }
 
-span.river-space {
-  display: none;
-  padding: 0 4ch;
-}
-
 #name {
   cursor: pointer;
   font-family: "Arial Rounded MT Bold", sans-serif;
@@ -38,10 +33,23 @@ article {
   width: 100%;
 }
 
-article p {
+#about {
   max-width: 40ch;
+}
+
+span.river-space {
+  display: none;
+  padding: 0 4ch;
+}
+
+#about:not(.spaced) {
   text-wrap-style: balance;
 }
+
+#about.spaced span.river-space {
+  display: inline-block;
+}
+
 
 dot {
   color: lawngreen;

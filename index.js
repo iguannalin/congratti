@@ -11,10 +11,8 @@ window.addEventListener("load", () => {
   const meow = document.querySelector("#meow");
   const photoButton = document.querySelector("#photo-button");
   const riverButton = document.querySelector("#river-button");
-  const stylesheet = document.styleSheets[0];
-  const riverSpacing = [...stylesheet.cssRules].find(
-    (r) => r.selectorText === "span.river-space",
-  );
+  const about = document.querySelector("#about");
+  let freed = false;
 
   name.addEventListener("mouseenter", () => {
     meow.style.display = "block";
@@ -65,9 +63,9 @@ window.addEventListener("load", () => {
   }
 
   function riverSpace() {
-    const visibility = riverSpacing.style.getPropertyValue("display") === "none" ? "inline-block" : "none"; // update style for entire class instead of each element
-    riverSpacing.style.setProperty("display", visibility);
     riverButton.classList.toggle("selected");
+    about.classList.toggle("spaced");
+    freed = !freed;
   }
 
   //
@@ -111,9 +109,7 @@ window.addEventListener("load", () => {
   photoButton.addEventListener("mouseover", () => provideContext("view photos"))
   photoButton.addEventListener("click", loadPhotos);
 
-  if ( riverSpacing ) {
-    riverButton.addEventListener("click", riverSpace);
-  }
+  riverButton.addEventListener("click", riverSpace);
 
   loadPhotos();
 });
