@@ -1,0 +1,42 @@
+{
+  "projects": [
+    {
+      "name": "tableware",
+      "count": 5,
+      "images": [
+        {
+          "alt": "portrait of family of projects",
+          "src": "public/projects/tableware1.png",
+          "title": "tableware - by anna y lin; credits to jaxon wang"
+        }, {
+          "alt": "5 small, stacked wooden cups",
+          "src": "public/projects/tableware2.png",
+          "title": "cups - sanded plywood"
+        }, {
+          "alt": "hand pulling a tissue out of a tissue box",
+          "src": "public/projects/tableware3.png",
+          "title": "tissue box - laser-cut finger joint plywood box"
+        }, {
+          "alt": "a round bowl holding balls of pink, and orange yarn, and crochet hooks",
+          "src": "public/projects/tableware4.png",
+          "title": "topography bowl - laser-cut plywood"
+        }, {
+          "alt": "a wooden candelabra shaped like a fan, and holding colorful birthday candles",
+          "src": "public/projects/tableware5.png",
+          "title": "fan candle holder - cut poplar wood with yarn"
+        }
+      ],
+      "alt": "portrait of family of projects",
+      "thumbnail": "public/projects/tableware1.png",
+      "title": "tableware"
+    }, {
+      "name": "",
+      "title": "Each node consists of recycled burlap and fleece yarn, a small board with a Raspberry Pi Zero, which starts a server and listens for messages, and also controls 2 mini haptic motors.",
+      "src": "public/projects/microcontroller.jpeg"
+    }, {
+      "name": "",
+      "src": "public/projects/handpaint.jpg",
+      "title": "picture of hand being spray-painted"
+    }
+  ]
+}

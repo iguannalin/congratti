@@ -31,66 +31,119 @@
 </head>
 <body>
 <div id="dots-container"></div>
-<div class="header">
+<header>
   <h1 title="hello!" id="name" onclick="location.reload()">anna y lin</h1>
-  <div id="links">
-    <p><a href="/resume"
-          title="link to PDF resume">resume</a> |
+  <nav id="links">
+    <p>
+      <a id="link-work" href="javascript:void(0);"
+         title="click to show selected work">work</a>
+      |
+      <a id="link-about" href="javascript:void(0);"
+         title="click to show about">about</a>,
+      <button id="river-button" class="icon-buttons"
+              title="click for river spacing"></button>
+      |
+      <a href="/resume" title="link to PDF resume">resume</a> |
       <a href="https://www.instagram.com/iguannalin/reels/"
          title="link to ig">ig</a> | <a href="mailto:al7215@nyu.edu"
                                         title="snail mail preferred">email</a>
+      |
+      <button id="photo-button" class="icon-buttons"
+              title="click for photos"></button>
     </p>
-  </div>
-</div>
-<article>
-  <div id="about">
-    <p> hi, <span class="river-space"></span>welcome to the <span class="river-space"></span>site of anna <span class="river-space"></span>y lin (林, she/her).
-      <span class="river-space"></span>she is a <span class="river-space"></span>frontend and UX <span class="river-space"></span>engineer, <span class="river-space"></span>focused on <span class="river-space"></span>accessibility,
-      <span class="river-space"></span>user <span class="river-space"></span>experience, <span class="river-space"></span>and challenging <span class="river-space"></span>existing web <span class="river-space"></span>paradigms.</p>
-    <p>anna <span class="river-space"></span>is developing <span class="river-space"></span>her <a
-      href="/" title="working on it!">technology <span class="river-space"></span>subversion
-      <span class="river-space"></span>practice</a> <span class="river-space"></span>in <a title="near prospect park"
-                         href="https://osm.org/go/Zct5LhoHI--?relation=9760157">brooklyn
-      / <span class="river-space"></span>lenapehoking</a>; <span class="river-space"></span>she was <span class="river-space"></span>previously <span class="river-space"></span>based in <a
-      title="near albany hill"
-      href="https://osm.org/go/TZNUOwG~Q--?node=358805939">the <span class="river-space"></span>bay area /
-      <span class="river-space"></span>ohlone land</a>. <span class="river-space"></span>she makes work <span class="river-space"></span>on the web <sup><a title="the html review, 03"
-                                                     href="https://thehtml.review/03/#anna-y-lin">1</a>, <a title="taper, issue #11"
-                                                     href="https://taper.badquar.to/11/diaspora_radicals.html">2</a></sup>,
-      <span class="river-space"></span>though she <span class="river-space"></span>also makes<span class="river-space"></span>physical work--<span class="river-space"></span>most <span class="river-space"></span>recently, <a
-        title="soft networks, thesis project"
-        href="https://www.instagram.com/p/DBPVTfQy1Ja/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">nets
-        and <span class="river-space"></span>the raspberry pi</a>. </p>
-    <p>before <span class="river-space"></span>attaining her <a
-      title="interactive telecommunications program, nyu"
-      href="https://itp.nyu.edu/itp/">masters <span class="river-space"></span>in creative <span class="river-space"></span>technology</a>,
-      she <span class="river-space"></span>worked <span class="river-space"></span>in the industry as a user experience <span class="river-space"></span>and accessibility
-      <span class="river-space"></span>focused <span class="river-space"></span>frontend software <span class="river-space"></span>engineer, <span class="river-space"></span>in the realms of <span class="river-space"></span><a
-        title="charles schwab" href="https://schwab.com/">finance tech</a>,
-      <span class="river-space"></span><a title="mitre" href="https://www.mitre.org/">cybersecurity</a><span class="river-space"></span>, and
-      freelanced <span class="river-space"></span>for a <a title="stamen" href="https://stamen.com/">data<span class="river-space"></span>
-        visualization <span class="river-space"></span>studio</a>. <span class="river-space"></span>currently freelancing <span class="river-space"></span>with <a
-        title="healing justice lineages"
-        href="https://healingjusticelineages.com/">non-profit</a> <span class="river-space"></span>/ <a
-        title="new economy coalition" href="https://neweconomy.net/">public
-        interest <span class="river-space"></span>organizations</a>. </p>
+  </nav>
+</header>
+<main>
+  <div>
+    <div id="about">
+      <p> hi, <span class="river-space"></span>welcome to the
+        <span class="river-space"></span>site of anna <span
+          class="river-space"></span>y lin (林, she/her). <span
+          class="river-space"></span>she is a <span
+          class="river-space"></span>frontend
+        and UX <span class="river-space"></span>engineer, <span
+          class="river-space"></span>focused on <span
+          class="river-space"></span>accessibility, <span
+          class="river-space"></span>user <span
+          class="river-space"></span>experience,
+        and <span class="river-space"></span><span
+          class="river-space"></span>challenging
+        <span class="river-space"></span>existing <span
+          class="river-space"></span>web <span
+          class="river-space"></span><span
+          class="river-space"></span>paradigms.</p>
+      <p>anna <span class="river-space"></span>is developing <span
+        class="river-space"></span>her <a href="/"
+                                          title="working on it!">technology
+        <span class="river-space"></span><span
+          class="subversive">subversion</span> <span
+          class="river-space"></span>practice</a> <span
+        class="river-space"></span>in <a title="near prospect park"
+                                         href="https://osm.org/go/Zct5LhoHI--?relation=9760157">brooklyn
+        / <span class="river-space"></span>lenapehoking</a>; <span
+        class="river-space"></span>she was <span
+        class="river-space"></span>previously
+        <span class="river-space"></span>based in <a
+          title="near albany hill"
+          href="https://osm.org/go/TZNUOwG~Q--?node=358805939">the
+          <span class="river-space"></span>bay area / <span
+            class="river-space"></span>ohlone land</a>. <span
+          class="river-space"></span>she makes work <span
+          class="river-space"></span>on the web <sup><a
+          title="the html review, 03"
+          href="https://thehtml.review/03/#anna-y-lin">1</a>, <a
+          title="taper, issue #11"
+          href="https://taper.badquar.to/11/diaspora_radicals.html">2</a></sup>,
+        <span class="river-space"></span>though she <span
+          class="river-space"></span>also makes<span
+          class="river-space"></span>physical work--<span
+          class="river-space"></span>most <span
+          class="river-space"></span>recently,
+        <a title="soft networks, thesis project"
+           href="https://www.instagram.com/p/DBPVTfQy1Ja/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">nets
+          and <span class="river-space"></span>the raspberry pi</a>. </p>
+      <p>before <span class="river-space"></span>attaining her <a
+        title="interactive telecommunications program, nyu"
+        href="https://itp.nyu.edu/itp/">masters <span
+        class="river-space"></span>in creative <span
+        class="river-space"></span>technology</a>, she <span
+        class="river-space"></span>worked <span
+        class="river-space"></span>in
+        the industry as a user experience <span
+          class="river-space"></span>and
+        accessibility <span class="river-space"></span>focused <span
+          class="river-space"></span>frontend software <span
+          class="river-space"></span>engineer, <span
+          class="river-space"></span>in the realms of <span
+          class="river-space"></span><a title="charles schwab"
+                                        href="https://schwab.com/">finance
+          tech</a>, <span class="river-space"></span><a title="mitre"
+                                                        href="https://www.mitre.org/">cybersecurity</a><span
+          class="river-space"></span>, and freelanced <span
+          class="river-space"></span>for a <a title="stamen"
+                                              href="https://stamen.com/">data<span
+          class="river-space"></span> visualization <span
+          class="river-space"></span>studio</a>. <span
+          class="river-space"></span>currently freelancing <span
+          class="river-space"></span>with <a
+          title="healing justice lineages"
+          href="https://healingjusticelineages.com/">non-profit</a><span
+          class="river-space"></span>/ <a title="new economy coalition"
+                                          href="https://neweconomy.net/">public
+          interest <span class="river-space"></span>organizations</a>.
+      </p>
+    </div>
+    <div id="work">
+      <ul id="project-list"></ul>
+    </div>
   </div>
   <div>
-    <button id="photo-button" class="icon-buttons" title="click for more photos"></button>
-    <button id="river-button" class="icon-buttons" title="click for river spacing"></button>
+    <div><p>✴︎ <em id="description"></em></p></div>
   </div>
-  <div><p>✴︎ <em id="description"></em></p></div>
-  <svg width="0" height="0">
-    <filter id="noiseFilter">
-      <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3"
-                    stitchTiles="stitch"></feTurbulence>
-    </filter>
-  </svg>
-  <div id="photo-container">
+  <div>
     <img alt="meow" id="meow" src="public/anna.png"/>
-    <div id="photos"></div>
   </div>
-</article>
+</main>
 <footer><small><em>last updated June 18th, 2025</em></small></footer>
 </body>
 </html>

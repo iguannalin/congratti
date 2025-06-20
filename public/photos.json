@@ -1,57 +1,6 @@
 {
   "photos": [
     {
-      "name": "projects",
-      "count": 12,
-      "images": [
-        {
-          "alt": "portrait of family of projects",
-          "src": "public/projects/tableware1.png",
-          "title": "tableware - by anna y lin; credits to jaxon wang"
-        }, {
-          "alt": "5 small, stacked wooden cups",
-          "src": "public/projects/tableware2.png",
-          "title": "cups - sanded plywood"
-        }, {
-          "alt": "hand pulling a tissue out of a tissue box",
-          "src": "public/projects/tableware3.png",
-          "title": "tissue box - laser-cut finger joint plywood box"
-        }, {
-          "alt": "a round bowl holding balls of pink, and orange yarn, and crochet hooks",
-          "src": "public/projects/tableware4.png",
-          "title": "topography bowl - laser-cut plywood"
-        }, {
-          "alt": "a wooden candelabra shaped like a fan, and holding colorful birthday candles",
-          "src": "public/projects/tableware5.png",
-          "title": "fan candle holder - cut poplar wood with yarn"
-        }, {
-          "alt": "A pink, orange, and dark purple net cascades from the ceiling, obscuring two people hugging nodes inside the net, one person is holding a phone, and the other person is smiling.",
-          "src": "public/projects/touched.jpg",
-          "title": "The soft networks is a net made of nodes that communicate to each other by touches--when one person hugs a node, a message is sent to all the other nodes which can be felt by another person."
-        }, {
-          "title": "Each node consists of recycled burlap and fleece yarn, a small board with a Raspberry Pi Zero, which starts a server and listens for messages, and also controls 2 mini haptic motors.",
-          "src": "public/projects/microcontroller.jpeg"
-        }, {
-          "alt": "A table display with the handhold mouse, on top of a light blue mousepad, connected to a iMac G4 computer--people to play with an old drawing program called Kid Pix (2000) on the iMac.",
-          "src": "public/projects/handhold.jpg",
-          "title": "The handhold mouse--connected to a iMac G4 computer, inviting people to play with an old drawing program called Kid Pix (2000) on the iMac."
-        }, {
-          "src": "public/projects/handpaint.jpg",
-          "title": "picture of hand being spray-painted"
-        }, {
-          "alt": "Two kids with black EEG headsets on stand in front of 2 pairs of LEG lights suspended from the ceiling--the pair of lights on the left shine green, and the two on the right shine orange.",
-          "src": "public/projects/eeg.png",
-          "title": "Twins using the EEG devices, and controlling different sets of the lights in the EEG cloud, based on activity levels in their brain."
-        }, {
-          "alt": "An old tv set with a green screen surround by piles of books sitting atop a lace-covered desk.",
-          "src": "public/projects/ai-loves-horror.png"
-        }, {
-          "alt": "Phone receiving texts from the text-me-smth-nice app.",
-          "src": "public/projects/text-me-smth-nice.gif",
-          "title": "A messaging app that uses the Twilio SMS API to send out nice texts periodically."
-        }
-      ]
-    }, {
       "name": "yosemite",
       "count": 5,
       "images": [
@@ -230,7 +179,7 @@
       ]
     }, {
       "name": "exposure",
-      "count": 21,
+      "count": 9,
       "images": [
         {
           "alt": "koi fish superimposed on rocks and grass",
@@ -268,7 +217,13 @@
           "alt": "orange cat lying on its side playfully superimposed over some brightly colored lawn chairs on a lush green yard, a small white cabin and a silver suv in the background",
           "title": "",
           "src": "public/exposure/10.png"
-        }, {
+        }
+      ]
+    }, {
+      "name": "exposure2",
+      "count": 9,
+      "images": [
+        {
           "alt": "red prayer candles blazing in front of a busy temple superimposed over a man inspecting an circuit box on a farm with a pond",
           "title": "",
           "src": "public/exposure/11.png"
@@ -276,7 +231,7 @@
           "alt": "multi-tiered metal sculpture with red prayer candles burning in front of a temple",
           "title": "",
           "src": "public/exposure/13.png"
-        },{
+        }, {
           "alt": "daffodils superimposed over picture of person on a roofed moped at an intersection",
           "title": "",
           "src": "public/exposure/15.png"

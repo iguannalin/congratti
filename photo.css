@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  place-content: center;
+  width: 100vw;
+}
+
+#container {
+  display: flex;
+  flex-flow: column;
+  place-content: center;
+  text-align: center;
+}
+
+/* inspired by-- https://mfabiennial2025.risd.gd/ */
+/* add noise filter */
+#container::after {
+  box-sizing: border-box;
+  content: "";
+  filter: url(#noiseFilter);
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  opacity: 0.5;
+  outline: 1px solid transparent;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -9;
+}
+
+svg {
+  position: fixed;
+  z-index: 3000;
+}
+
+sub, img {
+  box-sizing: border-box;
+  padding: 12px;
+  width: 100%;
+}

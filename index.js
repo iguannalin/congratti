@@ -5,75 +5,94 @@ window.addEventListener("load", () => {
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
 
-  const photos = document.querySelector("#photos");
   const description = document.querySelector("#description");
   const name = document.querySelector("#name");
   const meow = document.querySelector("#meow");
   const photoButton = document.querySelector("#photo-button");
   const riverButton = document.querySelector("#river-button");
   const about = document.querySelector("#about");
-  let freed = false;
+  const work = document.querySelector("#work");
+  const projectList = document.querySelector("#project-list");
+  const linkAbout = document.querySelector("#link-about");
+  const linkWork = document.querySelector("#link-work");
 
-  name.addEventListener("mouseenter", () => {
-    meow.style.display = "block";
-    name.addEventListener("mouseleave", () => {
-      meow.style.display = "none";
-    });
-  });
-
-  name.addEventListener('touchstart', () => {
-    meow.style.display = "none" ? "block" : "none";
-  }, { passive: false });
-
-  function resetWindow() {
-    photos.innerHTML = "";
-    provideContext();
-  }
-
+  //
+  // HELPERS
+  //
   function provideContext(context = "") {
     description.innerHTML = context;
+  }
+
+  function createWindow(image) {
+    const imageContext = image.title || image.alt;
+    const text = `<!DOCTYPE html><html><head> <title>${ imageContext }</title> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="http://127.0.0.1:8888/photo.css"/></head><body><div id="container"><img alt=${ imageContext } title=${ imageContext } src=${ "https://annaylin.com/" + image.src }><sub>${ imageContext }</sub><svg width="0" height="0"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch"></feTurbulence></filter></svg></div></body></html>`;
+    const blob = new Blob([text], { type: "text/html" });
+    const blobUrl = URL.createObjectURL(blob);
+    window.open(blobUrl, '_blank', `location=0,menubar=0,status=0,scrollbars=0,toolbar=0,resizable=0,popup,width=440,height=500,left=${ getRandomInt(0, screen.width) },top=${ getRandomInt(0, screen.height) }`);
+    window.URL.revokeObjectURL(blobUrl);
+  }
+
+  //
+  // CONTENT
+  //
+  function loadContent(type) {
+    if ( type === "about" ) {
+      about.style.display = "block";
+      work.style.display = "none";
+    } else if ( type === "work" ) {
+      about.style.display = "none";
+      work.style.display = "block";
+    }
+  }
+
+  function loadWork() {
+    fetch("public/projects.json").then((r => r.json())).then((d => {
+      if ( !d["projects"] ) return;
+      d["projects"].forEach(project => {
+        const li = document.createElement("li");
+        const img = document.createElement("img");
+        img.src = project.src;
+        img.alt = project.alt;
+        img.title = project.title;
+        const h2 = document.createElement("h2");
+        h2.innerHTML = project.name;
+        li.appendChild(img);
+        li.appendChild(h2);
+        projectList.appendChild(li);
+      });
+    }));
   }
 
   //
   // PHOTOS
   //
-
   function loadPhotos() {
-    resetWindow();
-    let photoFolders;
+    provideContext();
     fetch("public/photos.json").then((r => r.json())).then((d => {
-        photoFolders = d.photos;
-        const directory = photoFolders[getRandomInt(0, photoFolders.length)];
+        const photoFolders = d.photos;
+        if ( !photoFolders ) return;
+        const directory = photoFolders[getRandomInt(0, photoFolders.length)]; // pick a random folder
         for ( let i = 0; i < directory.count; i++ ) {
           const image = directory.images[i];
           if ( !image.src ) return;
-          const div = document.createElement("div");
-          const imageElement = document.createElement("img");
-          imageElement.addEventListener("mouseenter", () => {
-            description.innerHTML = image.title ? image.title : image.alt ? image.alt : "";
-          });
-          imageElement.src = image.src;
-          if ( image.alt ) imageElement.alt = image.alt;
-          if ( image.title ) imageElement.title = image.title;
-          div.appendChild(imageElement);
-          photos.appendChild(div);
+          setTimeout(() => createWindow({ ...image }), (i + 1) * 500);
         }
       }
     ));
   }
 
+  //
+  // RIVER
+  //
   function riverSpace() {
     riverButton.classList.toggle("selected");
     about.classList.toggle("spaced");
-    freed = !freed;
   }
 
   //
   // DOTS
   //
-
   const dotsContainer = document.getElementById("dots-container");
-
   let dotIndex = 0;
   const dotMax = 500;
 
@@ -88,9 +107,7 @@ window.addEventListener("load", () => {
       dot = dots[dotIndex];
       dotIndex++;
     }
-
     if ( dotIndex >= dotMax ) dotIndex = 0;
-
     if ( isTouch ) {
       e.preventDefault();
       dot.style.left = `${ e.targetTouches[0].pageX }px`;
@@ -103,13 +120,31 @@ window.addEventListener("load", () => {
     dotsContainer.appendChild(dot);
   }
 
+  //
+  // EVENTS
+  //
+  name.addEventListener("mouseenter", () => {
+    meow.style.display = "block";
+    name.addEventListener("mouseleave", () => {
+      meow.style.display = "none";
+    });
+  });
+  name.addEventListener('touchstart', () => {
+    meow.style.display = "none" ? "block" : "none";
+  }, { passive: false });
+  linkAbout.addEventListener("click", () => loadContent('about'));
+  linkWork.addEventListener("click", () => loadContent('work'));
   document.body.addEventListener("mousemove", (e) => drawDots(e));
   document.body.addEventListener("touchmove", (e) => drawDots(e, true));
-
   photoButton.addEventListener("mouseover", () => provideContext("view photos"))
   photoButton.addEventListener("click", loadPhotos);
-
   riverButton.addEventListener("click", riverSpace);
-
-  loadPhotos();
+  about.addEventListener('click', (e) => {
+    if ( e && e.target.tagName === 'A' ) {
+      window.open(e.target.href, 'newwindow', `width=500,height=450,left=${ getRandomInt(0, screen.width) },top=${ getRandomInt(0, screen.height) }`);
+      e.preventDefault();
+      return false;
+    }
+  }, false);
+  loadWork();
 });
