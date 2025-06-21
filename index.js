@@ -54,7 +54,6 @@ window.addEventListener("load", () => {
         const img = document.createElement("img");
         a.href="javascript:void(0);";
         a.addEventListener("click", () => createWindow(project));
-        createWindow(project);
         img.src = project.src;
         img.alt = project.alt;
         img.title = project.title;
