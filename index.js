@@ -23,9 +23,9 @@ window.addEventListener("load", () => {
     description.innerHTML = context;
   }
 
-  function createWindow(image) {
+  function createWindow(image, work = false) {
     const imageContext = image.title || image.alt;
-    const text = `<!DOCTYPE html><html><head> <title>${ imageContext }</title> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://www.annaylin.com/photo.css"/></head><body><div id="container"><img id="work" alt=${ imageContext } title=${ imageContext } src=${ "https://annaylin.com/" + image.src }><sub>${ imageContext }</sub><svg width="0" height="0"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch"></feTurbulence></filter></svg></div></body></html>`;
+    const text = `<!DOCTYPE html><html><head><title>${ imageContext }</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="http://127.0.0.1:8888/photo.css"/></head><body><div id="container"><img id=${ work ? "work" : null } alt=${ image.alt || "" } src=${ "https://annaylin.com/" + image.src } /><sub id="context" data-info=${ btoa(imageContext) }></sub><svg width="0" height="0"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch"></feTurbulence></filter></svg></div></body><script>const sub = document.getElementById('context'); if (sub.dataset && sub.dataset.info) sub.innerHTML = atob(sub.dataset.info);</script></html>`;
     const blob = new Blob([text], { type: "text/html" });
     const blobUrl = URL.createObjectURL(blob);
     window.open(blobUrl, '_blank', `location=0,menubar=0,status=0,scrollbars=0,toolbar=0,resizable=0,popup,width=440,height=500,left=${ getRandomInt(0, screen.width) },top=${ getRandomInt(0, screen.height) }`);
@@ -52,8 +52,8 @@ window.addEventListener("load", () => {
         const li = document.createElement("li");
         const a = document.createElement("a");
         const img = document.createElement("img");
-        a.href="javascript:void(0);";
-        a.addEventListener("click", () => createWindow(project));
+        a.href = "javascript:void(0);";
+        a.addEventListener("click", () => createWindow(project, true));
         img.src = project.src;
         img.alt = project.alt;
         img.title = project.title;

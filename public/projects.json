@@ -4,7 +4,7 @@
       "name": "New Economy Coalition",
       "alt": "The New Economy Coalition Member Directory.",
       "src": "public/projects/nec.png",
-      "title": "Working with The New Economy Coalition (NEC) on updating their website, they requested a new member directory that will automatically pull updates from their database to populate a map, complete with search and filter features.  I created a middleware API that can securely fetch member data from their database–which made it easier for admins to update the website–, and created a map with custom markers in the shape of the NEC logo, using the NEC color system."
+      "title": "Working with the New Economy Coalition (NEC) on updating their website, they requested a new member directory that will automatically pull updates from their database to populate a map, complete with search and filter features. I created a middleware API that can securely fetch member data from their database."
     }, {
       "name": "Gray Area",
       "alt": "The Gray Area Festival 2025 website.",
@@ -29,17 +29,17 @@
       "name": "handhold mouse",
       "alt": "A table display with the handhold mouse, on top of a light blue mousepad, connected to a iMac G4 computer--people to play with an old drawing program called Kid Pix (2000) on the iMac.",
       "src": "public/projects/handhold.png",
-      "title": "The handhold mouse--connected to a iMac G4 computer, inviting people to play with an old drawing program called Kid Pix (2000) on the iMac. This was a project created in collaboration with <a href='https://k--k.net/'>Kat Kitay."
+      "title": "The handhold mouse--connected to a iMac G4 computer, inviting people to play with an old drawing program called Kid Pix (2000) on the iMac. This was a project created in collaboration with <a title='link to Kat' href='https://k--k.net/'>Kat Kitay</a>."
     }, {
       "name": "EEG",
       "alt": "Two kids with black EEG headsets on stand in front of 2 pairs of EEG lights suspended from the ceiling--the pair of lights on the left shine green, and the two on the right shine orange.",
       "src": "public/projects/eeg.png",
-      "title": "Twins using the EEG devices, and controlling different sets of the lights in the EEG cloud, based on activity levels in their brain. This project was created in collaboration with <a href='https://danielwai.myportfolio.com'>Daniel Wai</a>, and with a lot of advice on EEG devices, as well as how to read its data from <a href='https://jasonjsnell.com'>Jason Snell"
+      "title": "Twins using the EEG devices, and controlling different sets of the lights in the EEG cloud, based on activity levels in their brain. This project was created in collaboration with <a title='link to Daniel' href='https://danielwai.myportfolio.com'>Daniel Wai</a>, and with a lot of advice on EEG devices, as well as how to read its data from <a title='link to Jason' href='https://jasonjsnell.com'>Jason Snell."
     }, {
       "name": "ai-loves-horror",
       "alt": "An old tv set with a green screen surround by piles of books sitting atop a lace-covered desk.",
       "src": "public/projects/ai-loves-horror.png",
-      "title": "A <a href='https://iguannalin.github.io/ai-loves-horror/about.html'>horror text-based adventure game</a>made using OpenAI's GPT-3 (Davinci model) API. This project was shown during the ITP Winter Show, 2022."
+      "title": "A <a title='link to project on GitHub' href='https://iguannalin.github.io/ai-loves-horror/about.html'>horror text-based adventure game</a> made using OpenAI's GPT-3 (Davinci model) API. This project was shown during the ITP Winter Show, 2022."
     }
   ]
 }

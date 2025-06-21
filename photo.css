@@ -8,9 +8,10 @@ body {
 }
 
 #container {
+  align-items: center;
   display: flex;
   flex-flow: column;
-  place-content: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -37,15 +38,21 @@ svg {
   z-index: 3000;
 }
 
-sub, img {
+img {
   box-sizing: border-box;
+  max-height: 90vh;
   max-width: 800px;
-  width: 100%;
+  width: fit-content;
 }
 
-#work img {
+sub {
+  max-width: 800px;
+  padding: 12px;
+}
+
+img#work {
   border: 1px solid black;
   border-radius: 3px;
-  box-shadow: 4px 4px #0000007a;
+  box-shadow: 4px 4px 5px 2px #1019ff4a;
   padding: 0;
 }
