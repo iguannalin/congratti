@@ -90,6 +90,7 @@ window.addEventListener("load", () => {
   function riverSpace() {
     riverButton.classList.toggle("selected");
     about.classList.toggle("spaced");
+    loadContent("about");
   }
 
   //
@@ -141,7 +142,7 @@ window.addEventListener("load", () => {
   document.body.addEventListener("touchmove", (e) => drawDots(e, true));
   photoButton.addEventListener("mouseover", () => provideContext("view photos"))
   photoButton.addEventListener("click", loadPhotos);
-  // riverButton.addEventListener("click", riverSpace);
+  riverButton.addEventListener("click", riverSpace);
   about.addEventListener('click', (e) => {
     if ( e && e.target.tagName === 'A' ) {
       window.open(e.target.href, 'newwindow', `width=500,height=450,left=${ getRandomInt(0, screen.width) },top=${ getRandomInt(0, screen.height) }`);

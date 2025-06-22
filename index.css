@@ -124,10 +124,10 @@ dot {
 }
 
 #river-button:before {
-  content: "🛶";
+  content: "☵";
 }
 
-#river-button:hover:before, #river-button.selected:before {content: "💧";}
+#river-button:hover:before, #river-button.selected:before {content: "☰";}
 
 #photo-button:before {
   content: "📷";
