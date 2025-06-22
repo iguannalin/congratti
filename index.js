@@ -56,7 +56,6 @@ window.addEventListener("load", () => {
         a.addEventListener("click", () => createWindow(project, true));
         img.src = project.src;
         img.alt = project.alt;
-        img.title = project.title;
         const h2 = document.createElement("h2");
         h2.innerHTML = project.name;
         a.appendChild(img);
