@@ -54,13 +54,14 @@ main {
   text-wrap-style: balance;
 }
 
-span.river-space {
-  display: none;
-  padding: 0 4ch;
+#about.spaced {
+  word-spacing: 3rlh;
 }
 
-#about.spaced span.river-space {
-  display: inline-block;
+#about.spaced a {
+  text-decoration-color: blue;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
 }
 
 #disclaimer {
@@ -123,11 +124,11 @@ dot {
   padding: 2px;
 }
 
-#river-button:before {
+#water-button:before {
   content: "☵";
 }
 
-#river-button:hover:before, #river-button.selected:before {content: "☰";}
+#water-button:hover:before, #water-button.selected:before {content: "☰";}
 
 #photo-button:before {
   content: "📷";

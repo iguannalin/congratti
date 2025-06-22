@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
   const name = document.querySelector("#name");
   const meow = document.querySelector("#meow");
   const photoButton = document.querySelector("#photo-button");
-  const riverButton = document.querySelector("#river-button");
+  const waterButton = document.querySelector("#water-button");
   const about = document.querySelector("#about");
   const work = document.querySelector("#work");
   const projectList = document.querySelector("#project-list");
@@ -85,10 +85,10 @@ window.addEventListener("load", () => {
   }
 
   //
-  // RIVER
+  // WATER
   //
-  function riverSpace() {
-    riverButton.classList.toggle("selected");
+  function waterSpace() {
+    waterButton.classList.toggle("selected");
     about.classList.toggle("spaced");
     loadContent("about");
   }
@@ -142,7 +142,7 @@ window.addEventListener("load", () => {
   document.body.addEventListener("touchmove", (e) => drawDots(e, true));
   photoButton.addEventListener("mouseover", () => provideContext("view photos"))
   photoButton.addEventListener("click", loadPhotos);
-  riverButton.addEventListener("click", riverSpace);
+  waterButton.addEventListener("click", waterSpace);
   about.addEventListener('click', (e) => {
     if ( e && e.target.tagName === 'A' ) {
       window.open(e.target.href, 'newwindow', `width=500,height=450,left=${ getRandomInt(0, screen.width) },top=${ getRandomInt(0, screen.height) }`);
