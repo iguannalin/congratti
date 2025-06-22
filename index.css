@@ -1,5 +1,10 @@
 @import url("https://use.typekit.net/cml7jkz.css");
 
+:root {
+  --gray: #4a4a4a3f;
+  --green: #9fff2f;
+}
+
 body {
   box-sizing: border-box;
   cursor: crosshair;
@@ -22,10 +27,17 @@ body {
 }
 
 a:hover {
-  background-color: #4a4a4a3f;
-  color: #9fff2f;
+  background-color: var(--gray);
+  color: var(--green);
   font-style: normal;
   text-decoration: underline;
+}
+
+small {
+  text-decoration-color: var(--green);
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 3px;
 }
 
 main {
@@ -53,7 +65,7 @@ span.river-space {
 
 .subversive:hover {
   color: #ffffff00;
-  text-shadow: 24px 24px 0 #4a4a4a;
+  text-shadow: 24px 24px 0 var(--gray);
 }
 
 #work {
@@ -78,7 +90,7 @@ ul#project-list li {
 }
 
 ul#project-list img {
-  border: 1px solid #9fff2f;
+  border: 1px solid var(--green);
   border-radius: 5px;
   width: 100%;
 }
@@ -93,7 +105,7 @@ ul#project-list h2 {
 }
 
 dot {
-  color: #9fff2f;
+  color: var(--green);
   position: absolute;
   z-index: -1;
 }
