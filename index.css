@@ -78,6 +78,8 @@ ul#project-list li {
 }
 
 ul#project-list img {
+  border: 1px solid #9fff2f;
+  border-radius: 5px;
   width: 100%;
 }
 
@@ -91,9 +93,9 @@ ul#project-list h2 {
 }
 
 dot {
-  color: #4cbb17;
+  color: #9fff2f;
   position: absolute;
-  z-index: -999;
+  z-index: -1;
 }
 
 .icon-buttons {

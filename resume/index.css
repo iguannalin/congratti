@@ -17,9 +17,13 @@ html {
 
 @media print {
   body {
+    box-sizing: border-box;
     font-size: 14px;
     margin: 0.2in 0.2in 0 1in;
-    box-sizing: border-box;
+  }
+
+  #left {
+    margin-right: 0.2in;
   }
 
   #right * {
@@ -122,6 +126,7 @@ body {
 
 #right {
   flex: 1 2 55ch;
+  margin-top: 0.1in;
 }
 
 .description {
