@@ -26,7 +26,7 @@ body {
   max-width: 4ch;
 }
 
-a:hover {
+a:not(.selected):hover {
   background-color: var(--gray);
   color: var(--green);
   font-style: normal;
@@ -117,6 +117,8 @@ dot {
 
 #link-about.selected, #link-work.selected {
   text-decoration: none;
+  color: initial;
+  cursor: initial;
 }
 
 .icon-buttons {

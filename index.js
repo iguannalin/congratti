@@ -39,12 +39,14 @@ window.addEventListener("load", () => {
     if ( type === "about" ) {
       about.style.display = "block";
       work.style.display = "none";
+      linkWork.classList = null;
+      linkAbout.classList.add("selected");
     } else if ( type === "work" ) {
       about.style.display = "none";
       work.style.display = "block";
+      linkAbout.classList = null;
+      linkWork.classList.add("selected");
     }
-    linkAbout.classList.toggle("selected");
-    linkWork.classList.toggle("selected");
   }
 
   function loadWork() {
