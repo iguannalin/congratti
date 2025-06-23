@@ -43,6 +43,8 @@ window.addEventListener("load", () => {
       about.style.display = "none";
       work.style.display = "block";
     }
+    linkAbout.classList.toggle("selected");
+    linkWork.classList.toggle("selected");
   }
 
   function loadWork() {
@@ -89,6 +91,7 @@ window.addEventListener("load", () => {
   //
   function waterSpace() {
     waterButton.classList.toggle("selected");
+    waterButton.title = waterButton.title === "water" ? "heaven" : "water";
     about.classList.toggle("spaced");
     loadContent("about");
   }

@@ -115,6 +115,10 @@ dot {
   z-index: -1;
 }
 
+#link-about.selected, #link-work.selected {
+  text-decoration: none;
+}
+
 .icon-buttons {
   background: none;
   border: 0;
@@ -124,7 +128,7 @@ dot {
   padding: 2px;
 }
 
-#water-button:before {
+#water-button:not(.selected):before {
   content: "☵";
 }
 
