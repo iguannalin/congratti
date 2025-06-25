@@ -46,8 +46,7 @@ main {
 
 #about {
   display: none;
-  /* 40ch is the optimal width for mobile */
-  max-width: 40ch;
+  max-width: 40ch; /* 40ch is the optimal width for mobile */
 }
 
 #about:not(.spaced) {
@@ -116,9 +115,9 @@ dot {
 }
 
 #link-about.selected, #link-work.selected {
-  text-decoration: none;
   color: initial;
   cursor: initial;
+  text-decoration: none;
 }
 
 .icon-buttons {
@@ -130,17 +129,17 @@ dot {
   padding: 2px;
 }
 
-#water-button:not(.selected):before {
+#water-button:not(.selected):hover:before, #water-button:not(.selected):before {
   content: "☵";
 }
 
-#water-button:hover:before, #water-button.selected:before {content: "☰";}
+#water-button.selected:hover:before, #water-button.selected:before {content: "☰";}
 
 #photo-button:before {
   content: "📷";
 }
 
-#photo-button:hover:before, #photo-button:active:before {content: "📸";}
+#photo-button:hover:before {content: "📸";}
 
 #meow {
   display: none;
