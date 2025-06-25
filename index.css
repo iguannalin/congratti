@@ -129,11 +129,13 @@ dot {
   padding: 2px;
 }
 
-#water-button:not(.selected):hover:before, #water-button:not(.selected):before {
+#water-button.selected:hover:before, #water-button:not(.selected):before {
   content: "☵";
 }
 
-#water-button.selected:hover:before, #water-button.selected:before {content: "☰";}
+#water-button:not(.selected):hover:before, #water-button.selected:before {
+  content: "☰";
+}
 
 #photo-button:before {
   content: "📷";
