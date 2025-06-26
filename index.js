@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
   }
 
   function createWindow(image, work = false) {
-    const imageContext = image.title || image.alt;
+    const imageContext = work ? image.description : (image.title || image.alt);
     const text = `<!DOCTYPE html><html><head><title>${ imageContext }</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://annaylin.com/photo.css"/></head><body><div id="container"><img alt="" data-info=${ btoa(image.alt) } class="thumbnail" id=${ work ? "work" : "photo" } src=${ "https://annaylin.com/" + image.src } /><sub id="context" data-info=${ btoa(imageContext) }></sub><svg width="0" height="0"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch"></feTurbulence></filter></svg></div></body><script>const sub = document.getElementById('context'); const thumb = document.querySelector('.thumbnail'); if (sub && sub.dataset && sub.dataset.info) sub.innerHTML = atob(sub.dataset.info); if (thumb && thumb.dataset && thumb.dataset.info) thumb.alt = atob(thumb.dataset.info);</script></html>`;
     const blob = new Blob([text], { type: "text/html" });
     const blobUrl = URL.createObjectURL(blob);
@@ -75,18 +75,20 @@ window.addEventListener("load", () => {
   // PHOTOS
   //
   function loadPhotos() {
-    provideContext();
-    fetch("public/photos.json").then((r => r.json())).then((d => {
-        const photoFolders = d.photos;
-        if ( !photoFolders ) return;
-        const directory = photoFolders[getRandomInt(0, photoFolders.length)]; // pick a random folder
-        for ( let i = 0; i < directory.count; i++ ) {
-          const image = directory.images[i];
-          if ( !image.src ) return;
-          setTimeout(() => createWindow({ ...image }), (i + 1) * 500);
+    if ( window.confirm("🐸 hi--this will open some pop-ups, is that ok?") ) {
+      provideContext();
+      fetch("public/photos.json").then((r => r.json())).then((d => {
+          const photoFolders = d.photos;
+          if ( !photoFolders ) return;
+          const directory = photoFolders[getRandomInt(0, photoFolders.length)]; // pick a random folder
+          for ( let i = 0; i < directory.count; i++ ) {
+            const image = directory.images[i];
+            if ( !image.src ) return;
+            setTimeout(() => createWindow({ ...image }), (i + 1) * 500);
+          }
         }
-      }
-    ));
+      ));
+    }
   }
 
   //

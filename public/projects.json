@@ -4,42 +4,42 @@
       "name": "New Economy Coalition",
       "alt": "The New Economy Coalition Member Directory.",
       "src": "public/projects/nec.png",
-      "title": "Working with the New Economy Coalition (NEC) on updating their website, they requested a new member directory that will automatically pull updates from their database to populate a map, complete with search and filter features. I created a middleware API that can securely fetch member data from their database.<br/><br/><em>Technologies</em>: airtable API, netlify, php, wordpress, javascript, html, css"
+      "description": "Working with the New Economy Coalition (NEC) on updating their website, they requested a new member directory that will automatically pull updates from their database to populate a map, complete with search and filter features. I created a middleware API that can securely fetch member data from their database.<br/><br/><em>Technologies</em>: airtable API, netlify, php, wordpress, javascript, html, css"
     }, {
       "name": "Gray Area",
       "alt": "The Gray Area Festival 2025 website.",
       "src": "public/projects/grayarea.png",
-      "title": "The Gray Area is a long-standing non-profit arts organization in the Bay Area. In the theme for its 2025 festival, I created an interactive, body-invoking website that plays around with the concept of a fun user interface with basic php and javascript.<br/><br/><em>Technologies</em>: php, wordpress, javascript, html, css<br/><br/><em>Collaborators</em>: Justin Carder (graphic design)"
+      "description": "The Gray Area is a long-standing non-profit arts organization in the Bay Area. In the theme for its 2025 festival, I created an interactive, body-invoking website that plays around with the concept of a fun user interface with basic php and javascript.<br/><br/><em>Technologies</em>: php, wordpress, javascript, html, css<br/><br/><em>Collaborators</em>: Justin Carder (graphic design)"
     }, {
       "name": "Healing Justice Lineages",
       "alt": "The Healing Justice Lineages website homepage.",
       "src": "public/projects/hjl.png",
-      "title": "The Healing Justice Lineages (HJL) website is a digital archival of collective care and safety strategies, to continue the work of authors Cara Page & Erica Woodland.<br/><br/><em>Technologies</em>: php, wordpress, javascript, html, css<br/><br/><em>Collaborators</em>: dre jácome (communications strategy), Belén Marco-Crespo (graphic design)"
+      "description": "The Healing Justice Lineages (HJL) website is a digital archival of collective care and safety strategies, to continue the work of authors Cara Page & Erica Woodland.<br/><br/><em>Technologies</em>: php, wordpress, javascript, html, css<br/><br/><em>Collaborators</em>: dre jácome (communications strategy), Belén Marco-Crespo (graphic design)"
     }, {
       "name": "soft network",
       "alt": "A pink, orange, and dark purple net cascades from the ceiling, obscuring two people hugging nodes inside the net, one person is holding a phone, and the other person is smiling.",
       "src": "public/projects/touched.jpg",
-      "title": "The soft networks is a net made of nodes that communicate to each other by touches--when one person hugs a node, a message is sent to all the other nodes which can be felt by another person.\nEach node consists of recycled burlap and fleece yarn, a small board with a Raspberry Pi Zero, which starts a server and listens for messages, and also controls 2 mini haptic motors.<br/><br/><em>Technologies</em>: recycled coffee burlap bags, fleece yarn, conductive fabric, Raspberry Pi Pico Ws, 18650 battery packs, DC coreless motors, shoddy<br/><br/>"
+      "description": "The soft network is a net made of nodes that communicate to each other by touches--when one person hugs a node, a message is sent to all the other nodes which can be felt by another person.\nEach node consists of recycled burlap and fleece yarn, a small board with a Raspberry Pi Zero, which starts a server and listens for messages, and also controls 2 mini haptic motors.<br/><br/>The soft network was presented at the Living Gallery in Brooklyn, and also as part of my graduate thesis.<br/><br/><em>Technologies</em>: recycled coffee burlap bags, fleece yarn, conductive fabric, Raspberry Pi Pico Ws, 18650 battery packs, DC coreless motors, shoddy"
     }, {
       "name": "text-me-smth-nice",
       "alt": "Phone receiving texts from the text-me-smth-nice app.",
       "src": "public/projects/text-me-smth-nice.gif",
-      "title": "A messaging app that uses the Twilio SMS API to send out nice texts periodically.<br/><br/><em>Technologies</em>: Twilio, Google Cloud, Heroku, Python, Flask"
+      "description": "A messaging app that uses the Twilio SMS API to send out nice texts periodically.<br/><br/><em>Technologies</em>: Twilio, Google Cloud, Heroku, Python, Flask"
     }, {
       "name": "handhold mouse",
       "alt": "A table display with the handhold mouse, on top of a light blue mousepad, connected to a iMac G4 computer--people to play with an old drawing program called Kid Pix (2000) on the iMac.",
       "src": "public/projects/handhold.png",
-      "title": "The handhold mouse--connected to a iMac G4 computer, inviting people to play with an old drawing program called Kid Pix (2000) on the iMac.<br/><br/><em>Collaborators</em>: <a title='link to Kat' href='https://k--k.net/'>Kat Kitay</a>"
+      "description": "The handhold mouse is the mouse you hold that holds you back.<br/><br/>The handhold mouse--connected to a iMac G4 computer, inviting people to play with a nostalgic drawing program called Kid Pix (2000) on the iMac.<br/><br/>It was presented at the 2024 ITP Winter Show.<br/><br/><em>Collaborators</em>: <a title='link to Kat' href='https://k--k.net/'>Kat Kitay</a>."
     }, {
       "name": "EEG",
       "alt": "Two kids with black EEG headsets on stand in front of 2 pairs of EEG lights suspended from the ceiling--the pair of lights on the left shine green, and the two on the right shine orange.",
       "src": "public/projects/eeg.png",
-      "title": "Twins using the EEG devices, and controlling different sets of the lights in the EEG cloud, based on activity levels in their brain.<br/><br/><em>Collaborators</em>: <a title='link to Daniel' href='https://danielwai.myportfolio.com'>Daniel Wai</a>, and with a lot of advice on EEG devices from <a title='link to Jason' href='https://jasonjsnell.com'>Jason Snell"
+      "description": "Twins using the EEG devices, and controlling different sets of the lights in the EEG cloud, based on activity levels in their brain.<br/><br/>The EEG cloud was presented in the 2023 ITP Spring Show.<br/><br/><em>Collaborators</em>: <a title='link to Daniel' href='https://danielwai.myportfolio.com'>Daniel Wai</a>, and with a lot of advice on EEG devices from <a title='link to Jason' href='https://jasonjsnell.com'>Jason Snell</a>."
     }, {
       "name": "ai-loves-horror",
       "alt": "An old tv set with a green screen surround by piles of books sitting atop a lace-covered desk.",
       "src": "public/projects/ai-loves-horror.png",
-      "title": "A <a title='link to project on GitHub' href='https://iguannalin.github.io/ai-loves-horror/about.html'>horror text-based adventure game</a> made using OpenAI's GPT-3 (Davinci model) API. This project was shown during the ITP Winter Show, 2022."
+      "description": "A <a title='link to project on GitHub' href='https://iguannalin.github.io/ai-loves-horror/about.html'>horror text-based adventure game</a> made using OpenAI's GPT-3 (Davinci model) API. This project was shown during the ITP Winter Show, 2022."
     }
   ]
 }

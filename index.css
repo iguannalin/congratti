@@ -129,6 +129,10 @@ dot {
   padding: 2px;
 }
 
+#water-button {
+  color: blue;
+}
+
 #water-button.selected:hover:before, #water-button:not(.selected):before {
   content: "☵";
 }
