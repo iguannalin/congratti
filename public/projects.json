@@ -26,16 +26,6 @@
       "src": "public/projects/handhold.png",
       "description": "The handhold mouse is the mouse you hold that holds you back.<br/><br/>The handhold mouse--connected to a iMac G4 computer, inviting people to play with a nostalgic drawing program called Kid Pix (2000) on the iMac.<br/><br/>It was presented at the 2024 ITP Winter Show.<br/><br/><em>Collaborators</em>: <a title='link to Kat' href='https://k--k.net/'>Kat Kitay</a>."
     }, {
-      "name": "EEG",
-      "alt": "Two kids with black EEG headsets on stand in front of 2 pairs of EEG lights suspended from the ceiling--the pair of lights on the left shine green, and the two on the right shine orange.",
-      "src": "public/projects/eeg.png",
-      "description": "Twins using the EEG devices, and controlling different sets of the lights in the EEG cloud, based on activity levels in their brain.<br/><br/>The EEG cloud was presented in the 2023 ITP Spring Show.<br/><br/><em>Collaborators</em>: <a title='link to Daniel' href='https://danielwai.myportfolio.com'>Daniel Wai</a>, and with a lot of advice on EEG devices from <a title='link to Jason' href='https://jasonjsnell.com'>Jason Snell</a>."
-    }, {
-      "name": "ai-loves-horror",
-      "alt": "An old tv set with a green screen surround by piles of books sitting atop a lace-covered desk.",
-      "src": "public/projects/ai-loves-horror.png",
-      "description": "A <a title='link to project on GitHub' href='https://iguannalin.github.io/ai-loves-horror/about.html'>horror text-based adventure game</a> made using OpenAI's GPT-3 (Davinci model) API. This project was shown during the ITP Winter Show, 2022."
-    }, {
       "name": "roots",
       "alt": "A black website, on which many visitors have left their mark with grass that will go on to become tree radicals.",
       "src": "public/projects/roots.png",
@@ -50,6 +40,16 @@
       "alt": "Index page of 100 days of websites",
       "src": "public/projects/100-days.png",
       "description": "I love making websites--I made 100 of them and indexed them <a title='link to 100-days index website' href='https://www.annaylin.com/100-days'>here</a>."
+    }, {
+      "name": "EEG",
+      "alt": "Two kids with black EEG headsets on stand in front of 2 pairs of EEG lights suspended from the ceiling--the pair of lights on the left shine green, and the two on the right shine orange.",
+      "src": "public/projects/eeg.png",
+      "description": "Twins using the EEG devices, and controlling different sets of the lights in the EEG cloud, based on activity levels in their brain.<br/><br/>The EEG cloud was presented in the 2023 ITP Spring Show.<br/><br/><em>Collaborators</em>: <a title='link to Daniel' href='https://danielwai.myportfolio.com'>Daniel Wai</a>, and with a lot of advice on EEG devices from <a title='link to Jason' href='https://jasonjsnell.com'>Jason Snell</a>."
+    }, {
+      "name": "ai-loves-horror",
+      "alt": "An old tv set with a green screen surround by piles of books sitting atop a lace-covered desk.",
+      "src": "public/projects/ai-loves-horror.png",
+      "description": "A <a title='link to project on GitHub' href='https://iguannalin.github.io/ai-loves-horror/about.html'>horror text-based adventure game</a> made using OpenAI's GPT-3 (Davinci model) API. This project was shown during the ITP Winter Show, 2022."
     }, {
       "name": "text-me-smth-nice",
       "alt": "Phone receiving texts from the text-me-smth-nice app.",
