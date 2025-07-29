@@ -33,6 +33,15 @@ window.addEventListener("load", () => {
     window.URL.revokeObjectURL(blobUrl);
   }
 
+  function redirect(link) {
+    const date = new Date();
+    if ( date.getMonth() === 6 && date.getDate() === 29 ) {
+      window.open(link);
+    } else {
+      alert("locked! ☁️");
+    }
+  }
+
   //
   // CONTENT
   //
@@ -57,8 +66,12 @@ window.addEventListener("load", () => {
         const li = document.createElement("li");
         const a = document.createElement("a");
         const img = document.createElement("img");
-        a.href = "javascript:void(0);";
-        a.addEventListener("click", () => createWindow(project, true));
+        if ( project.name.includes("Caldera") ) {
+          a.addEventListener("click", () => redirect("public/caldera"));
+        } else {
+          a.href = "javascript:void(0);";
+          a.addEventListener("click", () => createWindow(project, true));
+        }
         img.src = project.src;
         img.alt = project.alt;
         const h2 = document.createElement("h2");

@@ -1,6 +1,11 @@
 {
   "projects": [
     {
+      "name": "Caldera 🔒",
+      "alt": "The Caldera interface.",
+      "src": "public/caldera/caldera.png",
+      "description": "CALDERA is an open-source cybersecurity attack simulation software built in Python.\n\nI was responsible for designing a dashboard-like interface that gives the user a sense of trust and control over the simulation tool, and develop an app that meets the team’s technical requirements."
+    }, {
       "name": "New Economy Coalition",
       "alt": "The New Economy Coalition Member Directory.",
       "src": "public/projects/nec.png",
