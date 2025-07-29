@@ -35,7 +35,7 @@ window.addEventListener("load", () => {
 
   function redirect(link) {
     const date = new Date();
-    if ( date.getMonth() === 6 && date.getDate() === 29 ) {
+    if ( date.getMonth() === 6 && date.getDate() === 28 ) {
       window.open(link);
     } else {
       alert("locked! ☁️");
