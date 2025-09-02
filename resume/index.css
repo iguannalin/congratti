@@ -78,6 +78,10 @@ html {
   #right {
     padding: 1.5em 0 2em 1em;
   }
+
+  #right > div {
+    padding-bottom: 48px;
+  }
 }
 
 body {
