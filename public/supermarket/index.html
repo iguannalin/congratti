@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>a supermarket in california</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+<div id="welcome">
+  <h1>Welcome!</h1>
+  <a href="shopping.html">Click here to start</a>
+  <p id="disclaimer">disclaimer: possibly disturbing sounds ahead</p>
+</div>
+<div id="background"></div>
+<marquee id="marquee"></marquee>
+</body>
+<script>
+  const marquee = document.getElementById("marquee");
+  fetch("products.json").then((d) => d.json()).then((r) => {
+    r.pageProps.data.results.forEach((item) => {
+      const img = document.createElement("img");
+      img.src = item.imageThumbnail;
+      marquee.appendChild(img);
+    });
+  })
+</script>
+</html>

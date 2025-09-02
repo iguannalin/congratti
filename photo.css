@@ -41,13 +41,13 @@ svg {
 img {
   box-sizing: border-box;
   max-height: 90vh;
-  max-width: min(95%,800px);
+  max-width: min(95%, 800px);
   width: fit-content;
 }
 
 sub {
-  max-width: min(95%,800px);
-  padding: 12px;
+  max-width: min(95%, 800px);
+  padding: 16px 12px;
 }
 
 img#work {

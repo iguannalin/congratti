@@ -26,7 +26,8 @@ body {
   max-width: 4ch;
 }
 
-a:not(.selected):hover {
+a:not(.selected):hover,
+ul#project-list a:hover {
   background-color: var(--gray);
   color: var(--green);
   font-style: normal;
@@ -102,10 +103,13 @@ ul#project-list img {
 ul#project-list h2 {
   font-family: serif;
   font-size: 0.9em;
-  font-style: italic;
   font-weight: 500;
   margin: 0;
   padding: 4px;
+}
+
+ul#project-list a {
+  font-style: italic;
 }
 
 dot {

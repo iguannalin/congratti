@@ -1,62 +1,86 @@
 {
   "projects": [
     {
-      "name": "Caldera 🔒",
-      "alt": "The Caldera interface.",
-      "src": "public/caldera/caldera.png",
-      "description": "CALDERA is an open-source cybersecurity attack simulation software built in Python.\n\nI was responsible for designing a dashboard-like interface that gives the user a sense of trust and control over the simulation tool, and develop an app that meets the team’s technical requirements."
+      "name": "Gray Area",
+      "year": "2025",
+      "alt": "The Gray Area Festival 2025 website.",
+      "src": "public/projects/grayarea.png",
+      "description": "The Gray Area is a long-standing non-profit arts organization in the Bay Area. In the theme for its <a title='link to the gray area 2025 festival website' href='https://2025.grayareafestival.io/'>2025 festival</a>, I created an interactive, body-invoking website that plays around with the concept of a fun user interface with basic php and javascript.<br/><br/><em>Technologies</em>: php, wordpress, javascript, html, css<br/><br/><em>Collaborators</em>: Justin Carder (graphic design)"
+    }, {
+      "name": "Healing Justice Lineages",
+      "year": "2025",
+      "alt": "The Healing Justice Lineages website homepage.",
+      "src": "public/projects/hjl.png",
+      "description": "The <a title='link to the healing justice lineages website' href='https://healingjusticelineages.com/'>Healing Justice Lineages (HJL) website</a> is a digital archival of collective care and safety strategies, to continue the work of editors Cara Page & Erica Woodland.<br/><br/><em>Technologies</em>: php, wordpress, javascript, html, css<br/><br/><em>Collaborators</em>: dre jácome (communications strategy), Belén Marco-Crespo (graphic design)"
     }, {
       "name": "New Economy Coalition",
+      "year": "2025",
       "alt": "The New Economy Coalition Member Directory.",
       "src": "public/projects/nec.png",
       "description": "Working with the New Economy Coalition (NEC) on updating their website, they requested a new member directory that will automatically pull updates from their database to populate a map, complete with search and filter features. I created a middleware API that can securely fetch member data from their database.<br/><br/><em>Technologies</em>: airtable API, netlify, php, wordpress, javascript, html, css"
     }, {
-      "name": "Gray Area",
-      "alt": "The Gray Area Festival 2025 website.",
-      "src": "public/projects/grayarea.png",
-      "description": "The Gray Area is a long-standing non-profit arts organization in the Bay Area. In the theme for its 2025 festival, I created an interactive, body-invoking website that plays around with the concept of a fun user interface with basic php and javascript.<br/><br/><em>Technologies</em>: php, wordpress, javascript, html, css<br/><br/><em>Collaborators</em>: Justin Carder (graphic design)"
-    }, {
-      "name": "Healing Justice Lineages",
-      "alt": "The Healing Justice Lineages website homepage.",
-      "src": "public/projects/hjl.png",
-      "description": "The Healing Justice Lineages (HJL) website is a digital archival of collective care and safety strategies, to continue the work of editors Cara Page & Erica Woodland.<br/><br/><em>Technologies</em>: php, wordpress, javascript, html, css<br/><br/><em>Collaborators</em>: dre jácome (communications strategy), Belén Marco-Crespo (graphic design)"
-    }, {
       "name": "soft network",
+      "year": "2024",
       "alt": "A pink, orange, and dark purple net cascades from the ceiling, obscuring two people hugging nodes inside the net, one person is holding a phone, and the other person is smiling.",
       "src": "public/projects/touched.jpg",
       "description": "The soft network is a net made of nodes that communicate to each other by touches--when one person hugs a node, a message is sent to all the other nodes which can be felt by another person.\nEach node consists of recycled burlap and fleece yarn, a small board with a Raspberry Pi Zero, which starts a server and listens for messages, and also controls 2 mini haptic motors.<br/><br/>The soft network was presented at the Living Gallery in Brooklyn, and also as part of my graduate thesis.<br/><br/><em>Technologies</em>: recycled coffee burlap bags, fleece yarn, conductive fabric, Raspberry Pi Pico Ws, 18650 battery packs, DC coreless motors, shoddy"
     }, {
+      "name": "streaming 🔗",
+      "year": "2024",
+      "alt": "A still from a video showing a screen overflowing with wikipedia webpages as popups, on articles with the titles: '1986 Columbia University protests,' 'Arthur Jafa,' 'Franklin Gothic,' and more; on the top right corner a small thumbnail labeled anna lin shows a young woman looking away from the screen, as in a daydream, with a large pink net hanging on the wall behind her.",
+      "src": "public/projects/streaming.png",
+      "description": ""
+    }, {
+      "name": "california supermarket 🔗",
+      "year": "2024",
+      "alt": "A screenshot of a website with a big Welcome! at the top corner, with chickens running on green pasture as the background image, with a row of grocery store products running along the bottom of the page.",
+      "src": "public/projects/supermarket.png",
+      "description": ""
+    }, {
       "name": "handhold mouse",
+      "year": "2024",
       "alt": "A table display with the handhold mouse, on top of a light blue mousepad, connected to a iMac G4 computer--people to play with an old drawing program called Kid Pix (2000) on the iMac.",
       "src": "public/projects/handhold.png",
       "description": "The handhold mouse is the mouse you hold that holds you back.<br/><br/>The handhold mouse--connected to a iMac G4 computer, inviting people to play with a nostalgic drawing program called Kid Pix (2000) on the iMac.<br/><br/>It was presented at the 2024 ITP Winter Show.<br/><br/><em>Collaborators</em>: <a title='link to Kat' href='https://k--k.net/'>Kat Kitay</a>."
     }, {
       "name": "roots",
+      "year": "2024",
       "alt": "A black website, on which many visitors have left their mark with grass that will go on to become tree radicals.",
       "src": "public/projects/roots.png",
       "description": "I contributed this piece to <a title='link to the html review, issue 03' href='https://thehtml.review/03/#anna-y-lin'>the html review</a>, a garden where you can grow the chinese radical characters for grass and tree."
     }, {
       "name": "diaspora radicals",
+      "year": "2024",
       "alt": "A black website, on which many visitors have left their mark with grass that will go on to become tree radicals.",
       "src": "public/projects/diaspora-radicals.png",
       "description": "For <a title='link to diaspora radicals on issue 11 of taper zine' href='https://taper.badquar.to/11/diaspora_radicals.html'>the 11th issue of taper</a>: parallels, I contributed this piece that combines the 26 letters of the latin alphabet with 214 radicals that make up chinese characters."
     }, {
       "name": "100-days",
+      "year": "2024",
       "alt": "Index page of 100 days of websites",
       "src": "public/projects/100-days.png",
       "description": "I love making websites--I made 100 of them and indexed them <a title='link to 100-days index website' href='https://www.annaylin.com/100-days'>here</a>."
     }, {
       "name": "EEG",
+      "year": "2023",
       "alt": "Two kids with black EEG headsets on stand in front of 2 pairs of EEG lights suspended from the ceiling--the pair of lights on the left shine green, and the two on the right shine orange.",
       "src": "public/projects/eeg.png",
       "description": "Twins using the EEG devices, and controlling different sets of the lights in the EEG cloud, based on activity levels in their brain.<br/><br/>The EEG cloud was presented in the 2023 ITP Spring Show.<br/><br/><em>Collaborators</em>: <a title='link to Daniel' href='https://danielwai.myportfolio.com'>Daniel Wai</a>, and with a lot of advice on EEG devices from <a title='link to Jason' href='https://jasonjsnell.com'>Jason Snell</a>."
     }, {
       "name": "ai-loves-horror",
+      "year": "2022",
       "alt": "An old tv set with a green screen surround by piles of books sitting atop a lace-covered desk.",
       "src": "public/projects/ai-loves-horror.png",
       "description": "A <a title='link to project on GitHub' href='https://iguannalin.github.io/ai-loves-horror/about.html'>horror text-based adventure game</a> made using OpenAI's GPT-3 (Davinci model) API. This project was shown during the ITP Winter Show, 2022."
     }, {
+      "name": "Caldera 🔗",
+      "year": "2021",
+      "alt": "The Caldera interface.",
+      "src": "public/caldera/caldera.png",
+      "description": "CALDERA is an open-source cybersecurity attack simulation software built in Python.\n\nI was responsible for designing a dashboard-like interface that gives the user a sense of trust and control over the simulation tool, and develop an app that meets the team’s technical requirements."
+    }, {
       "name": "text-me-smth-nice",
+      "year": "2020",
       "alt": "Phone receiving texts from the text-me-smth-nice app.",
       "src": "public/projects/text-me-smth-nice.gif",
       "description": "A messaging app that uses the Twilio SMS API to send out nice texts periodically.<br/><br/><em>Technologies</em>: Twilio, Google Cloud, Heroku, Python, Flask"
