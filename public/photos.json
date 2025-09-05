@@ -287,6 +287,40 @@
           "title": "fan candle holder - cut poplar wood with yarn"
         }
       ]
+    }, {
+      "name": "east",
+      "count": 8,
+      "images": [
+        {
+          "alt": "boxy white with red and gold trim shell gas station on a snow-covered road in Wisconsin, offering the three essentials: coffee, gelato, and popcorn; there is a bench in the foreground next to a few gas pumps and wintry trees in the background",
+          "title": "",
+          "src": "public/east/East-1.png"
+        }, {
+          "alt": "blurry passing scene of a snow-covered cemetery with neatly-lined tombstones, a few homes line the background between dark, leafy trees",
+          "title": "",
+          "src": "public/east/East-2.png"
+        }, {
+          "alt": "woman in black clothes and a white beanie in the middle of hurtling two pebbles into a large, icy lake, flanked by two distant tree-lined landmasses",
+          "title": "",
+          "src": "public/east/East-4.png"
+        }, {
+          "alt": "orange and white cat nestled in bed with its face turned to the wall and away from the camera, the late afternoon sunset casting a soft glow on the orange and brown blankets, the white pillows, and the clothes hanging next to the bed, off to the side",
+          "title": "",
+          "src": "public/east/East-5.png"
+        }, {
+          "alt": "pink and white flowers grow vibrantly in their green nest, a ray of light shining from above",
+          "title": "",
+          "src": "public/east/East-6.png"
+        }, {
+          "alt": "two east asian people sit side-by-side, in black clothes, talking to friends off-frame and surrounded by a table of party offerings",
+          "title": "",
+          "src": "public/east/East-7.png"
+        }, {
+          "alt": "flash exposed picture of bunches of small red berries hanging off a viney, tall tree, with a late sunlight highlighting shrubbery with red flowers to the left and trees with glowing, rusty leaves in the background",
+          "title": "",
+          "src": "public/east/East-8.png"
+        }
+      ]
     }
   ]
 }
