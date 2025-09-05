@@ -94,8 +94,9 @@ window.addEventListener("load", () => {
           const directory = photoFolders[getRandomInt(0, photoFolders.length)]; // pick a random folder
           for ( let i = 0; i < directory.count; i++ ) {
             const image = directory.images[i];
-            if ( !image.src ) return;
-            setTimeout(() => createWindow({ ...image }), (i + 1) * 500);
+            if ( image.src ) {
+              setTimeout(() => createWindow({ ...image }), (i + 1) * 500);
+            }
           }
         }
       ));
