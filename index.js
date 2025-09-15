@@ -22,21 +22,11 @@ window.addEventListener("load", () => {
 
   function createWindow(image, work = false) {
     const imageContext = work ? image.description : (image.title || image.alt);
-    const sanitizeHtml = (str) => {
-      const div = document.createElement('div');
-      div.textContent = str;
-      return div.innerHTML;
-    };
-    const safeTitle = sanitizeHtml(imageContext);
-    const safeAlt = sanitizeHtml(image.alt);
-    const safeContext = sanitizeHtml(imageContext);
-    const safeSrc = encodeURI("https://annaylin.com/" + image.src);
-    
-    const text = `<!DOCTYPE html><html><head><title>${safeTitle}</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://annaylin.com/photo.css"/></head><body><div id="container"><img alt="${safeAlt}" class="thumbnail" id="${work ? "work" : "photo"}" src="${safeSrc}" /><sub id="context">${safeContext}</sub><svg width="0" height="0"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch"></feTurbulence></filter></svg></div></body></html>`;
+    const text = `<!DOCTYPE html><html><head><title>${ imageContext }</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://annaylin.com/photo.css"/></head><body><div id="container"><img alt="" data-info=${ btoa(image.alt) } class="thumbnail" id=${ work ? "work" : "photo" } src=${ "https://annaylin.com/" + image.src } /><sub id="context" data-info=${ btoa(imageContext) }></sub><svg width="0" height="0"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch"></feTurbulence></filter></svg></div></body><script>const sub = document.getElementById('context'); const thumb = document.querySelector('.thumbnail'); if (sub && sub.dataset && sub.dataset.info) sub.innerHTML = atob(sub.dataset.info); if (thumb && thumb.dataset && thumb.dataset.info) thumb.alt = atob(thumb.dataset.info);</script></html>`;
     const blob = new Blob([text], { type: "text/html" });
     const blobUrl = URL.createObjectURL(blob);
     const target = window.navigator.userAgent.includes("Mozilla") && window.navigator.userAgent.includes("Mobile") ? "_self" : "_blank";
-    window.open(blobUrl, target, `noreferrer=true,noopener=true,location=0,menubar=0,status=0,scrollbars=0,toolbar=0,status=0,resizable=0,popup,width=${CONSTANTS.POPUP_WIDTH},height=${CONSTANTS.POPUP_HEIGHT},left=${ getRandomInt(0, screen.width - CONSTANTS.POPUP_WIDTH/2) },top=${ getRandomInt(0, screen.height - CONSTANTS.POPUP_HEIGHT/2) }`);
+    window.open(blobUrl, target, `noreferrer=true,noopener=true,location=0,menubar=0,status=0,scrollbars=0,toolbar=0,status=0,resizable=0,popup,width=440,height=500,left=${ getRandomInt(0, screen.width - 220) },top=${ getRandomInt(0, screen.height - 250) }`);
     window.URL.revokeObjectURL(blobUrl);
   }
 
