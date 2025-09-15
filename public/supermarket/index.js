@@ -1,9 +1,6 @@
+import { getRandomInt, CONSTANTS } from '../../shared.js';
+
 window.addEventListener("load", () => {
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
-  }
 
   const container = document.getElementById("container");
   const dialog = document.getElementById("dialog");
@@ -69,8 +66,8 @@ window.addEventListener("load", () => {
     if ( textsIndex < 5 ) text += `<br><br>${ texts[textsIndex] }`;
     if ( clicked ) total = Math.round(((+total - (+(clicked.price))) / 100) * 100)
     if ( clicked && textsIndex > texts.length ) text += `<br><br>You have $${ total } left to spend.`;
-    for ( let i = 0; i < Math.min(clicks * 1.5, text.length); i++ ) {
-      if ( Math.random() <= clicks / 5 ) { // randomize--the more clicks the more alien the language
+    for ( let i = 0; i < Math.min(clicks * CONSTANTS.PHOTO_DELAY_MULTIPLIER, text.length); i++ ) {
+      if ( Math.random() <= clicks / CONSTANTS.RANDOM_CHANCE_THRESHOLD ) { // randomize--the more clicks the more alien the language
         const r = getRandomInt(0, text.length);
         if ( unicode[text[r]] ) {
           const dict = unicode[text[r]];
@@ -94,18 +91,34 @@ window.addEventListener("load", () => {
 
   // addEventListener("beforeunload", (e) => {e.preventDefault(); promptDialog()});
 
-  fetch("products.json").then((d) => d.json()).then((r) => {
+  fetch("products.json")
+    .then(d => {
+      if (!d.ok) throw new Error(`HTTP error! status: ${d.status}`);
+      return d.json();
+    })
+    .then((r) => {
     items = r.pageProps.data.results.map((item) => ({
       name: item.name,
       price: item.regularPrice,
       imgSrc: item.imageThumbnail
     }));
     displayItems(items);
+  })
+  .catch(error => {
+    console.error('Error loading products:', error);
   });
 
-  fetch("unicode.json").then((d) => d.json()).then((r) => {
-    unicode = r;
-    promptDialog();
-  });
+  fetch("unicode.json")
+    .then(d => {
+      if (!d.ok) throw new Error(`HTTP error! status: ${d.status}`);
+      return d.json();
+    })
+    .then((r) => {
+      unicode = r;
+      promptDialog();
+    })
+    .catch(error => {
+      console.error('Error loading unicode:', error);
+    });
 
 });

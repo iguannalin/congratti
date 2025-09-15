@@ -1,3 +1,21 @@
+// Constants
+export const CONSTANTS = {
+  DOT_MAX: 500,
+  PHOTO_TIMEOUT_DELAY: 500,
+  POPUP_WIDTH: 440,
+  POPUP_HEIGHT: 500,
+  WINDOW_WIDTH: 500,
+  WINDOW_HEIGHT: 450,
+  PHOTO_DELAY_MULTIPLIER: 1.5,
+  RANDOM_CHANCE_THRESHOLD: 5
+};
+
+export function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
 export function createSection(data) {
   const container = document.createElement("div");
   container.className = "resume " + data.title;
