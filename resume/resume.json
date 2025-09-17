@@ -54,12 +54,17 @@
     "title": "work",
     "projects": [
       {
+        "title": "Web development for <a href='https://afterviolencearchive.org/' title='After Violence Archive site'>After Violence Archive</a> | <a href='https://afterviolenceproject.org/' title='After Violence Project'>AVP</a> – ongoing",
+        "skills": [
+          "Mukurtu", "PHP", "Javascript", "HTML", "CSS"
+        ]
+      }, {
         "title": "Web development and accessibility-first design for archival project <a href='https://healingjusticelineages.com/' title='Healing Justice Lineages site'>Healing Justice Lineages</a> | <a href='https://www.instagram.com/hjlineages' title='Healing Justice Lineages Instagram'>HJL</a> – ongoing",
         "skills": [
           "WordPress", "PHP", "Javascript", "HTML", "CSS"
         ]
       }, {
-        "title": "Web development for the <a href='https://grayarea.org/' title='Gray Area site'>Gray Area</a> – ongoing",
+        "title": "Web development for the <a href='https://grayarea.org/' title='Gray Area site'>Gray Area</a> – 2025",
         "skills": [
           "WordPress", "PHP", "Javascript", "HTML", "CSS"
         ]

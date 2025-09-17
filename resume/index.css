@@ -30,7 +30,7 @@ html {
     max-width: 48ch;
   }
 
-  a {
+  a:not(.home) {
     color: inherit;
     font-style: italic;
     text-decoration: none;
@@ -157,11 +157,15 @@ body {
   max-width: 4ch;
 }
 
-a {
+a.home {
+  color: black;
+}
+
+a:not(.home) {
   color: #4a4a4a;
 }
 
-a:hover {
+a:not(.home):hover {
   background-color: #4a4a4a3f;
   color: #9fff2f;
   font-style: normal;
