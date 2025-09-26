@@ -69,7 +69,7 @@ main {
   text-shadow: 24px 24px 0 var(--gray);
 }
 
-#work {
+#archive {
   display: block;
 }
 
@@ -114,7 +114,7 @@ dot {
   z-index: -1;
 }
 
-#link-about.selected, #link-work.selected {
+#link-about.selected, #link-archive.selected {
   color: initial;
   cursor: initial;
   text-decoration: none;

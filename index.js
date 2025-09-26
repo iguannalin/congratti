@@ -8,10 +8,10 @@ window.addEventListener("load", () => {
   const photoButton = document.querySelector("#photo-button");
   const waterButton = document.querySelector("#water-button");
   const about = document.querySelector("#about");
-  const work = document.querySelector("#work");
+  const archive = document.querySelector("#archive");
   const projectList = document.querySelector("#project-list");
   const linkAbout = document.querySelector("#link-about");
-  const linkWork = document.querySelector("#link-work");
+  const linkWork = document.querySelector("#link-archive");
 
   //
   // HELPERS
@@ -20,9 +20,9 @@ window.addEventListener("load", () => {
     description.innerHTML = context;
   }
 
-  function createWindow(image, work = false) {
-    const imageContext = work ? image.description : (image.title || image.alt);
-    const text = `<!DOCTYPE html><html><head><title>${ imageContext }</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://annaylin.com/photo.css"/></head><body><div id="container"><img alt="" data-info=${ btoa(image.alt) } class="thumbnail" id=${ work ? "work" : "photo" } src=${ "https://annaylin.com/" + image.src } /><sub id="context" data-info=${ btoa(imageContext) }></sub><svg width="0" height="0"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch"></feTurbulence></filter></svg></div></body><script>const sub = document.getElementById('context'); const thumb = document.querySelector('.thumbnail'); if (sub && sub.dataset && sub.dataset.info) sub.innerHTML = atob(sub.dataset.info); if (thumb && thumb.dataset && thumb.dataset.info) thumb.alt = atob(thumb.dataset.info);</script></html>`;
+  function createWindow(image, archive = false) {
+    const imageContext = archive ? image.description : (image.title || image.alt);
+    const text = `<!DOCTYPE html><html><head><title>${ imageContext }</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://annaylin.com/photo.css"/></head><body><div id="container"><img alt="" data-info=${ btoa(image.alt) } class="thumbnail" id=${ archive ? "archive" : "photo" } src=${ "https://annaylin.com/" + image.src } /><sub id="context" data-info=${ btoa(imageContext) }></sub><svg width="0" height="0"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch"></feTurbulence></filter></svg></div></body><script>const sub = document.getElementById('context'); const thumb = document.querySelector('.thumbnail'); if (sub && sub.dataset && sub.dataset.info) sub.innerHTML = atob(sub.dataset.info); if (thumb && thumb.dataset && thumb.dataset.info) thumb.alt = atob(thumb.dataset.info);</script></html>`;
     const blob = new Blob([text], { type: "text/html" });
     const blobUrl = URL.createObjectURL(blob);
     const target = window.navigator.userAgent.includes("Mozilla") && window.navigator.userAgent.includes("Mobile") ? "_self" : "_blank";
@@ -36,12 +36,12 @@ window.addEventListener("load", () => {
   function loadContent(type) {
     if ( type === "about" ) {
       about.style.display = "block";
-      work.style.display = "none";
+      archive.style.display = "none";
       linkWork.classList = null;
       linkAbout.classList.add("selected");
-    } else if ( type === "work" ) {
+    } else if ( type === "archive" ) {
       about.style.display = "none";
-      work.style.display = "block";
+      archive.style.display = "block";
       linkAbout.classList = null;
       linkWork.classList.add("selected");
     }
@@ -168,7 +168,7 @@ window.addEventListener("load", () => {
     meow.style.display = "none" ? "block" : "none";
   }, { passive: false });
   linkAbout.addEventListener("click", () => loadContent('about'));
-  linkWork.addEventListener("click", () => loadContent('work'));
+  linkWork.addEventListener("click", () => loadContent('archive'));
   document.body.addEventListener("mousemove", (e) => drawDots(e));
   document.body.addEventListener("touchmove", (e) => drawDots(e, true));
   photoButton.addEventListener("mouseover", () => provideContext("view photos"))
