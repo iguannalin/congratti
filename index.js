@@ -68,6 +68,9 @@ window.addEventListener("load", () => {
         } else if ( project.name.includes("supermarket") ) {
           a.href = "public/supermarket";
           a.target = "_blank";
+        } else if ( project.name.includes("100") ) {
+          a.href = "https://www.annaylin.com/100-days/";
+          a.target = "_blank";
         } else {
           a.href = "javascript:void(0);";
           a.addEventListener("click", () => createWindow(project, true));

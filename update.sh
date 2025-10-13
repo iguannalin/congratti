@@ -1,3 +1,5 @@
+mv resume.pdf resume/resume.pdf
+
 if [ -z "$1" ] && [ -z "$2" ]; then
   echo "🌺 git commit message missing!"
 else

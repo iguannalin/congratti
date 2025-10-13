@@ -1,7 +1,7 @@
 {
   "header": {
     "name": "anna y lin",
-    "title": "UX - Frontend Engineer",
+    "title": "UX & frontend Engineer",
     "email": "anna@annaylin.com"
   },
   "education": {
@@ -15,7 +15,7 @@
         "activities": "Psychology Research Methods Teaching Assistant, Girls in Engineering Summer Camp Teacher, French 1 - 3, CS Distributed Systems"
       }, {
         "title": "Study Abroad | Yonsei University, Seoul",
-        "activities": "AI Robotics & Ethics, Tech Startup R & D Intern, After-school Program Teaching Assistant"
+        "activities": "AI Robotics & Ethics, Tech Startup R & D Intern, Afterschool Program Teaching Assistant"
       }
     ]
   },
@@ -87,12 +87,20 @@
     ],
     "roles": [
       {
+        "title": "Code Mentor | The Coding Lab @ NYU, Brooklyn – Oct. 2022 - May 2024",
+        "skills": [
+          "teaching", "organizing"
+        ],
+        "tasks": [
+          "Workshop and speaker events planning; invited 4 creative coding artists to talk at ITP.", "Managed mentor schedules and taught students.", "Workshop development and teaching the <a href='https://annaylin.notion.site/October-30th-Data-APIs-Workshop-43adbb782f234305b7b7f9e361d49102?pvs=143' title='Hacking with the Browser workshop notes on Notion'>Hacking with the Browser</a> workshop every semester."
+        ]
+      }, {
         "title": "UX Engineer | <a href='https://www.mitre.org/' title='MITRE website'>MITRE</a> Boston – Feb. 2021 - May 2022",
         "skills": [
           "Angular", "Typescript", "Python", "Vue", "Alpine.js", "Tailwind", "vis.js"
         ],
         "tasks": [
-          "Full-stack web development & UX design for cybersecurity and health policymaking tools on 4 different projects.", "Prototyping and full-stack development on <a href='https://caldera.mitre.org/'  title='Caldera project site'>CALDERA</a>, a red-team simulation software, using Python RESTful APIs.", "Full-stack development and maintenance of the <a href='https://github.com/mitre-attack/attack-navigator'title='ATT&CL Navigator GitHub project site'>ATT&CK&reg; Navigator</a>, an open-source cybersecurity database; features include the dark mode, search, and filter."
+          "Full-stack web development & UX design on projects involving cybersecurity and government health policy.", "Prototyping and full-stack development on <a href='https://caldera.mitre.org/'  title='Caldera project site'>CALDERA</a>, a red-team simulation software, using Python RESTful APIs.", "Full-stack development and maintenance of the <a href='https://github.com/mitre-attack/attack-navigator'title='ATT&CL Navigator GitHub project site'>ATT&CK&reg; Navigator</a>, an open-source cybersecurity database; features include the dark mode, search, and filter."
         ]
       }, {
         "title": "Frontend Software Engineer | <a href='https://www.schwab.com/' title='Charles Schwab website'>Charles Schwab</a> San Francisco – Nov. 2018 - Dec. 2020",
@@ -101,14 +109,6 @@
         ],
         "tasks": [
           "Led prototype design & development for user research tests.", "Full-stack web development and unit-testing for client-facing web applications.", "Accessibility lead for a WCAG-compatible web application used by 150, 000 + clients.", "Wrote <a alt=\"Medium article: Why Your Grandma's Images Are Being Rotated Wrong\" href=\"https://medium.com/@inceptiondeveloper/why-your-grandmas-images-are-being-rotated-wrong-bfeeae5cf91a' title='Sample documentation I wrote on Medium'\">documentation</a> to share technical knowledge."
-        ]
-      }, {
-        "title": "Code Mentor | The Coding Lab @ NYU, Brooklyn – Oct. 2022 - May 2024",
-        "skills": [
-          "teaching", "organizing"
-        ],
-        "tasks": [
-          "Workshop and speaker events planning; invited 4 creative coding artists to talk at ITP.", "Managed mentor schedules and taught students.", "Workshop development and teaching the <a href='https://annaylin.notion.site/October-30th-Data-APIs-Workshop-43adbb782f234305b7b7f9e361d49102?pvs=143' title='Hacking with the Browser workshop notes on Notion'>Hacking with the Browser</a> workshop every semester."
         ]
       }
     ]
