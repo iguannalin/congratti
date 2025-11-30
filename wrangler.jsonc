@@ -1,5 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "congratti",
   "compatibility_date": "2025-11-30",
-  "main": "index.html"
+  "main": "/index.html"
 }
