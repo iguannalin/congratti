@@ -1,8 +1,3 @@
 {
-  "$schema": "./node_modules/wrangler/config-schema.json",
-  "assets": {
-    "directory": "./public",
-    "html_handling": "force-trailing-slash",
-    "not_found_handling": "404-page"
-  }
+  "$schema": "./node_modules/wrangler/config-schema.json"
 }
