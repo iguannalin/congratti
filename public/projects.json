@@ -23,7 +23,7 @@
       "year": "2024",
       "alt": "A pink, orange, and dark purple net cascades from the ceiling, obscuring two people hugging nodes inside the net, one person is holding a phone, and the other person is smiling.",
       "src": "public/projects/touched.jpg",
-      "description": "The soft network is a net made of nodes that communicate to each other by touches--when one person hugs a node, a message is sent to all the other nodes which can be felt by another person.\nEach node consists of recycled burlap and fleece yarn, a small board with a Raspberry Pi Zero, which starts a server and listens for messages, and also controls 2 mini haptic motors.<br/><br/>The soft network was presented at the Living Gallery in Brooklyn, and also as part of my graduate thesis.<br/><br/><em>Technologies</em>: recycled coffee burlap bags, fleece yarn, conductive fabric, Raspberry Pi Pico Ws, 18650 battery packs, DC coreless motors, shoddy"
+      "description": "The soft network is a net made of nodes that communicate to each other by touches--when one person hugs a node, a message is sent to all the other nodes which can be felt by another person.\nEach node consists of recycled burlap and fleece yarn, a small board with a Raspberry Pi Zero, which starts a server and listens for messages, and also controls 2 mini haptic motors.<br/><br/>The soft network was presented at the Living Gallery in Brooklyn, and also as part of my <a href='https://www.annaylin.com/public/thesis.md'>graduate thesis</a>.<br/><br/><em>Technologies</em>: recycled coffee burlap bags, fleece yarn, conductive fabric, Raspberry Pi Pico Ws, 18650 battery packs, DC coreless motors, shoddy"
     }, {
       "name": "streaming 🔗",
       "year": "2024",
