@@ -41,7 +41,7 @@ I, as someone who is traumatized by war, or in some way, still living through th
 experiences or to surround myself with smooth objects in order to pacify myself.
 
 In the book *Are We Human?* writers Beatriz Colomina and Mark Wigley theorize that the well-designed domestic product
-became a form of "art therapy for a traumatized nation: ‘Good design' offers ‘good life,' a galaxy of happy,
+became a form of "art therapy for a traumatized nation: 'Good design' offers 'good life,' a galaxy of happy,
 self-contained objects for people who do not feel safely contained and cannot be sure of life itself" (Colomina and
 Wigley 101). Perhaps the human User is someone who is generally happy to consume and keep consuming, with bottomless
 desire, someone who keeps working in order to keep buying so that they can stay happy.
