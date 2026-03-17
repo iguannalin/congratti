@@ -1,6 +1,8 @@
 import { createSection } from "../shared.js";
 const left = document.querySelector("#left");
 const right = document.querySelector("#right");
+const title = document.querySelector("#title");
+const description = document.querySelector("#description");
 
 function loadResume() {
   fetch("resume.json")
@@ -9,16 +11,18 @@ function loadResume() {
       return res.json();
     })
     .then((data) => {
-    Object.keys(data).forEach((key) => {
-      if ( key === "header" ) return;
-      const section = createSection(data[key]);
-      if ( key === "work" ) right.appendChild(section);
-      else left.appendChild(section);
+      Object.keys(data).forEach((key) => {
+        if (key === "header") return;
+        const section = createSection(data[key]);
+        if (key === "work") right.appendChild(section);
+        else left.appendChild(section);
+      });
+      if (title) title.innerText = data["header"]["title"];
+      if (description) description.innerText = data["header"]["description"];
     })
-  })
-  .catch(error => {
-    console.error('Error loading resume:', error);
-  });
+    .catch(error => {
+      console.error('Error loading resume:', error);
+    });
 }
 
 loadResume();

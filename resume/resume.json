@@ -1,21 +1,22 @@
 {
   "header": {
     "name": "anna y lin",
-    "title": "UX & frontend Engineer",
+    "title": "Creative Technologist",
+    "description": "practicing research on counter-hegemonic technologies, and accessibility & user experience studies",
     "email": "anna@annaylin.com"
   },
   "education": {
     "title": "education",
     "programs": [
       {
-        "title": "Masters | Interactive Telecommunications Program, NYU",
+        "title": "Masters | ITP, NYU",
         "activities": "Lead Coding Lab Mentor, Graduate Assistant, ITP Fall & Spring Showcase"
       }, {
         "title": "B.A. Psychology | University of California, Santa Cruz",
-        "activities": "Psychology Research Methods Teaching Assistant, Girls in Engineering Summer Camp Teacher, French 1 - 3, CS Distributed Systems"
+        "activities": "Psychology Research Methods TA, Girls in Engineering Mentor, McHenry Library Collections Assistant, CMPE128 Distributed Systems"
       }, {
         "title": "Study Abroad | Yonsei University, Seoul",
-        "activities": "AI Robotics & Ethics, Tech Startup R & D Intern, Afterschool Program Teaching Assistant"
+        "activities": "AI Robotics & Ethics, R&D Intern, Kindergarten Program TA"
       }
     ]
   },
@@ -40,7 +41,7 @@
       }, {
         "title": "design",
         "skills": [
-          "web accessibility", "Illustrator", "Figma"
+          "WCAG web accessibility", "Illustrator", "Figma"
         ]
       }, {
         "title": "languages",
@@ -52,41 +53,31 @@
   },
   "work": {
     "title": "work",
-    "projects": [
+    "clients": [
       {
-        "title": "Web development for <a href='https://afterviolencearchive.org/' title='After Violence Archive site'>After Violence Archive</a> | <a href='https://afterviolenceproject.org/' title='After Violence Project'>AVP</a> – ongoing",
-        "skills": [
-          "Mukurtu", "PHP", "Javascript", "HTML", "CSS"
-        ]
+        "title": "<a href='https://communityarchivescollab.org/' title='Community Archives Collaborative website'>Community Archives Collaborative</a> – ongoing"
       }, {
-        "title": "Web development and accessibility-first design for archival project <a href='https://healingjusticelineages.com/' title='Healing Justice Lineages site'>Healing Justice Lineages</a> | <a href='https://www.instagram.com/hjlineages' title='Healing Justice Lineages Instagram'>HJL</a> – ongoing",
-        "skills": [
-          "WordPress", "PHP", "Javascript", "HTML", "CSS"
-        ]
+        "title": "<a href='https://afterviolencearchive.org/' title='After Violence Archive website'>After Violence Archive</a> – ongoing"
       }, {
-        "title": "Web development for the <a href='https://grayarea.org/' title='Gray Area site'>Gray Area</a> – 2025",
-        "skills": [
-          "WordPress", "PHP", "Javascript", "HTML", "CSS"
-        ]
+        "title": "<a href=https://healingjusticelineages.com' title='Healing Justice Lineages website'>Healing Justice Lineages</a> – 2025"
       }, {
-        "title": "Web development for the <a href='https://neweconomy.net/' title='New Economy Coalition website'>New Economy Coalition</a> – 2025",
-        "skills": [
-          "WordPress", "PHP", "Javascript", "HTML", "CSS"
-        ]
+        "title": "<a href='https://2025.grayareafestival.io/' title='Gray Area site'>Gray Area</a> – 2025"
       }, {
-        "title": "React web app development for the <a href='https://superdiv.mmg.mpg.de/' title='Superdiversity project site'>Superdiversity</a> data-viz project with the Max Planck Institute | <a href='https://stamen.com/' title='Stamen Design website'>Stamen Design</a>, San Francisco – 2018 ",
-        "skills": [
-          "HTML", "CSS", "Javascript", "React", "D3.js"
-        ]
+        "title": "<a href='https://neweconomy.net/' title='New Economy Coalition website'>New Economy Coalition</a> – 2025"
       }, {
-        "title": "Learning Management System web development and design for legal workers | <a href='https://www.pacificworkers.com/' title='Farber & Co. website'>Farber & Co.</a>, Oakland – 2017",
-        "skills": [
-          "WordPress", "Javascript", "HTML", "CSS", "PHP"
-        ]
+        "title": "<a href='https://stamen.com/' title='Stamen Design website'>Stamen Design</a> – 2018 "
+      }, {
+        "title": "<a href='https://www.pacificworkers.com/' title='Farber & Co. website'>Farber & Co.</a> – 2017"
       }
     ],
     "roles": [
       {
+        "title": "Creative Technologist | Freelance – ongoing",
+        "skills": ["Mukurtu", "WordPress", "Netlify", "PHP", "Javascript", "HTML", "CSS", "web hosting"],
+        "tasks": [
+          "Building custom technology integrations for non-profits and arts organizations.", "Providing technological consultation on topics like digital accessibility, user experience design, security, and performance optimizations."
+        ]
+      }, {
         "title": "Code Mentor | The Coding Lab @ NYU, Brooklyn – Oct. 2022 - May 2024",
         "skills": [
           "teaching", "organizing"

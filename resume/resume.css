@@ -18,7 +18,7 @@
 }
 
 .resume h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 0.5em 0 0.25em;
   text-transform: capitalize;
 }
@@ -31,9 +31,9 @@
 }
 
 .resume h4 {
-  font-size: 1em;
+  font-size: 0.9em;
   line-height: 1.2em;
-  margin: 0.7em 0 0.2rem;
+  margin: 0.5em 0.5em 0;
   text-transform: initial;
 }
 
@@ -42,13 +42,13 @@
 }
 
 .resume p {
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 .resume p.tags {
   color: #4a4a4a;
   font-family: "Zen Old Mincho", "Times New Roman", serif;
-  font-size: 0.9em;
+  font-size: 0.7em;
   margin: 0.2em 1em 0.5em;
   text-transform: lowercase;
 }
@@ -64,8 +64,9 @@
 
 .resume p.indent {
   line-height: 1.3em;
-  margin: 0.2em 0 0.1em 1.2em;
+  margin: 0.2em 0 0.1em 2.4em;
   text-indent: -1em;
+  max-width: 60ch;
 }
 
 .resume p.indent::before {

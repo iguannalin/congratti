@@ -1,4 +1,3 @@
-// Constants
 export const CONSTANTS = {
   DOT_MAX: 500,
   PHOTO_TIMEOUT_DELAY: 500,
@@ -26,13 +25,13 @@ export function createSection(data) {
 
   switch ( data.title ) {
     case "education":
-      data.programs.forEach(section => {
+      data["programs"]?.forEach(section => {
         const h3 = document.createElement("h3");
         h3.innerHTML = section.title;
         container.appendChild(h3);
         const p = document.createElement("p");
         p.className = "indent";
-        p.innerHTML = section.activities;
+        p.innerHTML = section["activities"];
         container.appendChild(p);
       });
       break;
@@ -42,28 +41,24 @@ export function createSection(data) {
         h3.innerHTML = type.title;
         container.appendChild(h3);
         const p = document.createElement("p");
-        p.innerText = type.skills.join(", ");
+        p.innerText = type["skills"]?.join(", ");
         p.className = "tags";
         container.appendChild(p);
       });
       break;
     case "work":
       const projectsH3 = document.createElement("h3");
-      projectsH3.innerHTML = "Projects";
+      projectsH3.innerHTML = "Selected Clients";
       container.appendChild(projectsH3);
-      data.projects.forEach((project) => {
+      data.clients.forEach((project) => {
         const h4 = document.createElement("h4");
         h4.innerHTML = project.title;
         container.appendChild(h4);
-        const p = document.createElement("p");
-        p.innerText = project.skills.join(", ");
-        p.className = "tags";
-        container.appendChild(p);
       });
       const rolesH3 = document.createElement("h3");
       rolesH3.innerHTML = "Roles";
       container.appendChild(rolesH3);
-      data.roles.forEach((project) => {
+      data["roles"]?.forEach((project) => {
         const h4 = document.createElement("h4");
         h4.innerHTML = project.title;
         container.appendChild(h4);
