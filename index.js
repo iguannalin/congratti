@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
 
   function createWindow(image, archive = false) {
     const imageContext = archive ? image.description : (image.title || image.alt);
-    const text = `<!DOCTYPE html><html><head><title>${ imageContext }</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://annaylin.com/photo.css"/></head><body><div id="container"><h1>${image.name}</h1><img alt="" data-info=${ btoa(image.alt) } class="thumbnail" id=${ archive ? "archive" : "photo" } src=${ "https://annaylin.com/" + image.src } /><sub id="context" data-info=${ btoa(imageContext) }></sub><svg width="0" height="0"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch"></feTurbulence></filter></svg></h1div></body><script>const sub = document.getElementById('context'); const thumb = document.querySelector('.thumbnail'); if (sub && sub.dataset && sub.dataset.info) sub.innerHTML = atob(sub.dataset.info); if (thumb && thumb.dataset && thumb.dataset.info) thumb.alt = atob(thumb.dataset.info);</script></html>`;
+    const text = `<!DOCTYPE html><html><head><title>${ imageContext }</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://annaylin.com/photo.css"/></head><body><div id="container"><h1>${ image.name }</h1><img alt="" data-info=${ btoa(image.alt) } class="thumbnail" id=${ archive ? "archive" : "photo" } src=${ "https://annaylin.com/" + image.src } /><sub id="context" data-info=${ btoa(imageContext) }></sub><svg width="0" height="0"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch"></feTurbulence></filter></svg></h1div></body><script>const sub = document.getElementById('context'); const thumb = document.querySelector('.thumbnail'); if (sub && sub.dataset && sub.dataset.info) sub.innerHTML = atob(sub.dataset.info); if (thumb && thumb.dataset && thumb.dataset.info) thumb.alt = atob(thumb.dataset.info);</script></html>`;
     const blob = new Blob([text], { type: "text/html" });
     const blobUrl = URL.createObjectURL(blob);
     const target = window.navigator.userAgent.includes("Mozilla") && window.navigator.userAgent.includes("Mobile") ? "_self" : "_blank";
@@ -48,19 +48,20 @@ window.addEventListener("load", () => {
   }
 
   function loadWork() {
-    fetch("public/projects.json")
-      .then(r => {
-        if (!r.ok) throw new Error(`HTTP error! status: ${r.status}`);
-        return r.json();
-      })
-      .then(d => {
-        if (!d["projects"]) return;
+    fetch("public/projects.json").then(r => {
+      if ( !r.ok ) throw new Error(`HTTP error! status: ${ r.status }`);
+      return r.json();
+    }).then(d => {
+      if ( !d["projects"] ) return;
       d["projects"].forEach(project => {
         const li = document.createElement("li");
         const a = document.createElement("a");
         const img = document.createElement("img");
         if ( project.name.includes("Caldera") ) {
           a.href = "public/caldera";
+          a.target = "_blank";
+        } else if ( project.name.includes("network") ) {
+          a.href = "public/thesis";
           a.target = "_blank";
         } else if ( project.name.includes("streaming") ) {
           a.href = "https://drive.google.com/file/d/1za0pxoDLuZLDrAhtSexOw5A_500VyYCf/view?usp=sharing";
@@ -84,8 +85,7 @@ window.addEventListener("load", () => {
         li.appendChild(a);
         projectList.appendChild(li);
       });
-    })
-    .catch(error => {
+    }).catch(error => {
       console.error('Error loading projects:', error);
     });
   }
@@ -96,25 +96,22 @@ window.addEventListener("load", () => {
   function loadPhotos() {
     if ( window.confirm("🐸 Are pop-ups ok?") ) {
       provideContext();
-      fetch("public/photos.json")
-        .then(r => {
-          if (!r.ok) throw new Error(`HTTP error! status: ${r.status}`);
-          return r.json();
-        })
-        .then(d => {
-          const photoFolders = d.photos;
-          if (!photoFolders) return;
-          const directory = photoFolders[getRandomInt(0, photoFolders.length)]; // pick a random folder
-          for ( let i = 0; i < directory.count; i++ ) {
-            const image = directory.images[i];
-            if ( image.src ) {
-              setTimeout(() => createWindow({ ...image }), (i + 1) * CONSTANTS.PHOTO_TIMEOUT_DELAY);
-            }
+      fetch("public/photos.json").then(r => {
+        if ( !r.ok ) throw new Error(`HTTP error! status: ${ r.status }`);
+        return r.json();
+      }).then(d => {
+        const photoFolders = d.photos;
+        if ( !photoFolders ) return;
+        const directory = photoFolders[getRandomInt(0, photoFolders.length)]; // pick a random folder
+        for ( let i = 0; i < directory.count; i++ ) {
+          const image = directory.images[i];
+          if ( image.src ) {
+            setTimeout(() => createWindow({ ...image }), (i + 1) * CONSTANTS.PHOTO_TIMEOUT_DELAY);
           }
-        })
-        .catch(error => {
-          console.error('Error loading photos:', error);
-        });
+        }
+      }).catch(error => {
+        console.error('Error loading photos:', error);
+      });
     }
   }
 
@@ -179,7 +176,7 @@ window.addEventListener("load", () => {
   waterButton.addEventListener("click", waterSpace);
   about.addEventListener('click', (e) => {
     if ( e && e.target.tagName === 'A' ) {
-      window.open(e.target.href, 'newwindow', `noreferrer=yes,noopener=yes,width=${CONSTANTS.WINDOW_WIDTH},height=${CONSTANTS.WINDOW_HEIGHT},left=${ getRandomInt(0, screen.width) },top=${ getRandomInt(0, screen.height) }`);
+      window.open(e.target.href, 'newwindow', `noreferrer=yes,noopener=yes,width=${ CONSTANTS.WINDOW_WIDTH },height=${ CONSTANTS.WINDOW_HEIGHT },left=${ getRandomInt(0, screen.width) },top=${ getRandomInt(0, screen.height) }`);
       e.preventDefault();
       return false;
     }
