@@ -1,0 +1,197 @@
+@import url(https://themes.googleusercontent.com/fonts/css?kit=-DBZiG6wLxERs-ipLN5V-Rk3mTAhZ73eBjaJsOYBEzhg3iIjkzrooWZqNg5xeByrbWhx2230K92fn2wQiOnoiw);
+
+:root {
+  --color-black: #000000;
+  --color-blue: #1155cc;
+  --body-font: "Inter", sans-serif;
+  --heading-font: "IBM Plex Sans", sans-serif;
+
+  --subtitle-font: "IBM Plex Mono", monospace;
+  --color-gray: #666666;
+  --color-light-gray: #d9d9d9;
+  --color-purple: #9900ff;
+  --font-size: 12px;
+  --font-size-0: 1.00rem; /* 12px */
+
+  --font-size-1: 1.25rem; /* 15px */
+  --font-size-2: 1.56rem; /* 18.75px */
+  --font-size-3: 1.95rem; /* 23.44px */
+  --font-size-4: 2.44rem; /* 29.3px */
+  --font-size-5: 3.05rem; /* 36.62px */
+  --font-size-m1: 0.80rem; /* 9.6px */
+  --font-size-m2: 0.64rem; /* 7.68px */
+  --color-white: #ffffff;
+  --color-yellow: #ffff00;
+}
+
+body {
+  align-items: flex-start;
+  background-color: var(--color-light-gray);
+  box-sizing: border-box;
+  color: var(--color-black);
+  display: flex;
+  flex-flow: column wrap;
+  font-family: var(--body-font);
+  font-size: var(--font-size);
+  height: 96%;
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding: 12px 24px;
+  width: 100%;
+}
+
+/* @media only screen and (min-width: 0px) { */
+/*   body {height: auto;} */
+/* } */
+
+/* @media only screen and (min-width: 800px) { */
+/*   body {height: 96%;} */
+/* } */
+
+h1 {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  font-family: var(--heading-font);
+  font-size: var(--font-size-5);
+  font-weight: 200;
+  margin: 45px 6px;
+}
+
+h2 {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  font-family: var(--heading-font);
+  font-size: var(--font-size-4);
+  font-weight: 200;
+  margin: 45px 6px;
+}
+
+h3 {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  font-family: var(--heading-font);
+  font-size: var(--font-size-3);
+  font-weight: 200;
+  margin: 35px 6px;
+}
+
+h4 {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  font-family: var(--heading-font);
+  font-size: var(--font-size-2);
+  font-weight: 200;
+}
+
+h5 {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  font-family: var(--heading-font);
+  font-size: var(--font-size-1);
+  font-weight: 200;
+}
+
+h6 {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  font-family: var(--heading-font);
+  font-size: var(--font-size-0);
+  font-weight: 200;
+}
+
+a {
+  margin: 6px 0;
+}
+
+ul {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 100%;
+  justify-content: flex-start;
+}
+
+p, li {
+  font-family: var(--body-font);
+  font-size: var(--font-size-0);
+  margin: 6px 12px;
+  max-width: min(75ch, 95vw);
+  text-wrap-style: balance;
+}
+
+figure {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 100%;
+}
+
+figcaption, .subtitle {
+  color: var(--color-purple);
+  display: block;
+  font-family: var(--body-font);
+  font-size: var(--font-size-m1);
+  font-style: italic;
+  margin: 6px 0;
+  max-width: min(75ch, 95vw);
+  text-wrap-style: balance;
+}
+
+.quote {
+  color: var(--color-purple);
+  font-family: var(--body-font);
+  font-size: var(--font-size-3);
+  font-style: italic;
+  margin: 20px 24px;
+  max-width: min(30ch, 90vw);
+}
+
+div {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: auto;
+}
+
+div.columns {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+div.columns img {
+  border: 2px solid var(--color-yellow);
+  height: auto;
+  max-width: min(500px, 90vw);
+  width: auto;
+}
+
+div:not(.columns) img {
+  border: 2px solid var(--color-yellow);
+  height: auto;
+  margin: 6px auto;
+  max-height: min(500px, 90vh);
+  max-width: 600px;
+  width: auto;
+}
+
+.video-container {
+  background-color: #272727;
+  border: 2px solid var(--color-yellow);
+  display: block;
+  height: 360px;
+  margin: 6px auto;
+  width: min(640px, 75vw);
+}
+
+video, iframe {
+  height: 100%;
+  width: 100%;
+}
