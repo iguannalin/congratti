@@ -71,7 +71,7 @@ h1 {
   font-family: var(--heading-font);
   font-size: var(--font-size-5);
   font-weight: 200;
-  margin: 45px 0;
+  margin: 42px 0;
   width: fit-content;
 }
 
@@ -81,7 +81,7 @@ h2 {
   font-family: var(--heading-font);
   font-size: var(--font-size-4);
   font-weight: 200;
-  margin: 45px 0;
+  margin: 42px 0;
   width: fit-content;
 }
 
@@ -91,7 +91,7 @@ h3 {
   font-family: var(--heading-font);
   font-size: var(--font-size-3);
   font-weight: 200;
-  margin: 35px 0;
+  margin: 36px 0;
   width: fit-content;
 }
 
@@ -102,6 +102,7 @@ h4 {
   font-size: var(--font-size-2);
   font-weight: 200;
   width: fit-content;
+  margin: 24px 0 6px;
 }
 
 h5 {
@@ -184,7 +185,7 @@ figcaption, .subtitle {
   font-size: var(--font-size-3);
   font-style: italic;
   margin: 20px auto;
-  max-width: min(30ch, 90%);
+  max-width: min(55ch, 90%);
 }
 
 .subquote {
@@ -193,7 +194,7 @@ figcaption, .subtitle {
   font-size: var(--font-size-1);
   font-style: italic;
   margin: 14px auto 24px;
-  max-width: min(36ch, 90%);
+  max-width: min(55ch, 90%);
   line-height: 1.1em;
 }
 
