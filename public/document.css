@@ -9,7 +9,7 @@
   --subtitle-font: "IBM Plex Mono", monospace;
   --color-gray: #666666;
   --color-light-gray: #d9d9d9;
-  --color-purple: #9900ff;
+  --color-accent: #9900ff;
   --font-size-0: 1.00rem; /* 16px */
 
   --font-size-1: 1.20rem; /* 19.2px */
@@ -20,8 +20,9 @@
   --font-size-m1: 0.83rem; /* 13.33px */
   --font-size-m2: 0.69rem; /* 11.11px */
 
+  --color-table: beige;
   --color-white: #ffffff;
-  --color-yellow: #ffff00;
+  --color-main: #ffff00;
 }
 
 @media only screen and (min-width: 0px) {
@@ -66,7 +67,7 @@ main {
 }
 
 h1 {
-  background-color: var(--color-yellow);
+  background-color: var(--color-main);
   color: var(--color-black);
   font-family: var(--heading-font);
   font-size: var(--font-size-5);
@@ -76,7 +77,7 @@ h1 {
 }
 
 h2 {
-  background-color: var(--color-purple);
+  background-color: var(--color-accent);
   color: var(--color-white);
   font-family: var(--heading-font);
   font-size: var(--font-size-4);
@@ -86,7 +87,7 @@ h2 {
 }
 
 h3 {
-  background-color: var(--color-yellow);
+  background-color: var(--color-main);
   color: var(--color-black);
   font-family: var(--heading-font);
   font-size: var(--font-size-3);
@@ -96,7 +97,7 @@ h3 {
 }
 
 h4 {
-  background-color: var(--color-purple);
+  background-color: var(--color-accent);
   color: var(--color-white);
   font-family: var(--heading-font);
   font-size: var(--font-size-2);
@@ -106,7 +107,7 @@ h4 {
 }
 
 h5 {
-  background-color: var(--color-purple);
+  background-color: var(--color-accent);
   color: var(--color-white);
   font-family: var(--heading-font);
   font-size: var(--font-size-1);
@@ -115,7 +116,7 @@ h5 {
 }
 
 h6 {
-  background-color: var(--color-purple);
+  background-color: var(--color-accent);
   color: var(--color-white);
   font-family: var(--heading-font);
   font-size: var(--font-size-0);
@@ -162,10 +163,12 @@ figure {
   flex-flow: column nowrap;
   justify-content: center;
   width: 100%;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 figcaption, .subtitle {
-  color: var(--color-purple);
+  color: var(--color-accent);
   display: block;
   font-family: var(--body-font);
   font-size: var(--font-size-m1);
@@ -180,7 +183,7 @@ figcaption, .subtitle {
 }
 
 .quote {
-  color: var(--color-purple);
+  color: var(--color-accent);
   font-family: var(--body-font);
   font-size: var(--font-size-3);
   font-style: italic;
@@ -189,13 +192,20 @@ figcaption, .subtitle {
 }
 
 .subquote {
-  color: var(--color-purple);
+  color: var(--color-accent);
   font-family: var(--body-font);
   font-size: var(--font-size-1);
   font-style: italic;
   margin: 14px auto 24px;
   max-width: min(55ch, 90%);
   line-height: 1.1em;
+}
+
+code {
+  border: 1px solid var(--color-main);
+  padding: 1px 2px;
+  font-size: var(--font-size-m2);
+  font-family: monospace;
 }
 
 div {
@@ -210,11 +220,12 @@ div {
 div.columns {
   align-items: center;
   box-sizing: border-box;
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   height: 100%;
   justify-content: center;
   width: 100%;
+  box-sizing: border-box;
 }
 
 div.columns img {
@@ -224,7 +235,7 @@ div.columns img {
 }
 
 div:not(.columns) img {
-  border: 2px solid var(--color-yellow);
+  border: 2px solid var(--color-main);
   height: auto;
   margin: 6px auto;
   max-width: min(600px, 75%);
@@ -232,7 +243,7 @@ div:not(.columns) img {
 }
 
 div:not(.columns) img {
-  border: 2px solid var(--color-yellow);
+  border: 2px solid var(--color-main);
   height: auto;
   margin: 6px auto;
   max-width: min(600px, 75%);
@@ -241,7 +252,7 @@ div:not(.columns) img {
 
 .video-container {
   background-color: #272727;
-  border: 2px solid var(--color-yellow);
+  border: 2px solid var(--color-main);
   display: block;
   height: min(450px, 50vh);
   margin: 6px auto;
