@@ -58,8 +58,10 @@ body {
 main {
   display: flex;
   flex-flow: column;
-  max-width: 90ch;
+  max-width: min(90ch, 100%);
   box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
   padding: 24px 6px 120px;
 }
 
@@ -69,7 +71,7 @@ h1 {
   font-family: var(--heading-font);
   font-size: var(--font-size-5);
   font-weight: 200;
-  margin: 45px 6px;
+  margin: 45px 0;
   width: fit-content;
 }
 
@@ -79,7 +81,7 @@ h2 {
   font-family: var(--heading-font);
   font-size: var(--font-size-4);
   font-weight: 200;
-  margin: 45px 6px;
+  margin: 45px 0;
   width: fit-content;
 }
 
@@ -89,7 +91,7 @@ h3 {
   font-family: var(--heading-font);
   font-size: var(--font-size-3);
   font-weight: 200;
-  margin: 35px 6px;
+  margin: 35px 0;
   width: fit-content;
 }
 
@@ -118,6 +120,7 @@ h6 {
   font-size: var(--font-size-0);
   font-weight: 200;
   width: fit-content;
+  margin: 20px 0 2px;
 }
 
 a {
@@ -130,15 +133,26 @@ ul {
   flex-flow: column;
   justify-content: flex-start;
   word-wrap: break-word;
+  padding: 0 0 0 16px;
 }
 
 p, li {
   font-family: var(--body-font);
   font-size: var(--font-size-0);
   line-height: 1.4em;
-  margin: 6px 12px;
+  margin: 6px 0;
   max-width: min(75ch, 95vw);
   text-wrap-style: balance;
+  list-style-type: auto;
+  list-style-position: outside;
+}
+
+li {
+  word-break: break-word;
+}
+
+li::marker {
+  font-size: var(--font-size-m1);
 }
 
 figure {
@@ -169,8 +183,18 @@ figcaption, .subtitle {
   font-family: var(--body-font);
   font-size: var(--font-size-3);
   font-style: italic;
-  margin: 20px 24px;
-  max-width: min(30ch, 90vw);
+  margin: 20px auto;
+  max-width: min(30ch, 90%);
+}
+
+.subquote {
+  color: var(--color-purple);
+  font-family: var(--body-font);
+  font-size: var(--font-size-1);
+  font-style: italic;
+  margin: 14px auto 24px;
+  max-width: min(36ch, 90%);
+  line-height: 1.1em;
 }
 
 div {
@@ -190,6 +214,12 @@ div.columns {
   height: 100%;
   justify-content: center;
   width: 100%;
+}
+
+div.columns img {
+  width: auto;
+  height: auto;
+  max-width: 90%;
 }
 
 div:not(.columns) img {
