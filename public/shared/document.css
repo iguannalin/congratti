@@ -1,0 +1,95 @@
+@import url(https://themes.googleusercontent.com/fonts/css?kit=-DBZiG6wLxERs-ipLN5V-Rk3mTAhZ73eBjaJsOYBEzhg3iIjkzrooWZqNg5xeByrbWhx2230K92fn2wQiOnoiw);
+
+:root {
+  --color-secondary: #9900ff;
+  --color-black: #000000;
+  --color-blue: #1155cc;
+  --body-font: "Inter", sans-serif;
+  --heading-font: "IBM Plex Sans", sans-serif;
+  --subtitle-font: "IBM Plex Mono", monospace;
+  --color-gray: #666666;
+  --color-background: #d9d9d9;
+  --color-primary: #ffff00;
+  --font-size-0: 1.00rem;
+  --font-size-1: 1.20rem;
+  --font-size-2: 1.44rem;
+  --font-size-3: 1.73rem;
+  --font-size-4: 2.07rem;
+  --font-size-5: 2.49rem;
+  --font-size-m1: .83rem;
+  --font-size-m2: .69rem;
+  --color-table: beige;
+  --color-white: #ffffff;
+}
+
+@media only screen and (min-width: 0) {
+  :root {--font-size: 12px}
+}
+
+@media only screen and (min-width: 800px) {
+  :root {--font-size: 16px}
+}
+
+html {scroll-behavior: smooth}
+
+body {align-items: center;background-color: var(--color-background);box-sizing: border-box;color: var(--color-black);display: flex;flex-flow: column;font-family: var(--body-font);font-size: var(--font-size);justify-content: flex-start;margin: 0 auto;padding: 12px 24px;width: 100%}
+
+main {align-items: flex-start;box-sizing: border-box;display: flex;flex-flow: column;justify-content: flex-start;max-width: min(90ch, 100%);padding: 24px 6px 120px}
+
+h1 {background-color: var(--color-primary);color: var(--color-black);font-family: var(--heading-font);font-size: var(--font-size-5);font-weight: 200;margin: 42px 0;width: fit-content}
+
+h2 {background-color: var(--color-secondary);color: var(--color-white);font-family: var(--heading-font);font-size: var(--font-size-4);font-weight: 200;margin: 42px 0;width: fit-content}
+
+h3 {background-color: var(--color-primary);color: var(--color-black);font-family: var(--heading-font);font-size: var(--font-size-3);font-weight: 200;margin: 36px 0;width: fit-content}
+
+h4 {background-color: var(--color-secondary);color: var(--color-white);font-family: var(--heading-font);font-size: var(--font-size-2);font-weight: 200;margin: 24px 0 6px;width: fit-content;}
+
+h5 {background-color: var(--color-secondary);color: var(--color-white);font-family: var(--heading-font);font-size: var(--font-size-1);font-weight: 200;width: fit-content}
+
+h6 {background-color: var(--color-secondary);color: var(--color-white);font-family: var(--heading-font);font-size: var(--font-size-0);font-weight: 200;margin: 20px 0 2px;width: fit-content;}
+
+a {margin: 6px 0}
+
+ul {align-items: flex-start;display: flex;flex-flow: column;justify-content: flex-start;padding: 0 0 0 16px;word-wrap: break-word;}
+
+p, li {font-family: var(--body-font);font-size: var(--font-size-0);line-height: 1.4em;list-style-position: outside;list-style-type: auto;margin: 6px 0;max-width: min(75ch, 95vw);text-wrap-style: balance;}
+
+li {word-break: break-word}
+
+li::marker {font-size: var(--font-size-m1)}
+
+figure {align-items: center;box-sizing: border-box;display: flex;flex-flow: column nowrap;justify-content: center;margin: 0;width: 100%;}
+
+figcaption, .subtitle {color: var(--color-secondary);display: block;font-family: var(--body-font);font-size: var(--font-size-m1);font-style: italic;margin: 6px 0;max-width: min(75ch, 95vw);text-wrap-style: balance}
+
+.subtitle, .quote {padding-left: 24px}
+
+.quote {color: var(--color-secondary);font-family: var(--body-font);font-size: var(--font-size-3);font-style: italic;margin: 20px auto;max-width: min(55ch, 90%)}
+
+.subquote {color: var(--color-secondary);font-family: var(--body-font);font-size: var(--font-size-1);font-style: italic;line-height: 1.1em;margin: 14px auto 24px;max-width: min(55ch, 90%);}
+
+code {border: 1px solid var(--color-primary);font-family: monospace;font-size: var(--font-size-m2);padding: 1px 2px;}
+
+div {align-items: center;box-sizing: border-box;display: flex;flex-flow: row wrap;justify-content: center;width: 100%}
+
+div.columns {align-items: center;box-sizing: border-box;box-sizing: border-box;display: grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));height: 100%;justify-content: center;width: 100%;}
+
+div.columns img {height: auto;max-width: 90%;width: auto;}
+
+div:not(.columns) img {border: 2px solid var(--color-primary);height: auto;margin: 6px auto;max-width: min(600px, 75%);width: auto}
+
+div:not(.columns) img {border: 2px solid var(--color-primary);height: auto;margin: 6px auto;max-width: min(600px, 75%);width: auto}
+
+.video-container {background-color: #272727;border: 2px solid var(--color-primary);display: block;height: min(450px, 50vh);margin: 6px auto;width: min(800px, 75%)}
+
+video, iframe {height: 100%;width: 100%}
+
+footer::before {
+  background: red;
+  color: yellow;
+  content: "Credit: Presentation document format style from John Caserta, RISD DS2 Syllabus 4";
+  display: block;
+  font-size: var(--font-size-m1);
+  height: 100%;
+  width: 100%;
+}
