@@ -1,4 +1,4 @@
-import { getRandomInt, CONSTANTS } from './shared.js';
+import { getRandomInt, CONSTANTS } from './public/shared/shared.js';
 
 window.addEventListener("load", () => {
 
@@ -58,16 +58,16 @@ window.addEventListener("load", () => {
         const a = document.createElement("a");
         const img = document.createElement("img");
         if ( project.name.includes("Caldera") ) {
-          a.href = "public/caldera";
+          a.href = "caldera";
           a.target = "_blank";
         } else if ( project.name.includes("network") ) {
-          a.href = "public/thesis";
+          a.href = "thesis";
           a.target = "_blank";
         } else if ( project.name.includes("streaming") ) {
           a.href = "https://drive.google.com/file/d/1za0pxoDLuZLDrAhtSexOw5A_500VyYCf/view?usp=sharing";
           a.target = "_blank";
         } else if ( project.name.includes("supermarket") ) {
-          a.href = "public/supermarket";
+          a.href = "./supermarket";
           a.target = "_blank";
         } else if ( project.name.includes("100") ) {
           a.href = "https://www.annaylin.com/100-days/";

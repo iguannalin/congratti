@@ -1,4 +1,4 @@
-import { createSection } from "../shared.js";
+import { createSection } from "../public/shared/shared.js";
 const left = document.querySelector("#left");
 const right = document.querySelector("#right");
 const title = document.querySelector("#title");

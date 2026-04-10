@@ -1,4 +1,4 @@
-import { getRandomInt, CONSTANTS } from '../../shared.js';
+import { getRandomInt, CONSTANTS } from '../public/shared/shared.js';
 
 window.addEventListener("load", () => {
 
